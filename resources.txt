@@ -1,0 +1,58 @@
+Week 1
+KEY BOARD & COMMANDS
+Shit + alt + arrow down- lets me copy a line repeatedly on several lines.
+# - a command that leads to no where on the web
+&equiv; - creates a menu
+.addEventListener('');
+The "toggle" function adds/removes
+ctrl + windows key + J = opens the command terminal in VS Code.
+(For cmd)git init will initiatial folders to become a repository
+ctrl + Windows + Shift + P will bring up the 
+
+CSS NOTES
+To align menus, paragraphs, and list set the margin and padding to 0.
+Using block on the display command expands the border to the links to the entire with of the page.
+To rid your text links from the underline change your text-decoration command to none.
+To hide the menu set the display to none and to show only the menu itself set the "nav ul li"  to 
+first-child being the first link in the list. Don't forget this is it's own css command separate 
+from the other "nave ul li" links.
+
+
+
+JAVASCRIPT NOTES
+Always link the JS after the footer and just before the </body> closing tag. Your HTML should be
+before before & load befoe your JS.
+There are 3 ways to declare a function in JS.
+    Ex: 1 FUNCTION DECLARATION
+    function toggleMenu() {
+        document.querySelector('#navigation').classList.toggle('open');
+    }
+    Ex: 2 ARROW SYNTAX IS THE PREFERRED WAY
+    const toggleMenu = () => {
+    document.querySelector('#navigation').classList.toggle('open');
+    }
+
+    Ex: 3 FUNCTION EXPRESSION
+    const toggleMenu = function() {
+    document.querySelector('#navigation').classList.toggle('open');
+    }
+
+Two ways to call a function.
+
+    Ex: 1 Make a change in the HTML
+    <li><a href="#" id="menu" onclick="toggleMenu()">&equiv; Menu</a></li>
+
+    Ex: 2 Make a change in JS
+    <li><a href="#" id="menu">&equiv; Menu</a></li> OR document.querySelector('#menu');  
+
+BROWSER TIPS
+Review the .setItem command in office hour start at 51.00 in video.
+    Review under inspect in the browser > click  application > click local storage 
+    > tab down & click to syntax > if needed deleate any keys > click on Menu on 
+    the mobile app & open up the week and you will see the code and the keys will reapper.
+
+TROUBLE SHOOTING
+
+I can't pull up the remote 
+ctrl + windows key + shift + P I was unable to open up the command pallet
+When I enter 

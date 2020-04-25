@@ -1,0 +1,32 @@
+/*HTML SELECTORS*/
+/*Remove the bullets from the mobile menu*/
+nav ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:first-child {
+    display: block;
+}
+
+nav ul li{
+    background-color: powderblue;
+    border: 1px solid #3a1aad;
+    display: none;
+}
+
+/*Expand the links to the full width of the page and remove the line from under the text links*/
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/*CLASS SELECTORS*/
+/* Open the class="open" when present */
+.open li {
+    display: block;
+}
+/*ID SELECTORS*/
+
