@@ -50,6 +50,8 @@ Review the .setItem command in office hour start at 51.00 in video.
     Review under inspect in the browser > click  application > click local storage 
     > tab down & click to syntax > if needed deleate any keys > click on Menu on 
     the mobile app & open up the week and you will see the code and the keys will reapper.
+    To see the  GitHub  source code go to github.com/username/projectname
+    SUBMIT THIS WEEKLY: To see the project webpage change the url to https://username.github.io/projectname
 
 TROUBLE SHOOTING
 
