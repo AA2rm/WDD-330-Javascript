@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Programming Basics</title>
+    <script>
+        //Problem No#1
+        function loadProgram() {
+            var userInput = document.getElementById('user_input').value
+            document.getElementById("user_notes").innerHTML = userInput
+
+            //Problem No#2
+
+
+
+        }
+    </script>
+
+    <style>
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: #ffffe0;
+        }
+    </style>
+</head>
+
+<header></header>
+<main>
+    <section id="program_basic">
+        <h1>Problem#1</h1>
+
+        <button onclick="loadProgram()">Load Program</button>
+
+        <textarea id="user_input" placeholder="Input text here."></textarea>
+        <div id="user_notes"></div>
+    </section>
+
+
+    <section>
+        <h2>Program Basics</h2>
+        CHAPTER 2
+        Well Commented Code:<input id=well_doc_code>
+        Use short statements that describes what your code is doing using either a
+
+        <textarea id="story_editor" placeholder="Insert your code"></textarea>
+
+        <ul>
+            <li>Short comment line //</li>
+            <li>Multi-line comment /*</li>
+        </ul>
+        <br>
+
+        <h3>JavaScript grammar ― expressions, statements, semicolons and whitespace</h3>
+        JS programs use multiple statements, ending w/ a new line or semicolon. Ex pg. 52
+        nessary to add a ( ; ) to end a statement because JS uses ASI that can place
+        ( ; ) @ the end for you. This can however be error prone and prevent minifies &
+        validator to not work. It’s best practice to write ea. Statement on a new line.
+        <br>
+        Block statements in curly brackets; don’t have to be terminated by ( ; )
+        White spaces separate various part of ea. Statement.
+        Reserved words for JS pg. 53 avoid naming var or files w/ these.
+        <br>
+        <h3>Primitive data types</h3>
+        JS has 6 primitive data type: Strings, Numbers, Symbols, Boolean, Undefined, & Null.
+        JS also has 1 object type which includes: Arrays, Functions, & Object literals.
+        JS special operator (typeof) is used for finding the value type (pg 36)
+        Operators apply an operation to a value known as operand A unary operator requires 1
+        operand, while a binary operator requires 2 operands. A ternary operator requires 3
+        operands. There are 3 string vars : string literals, string properties and methods
+        <br>
+        <h3>Declaring and assigning constants and variables</h3>
+        Variables refer to a stored value. You must declare a var first b4 it can be used. Key words
+        like (const) & (let) are used to declare var. const is used when a var will not be reassigned
+        another value. It’s best practice to use a const var let is use the value might be reassigned
+        later. Assign a value w/ the ( = ) operator.
+        <span style="color:red;font-size:17px"><b>Q:</b> What is ES6?</span>
+        <br>
+        <h3>You can declare a var and assign string names</h3>
+        Along w/ string names you can assign multiple comma-deliberated variables at the same time.
+        If a var refences a <b>non-primitve data type</b> array, function, or object the data w/in
+        the object can change to a mutating object & mutated later. The var behavior has to remain
+        consistent.
+        <br>
+        <h4>Scopes</h4>
+        Using <b>const</b> & <b>let </b>to declare var means they are block scoped. Their values only
+        exists inside the blocks. There are 2 types of scopes, global & local. Global scopes are var declard
+        outside of a block making it accessible throuhout the program. This is <i>NOT GOOD PRACTICE</i>. local
+        scope are var inside a block, & uses the let or const are only available inside the block it's created
+        in. However, it let or const are not used then the var are considered global scopes & are available
+        outside of the block. Both const & let are defined inside the block (pg. 43)
+
+        <br>
+        <h3>Naming Constants & Variables</h3>
+        Name var that describe what the var represent. They can start w/ upper & lower case letters, an underscore,
+        or a dollar character, as well as contain numbers, as long as they don't start w/ numbers. Avoid using
+        underscors
+        and dollar sign at the beginning of your named var, it can cause problems. Constant & var are case
+        sensitive. If
+        using multiple words to name your var follow these rules.
+        <ind><b>Camel case </b></ind> starts w/ lowercase & ea. new word is capitalized.
+        firstNameAndLastName
+        <ind><b>Underscore</b></ind> separates ea. new word w/ an underscore.
+        first_name_and_last_name
+        <br>
+        <h3>Direct Assignment & Assignment By Reference(pg. 45-</h3>
+        Assign a <b>non-primitive value</b> to a var using a <b>reference</b> keyword(pg 45)
+        <b>Strings</b> are a grp. of letters & symbols.
+        Create a string obj using a <b>constructor function</b> (pg 46)
+        <ind>Using single & double quotes, & apostrophes in your string (pg. 46) </ind>
+        You can use <b>backlashes</b> to escape using quotation marks. (pg. 46-47)
+        <b>Properties</b> are info abt the obj or value. While <b>methods</b>> are perform an action on an obj.
+        or value. A method is an action that a primitive data type or obj can perform, using the (.) operator
+        followed by the name of the method, followed by () (pg. 49)
+        <b>Wrapper obj</b> (pg. 47)
+        <br>
+        <h3>Good Habits</h3>(pg.48-51)
+        A <b>dot notation</b> can give you the string length property.
+        Another method to access a primitive data type are <b>square brackets</b>
+        <div class=""></div>
+        <b>charAt</b>character positioning(pg. 49 )
+        <b>indexOf</b> method tells you where a character or substring appeares in a string.
+        <b>lastIndexOf</b> tells you the last occurence of a char or substring.
+        <b>includes</b> method tells you what a string of certain char are.
+        <b>startWith()</b>lets you chk if a string start w/ a certain char.
+        <b>endWith</b>method lets you chk if a string ends w/ a particular char.
+        <b>concat()</b>
+        <b>+'',''</b>concantenation shortcut
+        <b>trim()</b> method remove white space
+        <b>repeat()</b> method repeats a string
+        <br>
+        <h3>Template Literals</h3>(pg. 52-53)
+        A special type of string (ES6) use the backtick char. that use string interpolation.
+        <br>
+        <h3>Symbol</h3>(pg. 53-55)
+        A primitive value to avoid naming collisions using the symbol function.
+        Symbol()
+        <br>
+        <h3>Numbers ― decimal, hexadecimal, octal, binary and exponent form, Infinity, and NaN</h3> (pg55-64)
+        Number can be <b>intergers</b> whichare whole numbers or <b>floating point numbrs</b> which are decimals or
+        floats.
+        Numbers have a constructor function.
+        <b>Octal & hexadecimal numbers</b> starts w/ an "ox" is a hexadecial (bse 16) notation.
+        <b>Exponential Numbers</b> use the exponential or scientific notation.
+        <b>Number methods</b> have built-in methods; write this w/ an <b>toExpoential</b> method when working w/
+        number
+        literals that are intergers.
+        <br>
+        <h3>Arithmetic operations(Converting btn Strings & Numbers) such as +, -, *, /, and %</h3>(pg.59-60)
+        You can do the followring in arithemtic operations
+        <ind>change the value of a var using a <b>compound assignment operator, +=;</b></ind>
+        <ind><b>Increment values</b> with a ++</ind>
+        <ind>Incorporate the <b>infinity</b> to represent large numbers</ind>
+        <ind>Use a <b>Nan</b></ind> to express a value is not a number.
+        <ind>Chk a value is a number</ind> using the <b>Number</b>.isFinite() metho
+        <ind>Use a <b>type coercion</b> to show different types of an operand oprator.</ind>
+        <ind>You can parse numbers using the <b>parseInt()</b> function.</ind>
+        <br>
+        <h3>Undefined and null</h3>(pg. 69)
+        Use an <b>Undefined</b> to express when a var is not assignmed to a value.
+        Use a <b>Null</b> as a placeholder to express that there is no value.
+        <br>Undefined and null
+        <h3>Booleans ― truthy and falsy values</h3>(pg. 70)
+        This just mean that a logical statement value is either true or false.
+        <br>
+        <h3>Logical operators ― AND, OR, and NOT</h3>(pg.71)
+        <b>Logical operators</b> can be used w/ any primitive value or obj & the results are based on if the values
+        are true or false.
+        <b>!(Logical Not)</b> will convert a statement into a Boolean and return the <b>opposite value</b> known as
+        negation.
+        <b>&t&t(Logical And)</b> works on 2 or more values and the value is only true if <b>all</b> the operands are
+        true.
+        A <b>II (Logical OR)</b> works on 2 or more values/operands and is true if 1 of the operands are true.
+        Our project ― we’ll set some question-and-answer variables and use alert boxes to display them
+        <b>Lazy Evalutaion</b>(pg. 74)
+        <b>Bitwise operators</b>(pg.75-78)
+        <b>Bitwise Not</b>
+        <b>Bitwise AND</b>
+        <b>Bitwise OR</b>
+        <b>Bitwise XOR</b>
+        <b>Bitwise Shift Operator</b>
+        <b>Equality</b>(pg. 78-82)
+        <b>Soft Equality</b>
+        <b>Hard Equality</b>
+        <b>Hard Equality's One Quir</b>
+        <b>Greater Thank & Less Thank</b>(pg. 82-84)
+        Quiz (pg. 84-85)
+    </section>
+    <h2>Arrays, Logic, & Loops</h2>*pg 88-129)
+    CHAPTER 3
+    <h3>Array literals</h3>
+    To retrieve a specific value in an aray, we write its position in the [] sq bracket called the index.(pg. 90)
+    To <b>add values</b> to an array, place the string in the element. The index <b>notation </b> is used to add
+    new items to a position w/in the index. Unused slots in the index have an <b>undefined</b> value. To
+    <b>remove</b> a
+    value from an array literal use the <b>delete</b> operator.
+
+    <h3>Adding and removing values from arrays</h3>
+    <h3>Array methods</h3>
+    <h3>Sets</h3>
+    <h3>Maps</h3>
+    <h3>if and else statements</h3>
+    <h3>switch statements</h3>
+    <h3>while loops</h3>
+    <h3>do … while loops</h3>
+    <h3> for loops</h3>
+    <h3>Iterating over a collection</h3>
+
+
+    CHAPTER 4
+
+    <section id="storage_display">
+        <h1>Local Storage</h1>
+
+    </section>
+</main>
+<footer></footer>
+<script src="scripts/wk1.js"></script>
+</body>
+
+</html>

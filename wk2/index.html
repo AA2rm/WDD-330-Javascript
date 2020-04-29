@@ -1,11 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Team Assignments</title>    
+    <script>
+        //Problem#1
+        function loadProgram(){
+            var userInput = document.getElementById("user_input").value
+            document.getElementById("user_text").innerHTML=userInput
+        }
+        //Problem#2
+        function sumItUp(){
+            var numberInput = parseInt(document.getElementById("user_input2").value);
+            var sum = 0;
+
+            for (var start = 1; start <= numberInput; start++) {
+                sum = start + sum;
+            }
+            
+            document.getElementById("output2").innerHTML=sum
+        }
+    </script>
+
+    <style>
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: #ffffe0;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header></header>
+    <main>
+        <section id="team_display">
+        <h1>Team Assignments</h1>
+        <h2>Problem#1</h2>           
+            <button onclick="loadProgram()">Load Program</button>
+            
+
+            <textarea id="user_input" placeholder="Input text here."></textarea>
+            <div id="user_text"></div>
+
+            <h2>Problem#2</h1>
+            <input type="text" id="user_input2" placeholder="Please enter a number."></input>
+            <br>
+            <button onclick="sumItUp()">Load Sum</button>
+            <div id="output2"></div>
+        </section>
+        
+        <section>
+            <h2></h2> 
+            <!--Create a link to the note.html file-->
+        </section>
+
+        <section id="example_display">
+            <h1>Examples</h1>
+            <code>
+                Ex: 1 const var
+                const message = 'Hello Word!'(pg 33)<br>
+                alert(message);<br>
+                OR<br>
+                const message = 'Hello World!'; alert(message);<br>
+
+                Ex: 2 const var BEST PRACTICE: Write each statement on a new line.
+                const message = 'Hello World!';<br>
+                aleart(message);<br>
+
+                Ex: 3 const var block statement
+                {
+                <!--this is a block containing 2 statements-->
+                const message = 'Hello!';(pg 34)<br>
+                alert(message);<br>
+                }<br>
+
+                Ex: 4 Assign string literal (pg 37)
+                const name = 'Alexa';<br>
+                <!--This won't be assigned to another string-->
+
+                let score = 0;<br>
+                <!--This values may change during the program-->
+
+                name<br>
+                'Alexa'<br>
+
+                typeof name;<br>
+                'string'<br>
+
+                Ex: 5 Assigning multiple values
+                let x = 3, y = 4, z = 5;<br>
+
+
+                Ex: 6
+                a. Strings, Expressions, & using the <b>let</b> keyword to reassign a value. (pg. 38<br>
+                score = 5;
+
+                b. Primitive data types Can't reassign var to another value in the case.<br>
+                const name = 'Alexa';<br>
+                name = 'Siri';<br>
+                TypeError: Assignment t constrant variable<br>
+
+                Ex:7
+                a. (pg. 42) Global scope var<br>
+
+                b. (pg. 43) Local scope var<br>
+                 
+
+                Ex: 8 (pg 43-44)
+            </code>
+        </section>       
+        <br>
+        <section id="individual_display">
+        <h2>Individual Assignments</h2>
+
+        </section>
+        <section id="ref_display">
+        <h2>Weekly References</h2>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="scripts/wk1.js"></script>
 </body>
 </html>
