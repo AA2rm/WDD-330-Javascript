@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <title>Programming Basics</title>
     <script>
-      
+
     </script>
 
     <style>
@@ -17,9 +17,9 @@
             height: 250px;
             background-color: #ffffe0;
         }
-    </style >
-        
-      
+    </style>
+
+
 </head>
 
 <header></header>
@@ -95,7 +95,7 @@
         and dollar sign at the beginning of your named var, it can cause problems. Constant & var are case
         sensitive. If
         using multiple words to name your var follow these rules.
-        <p class="tab">Example of a  tab</p>
+        <p class="tab">Example of a tab</p>
         <b>Camel case </b> starts w/ lowercase & ea. new word is capitalized.
         firstNameAndLastName
         <b>Underscore</b>separates ea. new word w/ an underscore.
@@ -105,7 +105,7 @@
         Assign a <b>non-primitive value</b> to a var using a <b>reference</b> keyword(pg 45)
         <b>Strings</b> are a grp. of letters & symbols.
         Create a string obj using a <b>constructor function</b> (pg 46)
-        Using single & double quotes, & apostrophes in your string (pg. 46) 
+        Using single & double quotes, & apostrophes in your string (pg. 46)
         You can use <b>backlashes</b> to escape using quotation marks. (pg. 46-47)
         <b>Properties</b> are info abt the obj or value. While <b>methods</b>> are perform an action on an obj.
         or value. A method is an action that a primitive data type or obj can perform, using the (.) operator
@@ -115,7 +115,7 @@
         <h3>Good Habits</h3>(pg.48-51)
         A <b>dot notation</b> can give you the string length property.
         Another method to access a primitive data type are <b>square brackets</b>
-        
+
         <b>charAt</b>character positioning(pg. 49 )
         <b>indexOf</b> method tells you where a character or substring appeares in a string.
         <b>lastIndexOf</b> tells you the last occurence of a char or substring.
@@ -146,14 +146,14 @@
         <br>
         <h3>Arithmetic operations(Converting btn Strings & Numbers) such as +, -, *, /, and %</h3>(pg.59-60)
         You can do the followring in arithemtic operations
-        <p class="tab">Example of a  tab</p>
+        <p class="tab">Example of a tab</p>
         change the value of a var using a <b>compound assignment operator, +=;</b>
         <p><b>Increment values</b> with a ++
-        Incorporate the <b>infinity</b> to represent large numbers
-        Use a <b>Nan</b> to express a value is not a number.
-        Chk a value is a number using the <b>Number</b>.isFinite() metho
-        Use a <b>type coercion</b> to show different types of an operand oprator.
-        You can parse numbers using the <b>parseInt()</b> function.
+            Incorporate the <b>infinity</b> to represent large numbers
+            Use a <b>Nan</b> to express a value is not a number.
+            Chk a value is a number using the <b>Number</b>.isFinite() metho
+            Use a <b>type coercion</b> to show different types of an operand oprator.
+            You can parse numbers using the <b>parseInt()</b> function.
         </p>
         <br>
         <h3>Undefined and null</h3>(pg. 69)
@@ -187,59 +187,200 @@
         Quiz (pg. 84-85)
     </section>
     <h2>Arrays, Logic, & Loops</h2>*pg 88-129)
-    CHAPTER 3
-    <h3>Array literals</h3>
-    To retrieve a specific value in an aray, we write its position in the [] sq bracket called the index.(pg. 90)
-    To <b>add values</b> to an array, place the string in the element. The index <b>notation </b> is used to add
-    new items to a position w/in the index. Unused slots in the index have an <b>undefined</b> value. To
-    <b>remove</b> a
-    value from an array literal use the <b>delete</b> operator.
-
-    <h3>Adding and removing values from arrays</h3>
-    <h3>Array methods</h3>
-    <h3>Sets</h3>
-    <h3>Maps</h3>
-    <h3>if and else statements</h3>
-    <h3>switch statements</h3>
-    <h3>while loops</h3>
-    <h3>do … while loops</h3>
-    <h3> for loops</h3>
-    <h3>Iterating over a collection</h3>
-
-    <section>
-    <h2>Array, Logic, and Loops</h2>
-    CHAPTER 3
-
-    <h3>Arrays</h3>
+    CHAPTER 3<br>
+    <h3>Array literals</h3><br>
     An array is an ordered list of values. To create an array literal, simply write a pair
-of square brackets:
-    </section>
-    
+    of square brackets[]. Destructring of an array is the the concept of taking vales out a
+    of an array and placing them as individual values. Destructuring of arrays allows us to
+    assign multiple values at the same time. To retrieve a specific value in an aray, we write
+    its position in the [] sq bracket called the index.(pg. 90) To <b>add values</b> to an
+    array, place the string in the element. The index <b>notation </b> is used to add new items
+    to a position w/in the index. Unused slots in the index have an <b>undefined</b> value.<br>
 
-    <code>
-        Ex:     
-           
-        <input type="text" id="text1" name="Enter first number"><br>
-        <input type="text" id="text2" name="Enter second number"><br>
-        Result: <br>
-        <input type="text" id="txtresult" placeholder="TextBox3"><br>
-        <button onclick="add_numbers()" value="display_result">Display Results</button>
-        <div id="result"></div>
-        <br>   
-  
+    <h3>Array methods</h3><br>
+    Using the <b>length</b> property allows you to manually make change. Unused slots in the index
+    have an <b>undefined</b> value. <h3>Adding and removing values from arrays</h3><br>
+    To <b>add values</b> to an array, place the string in the element. The index <b>notation
+    </b> is used to add new items to a position w/in the index. <br>To <b>remove</b> a value
+    from an array literal use the <b>delete</b> operator. Remove the last item from an array using
+    a <b>pop</b> method, while the <b>shift </b> method removes the first item. The <b>push</b>
+    method adds a new values to the end of the array. The <b>concat</b> will merge an array w/
+    other arrays. Some other methods are: <b>join, slicing, splicing, reverse, & sort,</b>
+    Find a if a values is in an array use the <b>indexOf</b> method. The include method will return
+    a boolean value if it has a particular element. It can be used to add an extra parameter to
+    indicate which index to start the search.Multidementional arrays which contains an array of an array. <br>
+
+    <h3>Sets</h3><br>
+    <b>Sets</b> offer a useful way to keep track of data without having to check if any values have
+    been duplicated. You create a set w/ the <b>new</b> operat and the <b>Set</b> constructor. You can
+    add values using the <b>add</b> method. To see the contents of a set enter the name of the var that
+    refers to it. The number of values in a set can be found using the <b>size()</b> method.Other set
+    methods are <b>has(),delete(), clear(), new Set(), Array.form()</b> A set can be converted into an array
+    by placing the set, along with the spread operator directly inside an array literal. Objs are store into
+    set as long as the set exists, when the set is removed *+& the set remains it can cause a memory leak,
+    known as garbage-collected. It should
+    be corrected to prevent future problems.
+
+    <h3>Maps</h3><br>
+    Maps are a way of keeping a list of key & value pairs in other programming languages. (They are similiar to
+    hashes, hash tables, & dictionaries). Maps can use any data type as a key. Use <b>size</b> propety to locate
+    a number of key-value pairs. Create a map using the <b>new</b>operator & a <b>Map</b>br> constructor, & a
+    <b>set()</b> method to add to your maps. Other methods used in maps are <b>get(), has(), delete(), clear(),</b>
+    Maps can be converted into nested arrays of key-value pairs using the spread operator and like weak sets, weak
+    maps can cause dead entries when the original obj is deleatd. Weak maps can use the <b>has(), get(), set(), and
+        delete()</b> methods.<br>
+
+    <h3>if and else logic statements</h3>
+    Logic statement allow you to control the flow of a program by running different blocks of code. The if runs a block
+    of code <b>if</b> the confition in the () is true. The <b>else statement adds an alternative block of code to run
+        the condition if it's false. A quick way of writing an <b>if else </b> is to use the ternary operator <b>?</b>
+        followed
+        by at least 2 operands.<br>
+
+        <h3>switch statements</h3><br>
+        <b></b>Switch
+    </b> statements consist of several <b>if</b> & <b>else</b> statemets making up a logical decision tree. Use
+    switch statement when there are several conditions to test. Use a <b>case</b> keyword for ea. possible value and
+    remember
+    to end your statement w/ a <b>break</b> to end the execution of the statement. <br>
+
+
+    <h3>while loops</h3><br>
+    What ever type of loop you run it's important that a condition is met or else your code will continue to run in a
+    loop, this
+    is known as an infinite loop. <b>While</b> loops runs a block of code continuously until a condition becomes
+    true.<br>
+
+    <h3>do … while loops</h3><br>
+    <b>do while</b> loops is similiar to a while loop. The differences is that the conditions comes <i>after</i> the
+    block code,
+    regardless if the condition is true or not.<br>
+
+    <h3> for loops</h3><br>
+    In <b>for</b> loops the initialization code is ran before the loop start. The condition has to be satisfied for the
+    loop to continue
+    The after code is what to do after ea. iteration of the loop, which is mostly used to increment a counter. <br>
+
+    <h3>nested for loops</h3><br>
+    When a loop is placed inside of another loop this is a <b>nested loop</b>. It contains an inner loop that runs all
+    the way through
+    before the nest step of the outer loop occurs.
+
+    <h3>Iterating over a collection</h3><br>
+    A for loop can be used to iterate over each value in an array. If we take our avengers array example from earlier,
+    we can create a for
+    loop that outputs each item in the array. Maps are also enumerable, so it's also possible to loop over a map in a
+    similar way to a set.
+    The loop will iterate over each key-value pair in the same order as they were added to the map. Maps are also
+    enumerable, so it's also
+    possible to loop over a map in a similar way to a set. The loop will iterate over each key-value pair in the same
+    order as they were
+    added to the map.<br>
+
+    <h2>Functions</h2><br>
+    Chapter 4 <br>
+    Defining functions―function declarations, function expressions, Function() constructors and the new arrow syntax.
+    <h3>Invoking a function</h3><br>
+    There are a number of ways to define a function in JavaScript. Three of the most common are covered below. ES6
+    introduced a new way to define
+    functions, using what is known as 'arrow' notation. To define a function literal we can use a <b></b>function</b>
+    declaration: like so <b>function
+        keyword()</b>. You can also define a function using and <b>expression</b> that assigns a function to a var
+    </b>:<br>
+    const goodbye = function(){br>
+    console.log('Goodbye World!');
+    The 3rd way to define a function is w/ a constructor <b>Function()</b>, where it's entered as a string like so:<br>
+    const hi new Function('console.log("Hi World!");'); It's recommend not to use this way because of <b>various
+        problems</b>. Next you need to <b>invoke</b>
+    a function inside of the funciton's body. This is done by entering it's name followed by (): <br>
+    hello();
+    'Hello world!'<br>
+    FOOT NOTE:Don’t Repeat Yourself,or DRY, is a principle of programming that specifies that every part of a program
+    should only be written once. This
+    voids duplication and means there’s no need to keep multiple pieces of code up to date and in sync.<br>
+
+    <h3>Return values</h3><br>
+    All functions return a value, which can be specified using the return statement, which comes after the <b>return</b>
+    keyword. A function that doesn’t
+    explicitly return anything (such as all the examples we have seen so far) will return <b>undefined</b> by
+    default.<br>
+
+    <h3>Parameters and arguments</h3><br>
+    <b>Parameters</b> and <b>arguments</b> are terms that are often used interchangeably to represent values provided
+    for the function as an input. There is a subtle
+    difference though: any parameters a function needs are set when the function isdefined. When a function isinvoked,
+    it is provided with arguments. you can use a
+    single parameter or several. If the parameter is empty it's <b>undefined</b> & an undefined parameter will return a
+    <b>NaN</b>.When too many arguments are entered
+    into a function we can either use a <b>mean()</b> function to calculate numbers or use the var <b>arguments</b> for
+    multiple arguments. This acts like an array.
+    However for BEST PRACTICE it's better to use a <b>rest<b> operator. We can use a rest parameter to improve our
+            <b>mean()</b> function so it accepts any number of
+            values. <b>default perameters</b> in a function are values that will be used by the function if no arguments
+            are provided when it is invoked. To specify a default
+            parameter, simply assign the default value to it in the function definition. <b>arrow =></b> syntax help
+            make declaring functions more succinct using less verbose syntax.
+            const square = x => x*x;<br>
+
+            <h3>Hoisting―variables and functions</h3><br>
+            Hoisting is the JavaScript interpreter’s action of moving all variable and function declarations to the top
+            of the current scope, regardless of where they are defined.
+            Functions that are defined using a function declaration are automatically hoisted, meaning they can be
+            invoked before they have been defined. Use a <b>hoist()</b> to
+            invoke a function. This allows you to all <b>function definitions</b> together at the end of the program.
+            <b>variable hoisting</b> that use the var keyword are
+            automatically moved to the top of the current scope. Variable assignment is not hoisted, however. This means
+            that a variable assigned at the end of a function will have
+            a value of undefined until the assignment is made. When using var hoist, use <b>const</b> & <b>let</b> to
+            delcare variable at the beginning of a block so hoisting is
+            unnessary.<br>
+
+            <h3>Callbacks―functions as a parameter</h3><br>
+            Functions can also be given as a parameter to another function. A function that is passed as an argument to
+            another is known as a <b>callback</b>.Callback functions are
+            made more flexible using the callback parameter.<br>
+            function sing(song,callback) {<br>
+            console.log(`I'm singing along to ${song}.`);<br>
+            callback();<br>
+            }<br>
+            The actual callback is invoked in the body of the function where the () are used. You can sort arrays w/ a
+            <b>sort()</b> method using a callback. You can also do this with a
+            <b>numericallys function</b> and the sort() to sort numbers. An <b>array iterator</b> uses several ways to
+            use callbacks, making them more flexible. It also uses the arrow
+            notation in many of the callback methods. The <b>foreEach()</b> to loop through multiple values, the
+            <b>map()</b> method to iterate through an array, so forces the
+            callback function as a parameter that invokes the items in an array. Other methods used are: <b> Reduce() &
+                filter()</b>. The <b>mean()</b> function can be added to the reduce()
+            method to add up all the values provided in an argument.
 
 
 
-    <section id="chap_js">
-    <h2>JavaScript</h2>
-        CHAPTER 4
-        (Passing the Argument)
-        A callback function is passed as an argument into another function. It contains a 
-        string of code. You call the function by naming it, & it's followed by ( ), this
-        tells the function to execute the code in thee ( ).
-        The argument consist of a method that has an event(onclick) & a function of (whatToDo).
-        The addEventListener method executes the function only when an event occurs.
-    </section>
+            </section>
+
+            <code>
+                Ex:
+
+                <input type="text" id="text1" name="Enter first number"><br>
+                <input type="text" id="text2" name="Enter second number"><br>
+                Result: <br>
+                <input type="text" id="txtresult" placeholder="TextBox3"><br>
+                <button onclick="add_numbers()" value="display_result">Display Results</button>
+                <!--<div id="result"></div>-->
+                <br>
+            </code>
+
+
+
+            <section id="chap_js">
+                <h2>JavaScript</h2>
+                CHAPTER 4
+                (Passing the Argument)
+                A callback function is passed as an argument into another function. It contains a
+                string of code. You call the function by naming it, & it's followed by ( ), this
+                tells the function to execute the code in thee ( ).
+                The argument consist of a method that has an event(onclick) & a function of (whatToDo).
+                The addEventListener method executes the function only when an event occurs.
+            </section>
 </main>
 <footer></footer>
 <script src="scripts/wk1.js"></script>
