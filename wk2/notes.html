@@ -262,20 +262,23 @@
     <section>
     <h3>Functions</h3><br>
     Chapter 4 <br>
-    Defining functions―function declarations, function expressions, Function() constructors and the new arrow syntax. 
+    Defining functions―function declarations, function expressions, Function() constructors and the new arrow syntax.<br>
     
-    <h3>Invoking a function</h3
-    There are a number of ways to define a function in JavaScript. Three of the most common are covered below. ES6
-    introduced a new way to define functions, using what is known as an arow notation. To define a function literal we 
-    can use a <b>function</b> declaration: like so <b>function()</b> keyword. You can also define a function using an
-    <b>expression</b> that assigns a function to a var <br>
+    <h3>Invoking a function</h3><br>
+    There are a number of ways to define a function in JavaScript. Three of the most common are covered below. Define functions, 
+    using what is known as an arrow notation. To define a function literal we can use a <b>function</b> declaration: like so 
+    <b>function()</b> keyword. You can also define a function using an <b>expression</b> that assigns a function to a var <br>
+    <code>
     const goodbye = function(){<br>
     console.log('Goodbye World!');<br>
+    </code>
     The 3rd way to define a function is w/ a constructor <b>Function()</b>, where it's entered as a string like so:<br>
     const hi new Function('console.log("Hi World!");'); It's recommend not to use this way because of <b>various problems</b>. 
     Next you need to <b>invoke</b> a function inside of the funciton's body. This is done by entering it's name followed by ():<br>
+    <code>
     hello();<br>
     'Hello world!'<br>
+    </code>
     FOOT NOTE:Don’t Repeat Yourself,or DRY, is a principle of programming that specifies that every part of a program should 
     only be written once. This voids duplication and means there’s no need to keep multiple pieces of code up to date and in sync.<br>
    
