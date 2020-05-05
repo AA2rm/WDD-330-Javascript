@@ -1,5 +1,6 @@
 /*HTML SELECTORS*/
 /*Remove the bullets from the mobile menu*/
+/*Wk 1 work*/
 nav ul {
     list-style:none;
     margin: 5px;
@@ -30,14 +31,12 @@ nav ul li a {
 }
 /*ID SELECTORS*/
 
+/*Wk 2 work*/
 /*Body*/
 body {
     margin: 0px;
     padding: 0px;
 }
-
-
-
 
 /*Indent paragrahs in notes.html*/
 .tab { margin-left: 40px;
