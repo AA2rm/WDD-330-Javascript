@@ -63,3 +63,4 @@ TROUBLE SHOOTING
 I can't pull up the remote 
 ctrl + windows key + shift + P I was unable to open up the command pallet
 When I enter 
+https://wordhtml.com/
