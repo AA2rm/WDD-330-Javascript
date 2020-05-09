@@ -41,3 +41,8 @@ body {
 /*Indent paragrahs in notes.html*/
 .tab { margin-left: 40px;
  }
+
+ /*assign the color to the rainbow page*/
+ .rebeccapurple {
+     background-color: #663399;;
+ }
