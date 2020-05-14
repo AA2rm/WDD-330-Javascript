@@ -1,3 +1,15 @@
+/*Style the Header*/
+#page-header {
+    width: 100%;
+    background-image: url(wdd340/images/heartslogo.jpg);
+    background-image: url(acme/images/avatar1.jpg);
+    background-color: #ffffff;
+    height: 114px;
+    padding: 5px 0px;
+    color: #000000;
+    display: flex;
+    height: 20px;
+}
 /*HTML SELECTORS*/
 /*Remove the bullets from the mobile menu*/
 /*Wk 1 work*/
@@ -46,3 +58,14 @@ body {
  .rebeccapurple {
      background-color: #663399;;
  }
+
+
+
+
+
+
+
+
+
+
+ /*Style the footer*/
