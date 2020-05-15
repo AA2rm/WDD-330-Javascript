@@ -10,11 +10,12 @@
     display: flex;
     height: 20px;
 }
+
 /*HTML SELECTORS*/
 /*Remove the bullets from the mobile menu*/
 /*Wk 1 work*/
 nav ul {
-    list-style:none;
+    list-style: none;
     margin: 5px;
     padding: 5px;
 }
@@ -23,7 +24,7 @@ nav ul li:first-child {
     display: block;
 }
 
-nav ul li{
+nav ul li {
     background-color: powderblue;
     border: 1px solid #3a1aad;
     display: none;
@@ -41,6 +42,7 @@ nav ul li a {
 .open li {
     display: block;
 }
+
 /*ID SELECTORS*/
 
 /*Wk 2 work*/
@@ -51,21 +53,32 @@ body {
 }
 
 /*Indent paragrahs in notes.html*/
-.tab { margin-left: 40px;
- }
+.tab {
+    margin-left: 40px;
+}
 
- /*assign the color to the rainbow page*/
- .rebeccapurple {
-     background-color: #663399;;
- }
-
-
-
-
+/*assign the color to the rainbow page*/
+.rebeccapurple {
+    background-color: #663399;
+    ;
+}
 
 
 
 
 
 
- /*Style the footer*/
+
+
+
+
+/*Style the footer*/
+footer {
+    background-color: white;
+    text-align: center;
+    font-size: 11px;
+    margin-top: -25px;
+    padding: 4px;
+    text-align: center;
+    width: 99%;
+}
