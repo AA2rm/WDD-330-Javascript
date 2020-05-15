@@ -1,88 +1,67 @@
-<!--4 Index Controller-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/cs" href="styles/main.css">
-    <title>JavaScript: Novice to Ninja, 2nd Edition</title>
-
-    <script>
-
-    </script>
-
+    <title>JavaScript: Novice to Ninja, Forms</title>
+    <link rel="stylesheet" href="styles/main.css">
     <style>
         textarea {
-            width: 800px;
-            height: 250px;
             background-color: #ffffe0;
+            height: 250px;
+            width: 800px;
         }
     </style>
-
 </head>
 
 <body>
-    <header id="page-header">
-        <?php include .'/wdd340/common/header.php'; ?>
-    </header>
+    <header class="page_header"></header>
     <main>
-        <!--Create a link to the note.html file-->
-        <section>
-
-            <h2>Wk 4 Notes</h2>
-            <link rel="stylesheet" href="../wdd340/wk4/notes.html">
-
+        <section id="wk4_assgnmt">
+            <h1>Wk 4 Notes</h1>
+            <link rel="stylesheet" href="../wdd340/wk4/notes.html">Notes</link>
         </section>
 
-        <section>
-
+        <section id="team_forms">
             <h1>Team Assignments</h1>
             <h2>Core Requirements</h2><br>
 
             <h2>Team Activity</h2>
             <h3 class="teamheader">Problem #1</h3><br>
-            <p>Build a 3X3 board in HTML and CSS, with a table element or div.</p>
-
+            <p>Build a 3X3 board in HTML and CSS, with a table element or div.</p><br>
 
             <h3 class="teamheader">Problem #2</h3><br>
             <p>Attach a touchend listener to the board.When a cell is touched it should add either an
-                'X or an 'O', depending on whether it is player 1 or player 2's turn..</p>
-
-
+                'X or an 'O', depending on whether it is player 1 or player 2's turn..</p><br>
 
             <h3 class="teamheader">Problem #3</h3><br>
-            <p>Add a reset button.When touched the reset button should remove all of the marks from
-                the board..</p>
-
-
+            <p>
+                Add a reset button.When touched the reset button should remove all of the marks from  the board.
+            </p><br>
 
             <h3 class="teamheader">Stretch #1</h3><br>
             <p>If your board looks like the first image below...make it look like the second.</p>
             Hint: look into :nth-child(n), :last-child, etc for help to target specific cells to turn
-            borders on or off.
-
+            borders on or off.<br>
 
             <h3 class="teamheader">Stretch #2</h3><br>
             Add Game logic. Right now the players have to decide who won, or whether it was a tie. Add
-            some game logic to figure out when the game should result in a tie.
-
+            some game logic to figure out when the game should result in a tie.<br>
 
             <h3 class="teamheader">Stretch #3</h3><br>
-            <p>Add More Game logic. Add the logic to figure out when someone wins.</p>
+            <p>Add More Game logic. Add the logic to figure out when someone wins.</p><br>
 
 
             <h3 class="teamheader">Stretch #4</h3><br>
 
 
             <h3 class="teamheader">Stretch #5</h3><br>
-
-
         </section>
 
 
-        <section id="examples_display">
-            <h2>Examples</h2>
+        <section id="examples_forms_obj_js">
+            <h2>Examples</h2><br>
             Ex: 1 Retrieve HTML form collections
             <code>
                 const form = document.forms[0];
@@ -99,27 +78,12 @@
             <code>
                 form.city.options[0].text
                 "Choose a City"
-            </code>
-        
-        </section>
-
-
-
-        <section id="individual_display">
-            <h2>Individual Assignments</h2>
-
+            </code><br>
 
         </section>
-
-        <section id="ref_display">S
-            <h2>References</h2>
-
-
-        </section>
-        <?php include 'footer.php';?>
     </main>
-    <script src="scripts/main.js">
-    </script>
+    <footer></footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

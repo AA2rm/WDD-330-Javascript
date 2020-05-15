@@ -1,5 +1,7 @@
+
+
 /*Style the Header*/
-#page-header {
+.page_header {
     width: 100%;
     background-image: url(wdd340/images/heartslogo.jpg);
     background-image: url(acme/images/avatar1.jpg);

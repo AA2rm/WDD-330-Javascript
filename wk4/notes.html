@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/cs" href="styles/main.css">
-    <title>JavaScript: Novice to Ninja, 2nd Edition</title>
-
+    <title>JavaScript: Novice to Ninja, Forms</title>
     <style>
         textarea {
             width: 800px;
@@ -14,22 +13,19 @@
             background-color: #ffffe0;
         }
     </style>
-
 </head>
 
 <body>
-    <header>
-
-    </header>
+    <header class="page_header"> </header>
     <main>
         <!--Create a link to the note.html file-->
-        <section id="week4_notes">
-            <h2>Wk 4 Notes</h2><br>
-            <h3>Forms</h3>
+        <section id="form_notes">
+            <h1>Wk 4 Notes</h1><br>
+            <h2>Forms</h2>
             Each form control has an initial value that can be specified in the HTML code. This value can be changed by
-            a user
-            entering information or interacting with the form’s interface (such as using a slider to increase or
-            decrease a value). The value can also be changed dynamically using JavaScript.
+            a user entering information or interacting with the form’s interface, (such as using a slider to increase or
+            decrease a value). The value can also be changed dynamically using JavaScript.<br>
+
             <code>
                 <form name='search' action='/search'>
                     <!--name attribute 'search'-->
@@ -38,104 +34,86 @@
                     <button type='submit'>Search</button>
                 </form>
             </code>
+
             <b>document.forms</b> returns an HTML collection of all the forms in the document in the order they appear
-            in the markup.
-            A form object also has a method called elements that returns an HTML collection of all the elements
-            contained in the form.
-            We can also access the form controls using their 'name' attributes as if it was a property of the form
-            object, you can also
-            use the square bracket notation can also be used instead.<br>
+            in the markup. A form object also has a method called elements that returns an HTML collection of all the 
+            elements contained in the form. We can also access the form controls using their 'name' attributes as if it 
+            was a property of the form object, you can also use the square bracket notation can also be used instead.<br>
 
-            <h3>Form Properties & Method</h3><br>
+            <h2>Form Properties & Method</h2><br>
             The form.submit() method will submit the form automatically. A form can be submitted manually by the user
-            employing
-            a button or input element with a type attribute of submit , or even an input element with a type attribute
-            of image.
-            While the <b>form.reset</b> method will reset all the form controls back to their initial values specified
-            in the HTML.
-            A button with a type attribute of reset can also be used to do this without the need for additional
-            scripting. The
-            <b>form.action</b> property can be used to set the action attribute of a form, so it’s sent to a different
-            URL to be
-            processed on the server.<br>
+            employing a button or input element with a type attribute of submit , or even an input element with a type 
+            attribute of image. While the <b>form.reset</b> method will reset all the form controls back to their initial 
+            ues specified in the HTML. A button with a type attribute of reset can also be used to do this without the need 
+            for additional scripting. The <b>form.action</b> property can be used to set the action attribute of a form, so 
+            it’s sent to a different URL to be processed on the server.<br>
 
-            <h3>Form Events</h3><br>
+            <h2>Form Events</h2><br>
             Forms trigger a number of events; the <b>focus</b> event occurs when an element is focused on. In the case
-            of an
-            <b>input</b>> element, this is when the cursor is placed inside the element.
+            of an <b>input</b> element, this is when the cursor is placed inside the element.<br>
 
-            <h3>Submitting Forms</h3><br>
+            <h2>Submitting Forms</h2><br>
             The most important form event is the submit event, occurring when the form is submitted. Usually this will
-            send the content
-            of the form to the server to be processed, but we can use JavaScript to intercept the form before it’s sent
-            by adding a
-            <b>submit</b> listener.<br>
+            send the content of the form to the server to be processed, but we can use JavaScript to intercept the form 
+            before it’s sent by adding a <b>submit</b> listener.<br>
 
-            <h3>Retrieving & Changing Values from a Form</h3>
+            <h2>Retrieving & Changing Values from a Form</h2>
             Text input elemtnt ojbs have <b>value</b> property that can be used to retrieve text from inside the field.
-            The <b>input</b>
-            points to the input element in the form. You can also set the value using JS using the input.value. The
-            <b>placeholder</b>
-            attribute can do this as well. <br>
+            The <b>input</b> points to the input element in the form. You can also set the value using JS using the input.value. 
+            The <b>placeholder</b> attribute can do this as well.<br>
 
-            <h3>Form Control</h3><br>
+            <h2>Form Control</h2><br>
             Some common types of form control are: <b>input</b>, <b>select</b>, <b>textarea</b>, & <b>buttton</b>,
-            <b>autofocus</b>.
-            The <b>placeholder</b> attribute will insert the value provided in the input field until the user enters
-            some text. The
-            <b>maxlength</b> attribute will limit the number of characters that can be entered in the field to the value
-            given.
-            Here's a reference for new form elements
+            <b>autofocus</b>. The <b>placeholder</b> attribute will insert the value provided in the input field until the user 
+            enters some text. The <b>maxlength</b> attribute will limit the number of characters that can be entered in the field 
+            the value given. Here's a reference for new form elements.<br>
 
-            <div class="sitepoint">Here's a complete array reference<a
-                    href="https://www.sitepoint.com/html5-forms-markup/">Sitepoint</a>
-            </div>
-
-
-            <h3>Input Fields</h3><br>
-            There are several categories of input field. The default type of input field is <b>text</b> which is used
-            for entering a short piece of text, such as a username. It's advise to use the <b>type='text</b> attribute making the input field
-            explicit. You set  this in the HTML using the <b>value</b> attribute.<br>
             <code>
+            <div class="sitepoint">Here's a complete array reference<a href="https://www.sitepoint.com/html5-forms-markup/">
+                Sitepoint</a>
+            </div>
+            </code>
 
+            <h2>Input Fields</h2><br>
+            There are several categories of input field. The default type of input field is <b>text</b> which is used
+            for entering a short piece of text, such as a username. It's advise to use the <b>type='text</b> attribute
+             making the input field explicit. You set  this in the HTML using the <b>value</b> attribute.<br>
+
+            <code>
                 <label for='donation-amount'>Enter amount to donate:
                     <input type='text' id='donation-amount' name='donationAmount' value='10'>
                 </label>
-            </code>
-            Other input fields are <b>intput type='password'</b>, <b>type='checkbox'</b>, <b>type'radio</b>,
-            <b>type='hidden'</b>, <b>typ'file/</b>,
-            <b>type='number'</b>, <b>type='tel'</b>, and <b>type='color'</b>. We can assign a <b>category</b> property
-            to our objects, like hero.
+            </code><br>
 
-            <br>
-            <h3>Drop Down List Selection</h3><br>
-            This lets you select one or more options from a list.
-
-            <h3>Text Areas</h3><br>
-            A <textarea> element is used to enter long pieces of text over multiple lines such as a comment or blog post. 
-
-            <h3>Buttons</h3><br>
-            The <b>submit</b> button is the default for most forms, but you can also use <b>reset</b>, <b>click me</b>, <b>menu</b>,
-            <b>menuitem</b>, & <b>li</b>You can also disable the submit button.
-
-            <h3>Form Validation</h3><br>
-            Form validation is the process of checking whether a user has entered the information into a form correctly. Examples of the types of 
-            validation that occur include ensuring that: A required field is completed, An email address is valid, A number is entered when numerical 
-            data is required,  & A password is at least a minimum number of characters. Validation can occur on the client side using JavaScript, and 
-            on the server side.
-
-            <h3 ></h3><br>
-
-
-            <h3 ></h3><br>
-
+            Other input fields are <b>intput type='password'</b>, <b>type='checkbox'</b>, <b>type'radio</b>, <b>type='hidden'</b>,
+            <b>typ'file/</b>, <b>type='number'</b>, <b>type='tel'</b>, and <b>type='color'</b>. We can assign a <b>category</b>property
+            to our objects, like hero.<br>
             
+            <h2>Drop Down List Selection</h2><br>
+            This lets you select one or more options from a list.<br>
 
+            <h2>Text Areas</h2><br>
+            A <textarea> element is used to enter long pieces of text over multiple lines such as a comment or blog post.<br>
 
-            </section>
+            <h2>Buttons</h2><br>
+            The <b>submit</b> button is the default for most forms, but you can also use <b>reset</b>, <b>click me</b>, <b>menu</b>,
+            <b>menuitem</b>, & <b>li</b>You can also disable the submit button.<br>
+            
+            <b>Validating Forms</b><br>
+            Form validation is the process of checking whether a user has entered the information into a form correctly. Examples of the 
+            types of validation that occur include ensuring that: A required field is completed, An email address is valid, A number is 
+            entered when numerical data is required, & A password is at least a minimum number of characters. Validation can occur on the 
+            client side using JavaScript, and on the server side.<br>
+        </section>
+        
+        <section>
+            <h2 >Object Oriented Programming</h2><br></section>
 
        
-                <h2></h2>
+        </section>
+        
+        <section>  
+        <h2>Modern JS</h2>   
 
 
        
