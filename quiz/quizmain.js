@@ -15,11 +15,15 @@ const view = {
 };
 
 //Use methods to update the HTML
-ask(); {
+ask(name); {
+    if(this.questions.length > 0) {
+    this.question = this.questions.pop();
     const question = `What is ${this.question.name}'s real name?`;
     view.render(view.question,question);
-    const response =  prompt(question);
-    this.check(response);
+    }
+    else {
+    this.gameOver();
+    }
 }
 check(response); { 
     const answer = this.question.realName;
@@ -35,6 +39,12 @@ check(response); {
 }
 
 view.show(view.start);
+start(quiz){
+    this.score = 0;
+    this.questions = [...quiz];
+    this.ask();
+}
+
 show(element){
     element.style.display = 'block';
 }
@@ -45,11 +55,11 @@ gameOver(); {
     view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
 }
 
-show(element){
+show(element) {
     element.style.display = 'block';
 }
 
-hide(element){
+hide(element) {
     element.style.display = 'none';
 }
 start: document.getElementById('start'),
@@ -57,3 +67,6 @@ start: document.getElementById('start'),
 
 //Add an event listener to the button
 view.start.addEventListener('click', () => game.start(quiz), false);
+
+//Reference the form
+response: document.querySelector('#response')

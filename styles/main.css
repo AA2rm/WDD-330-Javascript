@@ -39,6 +39,7 @@ nav ul li a {
 
 /*CLASS SELECTORS*/
 /* Open the class="open" when present */
+
 .open li {
     display: block;
 }
