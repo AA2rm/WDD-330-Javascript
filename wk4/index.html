@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe Game Board</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
     <style>
         textarea {
@@ -21,7 +21,7 @@
     <main>
         <section id="wk4_assgnmt">
             <h1>Wk 4 Notes</h1>
-            <link rel="stylesheet" href="../wdd340/wk4/notes.html">Notes</link>
+            <link rel="stylesheet" src="../wdd340/wk4/notes.html">Notes</link>
         </section>
 
         <section id="game_board">
@@ -57,14 +57,11 @@
                 let player = player1;
 
                 function addPiece(e) {
-                    console.log(e.target);
+                    //console.log(e.target);
                     e.target.innerHTML = player;
                     if (player === player1) player = player2;
                     else player = player;
                 }
-                board.addEventListener('click', addPiece);
-                board.addEventListener('click', addPiece);
-                reset.addEventListener('click', resetBoard);
             </script>
 
             <h3 class="teamheader">Problem #3</h3><br>
@@ -73,16 +70,20 @@
             <script>
                 // 
                 function resetBoard() {
-                    const board = document.querySelector('.bBoard');
-                    for (let i = 0; i < board.children.length; i++) {
-                        board.children[i].innerText = '';
+                    const board2 = document.querySelector('.bBoard');
+                    for (let i = 0; i < board2.children.length; i++) {
+                        board2.children[i].innerText = '';
                     }
-                    const children = Aarray.from(board.children);
+                    const children = Array.from(board2.children);
                     const empty = children.filter(function (child) {
                         return child.innerText == 'X' || child.innerText == 'O';
                     });
                     console.log(empty);
                 }
+                
+                board.addEventListener('click', addPiece);
+                board.addEventListener('click', addPiece);
+                reset.addEventListener('click', resetBoard);
             </script>
 
 

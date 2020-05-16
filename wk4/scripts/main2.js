@@ -12,4 +12,4 @@ function myFunction() {
 document.getElementById("game_board").addEventListener("touchend", myFunction);
 
 function myFunction() {
-  document.getElementById("game_board").innerHTML = "";
+  document.getElementById("game_board").innerHTML = ""};
