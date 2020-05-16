@@ -1,3 +1,4 @@
+//JS EXAMPLES HEROES PROJ
 //Heroes
 const form = document.forms['hero'];//add the var hero
 form.addEventListener('submit', makeHero, false);//add an event listerner to invoke the makeHero() function.

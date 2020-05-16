@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript: Novice to Ninja, Forms</title>
+    <title>Tic-Tac-Toe Game Board</title>
     <link rel="stylesheet" href="styles/main.css">
-    <style>
+
+<style>
         textarea {
             background-color: #ffffe0;
             height: 250px;
@@ -29,21 +30,66 @@
 
             <h2>Team Activity</h2>
             <h3 class="teamheader">Problem #1</h3><br>
-            <p>Build a 3X3 board in HTML and CSS, with a table element or div.</p><br>
+            <!--Build a 3X3 board in HTML and CSS, with a table element or div.--><br>
+            <div class="board">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <button id="reset">Reset</button>
 
+              
             <h3 class="teamheader">Problem #2</h3><br>
-            <p>Attach a touchend listener to the board.When a cell is touched it should add either an
-                'X or an 'O', depending on whether it is player 1 or player 2's turn..</p><br>
+            <!--Attach a touchend listener to the board.When a cell is touched it should add either an
+            'X or an 'O', depending on whether it is player 1 or player 2's turn..--><br>
+
+            <script>
+                const board = document.querySelector('.board');
+                const board = document.querySelector('.board');
+                const resetButton = document.getElementById('reset');
+                const player1 = 'X';
+                const player2 = 'O';
+                let player = player1;
+                function addPiece(e) {
+                console.log(e.target);
+                e.target.innerHTML = player;
+                if (player === player1) player = player2;
+                    else player = player1;
+                }
+                board.addEventListener('click', addPiece);
+                divBoard.addEventListener('click', addPiece);
+                reset.addEventListener('click', resetBoardDiv);
+                </script>
 
             <h3 class="teamheader">Problem #3</h3><br>
-            <p>
-                Add a reset button.When touched the reset button should remove all of the marks from  the board.
-            </p><br>
+            <!--Add a reset button.When touched the reset button should remove all of the marks from  the board.-->
+            <br>
+            <script>    
+                // 
+                function resetBoard() {
+                  const board = document.querySelector('.bBoard');
+                  for (let i = 0; i < board.children.length; i++) {
+                    board.children[i].innerText = '';
+                  }
+                  const children = Array.from(divBoard.children);
+                  const empty = children.filter(function(child) {
+                    return child.innerText == 'X' || child.innerText == 'O';
+                  });
+                  console.log(empty);
+                }
+            </script>
+            
 
             <h3 class="teamheader">Stretch #1</h3><br>
-            <p>If your board looks like the first image below...make it look like the second.</p>
+              <!--If your board looks like the first image below...make it look like the second.
             Hint: look into :nth-child(n), :last-child, etc for help to target specific cells to turn
-            borders on or off.<br>
+            borders on or off.--><br>
 
             <h3 class="teamheader">Stretch #2</h3><br>
             Add Game logic. Right now the players have to decide who won, or whether it was a tie. Add
@@ -73,13 +119,22 @@
                 const form = document.forms['search'];
                 <!--Bracket Notation-->
             </code>
-
+    
             Ex: 2 Return the tex from the categories of city listed in the form
             <code>
                 form.city.options[0].text
                 "Choose a City"
             </code><br>
 
+            Ex: 3 Create an instance of a const func
+            <code>
+                const redDice = new Dice();
+                { sides: 6, roll: [Function] }
+            
+            
+            
+            
+            </code>
         </section>
     </main>
     <footer></footer>

@@ -1,3 +1,4 @@
+//NOTES EX
 //Form Events
 const input = form.elements.searchInput;
 input.addEventListener('focus', () => alert('focused'), false);
@@ -45,4 +46,38 @@ input.addEventListener('blur', function(){
 
 //Add an autofocus to a form
 document.forms.hero.heroName.focus();
+
+
+//OBJECT ORIENTED PROGRAMMING
+//Create an obj using a const func
+const Dice = function(sides=6){
+    this.sides = sides;//keyword this is the obj that will be returned by the cons func
+    this.roll = function() {
+        return Math.floor(this.sides * Math.random() + 1)
+    }
+}
+
+
+//Create a new obj using literal syntax
+const literalObject = {};
+{}
+
+//Create a new obj using a const func
+constructedObject = new Object();
+{}
+
+//Create an array const func
+constructedArray = new Array(1,2,3);
+[1, 2, 3]
+
+
+//Create a new class declaration syntax
+class Dice {
+    constructor(sides=6) {
+        this.sides = sides;
+    }
+    roll() {
+        return Math.floor(this.sides * Math.random() + 1)
+    }
+}
 
