@@ -143,114 +143,56 @@
             The most basic form of debugging is to use the <b>alert()</b> method to show a dialog at certain points in the code. The <b>alert()</b> stops a program from running 
             until OK is clicked, it allows us to effectively put breakpoints in the code that let us check the value of variables at that point to see if they’re what we expect 
             them to be.<br>
-            Ex: Validate if the age 12 is appropriate.
-            <code>
-                function amIOldEnough(age){
-                    if (age = 12) {
-                        alert(age);
-                        return 'No, sorry.';
-                    } else if (age < 18) {
-                        return 'Only if you are accompanied by an adult.';
-                    }
-                    else {
-                        return 'Yep, come on in!';
-                    }
-                }
-                Once we click ok,we can then check the function returns the correct message.
-                amIOldEnough(21)
-                'No, sorry.'
-                Passing an argument of 21 should result in the string 'Yep, come on in!' being returned, but it is returning 'No, sorry.' instead. If you tried running the example, 
-                you would have seen the alert message show that the value of the variable age is 12 , even though the function was passed an argument of 21 . Closer inspection then 
-                reveals a classic mistake has been made. Instead of checking if the value of age is equal to 12 , we have inadvertently assigned it the value of 12 ! To check for 
-                equality, we should use === instead of = which assigns a value to a variable.
-            </code><br>
-            Ex: Validate if the age enter is less than 12 is old engouh.<br>
-            <code>
-                function amIOldEnough(age){
-                    if (age < 12) {
-                        alert(age);
-                        return 'No, sorry.';
-                    } else if (age < 18) {
-                        return 'Only if you are accompanied by an adult.';
-                    }
-                    else {
-                        return 'Yep, come on in!';
-                    }
-                }
-                Now it will work as expected.<br>
-                <code>
-                    amIOldEnough(21)
-                    'Yep, come on in!'
-                </code>
-                Now that JS has progressed, using trusty alert is discouraged.<br>
-                
-                <h3>Using the Console</h3><br>
-                Most modern JavaScript environments have a <b>console</b> object that provides a number of methods for logging information and debugging. The <b>console.log()</b> method  
-                can be used to log the value of variables at different stages of the program, although it will not actually stop the execution of the program in the same way as alert() does.<br>
-
-                Ex: Log the position in the function as well as the value of the age variable.
-                <code>
-                    function amIOldEnough(age){
-                        console.log(age);
-                            if (age < 12) {
-                            console.log(`In the if with ${age}`);
-                            return 'No, sorry.';
-                            } else if (age < 18) {
-                            console.log(`In the else-if with ${age}`);
-                            return 'Only if you are accompanied by an adult.';
-                            } else {
-                            console.log(`In the else with ${age}`);
-                            return 'Yep, come on in!';
-                        }
-                    }
-                </code>
-                The <b>console.trace()</b> 
-                method will log an interactive stack trace in the console. This will show the functions that were called in the lead up to an exception occurring while the code is running.<br>
-                Here are some other methods of the console obj.
-                <div class="console_api_methods">Here's a complete reference<a href="https://www.sitepoint.com/three-little-known-development-console-api-methods/"> Sitepoint</a>
-                </div><br>
-
-                <h3>Debugging Tools</h3><br>
-                Most modern browsers also have a debugging tool that allows you to setbreakpointsin your code that will pause it at certain points. You can then see the values of all 
-                the variables at those points and modify them. . Here are the links to the debugger documentation for each of the major browsers.<br>
-                
-                <div class="firefox">Here's a complete reference<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">
-                    Sitepoint</a>
-                </div>
-
-                <div class="ms_edge">Here's a complete reference<a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/debugger">
-                    Sitepoint</a>
-                </div>
-
-                <div class="chrome">Here's a complete reference<a href="https://developers.google.com/web/tools/chrome-devtools/?utm_campaign=2016q3&utm_medium=redirect&utm_source=dcc">
-                    Sitepoint</a>
-                </div>
+            Ex: Validate if the age 12 is appropriate. (lines 1-12)
             
-                <div class="safari">Here's a complete reference<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Debugger/Debugger.html">
-                    Sitepoint</a>
-                </div>
-                The <b>debugger</b> keyword  will create a breakpoint in your code that will pause the execution of the code and allow you to see where the program is currently up to. 
-                You can also hover over any variables to see what value they hold at that point. The program can then be restarted by clicking on the 'play' button. If you try entering the code below into 
-                your browser's console, then invoke the amIOldEnough() function, the browser's debugging tool will automatically kick in and you'll be able see the value of the age variable by hovering over it.
-                Ex: Enter code into the broswer to see how it works<br>
-                <code>
-                    function amIOldEnough(age){
-                        debugger;
-                            if (age < 12) {
-                            debugger;
-                            return 'No, sorry.';
-                            } else if (age < 18) {
-                            debugger;
-                            return 'Only if you are accompanied by an adult.';
-                            } else {
-                            debugger;
-                            return 'Yep, come on in!';
-                        }
-                    }
-                    amIOldEnough(16);
-                </code>
-                Remember to remove any references to the debugger command before shipping any code, otherwise the program will appear to freeze when people try to use it!
-            </section>
+            Once we click ok,we can then check the function returns the correct message.
+            amIOldEnough(21)
+            'No, sorry.'
+            Passing an argument of 21 should result in the string 'Yep, come on in!' being returned, but it is returning 'No, sorry.' instead. If you tried running the example, 
+            you would have seen the alert message show that the value of the variable age is 12 , even though the function was passed an argument of 21 . Closer inspection then 
+            reveals a classic mistake has been made. Instead of checking if the value of age is equal to 12 , we have inadvertently assigned it the value of 12 ! To check for 
+             equality, we should use === instead of = which assigns a value to a variable.
+          
+            Ex: Validate if the age enter is less than 12 is old engouh.(lines 1-12)<br>
+          
+            Now that JS has progressed, using trusty alert is discouraged.<br>
+                
+            <h3>Using the Console</h3><br>
+            Most modern JavaScript environments have a <b>console</b> object that provides a number of methods for logging information and debugging. The <b>console.log()</b> method  
+            can be used to log the value of variables at different stages of the program, although it will not actually stop the execution of the program in the same way as alert() does.<br>
+
+            Ex: Log the position in the function as well as the value of the age variable.<br>              
+                  
+            The <b>console.trace()</b> 
+            method will log an interactive stack trace in the console. This will show the functions that were called in the lead up to an exception occurring while the code is running.<br>
+            Here are some other methods of the console obj.
+            <div class="console_api_methods">Here's a complete reference<a href="https://www.sitepoint.com/three-little-known-development-console-api-methods/"> Sitepoint</a>
+            </div><br>
+
+            <h3>Debugging Tools</h3><br>
+            Most modern browsers also have a debugging tool that allows you to setbreakpointsin your code that will pause it at certain points. You can then see the values of all 
+            the variables at those points and modify them. . Here are the links to the debugger documentation for each of the major browsers.<br>
+                
+            <div class="firefox">Here's a complete reference<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">
+            Sitepoint</a>
+            </div>
+
+            <div class="ms_edge">Here's a complete reference<a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/debugger">
+            Sitepoint</a>
+            </div>
+
+            <div class="chrome">Here's a complete reference<a href="https://developers.google.com/web/tools/chrome-devtools/?utm_campaign=2016q3&utm_medium=redirect&utm_source=dcc">
+            Sitepoint</a>
+            </div>
+            
+            <div class="safari">Here's a complete reference<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Debugger/Debugger.html">
+            Sitepoint</a>
+            </div>
+            The <b>debugger</b> keyword  will create a breakpoint in your code that will pause the execution of the code and allow you to see where the program is currently up to. 
+            You can also hover over any variables to see what value they hold at that point. The program can then be restarted by clicking on the 'play' button. If you try entering the code below into 
+            your browser's console, then invoke the amIOldEnough() function, the browser's debugging tool will automatically kick in and you'll be able see the value of the age variable by hovering over it.
+            Ex: Enter code into the broswer to see how it works<br>
+           </section>
 
         <section>
             <h3>Error Objects</h3><br>
@@ -268,22 +210,58 @@
             URIError is thrown when there’s a problem encoding or decoding the URI.<br>
             InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common cause of this too much recursion.<br>
             Ex: Use one of the errors abv to create a custom erro Ojb.
-            <code>
-                const error = new TypeError('You need to use numbers in this function');<br>
-            </code>
-        
         </section>
 
         <section>
             <h3>Throwing exceptions</h3><br>
+            The <b>throw</b> statement can be applied to any JavaScript expression, causing the execution of the program to stop. For example, all the following lines of code will cause a program 
+            to halt: It is best practice, however, to throw an error object. This can then be caught in a catch block, which is covered later in the chapter.(Ex. in main.js line 46-62.)<br>
         </section>
 
         <section>
             <h3>Exception Handling</h3><br>
+            When an exception occurs, the program terminates with an error message. It is possible to handle exceptions gracefully by catching the error. Any errors can be hidden from users, but 
+            still identified. The <b>try, catch, & finally</b> can be wrapped in <b>try</b> block will result in an exception, we can wrap it in a try block. This will run the code inside the block 
+            as normal, but if an exception occurs it will pass the error object that is thrown onto a catch block. (Ex. main.js lines64-76).<br>
+
+            A finally block can be added after a catch block. This will always be executed after the try or catch block, regardless of whether an exception occurred or not. It is useful if you want 
+            some code to run in <b>both</b> cases. (Ex. in main.js lines 78-90)<br>
         </section>
 
         <section>
             <h3>Testing Frameworks</h3><br>
+            Writing good tests means your code will be less brittle as it develops, and any errors will be identified early on.
+
+            A test can simply be a function that tests a piece of code runs as it should. (Ex. in main.js lines92-95).<br>
+            
+            <b>Test-driven development</b> TDD s the process of writing tests before any 
+            actual code. Obviously these tests will initially fail, because there is no code to test. The next step is to write some code to make the tests pass. After this, the code is refactored 
+            to make it faster, more readable, and remove any repetition. The code is continually tested at each stage to make sure it continues to work. This process should be followed in small 
+            piecemeal chunks every time a new feature is implemented, resulting in the following workflow.
+            
+            1. Write tests (that initially fail)
+            
+            2. Write code to pass the tests
+            
+            3. Refactor the code
+            
+            4. Test refactored code
+            
+            5. Write more tests for new features       
+         
+            This is often referred to as the “red-green-refactor” cycle of TDD, as failing tests usually show up as red, and tests that pass show as green. Test-driven development is considered to be 
+            best practice.<br>
+
+            <b>Jest</b> Jest is a TDD framework It makes it easy to create and run tests by providing helper methods for common test assertions.
+
+            To use Jest, first we need to install it using npm . Enter the following command in a terminal:
+            
+            npm install -g jest
+            This should install Jest globally. To check everything worked okay, try running the following command to check the version number that has been installed. (Ex. squareRoot.test.js lines1-11.)
+            Note that the methods tobe() will This means that any valid JavaScript code can be run inside the test function.            
+            jest -v
+            v19.0.2
+            
         </section>
 
         <div class="">Here's a complete reference<a href="">
