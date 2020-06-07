@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/cs" href="styles/main.css">
-    <title>JavaScript: Novice to Ninja, Function Properties & Methods</title>
+    <title>JavaScript: Novice to Ninja, Function Properties, Methods & Ajax</title>
 
     <style>
         textarea {
@@ -79,7 +79,7 @@
             main.js (lines 61-71).     
         </section>
 
-        <sedtion>
+        <section>
             <h2>Functions that Define Themselves & Rewrite Themselves</h2><br>
             A <b>function</b>  is able to not only call itself, but define itself, and even redefine itself. This is done by assigning an anonymous function 
             to a variable that has the same name as the function. f the function is also assigned to another variable, this variable will maintain the original 
@@ -87,7 +87,7 @@
             the same name as the function is assigned to a different function. Another way to rewrite a function is using an  init-time branching. This enables 
             the functions to work more effectively in the browser, and avoid checking for features every time they’re invoked. A <b>recursive function</b>  is 
             one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved.
-        </sedtion>
+        </section>
 
         <section>
             <h2>Event-driven Asynchronous Programming</h2><br>
@@ -188,15 +188,267 @@
             <h2>Currying</h2><br>
             <b>Currying</b> is a process that involves the partial application of functions. A function is said to be curried when not all arguments have been supplied to the function, 
             so it returns another function that retains the arguments already provided, and expects the remaining arguments that were omitted when the original function was called. A final 
-            result is only returned once all the expected arguments have eventually been provided.
+           result is only returned once all the expected arguments have eventually been provided.
+        </section>
+
+        <section>
+            <h2>Clients & Servers</h2><br>
+            A <b>client</b>, such as a web browser, will request a resource (usually a web page) from a <b>server</b>, which processes the request and sends back a response to the client.
+            Ajax allows JavaScript to request resources from a server on behalf of the client. The resources requested are usually JSON data or small fragments of text or HTML rather than 
+            a whole web page. A server is required when requesting resources using Ajax. Typically this involves using a server-side language, such as PHP, Ruby, Node.js, or .NET to serve 
+            the data response following an Ajax request. To practice using Ajax, you can either set up a local development server on your own computer, or request the files from an external 
+            website that uses cross-origin resource sharing (CORS).<br>
+
+            Footnote: The same-origin policy in browsers blocks all requests from a domain that is different from the page making the request, to stop any malicious JavaScript being run 
+            from an external source. Cross-origin resource sharing (CORS)is a solution to this problem as it allows resources to be requested from another website outside the original domain. 
+        </section>
+
+        <section>
+            <h2>A Brief History of Ajax</h2><br>
+            <b>Asynchronous</b><br>
+            When a request for data is sent, the program doesn’t have to stop and wait for the response. It can carry on running, waiting for an event to fire when a response is received. By 
+            using callbacks to manage this, programs are able to run in an efficient way, avoiding lag as data is transferred back and forth.<br>
+            <b>JavaScript</b><br>
+            JavaScript was always considered a 'front-end' language, not used to communicate with the server. Ajax enabled JavaScript to send requests and receive responses from a server, 
+            allowing content to be updated in real time.<br>
+            <b>XML</b><br>
+            When the term Ajax was originally coined, XML documents were often used to return data. Many different types of data can be sent, but by far the most commonly used in Ajax nowadays 
+            is JSON, which is more lightweight and easier to parse than XML. (Although it has never really taken off, the termAjaj is sometimes used to describe the technique.)JSON also has the 
+            advantage of being natively supported in JavaScript, so you can deal with JavaScript objects rather than having to parse XML files using DOM methods.<br>
+            <b>API</b><br>
+            An application programming interface (API) is a collection of methods that allows external access to another program or service. Many websites allow controlled access to their data 
+            via public APIs. This means that developers are able to interact with the data and create mashups of third-party services.<br>
+            <b>Fetch API</b><br>
+            The Fetch API uses promises to avoid callback hell, and also streamlines a number of concepts that had become cumbersome when using the XMLHttpRequest object, and uses a global 
+            <b>fetch()</b> that only has one mandatory argument, which is the URL of the resource you wish to fetch. Ex main.js (lines 191-194)<br>
+            <b>Response Interface</b><br>
+            The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled. Response objects have a number of properties and methods that 
+            allow us to process the response effectively. each response object has an ok property that checks to see if the response is successfulwhich can be accessed using the status property. 
+            The ok property will return true if the status property is between 200 and 299. Ex. main.js (lines 196-206). If an error thrown refers to the statusText property of the response object<br>
+
+            Ex. Use an if block to check if the request was successful, and throw an error otherwise
+ 
+            <code>
+            const url = 'https:example.com/data';
+            fetch(url)
+            .then((response) => {
+                if(response.ok) {
+                    return response;
+                }
+                throw Error(response.statusText);
+            })
+            .then( response => // do something with response)
+            .catch( error => console.log('There was an error!')
+            </code>
+
+            Some other properties of the Response object are:
+
+            <b>headers</b> – A Headers object (see later section) containing any headers associated with the response
+            <b>url</b>– A string containing the URL of response
+            <b>redirected</b> – A boolean value that specifies if the response is the result of a redirect
+            <b>type</b> – A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response from the same domain. A value of 'cors' means the data was received from a 
+            valid cross-origin 
+            <b>request</b> from a different domain. A value of 'opaque' is used for a response received from 'no-cors' request from another domain, which means access to the data will be severely 
+            restricted. A value of 'error' is used when a network error occurs.<br>
+
+            <b>Redirects</b><br>
+            Notice that the error thrown refers to the statusText property of the response object.<br>
+
+            Ex. Write a redirect method that redirect response promise would be resolved
+            <code>
+            fetch(url)
+            .then( response => response.redirect(newURL)); // redirects to another URL
+            .then( // do something else )
+            .catch( error => console.log('There was an error: ', error)
+            </code><br>
+
+            <b>Text Responses</b><br>
+            The text() method takes a stream of text from the response, reads it to completion and then 
+            returns a promise that resolves to a USVSting object that can be treated as a string in 
+             JavaScript.<br>
+
+            Ex.  Write a tet response promis to be resolved
+            <code>
+                etch(url)
+                .then( response => response.text() ); // transforms the text stream into a JavaScript string
+                .then( text => console.log(text) )
+                .catch( error => console.log('There was an error: ', error))   
+            </code><br>
+
+            <b>File Response</b><br>
+            The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it 
+            has read the whole file, it returns a promise that resolves with a blob object.<br>
+
+            Ex. Write a file response promise to be resolved.
+            <code>
+                fetch(url)
+                .then( response => response.blob() ); // transforms the data into a blob object
+                .then( blob => console.log(blob.type) )
+                .catch( error => console.log('There was an error: ', error))  
+            </code><br>
+
+            <b>JSON Response</b><br>
+            SON is probably the most common format for AJAX responses. The json() method is used to deal with these 
+            by transforming a stream of JSON data into a promise that resolves to a JavaScript object.<br>
+
+            Ex. Write a JSON response promise to be resolved
+            <code>
+                fetch(url)
+                .then( response => response.json() ); // transforms the JSON data into a JavaScript object
+                .then( data => console.log(Object.entries(data)) )
+                .catch( error => console.log('There was an error: ', error))   
+            </code><br>
+
+            <b>Creating Response Objs</b><br>
+            Although most of the time you will be dealing with a response object that is returned from a request you 
+            make, you can also create your own response objects using a constructor function.<br>
+
+            Ex. Create a response promise to resolve the objs in the contructor function.
+            <code>
+                const response = new Response( 'Hello!', {
+                    ok: true,
+                    status: 200,
+                    statusText: 'OK',
+                    type: 'cors',
+                    url: '/api'
+                });  
+            </code>          
+        </section>
+
+        <section>
+            <h2>Communicating W/ The Server Using The Fetch API</h2><br>
+
+            <b>Request Interface</b><br>
+            We can get more fine-grained control over the request being made by providing a Request object as an argument. 
+            This allows a number of options to be set about the request. Request objects are created using the Request() 
+            constructor, and include the following properties.<br>
+
+            <b>url</b> – The URL of the requested resource (the only property that is required).
+            <b>method</b> – a string that specifies which HTTP method should be used for the request. By default, this is 'GET'.
+            <b>headers</b> – This is a Headers object (see later section) that provides details of the request's headers.
+            <b>mode</b> – Allows you to specify if CORS is used or not. CORS is enabled by default.
+            <b>cache</b> – Allows you to specify how the request will use the browser's cache. For example, you can force it to 
+            request a resource and update the cache with the result, or you can force it to only look in the cache for the resource.
+            <b>credentials</b> – Lets you specify if cookies should be allowed with the request.
+            <b>redirect</b>– Specifies what to do if the response returns a redirect. There’s a choice of three values: 'follow' 
+            (the redirect is followed), 'error' (an error is thrown) or 'manual' (the user has to click on a link to follow the redirect).
+            <br>
+            <b>HTTP</b><br>
+            When a client (usually a browser) makes a request to a server, it contains information about which HTTP verb to use.HTTP 
+            verbs, also known as HTTP methodsare the what HTTP uses to tell the server what type of request is being made.<br>
+            The five most commonly used verbs when dealing with resources on the web are:
+
+            <b>GET</b> requests to retrieve resources
+
+            <b>POST</b> requests, usually used to create a resource but can actually perform any task
+
+            <b>PUT</b> requests toupsert, which means insert a resource or update it entirely
+
+            <b>PATCH</b> requests to make partial updates to a resource
+
+            <b>DELETE</b> requests to delete a resources.<br>
+
+            Ex. Create a new requet obj using a constructor function<br>
+            <code>
+                const request = new Request('https://example.com/data', {
+                    method: 'GET',
+                    mode: 'cors',
+                    redirect: 'follow',
+                    cache: 'no-cache'
+                });
+            </code><br>
+            Once the Request object is assigned to a variable, it can then be used as the parameter of the fetch() method:
+            Ex. Write a request obj that takes a URL & obj as the arguments.
+            <code>
+                fetch(request)
+                .then( // do something with the response )
+                .catch( // handle any errors)
+            </code><br>            
+            
+            <b>Headers Interface</b><br>
+            HTTPheadersare used to pass on any additional information about a request or response, that may include  file-type 
+            of the resource, cookie information, authentication information and when the resource was last modified. Ex. 
+            main.js(lines 197-201). <br>
+            
+            A <b>Headers</b> object includes the following properties and methods that can be used to access 
+            information about the headers, as well as edit the header information.<br>
+
+            <b>has()</b> – Can be used to check if the headers object contains the header provided as an argument.<br>
+            
+            Ex. Chk if the header obj has the header provided in the argument
+            <code>
+            headers.has('Content-Type');
+            true         
+                       
+            headers.get('Content-Type');
+            'text/plain'           
+            </code><br>
+            get() - //Returns the value of the header provided as an argument<br>
+
+            <b>set()</b> – Can be used to set a value of an already existing header, or create a new header with the value provided 
+            as an argument if it does not already exist.<br>
+            <b>append()</b> – Adds a new header to the headers object.<br>
+            
+            Ex. Set a value in the header and create a new header w/ the value provided as an argument if it doesn't alread exist.<br>
+            <code>
+                headers.set('Content-Type', 'application/json');  
+                headers.append('Accept-Encoding','gzip,deflate');
+            </code><br>
+
+            delete() – Removes the header provided as an argument.<br>
+            Ex. Remove the header from the argument<br>
+            <code>
+                headers.delete('Accept-Encoding')
+            </code><br>
+            keys() , values() and entries() – Iterators that can be used to iterate over the headers key, values or entries 
+            (key and value pairs).<br>
+
+            Ex. Iterate through the header
+            <code>
+                for(const entry of headers.entries(){
+                    console.log(entry);
+                    }
+                    [ 'Content-Type', 'application/json' ]
+            </code><br>
+
+            <b>Putting It All Together</b><br>
+            Ex. Write a header, request, & response that sets up the URL, regquest, & header before calling the fetch() method.<br>
+            <code>
+                const url = 'https:example.com/data';
+                const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })
+                const request = (url,{
+                    headers: headers
+                })
+                fetch(request)
+                .then( function(response) {
+                    if(response.ok) {
+                        return response;
+                    }
+                    throw Error(response.statusText);
+                })
+                .then( response => // do something with response )
+                .catch( error => console.log('There was an error!')) 
+            </code>
+        </section>
+
+        <section>
+            <h2>Receiving Data W/ Ajax</h2>
+            To demonstrate how to update a web page using Ajax, we’ll need to set up a demonstration page
+        </section>
+        <section>
+            <h2>Sending Data W/ Ajax</h2>
+        </section>
+
+        <section>
+            <h2>Form Data</h2>
+        </section>
+            <h2> Project</h2>
+
+        <section>
 
         </section>
-        <div class="">Here's a complete reference<a href="">
-            Sitepoint</a> 
-            <div class="">Here's a complete reference<a href="">
-                Sitepoint</a> 
-  </main>
-    <footer></footer>
+   </main>
+  <footer></footer>
     <script src="scripts/main.js"></script>
 </body>
 

@@ -187,3 +187,17 @@ reverse(message);
 'tpircSavaJ olleH'
 message // hasn't changed
 'Hello JavaScript'
+
+//Write a global fetch that requires an URL for the argument
+fetch('https://example.com/data')
+.then//(code that handles the response)
+.catch//(error code for the server)
+
+
+//Ex. Write an instance that creates a new header using a constructor function<br>
+const headers = new Headers(); 
+
+//Provide the constructor with an optional argument containing any initial header values:
+
+const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })
+
