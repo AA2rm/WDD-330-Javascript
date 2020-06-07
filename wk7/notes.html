@@ -375,7 +375,7 @@
 
             <b>has()</b> – Can be used to check if the headers object contains the header provided as an argument.<br>
             
-            Ex. Chk if the header obj has the header provided in the argument
+            Ex. Chk if the header obj has the header provided in the argument<br>
             <code>
             headers.has('Content-Type');
             true         
@@ -415,7 +415,8 @@
             Ex. Write a header, request, & response that sets up the URL, regquest, & header before calling the fetch() method.<br>
             <code>
                 const url = 'https:example.com/data';
-                const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate' })
+                const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,
+                deflate' })
                 const request = (url,{
                     headers: headers
                 })
@@ -437,10 +438,41 @@
         </section>
         <section>
             <h2>Sending Data W/ Ajax</h2>
+            Actual html and js files created
+            ajax.html
+            todo.html
+            main1.js
+            main2.js
         </section>
 
         <section>
-            <h2>Form Data</h2>
+            <h2>Form Data</h2><br>
+            Most forms will have an action attribute that specifies the URL to use if the form is sent without 
+            using Ajax. It will also have a method attribute that will specify the HTTP verb to use. These methods 
+            are available as properties of the form object, so we could use these properties to create a more 
+            generalized request object, as follows.<br>
+
+            Ex. Create some form properties 
+            <code>
+                const request = new Request(form.action,
+                {
+                method: form.method,
+                header: headers,
+                body: data
+                }
+                )
+            </code><br>
+
+            The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax.
+
+            Ex. A FormData instance is created using a CONSTRUCTOR FUNCTION:<br>
+            <code>
+                const data = new FormData();   
+            </code>
+            If a form is passed to this constructor function as an argument, the form data instance will serialize all the data 
+            automatically, ready to be sent using Ajax. In our last example, we created the task manually based on the data 
+            provided in the form. The FormData interface helps to reduce the amount of code needed when submitting forms.<br>
+            
         </section>
             <h2> Project</h2>
 
