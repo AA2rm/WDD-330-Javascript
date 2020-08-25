@@ -17,7 +17,8 @@ To hide the menu set the display to none and to show only the menu itself set th
 first-child being the first link in the list. Don't forget this is it's own css command separate 
 from the other "nave ul li" links.
 
-
+HTML NOTES
+Tags-https://www.w3schools.com/tags/default.asp
 
 JAVASCRIPT NOTES
 Always link the JS after the footer and just before the </body> closing tag. Your HTML should be
@@ -45,6 +46,10 @@ Two ways to call a function.
     Ex: 2 Make a change in JS
     <li><a href="#" id="menu">&equiv; Menu</a></li> OR document.querySelector('#menu');  
 
+
+    Function callbacks : https://rashidjorvee.blogspot.com/2019/10/calculator-using-js-callback-function.html
+    Function Math Input Forms: https://www.sitepoint.com/community/t/math-formula-input-form/6956/3
+    
 BROWSER TIPS
 Review the .setItem command in office hour start at 51.00 in video.
     Review under inspect in the browser > click  application > click local storage 
