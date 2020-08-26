@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/cs" href="styles/main.css">
+    <title>JavaScript: Novice to Ninja, 2nd Edition</title>
+
+    <style>
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: #ffffe0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="page_header"></header>
+    <main>
+        <section id="form_notes">
+            <h1>Wk 5 Notes</h1><br>
+            <h2>Testing & Debugging</h2>
+            <h3>Errors, exceptions, and warnings</h3>
+            <b>Errors</b> are caused by one of the following:
+            1. System error ― there’s a problem with the system or external devices with which the program is interacting.
+            2. Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.
+            3. User error ― the user has entered data incorrectly, which the program is unable to handle.
+
+            <h3>Exceptions</h3><br>
+            An <b>exception</b> is an error that produces a return value that can then be used by the program to deal with the error.<br>
+            Ex: Call the unicorn method<br>
+            <code>
+                unicorn();
+                ReferenceError: unicorn is not defined
+            </code><br>
+
+            <h3>Stack Traces</h3><br>
+            An exception will also produce a <b>stack</b> trace. This is a sequence of functions or method calls that lead to the point 
+            where the error occurred. It’s often not just a single function or method call that causes an error. A stack trace 
+            will work backwards from the point at which the error occurred to identify the original function or method that started 
+            the sequence.<br>
+            Ex: Locate the error using stack trace<br>
+            <code>
+            function three(){ unicorn(); }
+            function two(){ three(); }
+            function one(){ two(); }
+            one();
+            index.html:13 Uncaught ReferenceError: unicorn is not defined
+            at three (index.html:13)<!--invoke the function two-->
+            at two (index.html:17)<!--invoke the function three-->
+            at one (index.html:21)<!--invoke the unicorn function that doesn't exist & causes the error-->
+            at index.html:24`
+            </code><br>
+
+            <h3>Warnings</h3><br>
+            A <b>warning</b> can occur if there’s an error in the code that isn't enough to cause the program to crash. This means the program 
+            will continue to run after a warning. This might sound good, but it can be problematic.<br>
+            Ex: Assigns a value to a var that's undeclared<br>
+            <code>
+                pi = 3.142;
+                JavaScript Warning: assignment to undeclared variable
+            </code><br>
+            When a runtime error occurs in the browser, the HTML will still appear, but the JavaScript code will stop working in the background,
+            which isn’t always obvious at first. If a warning occurs, the JavaScript will continue to run (although possibly incorrectly).<br>      
+        </section>
+        
+            
+        <section>
+            <h3>The Importance of Testing & Debugging</h3><br>
+            JavaScript is a fairly forgiving language when it comes to errors; it didn’t implement exceptions at all until ECMAScript version 3. 
+            Instead of alerting a user to an error in a program, it just failed silently in the background.  Failing silently makes errors difficult 
+            to spot and longer to track down. For this reason, a programmer should ensure that the code they write fails loudly in development so 
+            any errors can be identified and fixed quickly in production. This is achieved by making sure exceptions are caught and dealt with, and 
+            code is tested rigorously. 
+        </section>
+
+        <section>
+            <h3>Strict Mode</h3><br>
+            <b>Strict mode</b>  produces more exceptions and warnings and prohibits the use of some deprecated features.  Writing code in strict mode 
+            can also help improve its clarity and speed, since it follows conventions and will throw exceptions if any sloppy code practices are used.
+            Simply add th efollowing string to the first line of a JS file<br>
+            Ex: Add strict mode to the JS file<br>
+            <code>
+                'use strict';
+            </code>
+            If strict mode dosn't exist in your JS engine it will produce an exception of ReferenceError : 3 is not defined. You can also use it on a 
+            a per-function basis by adding the line inside a function like so.<br>
+            Ex: Add strict mode to the line with your function.<br>
+            <code>
+                function strictly(){
+                    'use strict';
+                    // function code goes here
+            </code><br>
+            It's better practice to invokke strict mode on all of your code like so.<br>
+            Ex: Add Strict mode at the beginning of your code to ensure the entire code is covered<br>
+            <code>
+                (function() {
+                    'use strict';
+                    // All your code would go inside this function
+                }());
+            </code><br>
+
+            <h3>Linting Tools</h3><br>
+            Linting tools such asJS Lint,JS Hint,andES Lintcan be used to test the quality of JavaScript code, beyond simply using strict mode. They are designed 
+            to highlight any sloppy programming practices or syntax errors, and will complain if certain style conventions are not followed.  Linting tools are 
+            also useful for enforcing a programmingstyle guide. This is particularly useful when you are working in a team. Here are some JS strict mode online 
+            programs that will help grammatically correct your JS errors.<br>
+            <div class="js_lint">Here's a complete reference<a href="http://jslint.com/">
+                Sitepoint</a>
+            </div>
+            <div class="js_hint">Here's a complete reference<a href="https://jshint.com/">
+                Sitepoint</a>
+            </div>
+            <div class="es_lint">Here's a complete reference<a href=" https://eslint.org/">
+                Sitepoint</a>
+            </div>
+            <h3>Feature Dectection</h3><br>
+            You can’t always rely on users having the most up-to-date browser. The recommended way to determine browser support for a feature is to use feature 
+            detection. This is done using an if statement to check whether an object or method exists before trying to actually call the method.<br>
+            Ex: Add the 'holoDeck' API method<br>
+            <code>
+                if (window.holoDeck) {
+                    virtualReality.activate();
+                }
+            </code>
+            This ensures that no error occurs if the browser doesn’t support the method, because referencing a nonexistent object such as window.virtualReality will 
+            return undefined.  the if block won’t run, but calling the method virtualReality.activate() outside of the if block would cause an exception to be thrown. 
+            Feature detection guarantees that the method is only called if it actually exists,  without any exceptions being thrown, if the method doesn't exist. 
+            Modernizris a library that offers an easy way to implement feature detection andCan I Use?is another useful resource for checking which features are currently 
+            supported in different browsers.<br>          
+        </section>
+
+        <section>
+            <h3>Debugging in The Browser</h3><br>
+            Debugging is the process of finding out where bugs occur in the code and then dealing with them. In many cases, the point at which an error occurs is not always 
+            where it originated, so you’ll need to run through the program to see what’s happening at different stages of its execution. When doing this, it can be useful to 
+            create what are known as breakpoints, which halt the progress of the code and allow us to view the value of different variables at that point in the program. 
+
+            <h3> The Trusty Aleart</h3><br>
+            The most basic form of debugging is to use the <b>alert()</b> method to show a dialog at certain points in the code. The <b>alert()</b> stops a program from running 
+            until OK is clicked, it allows us to effectively put breakpoints in the code that let us check the value of variables at that point to see if they’re what we expect 
+            them to be.<br>
+            Ex: Validate if the age 12 is appropriate. (lines 1-12)
+            
+            Once we click ok,we can then check the function returns the correct message.
+            amIOldEnough(21)
+            'No, sorry.'
+            Passing an argument of 21 should result in the string 'Yep, come on in!' being returned, but it is returning 'No, sorry.' instead. If you tried running the example, 
+            you would have seen the alert message show that the value of the variable age is 12 , even though the function was passed an argument of 21 . Closer inspection then 
+            reveals a classic mistake has been made. Instead of checking if the value of age is equal to 12 , we have inadvertently assigned it the value of 12 ! To check for 
+             equality, we should use === instead of = which assigns a value to a variable.
+          
+            Ex: Validate if the age enter is less than 12 is old engouh.(lines 1-12)<br>
+          
+            Now that JS has progressed, using trusty alert is discouraged.<br>
+                
+            <h3>Using the Console</h3><br>
+            Most modern JavaScript environments have a <b>console</b> object that provides a number of methods for logging information and debugging. The <b>console.log()</b> method  
+            can be used to log the value of variables at different stages of the program, although it will not actually stop the execution of the program in the same way as alert() does.<br>
+
+            Ex: Log the position in the function as well as the value of the age variable.<br>              
+                  
+            The <b>console.trace()</b> 
+            method will log an interactive stack trace in the console. This will show the functions that were called in the lead up to an exception occurring while the code is running.<br>
+            Here are some other methods of the console obj.
+            <div class="console_api_methods">Here's a complete reference<a href="https://www.sitepoint.com/three-little-known-development-console-api-methods/"> Sitepoint</a>
+            </div><br>
+
+            <h3>Debugging Tools</h3><br>
+            Most modern browsers also have a debugging tool that allows you to setbreakpointsin your code that will pause it at certain points. You can then see the values of all 
+            the variables at those points and modify them. . Here are the links to the debugger documentation for each of the major browsers.<br>
+                
+            <div class="firefox">Here's a complete reference<a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">
+            Sitepoint</a>
+            </div>
+
+            <div class="ms_edge">Here's a complete reference<a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/debugger">
+            Sitepoint</a>
+            </div>
+
+            <div class="chrome">Here's a complete reference<a href="https://developers.google.com/web/tools/chrome-devtools/?utm_campaign=2016q3&utm_medium=redirect&utm_source=dcc">
+            Sitepoint</a>
+            </div>
+            
+            <div class="safari">Here's a complete reference<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Debugger/Debugger.html">
+            Sitepoint</a>
+            </div>
+            The <b>debugger</b> keyword  will create a breakpoint in your code that will pause the execution of the code and allow you to see where the program is currently up to. 
+            You can also hover over any variables to see what value they hold at that point. The program can then be restarted by clicking on the 'play' button. If you try entering the code below into 
+            your browser's console, then invoke the amIOldEnough() function, the browser's debugging tool will automatically kick in and you'll be able see the value of the age variable by hovering over it.
+            Ex: Enter code into the broswer to see how it works<br>
+           </section>
+
+        <section>
+            <h3>Error Objects</h3><br>
+            An <b>error</b> object can be created by the host environment when an exception occurs, or it can be created in the code using a constructor function.<br>
+            Ex:Add an error obj to your code.
+            Syntax:  const error = new Error();
+            <code>
+                const error = new Error('Oops, something went wrong');<br>
+            </code>
+            EvalError is not used in the current ECMAScript specification and only retained for backwards compatibility. It was used to identify errors when using the global eval() function.<br>
+            RangeError is thrown when a number is outside an allowable range of values.<br>           
+            ReferenceError is thrown when a reference is made to an item that doesn’t exist. For example, calling a function that hasn't been defined.<br>
+            SyntaxError is thrown when there’s an error in the code’s syntax.<br>
+            TypeError is thrown when there’s an error in the type of value used; for example, a string is used when a number is expected.<br>
+            URIError is thrown when there’s a problem encoding or decoding the URI.<br>
+            InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common cause of this too much recursion.<br>
+            Ex: Use one of the errors abv to create a custom erro Ojb.
+        </section>
+
+        <section>
+            <h3>Throwing exceptions</h3><br>
+            The <b>throw</b> statement can be applied to any JavaScript expression, causing the execution of the program to stop. For example, all the following lines of code will cause a program 
+            to halt: It is best practice, however, to throw an error object. This can then be caught in a catch block, which is covered later in the chapter.(Ex. in main.js line 46-62.)<br>
+        </section>
+
+        <section>
+            <h3>Exception Handling</h3><br>
+            When an exception occurs, the program terminates with an error message. It is possible to handle exceptions gracefully by catching the error. Any errors can be hidden from users, but 
+            still identified. The <b>try, catch, & finally</b> can be wrapped in <b>try</b> block will result in an exception, we can wrap it in a try block. This will run the code inside the block 
+            as normal, but if an exception occurs it will pass the error object that is thrown onto a catch block. (Ex. main.js lines64-76).<br>
+
+            A finally block can be added after a catch block. This will always be executed after the try or catch block, regardless of whether an exception occurred or not. It is useful if you want 
+            some code to run in <b>both</b> cases. (Ex. in main.js lines 78-90)<br>
+        </section>
+
+        <section>
+            <h3>Testing Frameworks</h3><br>
+            Writing good tests means your code will be less brittle as it develops, and any errors will be identified early on.
+
+            A test can simply be a function that tests a piece of code runs as it should. (Ex. in main.js lines92-95).<br>
+            
+            <b>Test-driven development</b> TDD s the process of writing tests before any 
+            actual code. Obviously these tests will initially fail, because there is no code to test. The next step is to write some code to make the tests pass. After this, the code is refactored 
+            to make it faster, more readable, and remove any repetition. The code is continually tested at each stage to make sure it continues to work. This process should be followed in small 
+            piecemeal chunks every time a new feature is implemented, resulting in the following workflow.
+            
+            1. Write tests (that initially fail)
+            
+            2. Write code to pass the tests
+            
+            3. Refactor the code
+            
+            4. Test refactored code
+            
+            5. Write more tests for new features       
+         
+            This is often referred to as the “red-green-refactor” cycle of TDD, as failing tests usually show up as red, and tests that pass show as green. Test-driven development is considered to be 
+            best practice.<br>
+
+            <b>Jest</b> Jest is a TDD framework It makes it easy to create and run tests by providing helper methods for common test assertions.
+
+            To use Jest, first we need to install it using npm . Enter the following command in a terminal:
+            
+            npm install -g jest
+            This should install Jest globally. To check everything worked okay, try running the following command to check the version number that has been installed. (Ex. squareRoot.test.js lines1-11.)
+            Note that the methods tobe() will This means that any valid JavaScript code can be run inside the test function.            
+            jest -v
+            v19.0.2
+            
+        </section>
+
+        <div class="">Here's a complete reference<a href="">
+            Sitepoint</a>
+        </div>
+        
+        
+    </main>
+    <footer></footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

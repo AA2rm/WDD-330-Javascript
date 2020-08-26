@@ -50,6 +50,16 @@ Two ways to call a function.
     Function callbacks : https://rashidjorvee.blogspot.com/2019/10/calculator-using-js-callback-function.html
     Function Math Input Forms: https://www.sitepoint.com/community/t/math-formula-input-form/6956/3
     
+<<<<<<< HEAD
+=======
+
+     If you find that some code isn't working in your browser, you can add the following link into your HTML document:
+        Note that this link needs to gobeforeany JavaScript that needs to be transpiled.
+        <code>
+            <script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+        </code><br>
+
+>>>>>>> 507180363b565603c357f81bb911a8b7bace689e
 BROWSER TIPS
 Review the .setItem command in office hour start at 51.00 in video.
     Review under inspect in the browser > click  application > click local storage 
@@ -58,8 +68,11 @@ Review the .setItem command in office hour start at 51.00 in video.
     To see the  GitHub  source code go to github.com/username/projectname
     SUBMIT THIS WEEKLY: To see the project webpage change the url to https://username.github.io/projectname
 
+
+
 TROUBLE SHOOTING
 
 I can't pull up the remote 
 ctrl + windows key + shift + P I was unable to open up the command pallet
 When I enter 
+https://wordhtml.com/

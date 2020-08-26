@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Reading Notes</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <style>
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: #ffffe0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="notes_display">
+            <textarea id="story_editor" placeholder="Insert your code"></textarea><br>
+            <h1>Reading Notes</h1>
+            <h2>Chapter5: Objects</h2><br>
+            There are several ways to write programming lang.<br>
+            <b>low-level programming language</b> is written in abstract code relating to the computer's archtecture.
+            <b>high-level programming language</b> lanugauges that uses C, C++, or Java uses languages that are fast.
+            This is suited for games and business software.
+            <b>scripting lanugages</b> are high level languages, like JS, transformed into machine code at run time.
+            Sometimes they are slow at compiling languages.<br>
+
+            Ajax (Asynchronous JavaScript & XML) allowed data from a server in the background & updated relevant part of
+            the webpages w/o the need for a full page reload. Node.js allows server-side applications to be written in JS &
+            for web apps to be written in JS. It has many app & JS libraries that doen't use the browser at all. It has 
+            also allow for <b>Isomorphic JS</b> that lets the same JS code run on both the client or server side. <br>
+
+            Implementations of JS vary from engine to engine caseing browser to behave differently when running JS.
+            JavaScript and HTML5 technologies can be used to <b>develop browser extensions, Windows desktop widgets 
+            and Chrome OS applications non-web-related applications, to add interactivity to PDF documents, interact 
+            with a database, and even control  household appliances.</b><br>
+
+            Note:download Node.js: The installer(Windows) or Node Version Manager.<br>
+            <b>Validate Node</b>installation - node -v; it returns the node version.<br>
+            <b>Vaidate REPL</b>type node; returns><br>
+            <b>Exit REPL</b> hold the ctrl key & hit C twice.<br>
+
+            The <b>E66 Console</b> lets you enter in JS commonad directly in the browser & see the results. Other
+            options are Notepad++, Atom text editor, Brackets. There are also IDEs like MS VS, and online options are 
+            CodePen, JSFiddle, & JS Bin.<br>
+
+            Web pages have 3 layers HTML the markup, CSS design/presentation, & JS the interactive. These layers should
+            be kept separate. JS is kept separate from HTML with a <b>script></b> tag. To link your JS to the HTML & 
+            keep it unobtrusive use the best practice of writing a script tag for JS is in the footer below.<br>
+
+
+            Use a<b>progressive enhancement</b> builds a web page from the ground up w/ a base level of functionality,
+            then adds extra enhancements if they are available in the browser. <b>document.getElementById</b> function to 
+            find the HTML element with the ID of btn, this is assigned to the btn variable.<br>
+
+            <b>Syntactic sugar</b> allows an existing piece of code to be written in a niceer & more succinct way,
+            making it backwardly compatble. <b>Transpilers</b>convert code from one version of JS into another.
+            RESOURCE: Here's a transpiler Babel listed in the footer.<br>
+            
+            If you find that some code isn't working in your browser, you can add the following link into your HTML
+            document. Note that this link needs to gobeforeany JavaScript that needs to be transpiled.<br>
+
+            <code>
+                <a href='https://unpkg.com/babel-standalone@6/babel.min.js' title="Broken Script"></a><br>
+            </code>
+
+            You also have to change the type attribute to 'text/babel' in any links to JavaScript files. For example,
+            the link to the JavaScript file in the example above would change to: <br>
+
+            script type='text/babel' src='main.js'>script (add in the greater then & less than on the script tags).
+            Every id attribute should be unique to just one element. If no element exists with the ID provided, null is 
+            returned. The<b>getElementsByTagName()</b> will return a live node list of all the elements with the tag name that is provided as an argument. The
+            <b>getElementsByClassName() </b>
+            return a live node list of all elements that have the class name that is supplied as an argument.<br>
+        </section>
+
+        <section>
+            <h2>Chapter 6: Document Obj Model</h2><br>
+            The <b>Document Object Model, or DOM</b> for short, represents a HTML document as a network of connected
+            nodes that form a tree-like structure. We can use JavaScript to access and modify different parts of a web page
+            using a special built-in obj  called <b>document.</b><br>
+
+            <b>Console Shortcuts</b><br>
+            Pressing TAB will autocomplete any methods and should show you a list of possible methods. Pressing the UP
+            arrow key will select the previous command entered. Both<b>document.querySelector()</b> & <b>document.querySelectorAll()</b> 
+            are method that location the first element and all of the elements in a document. A <b>querySelector()</b> method 
+            can be called onanyelement, rather than just document . For example, we can get a reference to the 'ul' element,
+            & the lastChild property returns the last child of a node.<br>
+
+            The <b>childNodes</b> property is a list of all the nodes that are children of the node concerned. The
+            following example will return all the child nodes of the element with an id that your searhing for. The firstChild 
+            property returns the first child of a node. Once you locate the reference to the text node, you can find the text 
+            inside it useing the <b>nodeValue</b> method.<br>
+
+            You can get and set attributes w/ various method that ca be used to <b>view, add, remove or modify</b> the
+            value of these attributes. Use the <b>getAttribute()</b> or the <b>setAttributes</b> with these methods. The <b>.</b> 
+            notation retrieves access to various attributes. The <b>setAttribute()</b> method lets you modify a class name. While 
+            <b>classList</b> property is a list of all the classes an element has. It has a number of methods that make it easier 
+            modify the class of an element. The <b>add</b> method is used to add a class to an element without overwriting any 
+            classes that already exist. There are other methods sucha as <b>remove & toggle,</b><br>
+
+            To add and extra class to an element for old browsers us an <b>addClass</b>element. Ex: The example is in JS<br>
+            
+            The document object has a <b>createElement()</b> method that takes a tag name as a parameter and returns
+            that element. A text not is created using the <b>document.createTextNode()</b>method. An <b>appendChild()</b>add 
+            another node (given as an argument) as a child node. It uses a flash object that calls the method, with flashText in 
+            the argument.<br>
+
+            Now we have a <li> element that contains the text we want. So the process to follow each time you want to create a 
+            new element with text content is this:<br>
+
+                Create the element node<br>
+                Create the text node<br>
+                Append the text node to the element node<br>
+                const flash = document.createElement('li');
+                flash.textContent = 'Flash';<br>
+
+            You can use a function to cerate element (see JS file line 240), and use the <b>appendChild() &  insertBefore()</b> methods 
+            to move markup that already exists in the DOM as well. if you use multiple inserts and appends, only the last one will have 
+            an effect. If an element is required to appear in several different places in the document, it would need to be cloned before 
+            each insertion. An element can be removed from a page using the <b>removeChild()</b> method that's called on the parent node 
+            using a single parameter. You can also replace elements on a page<b>replaceChild()</b> method. The <b>innerHTML</b> property 
+            is also writable and can be used to place a chunk of HTML inside an element. Code w/in script tags will not execute. The 
+            <b>document.getElementsByClassName()</b> & <b>document.getElementsByTagName()</b> are live collections that discourage for use 
+            due to performance reasons. You also need to be careful when referring to elements by their index in a collection, as this
+            can change when markup is added or removed.<br>
+
+            Every element node has a <b>style</b> property. This can be used to dynamically modify the presentation of any element on a web page. 
+            Any CSS property names that are separated by dashes must be written in camelCase notation, so the dash is removed and the next 
+            letter is capitalized because dashes are not legal characters in property names. For ex the CSS proper <b>background-color</b> becomes 
+            <b>backgroundColor.</b> the <b>bracbket</b> notation can also be used, meaning that CSS properties can be provided as a string and
+            don't need the camelCase notation. The CSSproperty often employed is the <b>display</b> property can be used to make elements 
+            disappear and reappear on the page as needed. The <b>getCommputerStyle()</b> function will retrieve all the style info. of an element 
+            that is given as a parameter. Browsers like Chrome do not allow access to methods of a <b>CSSStyleDeclaration</b> obj such as 
+            <b>getPropertyCSSValue()</b>.<br>
+        </section>
+
+        <section>
+            <h2>Chapter7: Events</h2><br>
+            <b>Eventlisterners</b> let out for any clicks on the page. Every time the page is clicked, a callback function will be called. 
+            So the program can continue processing the rest of the code while it's waiting for the click event to happen. The original way of dealing with
+            browsers was to add an <b>Inline</b> event handlers attributes to markup. Ex in JS line 262. Howver, it's best to avoid using them.<br>
+
+            Another me a program know when the event happens, and the program can then respond appropriately by using a non-blocking  
+            approach that usesevent listenersto listenthod is to use <b>old event handlers</b> that all node objs have, by assigning a function to be invoked 
+            when an even occurs, ex in JS line. This keep JS out of HTML. Whenever an event handler is triggered by an event, the callback function is called. 
+            This function is automatically passed an event object as a parameter that contains information about the event. The <b>type</b> propety returns the 
+            type of event that occurred, while the <b>target</b> property returns a reference to the node that fired the event.<br>
+
+            You can locate a position of where a mougnt event occurs with the <b>clientX</b> & <b>clientY, </b> <b>screenX</b>, <b>screeY</b>, & the <b>pageX
+            </b> &<b>pageY</b>  properties all let you locate the number of pixel in various positions of the browser window & help you determine where the 
+            click happened.<br>
+
+            There are various types of events. You can view them at full list on the Events page of the Mozilla Developer Network. Other events are <b>mouse</b> 
+            events, <b>keyboard</b> events, <b>Modifier Keys</b> events, and <b>touch</b> events, which have various touch event properties. You can also remove 
+            an event w/ a  <b>removeEventListener()</b>. Don't use anonymous functions as arguments to addEventListener(), if you want to remove it later.<br> Other
+            elements  have default behavior associated with certain events. The <b>preventDefault()</b> method does this inside a callback function of events.
+
+            When you click on an element, you are actually clicking on all the elements it’s nested inside of this is an <b>event propagation</b>. Be careful when using
+            <b>stopPropagation()</b> methods to end bubble phases, there can be <b>other</b> event listeners attached to the element. Event delegation can be used to 
+            attach an event listener to a parent element in order to capture events that are triggered by its child elements. 
+        
+        
+        </section>
+    </main>
+    <footer>
+        <script src="scripts/main.js", href='https://babeljs.io/' title="Babel",  href='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+    </script>
+    </footer>
+
+</body>
+
+</html>

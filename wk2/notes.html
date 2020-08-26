@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/main.css">
-    <title>Programming Basics</title>
+    <title>Programming Basics: Notes</title>
     <script>
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 507180363b565603c357f81bb911a8b7bace689e
     </script>
 
     <style>
@@ -17,9 +21,15 @@
             height: 250px;
             background-color: #ffffe0;
         }
+<<<<<<< HEAD
     </style >
         
       
+=======
+    </style>
+
+
+>>>>>>> 507180363b565603c357f81bb911a8b7bace689e
 </head>
 
 <header></header>
@@ -35,19 +45,20 @@
 
 
     <section>
-        <h2>Program Basics</h2>
-        CHAPTER 2
-        Well Commented Code:<input id=well_doc_code>
-        Use short statements that describes what your code is doing using either a
+    <h2>Program Basics</h2>
+    CHAPTER 2
+    Well Commented Code:<input id=well_doc_code>
+    Use short statements that describes what your code is doing using either a
 
-        <textarea id="story_editor" placeholder="Insert your code"></textarea>
+    <textarea id="story_editor" placeholder="Insert your code"></textarea><br>
 
-        <ul>
-            <li>Short comment line //</li>
-            <li>Multi-line comment /*</li>
-        </ul>
+    <ul>
+        <li>Short comment line //</li>
+        <li>Multi-line comment /*</li>
+    </ul>
         <br>
 
+<<<<<<< HEAD
         <h3>JavaScript grammar ― expressions, statements, semicolons and whitespace</h3>
         JS programs use multiple statements, ending w/ a new line or semicolon. Ex pg. 52
         nessary to add a ( ; ) to end a statement because JS uses ASI that can place
@@ -72,21 +83,117 @@
         another value. It’s best practice to use a const var let is use the value might be reassigned
         later. Assign a value w/ the (=) operator.
         <span style="color:red;font-size:17px"><b>Q:</b> What is ES6?</span>
+=======
+    <h3>JavaScript grammar ― expressions, statements, semicolons and whitespace</h3><br>
+    JS programs use multiple statements, ending w/ a new line or semicolon. Ex pg. 52
+    nessary to add a ( ; ) to end a statement because JS uses ASI that can place
+    ( ; ) @ the end for you. This can however be error prone and prevent minifies &
+    validator to not work. It’s best practice to write ea. Statement on a new line.
+    <br>
+    Block statements in curly brackets; don’t have to be terminated by ( ; )
+    White spaces separate various part of ea. Statement.
+    Reserved words for JS pg. 53 avoid naming var or files w/ these.
+    <br>
+    <h3>Primitive data types</h3><br>
+    JS has 6 primitive data type: Strings, Numbers, Symbols, Boolean, Undefined, & Null.
+    JS also has 1 object type which includes: Arrays, Functions, & Object literals.
+    JS special operator (typeof) is used for finding the value type (pg 36)
+    Operators apply an operation to a value known as operand A unary operator requires 1
+    operand, while a binary operator requires 2 operands. A ternary operator requires 3
+    operands. There are 3 string vars : string literals, string properties and methods
+    <br>
+    <h3>Declaring and assigning constants and variables</h3><br>
+    Variables refer to a stored value. You must declare a var first b4 it can be used. Key words
+    like (const) & (let) are used to declare var. const is used when a var will not be reassigned
+    another value. It’s best practice to use a const var let is use the value might be reassigned
+    later. Assign a value w/ the (=) operator.
+    <code>
+    <span style="color:red;font-size:17px"><b>Q:</b> What is ES6?</span>
+    </code>
+    ES6 is ECMAScript 6
+    <br>
+    <h3>You can declare a var and assign string names</h3><br>
+    Along w/ string names you can assign multiple comma-deliberated variables at the same time.
+    If a var refences a <b>non-primitve data type</b> array, function, or object the data w/in
+    the object can change to a mutating object & mutated later. The var behavior has to remain
+    consistent.
+    <br>
+    <h4>Scopes</h4><br>
+    Using <b>const</b> & <b>let </b>to declare var means they are block scoped. Their values only
+    exists inside the blocks. There are 2 types of scopes, global & local. Global scopes are var declard
+    outside of a block making it accessible throuhout the program. This is <i>NOT GOOD PRACTICE</i>. local
+    scope are var inside a block, & uses the let or const are only available inside the block it's created
+    in. However, it let or const are not used then the var are considered global scopes & are available
+    outside of the block. Both const & let are defined inside the block (pg. 43)
+    <br>
+    <h3>Naming Constants & Variables</h3><br>
+    Name var that describe what the var represent. They can start w/ upper & lower case letters, an underscore,
+    or a dollar character, as well as contain numbers, as long as they don't start w/ numbers. Avoid using
+    underscors and dollar sign at the beginning of your named var, it can cause problems. Constant & var are 
+    case sensitive. If using multiple words to name your var follow these rules.<br>
+    <code>
+    p class="tab">Example of a tab /p><br>
+    <b>Camel case </b> starts w/ lowercase & ea. new word is capitalized.<br>
+    firstNameAndLastName<br>
+    <b>Underscore</b>separates ea. new word w/ an underscore.<br>
+    first_name_and_last_name
+    </code>
+>>>>>>> 507180363b565603c357f81bb911a8b7bace689e
         <br>
-        <h3>You can declare a var and assign string names</h3>
-        Along w/ string names you can assign multiple comma-deliberated variables at the same time.
-        If a var refences a <b>non-primitve data type</b> array, function, or object the data w/in
-        the object can change to a mutating object & mutated later. The var behavior has to remain
-        consistent.
-        <br>
-        <h4>Scopes</h4>
-        Using <b>const</b> & <b>let </b>to declare var means they are block scoped. Their values only
-        exists inside the blocks. There are 2 types of scopes, global & local. Global scopes are var declard
-        outside of a block making it accessible throuhout the program. This is <i>NOT GOOD PRACTICE</i>. local
-        scope are var inside a block, & uses the let or const are only available inside the block it's created
-        in. However, it let or const are not used then the var are considered global scopes & are available
-        outside of the block. Both const & let are defined inside the block (pg. 43)
+    <h3>Direct Assignment & Assignment By Reference(pg. 45)</h3><br>
+    Assign a <b>non-primitive value</b> to a var using a <b>reference</b> keyword(pg 45).  <b>Strings</b> are a grp. 
+    of letters & symbols. Create a string obj using a <b>constructor function</b> (pg 46). Using single & double 
+    quotes, & apostrophes in your string (pg. 46).  You can use <b>backlashes</b> to escape using quotation marks. 
+    (pg. 46-47). <b>Properties</b> are info abt the obj or value. While <b>methods</b>> are perform an action on an obj.
+    or value. A method is an action that a primitive data type or obj can perform, using the (.) operator followed 
+    by the name of the method, followed by () (pg. 49). <b>Wrapper obj</b> (pg. 47). <br>
+    <h3>Good Habits</h3>(pg.48-51)<br>
+    A <b>dot notation</b> can give you the string length property. Another method to access a primitive data type are:
+    <b>square brackets</b><br>
+    <b>charAt</b>character positioning(pg. 49 )<br>
+    <b>indexOf</b> method tells you where a character or substring appeares in a string.<br>
+    <b>lastIndexOf</b> tells you the last occurence of a char or substring.<br>
+    <b>includes</b> method tells you what a string of certain char are.<br>
+    <b>startWith()</b>lets you chk if a string start w/ a certain char.<br>
+    <b>endWith</b>method lets you chk if a string ends w/ a particular char.<br>
+    <b>concat()</b><br>
+    <b>+'',''</b>concantenation shortcut<br>
+    <b>trim()</b> method remove white space<br>
+    <b>repeat()</b> method repeats a string
+    <br>
+    <h3>Template Literals</h3>(pg. 52-53)<br>
+    A special type of string (ES6) use the backtick char. that use string interpolation.
+    <br>
+    <h3>Symbol</h3>(pg. 53-55)<br>
+    A primitive value to avoid naming collisions using the symbol function. Symbol()
+    <br>
+    <h3>Numbers ― decimal, hexadecimal, octal, binary and exponent form, Infinity, and NaN</h3> (pg55-64)<br>
+    Number can be <b>intergers</b> whichare whole numbers or <b>floating point numbrs</b> which are decimals or
+    floats. Numbers have a constructor function. <b>Octal & hexadecimal numbers</b> starts w/ an "ox" is a
+    hexadecial (bse 16) notation. <b>Exponential Numbers</b> use the exponential or scientific notation.
+    <b>Number methods</b> have built-in methods; write this w/ an <b>toExpoential</b> method when working w/ number
+    literals that are intergers.
+    <br>
+    <h3>Arithmetic operations(Converting btn Strings & Numbers) such as +, -, *, /, and %</h3>(pg.59-60)<br>
+    You can do the followring in arithemtic operations<br>
+    <p class="tab">Example of a tab</p><br>
+    change the value of a var using a <b>compound assignment operator, +=;</b><br>
+    <p><b>Increment values</b> with a ++<br>
+    Incorporate the <b>infinity</b> to represent large numbers.<br>
+    Use a <b>Nan</b> to express a value is not a number.<br>
+    Chk a value is a number using the <b>Number</b>.isFinite() method.<br>
+    Use a <b>type coercion</b> to show different types of an operand oprator.<br>
+    You can parse numbers using the <b>parseInt()</b> function.<br>
+    </p>
+    <br>
+    <h3>Undefined and null</h3>(pg. 69)<br>
+    Use an <b>Undefined</b> to express when a var is not assignmed to a value.<br>
+    Use a <b>Null</b> as a placeholder to express that there is no value.<br>
+    Undefined and null<br>
+    <h3>Booleans ― truthy and falsy values</h3>(pg. 70)<br>
+    This just mean that a logical statement value is either true or false.<br>
 
+<<<<<<< HEAD
         <br>
         <h3>Naming Constants & Variables</h3>
         Name var that describe what the var represent. They can start w/ upper & lower case letters, an underscore,
@@ -185,28 +292,31 @@
         <b>Hard Equality's One Quir</b>
         <b>Greater Thank & Less Thank</b>(pg. 82-84)
         Quiz (pg. 84-85)
+=======
+    <h3>Logical operators ― AND, OR, and NOT</h3>(pg.71)<br>
+    <b>Logical operators</b> can be used w/ any primitive value or obj & the results are based on if the values  are true 
+    false. <b>!(Logical Not)</b> will convert a statement into a Boolean and return the <b>opposite value</b> known as
+    negation. <b>&t&t(Logical And)</b> works on 2 or more values and the value is only true if <b>all</b> the operands are
+    true. A <b>II (Logical OR)</b> works on 2 or more values/operands and is true if 1 of the operands are true.<br>
+      
+    <b>Lazy Evalutaion</b>(pg. 74)<br>
+    <b>Bitwise operators</b>(pg.75-78)<br>
+    <b>Bitwise Not</b><br>
+    <b>Bitwise AND</b><br>
+    <b>Bitwise OR</b><br>
+    <b>Bitwise XOR</b><br>
+    <b>Bitwise Shift Operator</b><br>
+    <b>Equality</b>(pg. 78-82)<br>
+    <b>Soft Equality</b><br>
+    <b>Hard Equality</b><br>
+    <b>Hard Equality's One Quir</b><br>
+    <b>Greater Thank & Less Thank</b>(pg. 82-84)<br>
+    Quiz (pg. 84-85)<br>
+>>>>>>> 507180363b565603c357f81bb911a8b7bace689e
     </section>
-    <h2>Arrays, Logic, & Loops</h2>*pg 88-129)
-    CHAPTER 3
-    <h3>Array literals</h3>
-    To retrieve a specific value in an aray, we write its position in the [] sq bracket called the index.(pg. 90)
-    To <b>add values</b> to an array, place the string in the element. The index <b>notation </b> is used to add
-    new items to a position w/in the index. Unused slots in the index have an <b>undefined</b> value. To
-    <b>remove</b> a
-    value from an array literal use the <b>delete</b> operator.
-
-    <h3>Adding and removing values from arrays</h3>
-    <h3>Array methods</h3>
-    <h3>Sets</h3>
-    <h3>Maps</h3>
-    <h3>if and else statements</h3>
-    <h3>switch statements</h3>
-    <h3>while loops</h3>
-    <h3>do … while loops</h3>
-    <h3> for loops</h3>
-    <h3>Iterating over a collection</h3>
 
     <section>
+<<<<<<< HEAD
     <h2>Array, Logic, and Loops</h2>
     CHAPTER 3
 
@@ -239,6 +349,173 @@ of square brackets:
         tells the function to execute the code in thee ( ).
         The argument consist of a method that has an event(onclick) & a function of (whatToDo).
         The addEventListener method executes the function only when an event occurs.
+=======
+    <h2>Arrays, Logic, & Loops</h2>*pg 88-129)<br>
+    CHAPTER 3<br>
+    <h3>Array literals</h3><br>
+    An array is an ordered list of values. To create an array literal, simply write a pair
+    of square brackets[]. Destructring of an array is the the concept of taking vales out a
+    of an array and placing them as individual values. Destructuring of arrays allows us to
+    assign multiple values at the same time. To retrieve a specific value in an aray, we write
+    its position in the [] sq bracket called the index.(pg. 90) To <b>add values</b> to an
+    array, place the string in the element. The index <b>notation </b> is used to add new items
+    to a position w/in the index. Unused slots in the index have an <b>undefined</b> value.<br>
+
+    <h3>Array methods</h3><br>
+    Using the <b>length</b> property allows you to manually make change. Unused slots in the index
+    have an <b>undefined</b> value. <h3>Adding and removing values from arrays</h3><br>
+    To <b>add values</b> to an array, place the string in the element. The index <b>notation
+    </b> is used to add new items to a position w/in the index. <br>To <b>remove</b> a value
+    from an array literal use the <b>delete</b> operator. Remove the last item from an array using
+    a <b>pop</b> method, while the <b>shift </b> method removes the first item. The <b>push</b>
+    method adds a new values to the end of the array. The <b>concat</b> will merge an array w/
+    other arrays. Some other methods are: <b>join, slicing, splicing, reverse, & sort,</b>
+    Find a if a values is in an array use the <b>indexOf</b> method. The include method will return
+    a boolean value if it has a particular element. It can be used to add an extra parameter to
+    indicate which index to start the search.Multidementional arrays which contains an array of an array. <br>
+
+    <h3>Sets</h3><br>
+    <b>Sets</b> offer a useful way to keep track of data without having to check if any values have
+    been duplicated. You create a set w/ the <b>new</b> operat and the <b>Set</b> constructor. You can
+    add values using the <b>add</b> method. To see the contents of a set enter the name of the var that
+    refers to it. The number of values in a set can be found using the <b>size()</b> method.Other set
+    methods are <b>has(),delete(), clear(), new Set(), Array.form()</b> A set can be converted into an array
+    by placing the set, along with the spread operator directly inside an array literal. Objs are store into
+    set as long as the set exists, when the set is removed *+& the set remains it can cause a memory leak,
+    known as garbage-collected. It should be corrected to prevent future problems.<br>
+
+    <h3>Maps</h3><br>
+    Maps are a way of keeping a list of key & value pairs in other programming languages. (They are similiar to
+    hashes, hash tables, & dictionaries). Maps can use any data type as a key. Use <b>size</b> propety to locate
+    a number of key-value pairs. Create a map using the <b>new</b>operator & a <b>Map</b>br> constructor, & a
+    <b>set()</b> method to add to your maps. Other methods used in maps are <b>get(), has(), delete(), clear(),</b>
+    Maps can be converted into nested arrays of key-value pairs using the spread operator and like weak sets, weak
+    maps can cause dead entries when the original obj is deleatd. Weak maps can use the <b>has(), get(), set(), and
+    delete()</b> methods.<br>
+
+    <h3>if and else logic statements</h3><br>
+    Logic statement allow you to control the flow of a program by running different blocks of code. The if runs a block
+    of code <b>if</b> the confition in the () is true. The <b>else</b> statement adds an alternative block of code to run
+    the condition if it's false. A quick way of writing an <b>if else </b> is to use the ternary operator <b>?</b> followed
+    by at least 2 operands.<br>
+
+    <h3>switch statements</h3><br>
+    <b>Switch</b> statements consist of several <b>if</b> & <b>else</b> statemets making up a logical decision tree. Use
+    switch statement when there are several conditions to test. Use a <b>case</b> keyword for ea. possible value and
+    remember to end your statement w/ a <b>break</b> to end the execution of the statement. <br>
+
+
+    <h3>while loops</h3><br>
+    What ever type of loop you run it's important that a condition is met or else your code will continue to run in a
+    loop, this is known as an infinite loop. <b>While</b> loops runs a block of code continuously until a condition becomes
+    true.<br>
+
+    <h3>do … while loops</h3><br>
+    <b>do while</b> loops is similiar to a while loop. The differences is that the conditions comes <i>after</i> the
+    block code, regardless if the condition is true or not.<br>
+    
+    <h3> for loops</h3><br>
+    In <b>for</b> loops the initialization code is ran before the loop start. The condition has to be satisfied for the
+    loop to continue The after code is what to do after ea. iteration of the loop, which is mostly used to increment a 
+    counter. <br>
+
+    <h3>nested for loops</h3><br>
+    When a loop is placed inside of another loop this is a <b>nested loop</b>. It contains an inner loop that runs all
+    the way through before the nest step of the outer loop occurs.<br>   
+
+    <h3>Iterating over a collection</h3><br>
+    A for loop can be used to iterate over each value in an array. If we take our avengers array example from earlier,
+    we can create a for loop that outputs each item in the array. Maps are also enumerable, so it's also possible to loop 
+    over a map in a similar way to a set. he loop will iterate over each key-value pair in the same order as they were 
+    added to the map. Maps are also enumerable, so it's also possible to loop over a map in a similar way to a set. The 
+    loop will iterate over each key-value pair in the same order as they were added to the map.<br>
+    </section>
+
+    <section>
+    <h3>Functions</h3><br>
+    Chapter 4 <br>
+    Defining functions―function declarations, function expressions, Function() constructors and the new arrow syntax.<br>
+    
+    <h3>Invoking a function</h3><br>
+    There are a number of ways to define a function in JavaScript. Three of the most common are covered below. Define functions, 
+    using what is known as an arrow notation. To define a function literal we can use a <b>function</b> declaration: like so 
+    <b>function()</b> keyword. You can also define a function using an <b>expression</b> that assigns a function to a var <br>
+    <code>
+    const goodbye = function(){<br>
+    console.log('Goodbye World!');<br>
+    </code>
+    The 3rd way to define a function is w/ a constructor <b>Function()</b>, where it's entered as a string like so:<br>
+    const hi new Function('console.log("Hi World!");'); It's recommend not to use this way because of <b>various problems</b>. 
+    Next you need to <b>invoke</b> a function inside of the funciton's body. This is done by entering it's name followed by ():<br>
+    <code>
+    hello();<br>
+    'Hello world!'<br>
+    </code>
+    FOOT NOTE:Don’t Repeat Yourself,or DRY, is a principle of programming that specifies that every part of a program should 
+    only be written once. This voids duplication and means there’s no need to keep multiple pieces of code up to date and in sync.<br>
+   
+    <h3>Return values</h3><br>
+    All functions return a value, which can be specified using the return statement, which comes after the <b>return</b>
+    keyword. A function that doesn’t
+    explicitly return anything (such as all the examples we have seen so far) will return <b>undefined</b> by default.<br>
+   
+    <h3>Parameters and arguments</h3><br>
+    <b>Parameters</b> and <b>arguments</b> are terms that are often used interchangeably to represent values provided for the 
+    function as an input. There is a subtle difference though: any parameters a function needs are set when the function is defined. 
+    When a function isinvoked, it is provided with arguments. you can use a single parameter or several. If the parameter is empty 
+    it's <b>undefined</b> & an undefined parameter will return a <b>NaN</b>.When too many arguments are entered into a function we 
+    can either use a <b>mean()</b> function to calculate numbers or use the var <b>arguments</b> for multiple arguments. This acts 
+    like an array. However for BEST PRACTICE it's better to use a <b>rest</b> operator. We can use a rest parameter to improve our
+    <b>mean()</b> function so it accepts any number of values. <b>default perameters</b> in a function are values that will 
+    be used by the function if no arguments are provided when it is invoked. To specify a default  parameter, simply assign 
+    the default value to it in the function definition. <b>arrow =></b> syntax help make declaring functions more succinct 
+    using less verbose syntax. <br>
+    const square = x => x*x;<br>
+   
+    <h3>Hoisting―variables and functions</h3><br>
+    Hoisting is the JavaScript interpreter’s action of moving all variable and function declarations to the top of the current scope, 
+    regardless of where they are defined. Functions that are defined using a function declaration are automatically hoisted, meaning 
+    they can be invoked before they have been defined. Use a <b>hoist()</b> to invoke a function. This allows you to all <b>function 
+    definitions</b> together at the end of the program. <b>variable hoisting</b> that use the var keyword are automatically moved to 
+    the top of the current scope. Variable assignment is not hoisted, however. This means that a variable assigned at the end of a 
+    function will have a value of undefined until the assignment is made. When using var hoist, use <b>const</b> & <b>let</b> to
+    delcare variable at the beginning of a block so hoisting is unnessary.<br>
+
+    <h3>Callbacks―functions as a parameter</h3><br>
+    Functions can also be given as a parameter to another function. A function that is passed as an argument to another is known as a 
+    <b>callback</b>.Callback functions are made more flexible using the callback parameter.<br>function sing(song,callback) {<br>
+    console.log(`I'm singing along to ${song}.);<br>
+    callback();<br>
+    <br>
+    The actual callback is invoked in the body of the function where the () are used. You can sort arrays w/ a <b>sort()</b> method using 
+    a callback. You can also do this with a <b>numericallys function</b> and the sort() to sort numbers. An <b>array iterator</b> uses 
+    several ways to use callbacks, making them more flexible. It also uses the arrow notation in many of the callback methods. The 
+    <b>foreEach()</b> to loop through multiple values, the <b>map()</b> method to iterate through an array, so forces the callback function 
+    as a parameter that invokes the items in an array. Other methods used are: <b> Reduce() & filter()</b>. The <b>mean()</b> function can 
+    be added to the reduce() method to add up all the values provided in an argument.
+    
+
+        <code>
+        Ex:
+
+            <input type="text" id="text1" name="Enter first number"><br>
+            <input type="text" id="text2" name="Enter second number"><br>
+            Result: <br>
+            <input type="text" id="txtresult" placeholder="TextBox3"><br>
+            <button onclick="add_numbers()" value="display_result">Display Results</button>
+             <!--<div id="result"></div>-->
+            <br>
+        </code>    
+    
+    <h2>JavaScript</h2>
+    CHAPTER 4
+    (Passing the Argument)
+     A callback function is passed as an argument into another function. It contains a
+    string of code. You call the function by naming it, & it's followed by ( ), this
+    tells the function to execute the code in thee ( ).
+    The argument consist of a method that has an event(onclick) & a function of (whatToDo).
+    The addEventListener method executes the function only when an event occurs.
+>>>>>>> 507180363b565603c357f81bb911a8b7bace689e
     </section>
 </main>
 <footer></footer>

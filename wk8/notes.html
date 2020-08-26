@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/cs" href="styles/main.css">
+    <title>JavaScript: Novice to Ninja, Transform, Transition, Canvas, SVG, & Drag</title>
+
+    <style>
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: #ffffe0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page_header"></header>
+    <main>
+        <section id="keywords">
+            <h2>Transforms</h2><br>
+            The CSS3 <b>transform</b> property lets you lets you translate, rotate, scale, and/or skew any element on the page. property lets you lets you translate, rotate, scale, and/or skew any element on the page. 
+            property lets you lets you translate, rotate, scale, and/or skew any element on the page. 
+        </section>
+        
+        <section>
+            <h2>Translation</h2><br>
+            Translation functions allow you to move elements left, right, up, or down. These functions are similar to the behavior of <b>positon: relative</b>, when declaring top and left , moving elements up and down or left 
+            and right along the x and y axes. When you employ a translation function, you’re moving elements without impacting the flow of the document. Transforms require vendor prefixing for IE9, Android up to 4.4.3, iOS8, 
+            and Blackberry 10. To make the aforementioned code work in IE9 and older mobile WebKit browsers,<br>
+
+            Ex. Move an element x from the left & y from the top
+            <code>
+                transform: translate(45px, -45px); 
+            </code><br>
+            Ex. Add code to make the transforms functional in IE9, Android 4.4.3,iOs8, & Blackberry19<br>
+
+            <code>
+                -webkit-transform: translate(45px,-45px); /* iOS8, 
+                Android 4.4.3, BB10 */
+                -ms-transform: translate(45px,-45px); /* IE9 only */
+                transform: translate(45px,-45px);
+            </code>
+        </section><br>
+
+        <section>
+            <h2>Translate X & Y</h2><br>
+            If you only want to move an element vertically or horizontally, you can use the <b>translatex</b> or <b>translatey</b> functions respectively.<br>
+
+            Ex. Move the position 45px to the right along the x axis & 50 px on the y axis<br>
+
+            <code>
+                transform: translateY(-30px);
+                transform: translateY(-30px);
+            </code>
+            Ex. Move the word 'dukes' over to the right when the user hovers over it.
+            <h1>Put your <span>dukes</span> up, sire</h1>
+            <code>
+                .ad-ad2 h1:hover span {
+                color: #484848;  
+                transform: translateX(40px);
+                display: inline-block;
+                }
+            </code>
+            IT DOESN'T WORK-transform don't work on inline elements so you have to add code for the inline block.
+      </section><br>
+
+      <section>
+          <h2>Scaling</h2><br>
+          The <b>scale(x,y)</b> function scales an element by the defined factors horizontally then vertically. If only one value is provided, it will be used for 
+          both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio. <br>
+
+          Ex. Provide various values to distor the word element<br>
+            <code>
+                transform: scale(1.5, 0.25);
+            </code>
+          You can also use the <b>scaleX(x)</b> or the <b>scaleY(y)</b> functions. These functions will scale only the horizontal dimensions or only the vertical 
+          dimensions respectively. A scaled element will grow outwards from or shrink inwards towards its center; in other words, the element’s center will stay in 
+          the same place as its dimensions change.<br>
+
+          Ex. Change the default scaling of the element<br>
+          <code>
+            ad-ad2 h1:hover span {
+                color: #484848;  
+                transform: translateX(40px) scale(1.5);
+            }
+          </code>
+          Note: that you shouldn’t declare a new transform : because of the cascade, a second transform would override the first. To declare multiple transformations, 
+          provide a space-separated list of transform functions. caling, like translation, has no impact on the document flow. Also, if you scale inline-block elements, 
+          text around it will fail to accommodate it with reflowing. Consider adjusting the element’s height , width , or font-size instead of using a scale() transform.
+      </section><br>
+
+      <section>
+          <h2>Rotation</h2><br>
+          The <b>rotate()</b>function rotates an element around the point of origin by a specified angle value. As with scale , by default the point of origin is the 
+          element’s center. Generally, angles are declared in degrees, with positive degrees moving clockwise and negative moving counterclockwise. In addition to degrees, 
+          values can be provided in grads, radians, or turns, but we’ll just be sticking with degrees.<br>
+
+          Ex. Rotate the word 'dukes' using a transform<br>
+          <code>
+            .ad-ad2 h1:hover span {
+                color: #484848;
+                transform: rotate(10deg) translateX(40px) scale(1.5);
+            }
+          </code>
+          We are declaring the rotationbeforethe translate so that it’s applied first—remember that transforms are applied in the order provided. 
+      </section><br>
+
+        <section>
+            <h2>Skew</h2><br>
+            The <b>skew(x,y)</b>  function specifies a skew along the x and y axes. As you’d expect, the x specifies the skew on the x axis, and the y specifies the skew on the 
+            y axis. If the second parameter is omitted, the skew will only occur on the x axis. As with translate and scale , there are axis-specific versions of the skew transform: 
+            skewX() and skewY() .<br>
+            <code>
+                transform: skew(15deg, 4deg);  
+            </code>
+            NOTE: If you gave your circle or ellipse a transform-origin of 10% 10% or top center , you would notice the rotation
+        </section><br>
+
+
+   
+          
+</main>
+<footer></footer>
+ <script src="scripts/main.js"></script>
+</body>
+
+</html>

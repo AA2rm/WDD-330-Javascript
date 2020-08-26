@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/cs" href="styles/main.css">
+    <title>JavaScript: Novice to Ninja, Function Properties, Methods & Ajax</title>
+
+    <style>
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: #ffffe0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page_header"></header>
+    <main>
+        <section id="keywords">
+            <h2>Key words for team activity</h2><br>
+            comment type(newComment, adding & removing comments, saved comments, store comments in an array) uses a key    
+                list steps
+            methods (renderCommentList, filterCommentsByName, event listeners)
+            properties-lines 51-55    
+            Create a class w/ a constructor
+            form to gather input.
+            button to store in an array
+            display a list of comments
+            adding new instances
+            filter comments
+            control comment entry        
+        </section>
+
+
+        <section id="funtions_notes">
+            <h1>Wk 7 Notes</h1><br>
+            <h2>Function properties and methods</h2>
+            <b>Functions</b> can have <b>properties</b> and <b>methods</b>.
+            The <b>call()</b> method can be used to set the value of <b>this</b> inside a function to an object that is provided as the first argument.
+            Ex. in main.js (lines 1-4). If the function that’s called requires any parameters, these need to be provided as arguments after the first 
+            argument, which is always the value of <b>this</b>.  f a function doesn’t refer to an object as this in its body, it can still be called 
+            using the call() method, but you need provide null as its first argument. If a function doesn’t refer to an object as this in its body, it 
+            can still be called using the call() method, but you need provide <b>null</b> as its first argument. You can use an <b>apply()</b> method in 
+           same way execept the arguments of the function uses an array, Ex: main.js (lines 14-20). 
+        </section><br>
+
+        <section>
+            <h2>Custom Properties</h2><br>
+            There is nothing to stop you adding your own properties to functions in the same way that you can add properties to any object in JavaScript.
+            There are several types of properties: square.dsecription- describes what it does. Ex. main.js (lines22-29) cache property-it provides result caching, ormemoization.
+        </section><br>
+
+
+        <section>
+            <h2>Inmmediately Invoked Function Expressions</h2><br>
+            An <b>immediately invoked function expression</b> is an anonymous function that, as the name suggests, is invoked as soon as it’s defined. 
+            This is easily achieved by placing parentheses at the end of the function definition (remember we use parentheses to invoke a function). The 
+            function also has to be made into an expression, which is done by placing the whole declaration inside parentheses, as in this example:
+            Ex. main.js (lines 31-36). Placing any temporary var code that uses the temporary variable inside an IIFE will ensure it’s only available while 
+            the IIFE is invoked, then it will disappear
+        </section><br>
+
+        <section>
+            <h2>Initialize Code</h2>
+            An IIFE can be used to set up any initialization code that there’ll be no need for again. Because the code is only run once, there’s no need to 
+            create any reusable, named functions, and all the variables will also be temporary. An IIFE will be invoked once, and can set up any variables, 
+            objects and event handlers  hen the page loads. Ex. main.js (lines 38-45), but BEST PRACTICE is to use a  a block. This is because variables have 
+            block scope when const or let are used, whereas in previous versions of JavaScript, only functions maintained the scope of variables.  Ex. 
+            main.js (lines 47-53)
+        </section><br>
+
+        <section>
+            <h2>SAFE Use of Strict Mode</h2>
+            To avoid having <b>strict mode</b> on all of your code, but to place on a portion of your code you can implement in IIFE. Ex. main.js (lines
+            . This  ensures that only your code inside the IIFE is forced to use strict mode. The same can be done for creating self-containe Code Blocks Ex. 
+            main.js (lines 61-71).     
+        </section>
+
+        <section>
+            <h2>Functions that Define Themselves & Rewrite Themselves</h2><br>
+            A <b>function</b>  is able to not only call itself, but define itself, and even redefine itself. This is done by assigning an anonymous function 
+            to a variable that has the same name as the function. f the function is also assigned to another variable, this variable will maintain the original 
+            function definition and not be rewritten. This is because the original function is assigned to a variable, then within the function, a variable with 
+            the same name as the function is assigned to a different function. Another way to rewrite a function is using an  init-time branching. This enables 
+            the functions to work more effectively in the browser, and avoid checking for features every time they’re invoked. A <b>recursive function</b>  is 
+            one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved.
+        </section>
+
+        <section>
+            <h2>Event-driven Asynchronous Programming</h2><br>
+            Callbacks can be used to facilitate event-driven asynchronous programming. JavaScript is a single-threaded environment, which means only one piece of 
+            code will ever be processed at a time. A  a callback can be created that’s invoked when the event happens. This means that the code is able to run out 
+            of order, orasynchronously. Once the task has been completed, the callback will be invoked before returning to the rest of the program. 
+        </section>
+
+        <section>
+            <h2> Promises</h2><br>
+            Apromiserepresents the future result of an asynchronous operation. When created  it calls an asynchronous operation and is then said to bepending. It 
+            remains in this state while the operation is taking place. At this stage, the promise is said to beunsettled. Once the operation has completed, the promise 
+            is said to have beensettled. A settled promise can result in two different outcomes:
+
+            Resolved ― the asynchronous operation was completed successfully.
+            Rejected ― the asynchronous operation didn’t work as expected, wasn't successfully completed or resulted in an error.
+
+            There are several phases of Promises
+            Super promise allows is when you are in  a pending phase while you wait on the results of an operation. Once the promise is settled, you deal with the 
+            results in an appropriate way Create a promise w/ a construtor function. Deal w/ a settled promise using a the then() method can be used to deal with the 
+            outcome. Chaining multiple promises by chaining them w/ the <b>then()</b> method.
+        </section>
+
+        <section>
+            <h2>Async Funtions</h2><br>
+            These functions are preceded by the async keyword and allow you to write asynchronous code as if it was synchronous. This is achieved by using the await operator 
+            before an asynchronous function. This will wrap the return value of the function in a promise that can then be assigned to a variable. The next line of code is not
+            executed until the promise is resolved. Ex. main.js (lines 73-83).
+        </section>
+
+        <section>
+            <h2>Generalized Functions</h2><br>
+            Callbacks can be used to build more generalized functions. Instead of having lots of specific functions, one function can be written that accepts a callback. 
+            Ex main.js (lines 86-115).
+        </section>
+
+        <section>
+            <h2>Functions That Return Functions</h2><br>
+            Ex. main.js (lines 117-131)
+        </section>
+
+        <section>
+            <h2>Closures</h2><br>
+            A variable is only available inside the block it was created inside if the const or let keywords were used. his also applies to the body of a function if the var 
+            keyword is used for <b>function scopes</b>. Ex. main.js (lines 133-157) . The variable 'inside' is outside of the scope of the function, because the var 'inside' is only 
+            active while the function is active. A <b>closure</b> is a reference to a variable that was created inside the scope of another function, but is then kept 
+            alive and used in another part of the program. The key for a  principles in creating closures is that an 'inner' function, which is declared inside another function, has 
+            full access to all of the variables declared inside the scope of the function in which it’s declared (the 'outer' function). 
+        </section>
+        
+        <section>
+            <h2>functions Returning Functions</h2><br>
+            <b>Functions</b> declared from within another function have access to any variables declared in the outer function’s scope. Ex main.js (line 154).
+        </section>
+
+        <section>
+            <h2>Generators</h2><br>
+            These are special functions used to produce iterators that maintain the state of a value. To define a generator function, an asterisk symbol ( * ) is 
+            placed after the function declaration. Ex. main.js (lines 162-). Calling a generator function doesn’t actually run any of the code in the function; it returns a Generator 
+            object that can be used to create an iterator that implements a next() method that returns a value every time the next() method is called. Ex. main.js(lines 162-176).
+        </section>
+        
+        <section>
+            <h2> Introduction to functional programming</h2><br>
+            The ability to pass functions as arguments, return them from other functions, and use anonymous functions and closures, are all fundamental elements of functional programming 
+            that JavaScript excels at. Functional programming is a programming paradigm, meaning that it can be used to program in a variety of paradigms (and sometimes a mash-up of them!).<br>
+
+            <b>Pure functions</b> A pure function is a function that adheres to the following rules:<br>
+
+            1) The return value of a pure function should only depend on the values provided as arguments. It doesn't rely on values from somewhere else in the program.
+            2) There are no side-effects. A pure function doesn't change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, 
+               rather than altering any of the underlying data.
+            3) Referential transparency. Given the same arguments, a pure function will always return the same result.<br>
+            
+            In order to follow these rules, any pure function must have:<br>            
+            At least one argument; otherwise the return value must depend on something other than the arguments of the function, breaking the first rule
+            A return value; otherwise there’s no point in the function (unless it has changed something else in the program – in which case, it’s broken the 'no side-effects' rule).
+            Pure functions help to make functional programming code more concise and predictable than in other programming styles.<br>
+            Ex. main.js (lines 179-189)
+            Ex. How to NOT write a pure function
+            <code>
+                let number = 42;
+                let result = 0;
+                function impureAdd(x) { <!--this is an impure function-->
+                    result = number + x;<!--the value number is defined outside of the function, which changes the value of result returning a different value, if the value of var number is different-->
+                }
+                impureAdd(10);
+                result;
+                52
+            </code>
+
+
+            <b>High-order functions</b>
+
+        </section>
+
+        <section>
+            <h2>Currying</h2><br>
+            <b>Currying</b> is a process that involves the partial application of functions. A function is said to be curried when not all arguments have been supplied to the function, 
+            so it returns another function that retains the arguments already provided, and expects the remaining arguments that were omitted when the original function was called. A final 
+           result is only returned once all the expected arguments have eventually been provided.
+        </section>
+
+        <section>
+            <h2>Clients & Servers</h2><br>
+            A <b>client</b>, such as a web browser, will request a resource (usually a web page) from a <b>server</b>, which processes the request and sends back a response to the client.
+            Ajax allows JavaScript to request resources from a server on behalf of the client. The resources requested are usually JSON data or small fragments of text or HTML rather than 
+            a whole web page. A server is required when requesting resources using Ajax. Typically this involves using a server-side language, such as PHP, Ruby, Node.js, or .NET to serve 
+            the data response following an Ajax request. To practice using Ajax, you can either set up a local development server on your own computer, or request the files from an external 
+            website that uses cross-origin resource sharing (CORS).<br>
+
+            Footnote: The same-origin policy in browsers blocks all requests from a domain that is different from the page making the request, to stop any malicious JavaScript being run 
+            from an external source. Cross-origin resource sharing (CORS)is a solution to this problem as it allows resources to be requested from another website outside the original domain. 
+        </section>
+
+        <section>
+            <h2>A Brief History of Ajax</h2><br>
+            <b>Asynchronous</b><br>
+            When a request for data is sent, the program doesn’t have to stop and wait for the response. It can carry on running, waiting for an event to fire when a response is received. By 
+            using callbacks to manage this, programs are able to run in an efficient way, avoiding lag as data is transferred back and forth.<br>
+            <b>JavaScript</b><br>
+            JavaScript was always considered a 'front-end' language, not used to communicate with the server. Ajax enabled JavaScript to send requests and receive responses from a server, 
+            allowing content to be updated in real time.<br>
+            <b>XML</b><br>
+            When the term Ajax was originally coined, XML documents were often used to return data. Many different types of data can be sent, but by far the most commonly used in Ajax nowadays 
+            is JSON, which is more lightweight and easier to parse than XML. (Although it has never really taken off, the termAjaj is sometimes used to describe the technique.)JSON also has the 
+            advantage of being natively supported in JavaScript, so you can deal with JavaScript objects rather than having to parse XML files using DOM methods.<br>
+            <b>API</b><br>
+            An application programming interface (API) is a collection of methods that allows external access to another program or service. Many websites allow controlled access to their data 
+            via public APIs. This means that developers are able to interact with the data and create mashups of third-party services.<br>
+            <b>Fetch API</b><br>
+            The Fetch API uses promises to avoid callback hell, and also streamlines a number of concepts that had become cumbersome when using the XMLHttpRequest object, and uses a global 
+            <b>fetch()</b> that only has one mandatory argument, which is the URL of the resource you wish to fetch. Ex main.js (lines 191-194)<br>
+            <b>Response Interface</b><br>
+            The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled. Response objects have a number of properties and methods that 
+            allow us to process the response effectively. each response object has an ok property that checks to see if the response is successfulwhich can be accessed using the status property. 
+            The ok property will return true if the status property is between 200 and 299. Ex. main.js (lines 196-206). If an error thrown refers to the statusText property of the response object<br>
+
+            Ex. Use an if block to check if the request was successful, and throw an error otherwise
+ 
+            <code>
+            const url = 'https:example.com/data';
+            fetch(url)
+            .then((response) => {
+                if(response.ok) {
+                    return response;
+                }
+                throw Error(response.statusText);
+            })
+            .then( response => // do something with response)
+            .catch( error => console.log('There was an error!')
+            </code>
+
+            Some other properties of the Response object are:
+
+            <b>headers</b> – A Headers object (see later section) containing any headers associated with the response
+            <b>url</b>– A string containing the URL of response
+            <b>redirected</b> – A boolean value that specifies if the response is the result of a redirect
+            <b>type</b> – A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response from the same domain. A value of 'cors' means the data was received from a 
+            valid cross-origin 
+            <b>request</b> from a different domain. A value of 'opaque' is used for a response received from 'no-cors' request from another domain, which means access to the data will be severely 
+            restricted. A value of 'error' is used when a network error occurs.<br>
+
+            <b>Redirects</b><br>
+            Notice that the error thrown refers to the statusText property of the response object.<br>
+
+            Ex. Write a redirect method that redirect response promise would be resolved
+            <code>
+            fetch(url)
+            .then( response => response.redirect(newURL)); // redirects to another URL
+            .then( // do something else )
+            .catch( error => console.log('There was an error: ', error)
+            </code><br>
+
+            <b>Text Responses</b><br>
+            The text() method takes a stream of text from the response, reads it to completion and then 
+            returns a promise that resolves to a USVSting object that can be treated as a string in 
+             JavaScript.<br>
+
+            Ex.  Write a tet response promis to be resolved
+            <code>
+                etch(url)
+                .then( response => response.text() ); // transforms the text stream into a JavaScript string
+                .then( text => console.log(text) )
+                .catch( error => console.log('There was an error: ', error))   
+            </code><br>
+
+            <b>File Response</b><br>
+            The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it 
+            has read the whole file, it returns a promise that resolves with a blob object.<br>
+
+            Ex. Write a file response promise to be resolved.
+            <code>
+                fetch(url)
+                .then( response => response.blob() ); // transforms the data into a blob object
+                .then( blob => console.log(blob.type) )
+                .catch( error => console.log('There was an error: ', error))  
+            </code><br>
+
+            <b>JSON Response</b><br>
+            SON is probably the most common format for AJAX responses. The json() method is used to deal with these 
+            by transforming a stream of JSON data into a promise that resolves to a JavaScript object.<br>
+
+            Ex. Write a JSON response promise to be resolved
+            <code>
+                fetch(url)
+                .then( response => response.json() ); // transforms the JSON data into a JavaScript object
+                .then( data => console.log(Object.entries(data)) )
+                .catch( error => console.log('There was an error: ', error))   
+            </code><br>
+
+            <b>Creating Response Objs</b><br>
+            Although most of the time you will be dealing with a response object that is returned from a request you 
+            make, you can also create your own response objects using a constructor function.<br>
+
+            Ex. Create a response promise to resolve the objs in the contructor function.
+            <code>
+                const response = new Response( 'Hello!', {
+                    ok: true,
+                    status: 200,
+                    statusText: 'OK',
+                    type: 'cors',
+                    url: '/api'
+                });  
+            </code>          
+        </section>
+
+        <section>
+            <h2>Communicating W/ The Server Using The Fetch API</h2><br>
+
+            <b>Request Interface</b><br>
+            We can get more fine-grained control over the request being made by providing a Request object as an argument. 
+            This allows a number of options to be set about the request. Request objects are created using the Request() 
+            constructor, and include the following properties.<br>
+
+            <b>url</b> – The URL of the requested resource (the only property that is required).
+            <b>method</b> – a string that specifies which HTTP method should be used for the request. By default, this is 'GET'.
+            <b>headers</b> – This is a Headers object (see later section) that provides details of the request's headers.
+            <b>mode</b> – Allows you to specify if CORS is used or not. CORS is enabled by default.
+            <b>cache</b> – Allows you to specify how the request will use the browser's cache. For example, you can force it to 
+            request a resource and update the cache with the result, or you can force it to only look in the cache for the resource.
+            <b>credentials</b> – Lets you specify if cookies should be allowed with the request.
+            <b>redirect</b>– Specifies what to do if the response returns a redirect. There’s a choice of three values: 'follow' 
+            (the redirect is followed), 'error' (an error is thrown) or 'manual' (the user has to click on a link to follow the redirect).
+            <br>
+            <b>HTTP</b><br>
+            When a client (usually a browser) makes a request to a server, it contains information about which HTTP verb to use.HTTP 
+            verbs, also known as HTTP methodsare the what HTTP uses to tell the server what type of request is being made.<br>
+            The five most commonly used verbs when dealing with resources on the web are:
+
+            <b>GET</b> requests to retrieve resources
+
+            <b>POST</b> requests, usually used to create a resource but can actually perform any task
+
+            <b>PUT</b> requests toupsert, which means insert a resource or update it entirely
+
+            <b>PATCH</b> requests to make partial updates to a resource
+
+            <b>DELETE</b> requests to delete a resources.<br>
+
+            Ex. Create a new requet obj using a constructor function<br>
+            <code>
+                const request = new Request('https://example.com/data', {
+                    method: 'GET',
+                    mode: 'cors',
+                    redirect: 'follow',
+                    cache: 'no-cache'
+                });
+            </code><br>
+            Once the Request object is assigned to a variable, it can then be used as the parameter of the fetch() method:
+            Ex. Write a request obj that takes a URL & obj as the arguments.
+            <code>
+                fetch(request)
+                .then( // do something with the response )
+                .catch( // handle any errors)
+            </code><br>            
+            
+            <b>Headers Interface</b><br>
+            HTTPheadersare used to pass on any additional information about a request or response, that may include  file-type 
+            of the resource, cookie information, authentication information and when the resource was last modified. Ex. 
+            main.js(lines 197-201). <br>
+            
+            A <b>Headers</b> object includes the following properties and methods that can be used to access 
+            information about the headers, as well as edit the header information.<br>
+
+            <b>has()</b> – Can be used to check if the headers object contains the header provided as an argument.<br>
+            
+            Ex. Chk if the header obj has the header provided in the argument<br>
+            <code>
+            headers.has('Content-Type');
+            true         
+                       
+            headers.get('Content-Type');
+            'text/plain'           
+            </code><br>
+            get() - //Returns the value of the header provided as an argument<br>
+
+            <b>set()</b> – Can be used to set a value of an already existing header, or create a new header with the value provided 
+            as an argument if it does not already exist.<br>
+            <b>append()</b> – Adds a new header to the headers object.<br>
+            
+            Ex. Set a value in the header and create a new header w/ the value provided as an argument if it doesn't alread exist.<br>
+            <code>
+                headers.set('Content-Type', 'application/json');  
+                headers.append('Accept-Encoding','gzip,deflate');
+            </code><br>
+
+            delete() – Removes the header provided as an argument.<br>
+            Ex. Remove the header from the argument<br>
+            <code>
+                headers.delete('Accept-Encoding')
+            </code><br>
+            keys() , values() and entries() – Iterators that can be used to iterate over the headers key, values or entries 
+            (key and value pairs).<br>
+
+            Ex. Iterate through the header
+            <code>
+                for(const entry of headers.entries(){
+                    console.log(entry);
+                    }
+                    [ 'Content-Type', 'application/json' ]
+            </code><br>
+
+            <b>Putting It All Together</b><br>
+            Ex. Write a header, request, & response that sets up the URL, regquest, & header before calling the fetch() method.<br>
+            <code>
+                const url = 'https:example.com/data';
+                const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,
+                deflate' })
+                const request = (url,{
+                    headers: headers
+                })
+                fetch(request)
+                .then( function(response) {
+                    if(response.ok) {
+                        return response;
+                    }
+                    throw Error(response.statusText);
+                })
+                .then( response => // do something with response )
+                .catch( error => console.log('There was an error!')) 
+            </code>
+        </section>
+
+        <section>
+            <h2>Receiving Data W/ Ajax</h2>
+            To demonstrate how to update a web page using Ajax, we’ll need to set up a demonstration page
+        </section>
+        <section>
+            <h2>Sending Data W/ Ajax</h2>
+            Actual html and js files created
+            ajax.html
+            todo.html
+            main1.js
+            main2.js
+        </section>
+
+        <section>
+            <h2>Form Data</h2><br>
+            Most forms will have an action attribute that specifies the URL to use if the form is sent without 
+            using Ajax. It will also have a method attribute that will specify the HTTP verb to use. These methods 
+            are available as properties of the form object, so we could use these properties to create a more 
+            generalized request object, as follows.<br>
+
+            Ex. Create some form properties 
+            <code>
+                const request = new Request(form.action,
+                {
+                method: form.method,
+                header: headers,
+                body: data
+                }
+                )
+            </code><br>
+
+            The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax.
+
+            Ex. A FormData instance is created using a CONSTRUCTOR FUNCTION:<br>
+            <code>
+                const data = new FormData();   
+            </code>
+            If a form is passed to this constructor function as an argument, the form data instance will serialize all the data 
+            automatically, ready to be sent using Ajax. In our last example, we created the task manually based on the data 
+            provided in the form. The FormData interface helps to reduce the amount of code needed when submitting forms.<br>
+            
+        </section>
+          
+   </main>
+  <footer></footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
