@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>First Event</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        
-        <script>
-            
-        </script>
-        <style>
-            textarea {
-                background-color: #ffffe0;
-                height: 250px;
-                width: 800px;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>First Event</title>
+    <script>
+        function showCongratulations(theButtonClicked){
+            document.getElementById("result_display").innerHTML =
+                "Congratulations, you did it!<p>You got the page to update!</p>"
+            theButtonClicked.innerHTML = "Click Me Again!"    
             }
-        </style>
-   </head>
+    </script>
+    <style>
+        textarea {
+            background-color: #ffffe0;
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+</head>
 
 <body>
-    <header class="individual_display"></header>
+    <header class="ref_display"></header>
     <main>
-        <!--Create a link to the note.html file-->
-        <section>
-            <h1>First Event</h1>
-            <a href="../WDD340/wk1/notes.html">Wk1 Notes</a>
-  
-            Ex. 1: Create a button<br><br>
-            <code>
-                <button>Click Me</button>
-            </code>
-        </section>
+        <section id="func_event_display">
+            <span style="color: #0000ff;font-size:17px"><h1>FUNCTIONS & EVENTS</h1></span>
+            <button onclick="showCongratulations(this)">Click Me!</button>
+            <div id="result_display"></div>
+           
 
-      
-        <section id="ref_display">
-            <h2>REFERENCES:</h2>
+            <span style="color: #00cc00"><h2>References:</h2></span>
             <code>
-                <a href='https://github.com/yenrab/doing_stuff_with_web_things/blob/master/doing_stuff_with_web_things.pdf' title="Doing Stuff With Web Things">Manual: Create a button</a><br>
+                <a href='https://github.com/yenrab/doing_stuff_with_web_things/blob/master/doing_stuff_with_web_things.pdf'
+                    title="Doing Stuff With Web Things">Manual: Create a button</a><br>
             </code><br>
-
+            Link: 
+        <a href="../WDD340/wk1/notes.html">Wk1 Notes</a><br><br>
+            
         </section>
     </main>
     <footer></footer>

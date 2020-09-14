@@ -21,27 +21,120 @@
 </head>
 
 <body>
-<header>
-    <p>Posted by Renee Mitchell</p>
-    <p>Some additional information here</p>
-</header>
+    <header>
+        <p>Posted by Renee Mitchell</p>
+        <p>Some additional information here</p>
+    </header>
 
-<main>
-    <section id="hello_js">
-    <h1>WK 1 Doing Stuff With The Web</h1>
-    <h2>Make It Nice</h2>
-    <code>
-        <a href='https://github.com/yenrab/doing_stuff_with_web_things/tree/6009270a0ddce5a42675e0abe9c9c0232fa97185' title="GitHub-Yenrab"></a><br>
-    </code>
-    <b>Functions</b> are a type of operation which:
-    1. Has a name.
-    2. Things that goes in the function.
-    3. Things that come out of the function.
-    4. As well as things that make up what the function does.
-    
-    Create a button using the <b><butto></butto></b> tag. An example is in the first_envent.html folder
+    <main>
+        <section id="web_things_wk1">
+            <h1>WK 1 Doing Stuff With The Web</h1>
+            <h2>Make It Nice</h2>
+            <code>
+                <a href='https://github.com/yenrab/doing_stuff_with_web_things/tree/6009270a0ddce5a42675e0abe9c9c0232fa97185'
+                    title="GitHub-Yenrab"></a><br>
+            </code>
+            <b>Functions</b> are a type of operation which:<br>
+            1. Function syntax has the <b>function</b> keyword at the start of the code.<br>
+            2. It has a (verb) name. Start with lowever case & camel case the first letter of each word afterwards.<br>
+            3. Things that goes in the function. Is inside the ().<br>
+            4. Things that come out of the function are located in the {}, as well as things that make up what the function does goes here.<br><br>
 
+            Ex:<br>
+            <b>function</b> theFunctionName(whatGoesIn){<br>
+                Instructions: what the computer does<br>
+            }
+                <br>
+            
+            <code>
+                <a href="../WDD340/wk1/main.js">Code: Function Ex.</a>
+            </code><br><br>
+           <b>Note:</b>Place your function within the script tags. Since you have to tell the computer the id of the element you want
+           found, you are responsible for there being an element that has that
+           id. (look at the example in the fir st_event.html file below. If you forget to add an id or send getElementById the wrong id,
+           you’re going to get a strange error when you click the button. The
+           error will mention null. Since button and section are both tags, you can change what is in
+between their starting and ending tags using the same thing; innerHTML. <br>
+
+            Create a button using the <b>button</b> tag. An example is in the first_event.html folder
+            <code>
+                <a href="../WDD340/wk1/first_event.html">first_event.html Ex.</a>
+            </code><br>
+            Add the button html code in the body and the JS code in the script tag between the head tags of the html doc.
+            To get the button to update after clicking it you need to modify the code as such: <br>
+
+                Ex:<br>
+                <u>change from:</u> (button tag Click me! /button tag)<br><br>
+                <u>change to:</u> (buttontag onclick="showCongratulations(this)">Click Me! /button tag)<br><br>
+           
+            This is the <b>event</b> aspect of the function, which executes the code. Since button and section are both tags, you can change 
+            what is in between their starting and ending tags using the same thing; innerHTML. 
+        </section>
+
+        <section id="master_mobile">
+            <h1>Master Mobile UX</h1>
+            <h2>Rewired The Brain For Mobile First</h2><br>
+            Focus on making content to fit small screens first for functionality. Just because you make your code <b>responsive</b> doesn't 
+            mean it mobile first. This is when you take what you have & make it work on mobile, but this does not address the screen size or
+            touch site issues.<br>
+            PROS &  CONS: <br>
+                It's time consuming & costly.<br>
+                Provides experience across many devices.<br>
+                Address constraints of mobile size/bandwith.<br>
+                Future Friendly & ready for scaling up.<br>
+
+            <h2>Improve UX by Understanding Users</h2><br>
+            <u>Observe</u> what the user is doing, not what they say. Be available, useful, and be quick by reducing the user cognitive load.<br>
+            <u>Reachability</u>-how the users handle the device. Make this easy, for example key items should be at the bottom of the device where 
+            it's easy to reach.<br>
+            <u>Speed matters</u>-how is the client/user's buisiness effected? For example delays can effect revenue.<br>
+                reduce image<br>
+                svg/webfonts are lower bandwidth<br>
+                optimized & minify CSS & JS files. Remove white space.<br>
+                GZip files to eliminate unnecessary data.<br>
+
+            <h2>Strategic Menu Design></h2><br>
+            Use Primary Controls<br>
+                Move nav bar & commonly used sub navigations to the bottom of the device.
+                    This promotes reachability issues.<br>
+                    Creates perception of speed<br>
+                    Improves engagement rates<br>
+                    Increased user satifaction<br>
+                Use icons that are easy recognizable like the word menu with a boarder that looks like a button.<br>
+            
+            <h2>Mobile Friendly Forms</h2><br>
+            Focus on important things first, and keep it simple.<br>
+                Ditch the labels and display the label inside of the text box.<br>
+                Use float labels.<br>
+                Make check boxes larger.<br>
+                Ask customer preference of contact (email or phone).<br>
+                Break a form down into sections when more input is needed.<br>
+                Include a progress indicator. Enable autocomple on the form<br>
+                For password show the password and allow the user to hide the password when needed.<br>
+                Use an auto advance for credit/bank cards.<br>
+                For number use the number pad instead of the keyboard.<br>
+                Use an <a> </a> tag to link your phone number.
+
+            <h2>Advertising</h2><br>
+            When adding ads or popups keep them small and simple  no more thant 40% of your space).<br>
+            If using lardge ads start with a small thumbnail that enlarges to a larger image when clicked on.<br>
+            Use video ads.<br>
+            Use ads that are in the background while the text is in the foreground.<br>
+            Things to remember<br>
+                stop using pop-ups/pop-overs<br>
+                users don't visit your webisite to look at ads
+                keep it simple & sleek.<br>
+                Make it unobtrusive. Content first.<br>
+
+
+
+            <h2></h2><br>
+
+
+            Avoid popups, but if placing ads keep it small & simple
+        </section>
+    </main>
     
-</main>
 </body>
+
 </html>
