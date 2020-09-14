@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/main.css">
-    <title>Programming Basics: Notes</title>
+    <title>JavaScript: Novice to Ninja, 2nd Edition
+        : Notes</title>
     <script>
     </script>
 
@@ -17,34 +18,88 @@
             background-color: #ffffe0;
         }
     </style>
-
-
 </head>
 
-<header></header>
+<header>
+    <p>Posted by Renee Mitchell</p>
+    <p>Some additional information here</p>
+</header>
+
 <main>
+    <section id="hello_js">
+    <h1>Learning Javascript</h1>
+    <h2>CHAPTER 1: Programming (PGS. 1-33)</h2><br>
+
+    <b>Low-level programming language</b> programs written in <b>machine code</b> & <b>assembly language</b>.<br>
+    <b>High-level programming language</b> allows abstractions to be used & uses programming language that's compiled into machine code & executed.(very fast)<br>
+    <b>Scripting languages </b> are also high-level & are translated into machine code at run time, making them slower than compiled language.<br>
+    <b>Ajax</b> is the technique of getting data from a server in the background & updating only the relevant parts of the web page w/o the need for a full page reload.<br>
+
+    <h3>Node.js</h3>
+    Install node.js using  the installer or Nover Version Manager. You can also install node.js using command lines<br>
+    STEP 1 Install build tools
+    For MAC<br>
+    Install the X code command line tools by running the following command:
+    xcode-select --install<br>
+    For WINDOWS<br>
+    If you’re using Linux, you’ll need to install the “build-essential” package. This can be done by running the following commands on Debian-based distros (use your package manager of choice with other distros):
+    sudo apt-get update sudo apt-get install build-essential<br>
+
+    STEP 2 Install nvm<br>
+    To install nvm, simply run the following command:<br>
+    curl -o-https://raw.githubusercontent.com/creationix/nvm/v0.31.0/ install.sh | bash<br>
+
+     Now that nvm is installed, you’ll need to reload your shell, before you can install Node. This can be done using the following command in:<br>
+     
+     Mac Os<br>
+     . ~/.bash_profile<br>
+
+     Or by using the following command:<br>
+
+     Linux<br>
+     . ~/.bashrc
+
+     Now you can install the latest version of Node with the following command:<br>
+     nvm install node<br>
+
+     You might have to wait a while for everything to download and install, but once it’s finished, you can check everything is working properly by entering the following command:<br>
+
+     node -v<br>
+     It will return the version number of Node that is installed     
+
+    <h3>JS in the console</h3><br>
+
+    1. If you installed Node, you can use the REPL, which stands for Read Eval Print Loop. It allows you to write JavaScript in the console then outputs the results. To start the REPL, 
+    all you need to do is open up a terminal prompt and enter the command node. This should then display a prompt. To exit the REPL, simply hold the ctrl key and hit C twice.<br>
+
+    2. Another option is to use the JavaScript console that comes with your browser.
+    You can access the console by opening your browser and pressing F12 (or Command + Option + I on a Mac) to open the developer tools then clicking on the Console tab.<br>
+
+    3. The last option is to use the E66 Console  website. This allows you to enter JavaScript commands directly into the browser and see the results. It also lets you write in ES6 and see what it looks like after it has been transpiled into ES5.<br>
+    </section><br>
+
+
     <section id="program_basic">
-        <h1>Problem#1</h1>
-        <button onclick="loadProgram()">Load Program</button>
-
-        <textarea id="user_input" placeholder="Input text here."></textarea>
-        <div id="user_notes"></div>
-    </section>
-
-    <section>
-    <h2>Programming Basics</h2>
-    CHAPTER 2 (PG. 34-)
-    Well Commented Code:<input id=well_doc_code>
-    Use short statements that describes what your code is doing using either a
-
+    <h1>Learning Javascript</h1>
+    <h2>CHAPTER 2: Programming Basics  (PG. 34-)</h2><br>
+  
+    Well Commented Code: Use short statements that describes what your code is doing using either a
+    <code>
     <textarea id="story_editor" placeholder="Insert your code"></textarea><br>
+    <textarea id="user_input" placeholder="Input text here."></textarea>
+    <div id="user_notes"></div>
+    </code>
 
     <ul>
         <li>Short comment line //comment</li>
         <li>Multi-line comment /*This comment is  used for multiple lines*/</li>
     </ul>
         <br>
-
+    <h3>Problem#1</h3>
+        <code>
+            <button onclick="loadProgram()">Load Program</button>
+        </code>
+        
     <h3>JavaScript grammar:</h3>
     There’s no need to actually use a (;)to terminate 
     a statement because JavaScript interpreters use a process called Automatic 
@@ -183,9 +238,16 @@
     Quiz (pg. 84-85)<br>
     </section>
 
-    <section>
-    <h2>Arrays, Logic, & Loops</h2>*pg 88-129)<br>
-    CHAPTER 3<br>
+    <section id="arrays_logic_loops">
+    
+    <h1>CHAPTER 3</h>1(pg 88-129)<br>
+    <br>
+    <b>Arrays</b> are ordered list, while <b>Mulitidimensional Arrays</b> are arrays that contain other arrays.<br>
+    The <b>if</b> and <b>else</b> statement controls the flow of code. However you can use the <b>switch</b> statement can be used,
+    instead of using multiple if and else statements.<br>
+    The <b>while</b> and <b>do</b> loops are used are used to repeat a block code as long as the condition is true.<br>
+    The <b>for</b> loop statement controls the flow of code that deals with iteration and executes the code repeatedly.<br>
+    The <b>for-of</b> is used to iterate code in an array.
     <h3>Array literals</h3><br>
     An array is an ordered list of values. To create an array literal, simply write a pair
     of square brackets[]. Destructring of an array is the the concept of taking vales out a

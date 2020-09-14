@@ -1,7 +1,10 @@
 //WEEK 1
+
 /*Declar a var*/
 const title = 'Doctor';
 let amount = 50;
+
+/*
 
 /* Create a function that links the navigation and menu items*/
 function toggleMenu() {
