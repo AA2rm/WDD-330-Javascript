@@ -1,184 +1,82 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript: Novice to Ninja, User Information</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script>
-        function loadStory() {
-            var storyName = document.getElementById("name_input").value
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Story Writer</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        
+        <script>
+            function loadStory(){
+            var storyName = document.getElementById(“name_input”).value
             var storyHTML = localStorage.getItem(storyName)
-            document.getElementById("story_editor").value = storyHTML
-        }
-
-        function saveStory() {
-            var storyName = document.getElementById("name_input").value
-            var storyHTML = document.getElementById("story_editor").value
-            localStorage.setItem("story_Name, storyHTML")
-        }
-
-        function displayStory() {
-            var storyHTML = document.getElementById("story_editor").value
-            document.getElementById("story_display").innerHTML = storyHTML
-        }
-    </script>
-
-    <style>
-        textarea {
-            background-color: #ffffe0;
-            height: 250px;
-            width: 800px;
-        }
-    </style>
-</head>
+            document.getElementById(“story_editor”).value = storyHTML
+            }
+            function saveStory(){
+            var storyName = document.getElementById(“name_input”).value
+            var storyHTML = document.getElementById(“story_editor”).value
+            localStorage.setItem(storyName, storyHTML)
+            }
+            function dsiplayStory(){
+            var storyHTML = document.getElementById(“story_editor”).value
+            document.getElementById(“story_display”).innerHTML = storyHTML
+            }   
+        </script>
+        <style>
+            textarea {
+                background-color: lightgoldenrodyellow;
+                height: 250px;
+                width: 800px;
+            }
+        </style>
+   </head>
 
 <body>
     <header class="page_header"></header>
-    <main>
-        <section id="story_display">
-            <h1>Incorporating CSS & HTML With Javascript</h1>
-            <h2>RepositorySetup</h2>
-            <p>Log into Github and enter the repository for this class. Go to Settings and on the Options page 
-               scroll down until you find the section on Github Pages. In the dropdown under Source, choose master branch. 
-               should now be able to browse to your repository at the URL Github shows you after the page refreshes. It
-               will look like this: https://username.github.io/repositoryname/ .
-            </p>
+    <main>   
 
-            Data Storage:<input id=store_data><br><br>
-            Ex:<br>
-            <button onclick="loadStory()">Find & Edit It</button>
+        <h1>Week 1</h1>
+        <ul>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="first_event.html">Code Examples</a></li>  
+        </ul>
+
+ 
+        Story Name: <input id="name_input"></input><br>    
+        
+        <section id="store_info">
+           <h2>Story Editor</h2>
+            <button onclick="loadStory()">Find and Edit It</button>
             <button onclick="saveStory()">Save It</button>
-            <button onclick="displayStory()">Display It</button><br>
-
-            <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-            Pages 35-38
-            <br>
-
-            Bidirectional communication occurs between users, authors, devices, and applications. This is done
-            with Input (ex: name_input) and output or An IO=input/out.<br>
-            <h3>How Data is Store & Moved</h3>
-            Tags where the user types their story is the <b>textarea</b> tag (for ex. ("story_editor")
-            Tags that allow you to name or tell you the type of information or a story is a <b>title</b> tag.<br>
-            Tags that allows you to tell or input your data/story is the <b>input</b> tag (for ex. ("name_input"). This
-            tag also includes
-            a <b>id</b> tag. The story or content name is placed infront of this.<br>
-            The <b>text id</b> tag has a <b><i> placeholder</i></b>property that references to the text area and input
-            tags.<br>
-            The <b>header</b> tag describe what the page is for.<br><br>
-
-
-            Pages 39-45<br>
-
-            The <b>h1</b> tag styles the various sizes of your headers with 1 being the largest and each header tag
-            producing smaller size headers.<br>
-            Use the <b>button</b> tags to create several buttons. In this application create 3 buttons for: find & edit,
-            save, & display.
-            When using more than 1 <b>onclick</b> tag you can set each function to do something different for each
-            button. To make your buttons
-            active, create <b>methods/function</b> using CSS for each button created using the <b>script</b> tag.
-            (footnote: line 9-25 in code source). <br>
-            The <b>var</b> element is used to describe the content inside the <b>method</b>. It stores the data in the
-            var named (for ex: storyHTML)
-            in this case. The computer reads & completes everything on the right side of the = sign first.<br>
-            To retrieve a user's input from an <b>input</b> or <b>textarea</b> tag use the <b>value</b> key word.
-            To display outut to a user use the <b>section</b> tag and the key word <b>innerHTML</b>.<br>
-            You store your code in the storage var and the stored data is labeled in the storyName var.
-            Ex:
-            localStorage.setItem(storyName, storyHTML)
-
-            <h3>Reading The Story Line</h3>
-            Practice reading the key-value pairs in the examples below until you are comfortable.<br>
-            The .getElementById retrieves the HTML id that was stored in the "name_input". This becomes the value for
-            the var name storyName.
-            The localStorage is used to save the data from the previous function created (Ex: 1 below) to retrieve the
-            data. It does this by
-            retrieving the item (.getItem) from the story Nave var.
-            The key for the stored value(data/story stored).
-            <br>
-            To display the data/story the document retrieves the element id (.getElementById) called the (story_editor)
-            and this display the storyHTML var.
-            <br>
-            In JS the local storage is called "key-value pairs." The <b>key</b> is the name of an obj. and the
-            <b>value</b> is what describes the obj.
-            <br>
-            <span style="color:red;font-size:17px"><b>Q:</b> Should I be writing all of my CSS in the main.css folder
-                or in separate css folders for each week?</span>
+            <button onclick="displayStory()">Display It</button>
+        </section><br>
+        <textarea id="story_editor" placeholder="Write your totally awesome story here!"></textarea>
+        
+        <section id="story_display">
+        <h1></h1>
         </section>
 
-        <section id="storage_display">
-            <h2>Local Storage</h2>
-            Add example into JS script file
-            <br>
-            Review the .setItem command in office hour start at 51.00 in video.
-            <br><br>
-            HOW TO VIEW YOUR SOURCE CODE IN THE BROWSER:<br>
-            Right click in the browser> tab down to inspect in the browser > click application > click local storage
-            > tab down & click to syntax > if needed deleate any keys > click on Menu on
-            the mobile app & open up the week and you will see the code and the keys & values will reapper.
-            <br>
+        <section>
+            <h1>Team Assignments</h1>
+            <h2>Core Requirements</h2><br>
+            
         </section>
-
-        <section id="example_display">
+        <section id="examples_display">
             <h2>Examples</h2>
-            Ex: 1<br>
-            <code>
-                function saveStory(){
-                var storyName = document.getElementById(“name_input”).value
-                var storyHTML = document.getElementById(“story_editor”).value
-                localStorage.setItem(storyName, storyHTML)
-                }
-            </code>
-            <br>
-            Ex: 2<br>
 
-            <code>
-                function loadStory(){
-                var storyName = document.getElementById(“name_input”).value
-                var storyHTML = localStorage.getItem(storyName)
-                document.getElementById(“story_editor”).value = storyHTML
-                }
-            </code>
         </section>
 
-        <section id="team_display">
-            <h2>Team Assignments</h2>
-            None
-        </section>
+
+
         <section id="individual_display">
-
             <h2>Individual Assignments</h2>
-            <nav>
-                <ul id="nav1">
-                    <li>Find groups to work with: Team 4.</li>
-                    <li>Reviewed office hours.</li>
-                    <li>Reading Chapter2 of "Doing Stuff with the Web."</li>
-                    <li>Watch video: Master Mobile UX</li>
-                    <li>Add repository to VS Code.</li>
-                    <li>Contribute to discussion board.</li>
-                    <li><a
-                            href="../https://github.com/AA2rm/WDD-330-Javascript.git">https://github.com/AA2rm/WDD-330-Javascript.git"</a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-        <section id="ref_display">
-            <h2>Weekly References</h2>
 
-            https://www.w3schools.com/html/html_formatting.asp
-            https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_button_test
-            https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_section
-            https://www.codecademy.com/forum_questions/5134db775515c35e6300050a
-            JavaScript examples in JS file.
-            https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/
-            Using JS to retireve Windows local storage.
-            https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_localstorage
+
         </section>
+
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="scripts/main.js"></script>
 </body>
 

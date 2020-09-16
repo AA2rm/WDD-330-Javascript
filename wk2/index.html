@@ -72,7 +72,6 @@
         }
     </style>
 </head>
-<<<<<<< HEAD
 
 <body>
     <header>
@@ -89,23 +88,6 @@
         <section id="team_display">
 
             <h1>TEAM ASSIGNMENTS</h1>
-=======
-
-<body>
-    <header id="page_header"></header>
-      
-    <main>
-        <!--Create a link to the note.html file-->
-        <section id="wk2_assngmt">
-
-            <h1>Wk 2 Notes</h1>
-            <link rel="stylesheet" href="../WDD340/wk3/notes.html">
-           
-        </section>
-        <section id="team_display">
-
-            <h1>Team Assignments</h1>
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
             <h2>Core Requirements</h2><br>
             <h3 class="teamheader">Problem #1</h3><br>
             <button onclick="loadProgram()">Load Program</button><br>
@@ -116,34 +98,20 @@
             <input type="text" id="user_input2" placeholder="Please enter a number."><br>
             <button onclick="sumItUp()">Load Sum</button>
             <div id="output2"></div><br>
-<<<<<<< HEAD
             
             <h3 class="teamheader">Problem #3</h3>
             <input type="text" id="number1" placeholder="Enter a number"><br>  <p>+</p>         
-=======
-
-            <h3 class="teamheader">Problem #3</h3>
-            <input type="text" id="number1" placeholder="Enter a number"><br>
-            <p>+</p>
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
             <input type="text" id="number2" placeholder="Enter a number"><br>
             <button onclick="addItUp()">result</button><br>
             <div id="output3"></div>
 
-<<<<<<< HEAD
         </section>        
-=======
-        </section>
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
+      
         <br>
         <section>
             <h2>Stretch Goals</h2>
             <h3 class="teamheader">Stretch #1</h3>
-<<<<<<< HEAD
             <input type="text" id="number3" placeholder="Enter a number"><br>          
-=======
-            <input type="text" id="number3" placeholder="Enter a number"><br>
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
             <input type="text" id="number4" placeholder="Enter a number"><br>
             <button onclick="subtract()">result</button>
             <div id="output4"></div>
@@ -154,7 +122,6 @@
             <button onclick="multiply()">result</button>
             <div id="output5"></div>
             <br>
-<<<<<<< HEAD
             
             <h3 class="teamheader">Stretch #3</h3><br>            
         
@@ -169,31 +136,11 @@
             Result: <input id="result" type="number"/><br />
             <br>
         
-=======
-
-            <h3 class="teamheader">Stretch #3</h3><br>
-
-        </section>
-        <h3>Calculator</h3>
-        Number 1: <input id="number7" type="number" /><br /><br />
-        Number 2: <input id="number8" type="number" /><br /><br />
-        <input type="button" onclick="calc(addNum)" value="Add" id="add" />
-        <input type="button" value="Multiply" onclick="calc(multiplyNum)" id="multiply" />
-        <input type="button" value="Divide" id="divide" onclick="calc(divideNum)" />
-        <br /><br />
-        Result: <input id="result" type="number" /><br />
-        <br>
-
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
 
         <section id="example_display">
             <h1>Examples</h1> 
             <code>
-<<<<<<< HEAD
                 
-=======
-
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
                 Ex: 1 const var block statement
                 {
                 <!--this is a block containing 2 statements-->
@@ -207,7 +154,6 @@
                 let score = 0;<br>
                 <!--This values may change during the program-->
                 name<br>
-<<<<<<< HEAD
                 'Alexa'<br>             
 
                 Ex: 3
@@ -246,112 +192,6 @@
         </section>
         <section id="ref_display">
             <h2>Weekly References</h2>
-=======
-                'Alexa'<br>
-
-                Ex: 3 Write a function that takes the first number and adds it to a second number and display the result
-                from a div out put<br>
-                var x = myFunction(4, 3);<br>
-                document.getElementById("demo").innerHTML = x;<br><br>
-
-                function myFunction(a, b) {<br>
-                return a * b;<br>
-                }<br>
-                type = "text/javascript" ><br><br>
-
-                function add_number() {<br>
-                var first_number = parseInt(document.getElementsById("Text1").value);<br>
-                var second_number = parseInt(document.getElementsById("Text2").value);<br>
-                var result = first_number + second_number;<br>
-                document.getElementById("txtresult").value = result;<br>
-                }<br>
-                document.getElementById("txtresult").value = result;<br>
-                }<br><br>
-
-                Ex: 4 Write the argument to the function<br>
-                input type="text" id="text1" name="Enter first number"><br>
-                input type="text" id="text2" name="Enter second number"><br>
-                Result:<br>
-                input type="text" id="txtresult" placeholder="TextBox3"><br>
-                button onclick="add_numbers()" value="display_result"Display Results<br>
-                div id="result" div<br><br>
-
-                Ex: 5 Write a Multidemensional Array<br>
-                const summer = ['Jun', 'Jul', 'Aug'];<br>
-                const winter = ['Dec', 'Jan', 'Feb'];<br>
-                const nested = [ summer, winter ];<br>
-                [ [ 'Jun', 'Jul', 'Aug' ], [ 'Dec', 'Jan', 'Feb' ] ]<br>
-                const flat = [...summer, ...winter];<br>
-                [ 'Jun', 'Jul', 'Aug', 'Dec', 'Jan', 'Feb' ]<br><br>
-
-                Ex: 6 Set Methods<br>
-                Write a set method that determines how many values are in an array set.<br>
-
-                const jla = new Set().add('Superman').add('Batman').add('Wonder Woman');<br>
-                jla<br>
-                Set { 'Superman', 'Batman', 'Wonder Woman' }<br>
-                jla.size();<br>
-                3<br><br>
-
-                Ex: 7 Convert a set into an array<br>
-                const shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');<br>
-                shoppingSet<br>
-                Set { 'Apples', 'Bananas', 'Beans' }<br>
-                Then we convert it into an array:<br><br>
-
-                const shoppingArray = [...shoppingSet]<br>
-                shoppingArray<br>
-                [ 'Apples', 'Bananas', 'Beans' ]<br><br>
-
-                Ex: 8 Configure a nested for loadProgram<br>
-
-                Ex: 9 Write a function to return a value<br>
-                function howdy(){<br>
-                return 'Howdy World!';<br>
-                }<br><br>
-
-                const message = howdy();<br>
-                'Howdy World!'<br>br>
-
-                Ex: 10 Write a function that accepts any number of values.<br>
-                function mean(...values) {<br>
-                let total = 0;<br>
-                for(const value of values) {<br>
-                total += value;<br>
-                }<br>
-                return total/values.length;<br>
-                }<br><br>
-
-                Ex: 11 function w/ a var hoist.<br>
-                // the variable helloExpression has a value of undefined, so the function cannot be invoked
-                helloExpression();<br>
-                // throws an error<br>
-                // the function declaration can be invoked before it is declared
-                helloDeclaration();<br>
-                // returns 'hello'<br>
-                // assign function expression to a variable<br>
-                var helloExpression = function() {<br>
-                console.log('hello')<br>
-                }<br>
-                // declare function declaration<br>
-                function helloDeclaration() {<br>
-                console.log('hello')<br>
-                }<br>
-                // The function expression can only be invoked after assignment<br>
-                helloExpression();<br>
-                // returns 'hello'
-            </code><br>
-
-        </section>
-        <br>
-        <section id="individual_display">
-            <h2>Individual Assignments</h2><br>
-            N/A
-        </section>
-        <section id="ref_display">
-            <h2>Weekly References</h2><br>
-            N/A
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
         </section>
     </main>
     <footer></footer>

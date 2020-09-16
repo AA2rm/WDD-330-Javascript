@@ -15,10 +15,25 @@
     </script>
     <style>
         textarea {
-            background-color: #ffffe0;
+            /*background-color: #ffffe0;*/
             height: 250px;
             width: 800px;
         }
+        body {
+            background-color: rgb(106, 93, 196);
+            color: white;
+        }
+        /*Style the result-display id*/
+        #result_display{
+            background-color: DarkGrey;
+            width: 300px;
+            height: 150px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+        }
+        
     </style>
 </head>
 
@@ -26,18 +41,20 @@
     <header class="ref_display"></header>
     <main>
         <section id="func_event_display">
-            <span style="color: #0000ff;font-size:17px"><h1>FUNCTIONS & EVENTS</h1></span>
+            <h1>FUNCTIONS & EVENTS</h1>
             <button onclick="showCongratulations(this)">Click Me!</button>
             <div id="result_display"></div>
            
 
-            <span style="color: #00cc00"><h2>References:</h2></span>
+            <h2>References:</h2>
             <code>
                 <a href='https://github.com/yenrab/doing_stuff_with_web_things/blob/master/doing_stuff_with_web_things.pdf'
                     title="Doing Stuff With Web Things">Manual: Create a button</a><br>
             </code><br>
             Link: 
-        <a href="../WDD340/wk1/notes.html">Wk1 Notes</a><br><br>
+            <ul>
+                <li><a href="notes.html">Notes</a></li>
+            </ul>
             
         </section>
     </main>

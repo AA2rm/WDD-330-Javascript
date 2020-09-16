@@ -12,6 +12,24 @@ GitHub signin authorization: vscode://vscode.github-authentication/did-authentic
             Wk5 WDD Notes 1.0
             Wk5 WDD Notes 1.1 etc...
         
+INSTALL & RUN NPM SERVER (To see your work on the web)
+npm install -g http-serve (press enter)
+http-serve (runs the server)
+
+INSTALL & RUN GITHUB
+git add
+git commit -m "Add code.html to week 1"
+git push -u repository name (add the -u if it's the first time)
+Ex:
+git push -u AA2rm/WDD-330-Javascript (might not need the AA2rm)
+or 
+git push (after your first commit)
+
+ENABLE GITHUB PAGES (Website)
+Click on 'settings'
+Scroll down to 'GitHub Pages'
+Click 'Branch master' > select master
+Anything that pushed to the master branch is hosted to the URL link provided : https://aa2rm.github.io/WDD-330-Javascript/
 
 KEY BOARD & COMMANDS
 Shit + alt + arrow down- lets me copy a line repeatedly on several lines.
