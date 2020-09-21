@@ -85,10 +85,13 @@ Two ways to call a function.
 
     Ex: 2 Make a change in JS
     <li><a href="#" id="menu">&equiv; Menu</a></li> OR document.querySelector('#menu');  
-
-
-    Function callbacks : https://rashidjorvee.blogspot.com/2019/10/calculator-using-js-callback-function.html
-    Function Math Input Forms: https://www.sitepoint.com/community/t/math-formula-input-form/6956/3
+    
+    <ul>           
+            <li><a href="https://rashidjorvee.blogspot.com/2019/10/calculator-using-js-callback-function.html" title="Git HubPage">Function Callbacks</a></li>
+            
+            <li><a href="https://www.sitepoint.com/community/t/math-formula-input-form/6956/3" title="GitHub URL">Function Math Input Form</a></li>
+    </ul>
+   
     
 
      If you find that some code isn't working in your browser, you can add the following link into your HTML document:

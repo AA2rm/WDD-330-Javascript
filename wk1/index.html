@@ -1,82 +1,166 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Story Writer</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        
-        <script>
-            function loadStory(){
-            var storyName = document.getElementById(“name_input”).value
-            var storyHTML = localStorage.getItem(storyName)
-            document.getElementById(“story_editor”).value = storyHTML
-            }
-            function saveStory(){
-            var storyName = document.getElementById(“name_input”).value
-            var storyHTML = document.getElementById(“story_editor”).value
-            localStorage.setItem(storyName, storyHTML)
-            }
-            function dsiplayStory(){
-            var storyHTML = document.getElementById(“story_editor”).value
-            document.getElementById(“story_display”).innerHTML = storyHTML
-            }   
-        </script>
-        <style>
-            textarea {
-                background-color: lightgoldenrodyellow;
-                height: 250px;
-                width: 800px;
-            }
-        </style>
-   </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Writer</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script>
+        //1a
+        //Create a structure list of links that has a label & URL of the pg that opens when clicked
+        //Declare a constructor node
+        const links = [{
+            label: "Week1 notes",
+            url: "wk1/index.html",
+
+            labe2: "Week2 notes",
+            url: "wk2/index.html",
+
+            labe3: "Week3 notes",
+            url: "wk3/index.html",
+
+            label4: "Week4 notes",
+            url: "wk4/index.html",
+
+            labe5: "Week5 notes",
+            url: "wk5/index.html",
+
+            labe6: "Week6 notes",
+            url: "wk6/index.html",
+
+            labe7: "Week7 notes",
+            url: "wk7/index.html",
+
+            label8: "Week8 notes",
+            url: "wk8/index.html",
+
+            label9: "Week9 notes",
+            url: "wk9/index.html",
+
+            label10: "Week10 notes",
+            url: "wk10/index.html",
+
+            label11: "Week11 notes",
+            url: "wk11/index.html",
+
+            label12: "Week11 notes",
+            url: "wk11/index.html",
+        }]
+        //1b.
+        //Create an links array
+        var links = ["Week1 notes", "Week2 notes", "Week3 notes"];
+        document.getElementById("url").innerHTML = links
+
+        //Create a new link array
+        //var links = new Array("Week1 notes", "Week2 notes", "Week3 notes");
+        //document.getElementById("url").innerHTML = links;
+
+        //1c.
+        //Get the elements of the links array
+        var links = ["Week1 notes", "Week2 notes", "Week3 notes", "Week4 notes", "Week5 notes", "Week6 notes",
+            "Week7 notes", "Week8 notes", "Week9 notes", "Week10 notes", "Week11 notes", "Week12 notes"
+        ];
+        document.getElementById("wk1/index.html").innerHTML = links[0];
+
+        //2a.
+        const team = [{
+            name: "Jose Paredes",
+            url: "par11054@byui.edu",
+            url: "par17035@byui.edu",
+
+            name: "Cody Lillywhite",
+            url: "lil15003@byui.edu",
+
+            name: "Renee Mitchell",
+            url: "mit12020@byui.edu"
+        }]
+
+        //2b.
+        //Create an links array
+        var team = ["Jose Paredes", "Cody Lillywhite", "Renee Mitchell"];
+        document.getElementById("url").innerHTML = team
+
+        //2c.
+        var team = ["Jose Paredes", "Cody Lillywhite", "Renee Mitchell"];
+        document.getElementById("wk1/index.html").innerHTML = team[0, 1, 2];
+    </script>
+
+    <style>
+        textarea {
+            background-color: lightgoldenrodyellow;
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+</head>
 
 <body>
-    <header class="page_header"></header>
-    <main>   
+    <div class="avatar">
+        <p>
+            <img src="/images/icons/avatar3.png" alt="A Woman with glasses.">
+        </p>
+    </div>
 
-        <h1>Week 1</h1>
+    <header class="page_header"></header>
+    <main>
+
+        <section id="individual_display">
+            <h1>Week 1</h1>
+            <h2>Individual Assignments & Notes</h2>
+        </section>
         <ul>
             <li><a href="notes.html">Notes</a></li>
-            <li><a href="first_event.html">Code Examples</a></li>  
+            <li><a href="first_event.html">Code Example 1</a></li>
+            <li><a href="story_editor.html">Code Example 2</a></li>
         </ul>
 
- 
-        Story Name: <input id="name_input"></input><br>    
-        
-        <section id="store_info">
-           <h2>Story Editor</h2>
-            <button onclick="loadStory()">Find and Edit It</button>
-            <button onclick="saveStory()">Save It</button>
-            <button onclick="displayStory()">Display It</button>
-        </section><br>
-        <textarea id="story_editor" placeholder="Write your totally awesome story here!"></textarea>
-        
-        <section id="story_display">
-        <h1></h1>
+        <section id="team_work">
+            <h2>Team & Core Assignments</h2>
+            <p>None this week</p>
+
         </section>
 
         <section>
-            <h1>Team Assignments</h1>
-            <h2>Core Requirements</h2><br>
-            
+            <h1>Table of Contents</h1>
+            <ol>
+                <li><a href="label:wk1/notes.html"></a>Week1 notes<a href="url:wk1/index.html">wk1 index</a></li>
+                <li><a href="label:wk2/notes.html"></a>Week2 notes<a href="url:wk2/index.html">wk2 index</a></li>
+                <li><a href="label:wk3/notes.html"></a>Week3 notes<a href="url:wk3/index.html">wk3 index</a></li>
+                <li><a href="label:wk4/notes.html"></a>Week4 notes<a href="url:wk4/index.html">wk4 index</a></li>
+                <li><a href="label:wk5/notes.html"></a>Week5 notes<a href="url:wk5/index.html">wk5 index</a></li>
+                <li><a href="label:wk6/notes.html"></a>Week6 notes<a href="url:wk6/index.html">wk6 index</a></li>
+                <li><a href="label:wk7/notes.html"></a>Week7 notes<a href="url:wk7/index.html">wk7 index</a></li>
+                <li><a href="label:wk8/notes.html"></a>Week8 notes<a href="url:wk8/index.html">wk8 index</a></li>
+                <li><a href="label:wk9/notes.html"></a>Week9 notes<a href="url:wk9index.html">wk9 index</a></li>
+                <li><a href="label:wk10/notes.html"></a>Week10 notes<a href="url:wk10/index.html">wk10 index</a></li>
+                <li><a href="label:wk11/notes.html"></a>Week11 notes<a href="url:wk11/index.html">wk11 index</a></li>
+                <li><a href="label:wk12/notes.html"></a>Week12 notes<a href="url:wk12/index.html">wk12 index</a></li>
+            </ol>
         </section>
-        <section id="examples_display">
-            <h2>Examples</h2>
+
+        <section id="ref">
+            <h1>References</h1>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=ZBdE8DElQQU&ab_channel=TraversyMedia"
+                        title="Linking List With JS">Linked List Data Structure</a></li>
+                <li><a href="https://www.w3schools.com/js/js_arrays.asp" title="JS Arrays">JS Arrays</a></li>
+                <li><a href="https://www.w3schools.com/html/html_links.asp" title="HTML Links-Syntax">HTML Links</a>
+                </li>
+            </ul>
 
         </section>
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Should I be writing all of my CSS in the main.css
+        folder
+        or do I createa a separate css folder for each week?
+    </main><br><br>
 
 
-
-        <section id="individual_display">
-            <h2>Individual Assignments</h2>
-
-
-        </section>
-
-    </main>
-    <footer></footer>
+    <footer class="footer">
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
     <script src="scripts/main.js"></script>
 </body>
 

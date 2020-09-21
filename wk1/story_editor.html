@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Writer</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script>
+        function loadStory() {
+            var storyName = document.getElementById("name_input").value
+            var storyHTML = localStorage.getItem(storyName)
+            document.getElementById("story_editor").value = storyHTML
+        }
+
+        function saveStory() {
+            var storyName = document.getElementById("name_input").value
+            var storyHTML = document.getElementById("story_editor").value
+            localStorage.setItem("story_Name, storyHTML")
+        }
+
+        function displayStory() {
+            var storyHTML = document.getElementById("story_editor").value
+            document.getElementById("story_display").innerHTML = storyHTML
+        }
+    </script>
+
+    <style>
+        textarea {
+            background-color: lightgoldenrodyellow;
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="avatar">
+        <p>
+            <img src="/images/icons/avatar3.png" alt="A Woman with glasses.">
+        </p>
+    </div>
+    <header class="page_header"></header>
+    <main>
+        <section id="examples_display">
+            <h1>Week 1</h1>
+            <h2>Individual Assignments & Notes</h2>
+            <ol>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="first_event.html">Code Example 1</a></li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Story Editor</h2>
+            Story Name:<input id="name_input">
+            <button onclick="loadStory()">Find and Edit It</button>
+            <button onclick="saveStory()">Save It</button>
+            <button onclick="displayStory()">Display It</button>
+        </section>
+        <br>
+        <textarea id="story_editor" placeholder="Write your totally awesome story here!"></textarea>
+
+        <section id="story_display">
+            <h1>:)</h1>
+        </section>
+    </main>
+    <footer class="footer">
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

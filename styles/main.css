@@ -1,27 +1,105 @@
-
-
 /*Style the Header*/
 .page_header {
-    width: 100%;
-    background-image: url(wdd340/images/heartslogo.jpg);
-    background-image: url(acme/images/avatar1.jpg);
-    background-color: #ffffff;
-    height: 114px;
-    padding: 5px 0px;
-    color: #000000;
+    background-color: #f0b3ff;
+    color: #ffffff;
     display: flex;
     height: 20px;
+    margin-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 10px;
+    width: 100%;
 }
+
+/*
+   .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+*/
+
+border {
+    border-top-color: #b300b3;
+}
+
+/*Style the container 1*/
+.container1 {
+    display: flex;
+    height: 20px;
+    justify-content: left;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.container1>a {
+    display: flex;
+}
+
+/*Style the logo*/
+img {
+    height: 25px;
+    width: 12%;
+}
+div.avatar {
+    image-rendering: auto;
+    background-image: url('WDD_330/images/avatar3.png');
+    background-position: left;
+    background-size: 20%;
+    float: left;
+    height: 20px;
+    margin-bottom: 6px;
+    padding: 10px; 
+    width:15%; 
+
+}
+
+
+header>.page_header{
+    height:15px;
+    width: 100%;
+}
+/*Style the links*/
+.header a:hover {
+    background-color: #ddd;
+    color: #cc0000;
+}
+
+ul {
+    display: flex;
+    font-variant: all-small-caps;
+    font-weight: bolder;
+    margin-top: 6px;
+    padding: 1px 50px;
+}
+
+header.page_header>#ulnav_bar {
+    margin-left: 135px;
+}
+
+
+li {
+    margin-left: 20px;
+    width: 100%;
+}
+
+a {
+    display: flex;
+    color: #330033;
+    font-size: 15px;
+    word-spacing: 8px;
+}
+
 
 /*HTML SELECTORS*/
 /*Remove the bullets from the mobile menu*/
 /*Wk 1 work*/
 nav ul {
-<<<<<<< HEAD
-    list-style:none;
-=======
     list-style: none;
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e
     margin: 5px;
     padding: 5px;
 }
@@ -52,17 +130,10 @@ nav ul li a {
 
 /*ID SELECTORS*/
 
-<<<<<<< HEAD
-
-
-
-/*Indent paragrahs in notes.html*/
-.tab { margin-left: 40px;
- }
-=======
 /*Wk 2 work*/
 /*Body*/
 body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
 }
@@ -75,26 +146,15 @@ body {
 /*assign the color to the rainbow page*/
 .rebeccapurple {
     background-color: #663399;
-    ;
+
 }
 
-
-
-
-
-
-
-
-
-
 /*Style the footer*/
-footer {
-    background-color: white;
-    text-align: center;
-    font-size: 11px;
-    margin-top: -25px;
+.footer {
+    border-top-style: solid;
+    font-size: 15px;
+    margin-top: 25px;
     padding: 4px;
     text-align: center;
     width: 99%;
 }
->>>>>>> 507180363b565603c357f81bb911a8b7bace689e

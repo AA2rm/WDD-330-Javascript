@@ -73,4 +73,10 @@ liElement.addEventListener('click', (event) => {
 // Attach an event delegation to the parent element on the page
 ulElement.addEventListener('click',highlight);
 
-//D
+//Create a structure list of links that has a label & URL of the pg that opens when clicked
+const links = [
+    {
+        label: "Week1 notes", 
+        url: "wk1/index.html"
+    }
+]  

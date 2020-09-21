@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>First Event</title>
     <script>
+        //Create a structure list of links that has a label & URL of the pg that opens when clicked
+        const links = [
+         {
+            label: "Week1 notes", 
+            url: "wk1/index.html"
+         }
+        ] 
         function showCongratulations(theButtonClicked){
             document.getElementById("result_display").innerHTML =
                 "Congratulations, you did it!<p>You got the page to update!</p>"
@@ -38,7 +45,8 @@
 </head>
 
 <body>
-    <header class="ref_display"></header>
+    <header class="page_header"></header>
+    <!--<header class="ref_display"></header>-->
     <main>
         <section id="func_event_display">
             <h1>FUNCTIONS & EVENTS</h1>
@@ -58,7 +66,10 @@
             
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
     <script src="scripts/main.js"></script>
 </body>
 
