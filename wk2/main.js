@@ -85,6 +85,132 @@ length
   // do something with each image using document.images[i]
   }
 
+/*************************************
+*Declare/Define a function 'literal'
+*************************************/
+function name(){
+    console.log('Renee');
+    }
+
+
+function city(){
+    console.log('Clinton Township');
+    }
+/*************************************
+*Declare/Define a function using a 
+function 'expression' to assign an 
+anonymous function to a var
+*************************************/
+const goodbye = function(){
+    console.log('Goodbye World!');
+    };
+
+/*************************************
+*Declare  function using a 'constructor'
+ NOT RECOMMENDED TO USE
+*************************************/  
+const bonjour = new Function('console.log("BonjourWorld!");');
+
+const makeModel= new Function('console.log("Honda Civic");');
+
+/*******************************************************
+*Invoke a function by name or reference (Run Code inside 
+the function's body Keep code DRY (don't repeat)
+*******************************************************/  
+date();
+Ciao();
+trees();
+
+/***********************************
+/*Return a value from a function
+************************************/
+function howdy(){
+    return 'Howdy World!';
+    }
+function trees(){
+    return 'Maple, Willow, Ever Green';
+       }
+
+/***********************************
+/*Return a value from a function's 
+// arguments()Pg. 157 ?????
+************************************/
+function square(x) {//x is the parameter
+    return x*x;
+}
+square(8.2);//provide an argument of the number to be squared
+ //2.86356421…
+
+function colorMix(red, blue){
+    return newColor;
+}
+colorMix(rgb(255, 128, 128)+ rgb(51, 102, 255));
+
+
+/***********************************
+/*Invoke a parameter w/ no arguments
+************************************/
+mean(1,2)//not invoked; can't complete operation w/ undefined
+//Nan
+
+mean(1, 2, 3, 4, 5);//function invoked finds the mean of 1, 2, & 3 but ignores the rest of the argument
+//2
+
+square();//not invoked; no number given to square
+//undefine
+
+trees();// not invoked; no tree names given as argument
+//undefine
+ 
+
+/*******************************************
+/*Create a function called arguments() that
+will return arguments objs to view the values
+*******************************************/
+//Ex.
+function arguments(){
+    return arguments;
+}
+
+
+/******************************************************
+/*Create an array of arguments() using th rest operator 
+to view the values w/in the previously created functions
+*******************************************************/
+function rest(...args){
+    return args;
+    }
+
+/*******************************************
+/*Invoke a function using called arguments()
+*******************************************/
+arguments('Ciao', NaN, name, city, square);
+arguments(1, 2, 3, 4, 5);
+
+
+/*******************************************
+/*Use a for-of loop to iterate through each
+values given in an argument
+********************************************/
+function rest(...args){
+    for(arg of args){
+    console.log(arg);
+    }
+    }
+    rest(2,4,6,8);
+
+
+/*******************************************
+/*Use a rest parameter to improve the mean()
+function  to accept any number of values
+********************************************/
+function mean(...values) {
+    let total = 0;
+    for(const value of values) {
+    total += value;
+    }
+    return total/values.length;
+    }
 /**************************************************************************
 //Write a function that adds an extra class to an element using an addClass
 **************************************************************************/
