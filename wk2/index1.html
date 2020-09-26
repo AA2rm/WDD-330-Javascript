@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 2 Team Activity</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-  
+
     <script>
         //Problem#1
-        function loadProgram(){
+        function loadProgram() {
             let userInput = document.getElementById('number').value;
             let sum = factorial(userInput);
             let result = sum.toString();
@@ -19,24 +19,30 @@
         function factorial(number) {
             let sum = 0;
             let num = parseInt(number);
-            while(num > 0) {
+            while (num > 0) {
                 sum += num;
                 num--;
             }
             return sum;
         }
-        const sub = function(sub1, sub2){return sub1 - sub2;};
+        const sub = function (sub1, sub2) {
+            return sub1 - sub2;
+        };
 
-        const multi = (mul1, mul2) => {return mul1 * mul2;};
+        const multi = (mul1, mul2) => {
+            return mul1 * mul2;
+        };
         //Problem#3
-        function addNum(add1, add2){return add1 + add2;}
+        function addNum(add1, add2) {
+            return add1 + add2;
+        }
         //Stretch#1
         function index(operation) {
             let num1 = parseInt(document.getElementById('number').value);
             let num2 = parseInt(document.getElementById('number1').value);
             let result = 0;
-        //Stretch#2
-            switch(operation) {
+            //Stretch#2
+            switch (operation) {
                 case 1:
                     result = addNum(num1, num2);
                     break;
@@ -54,20 +60,23 @@
             var n1 = parseFloat(document.getElementById("number8").value);
             var n2 = parseFloat(document.getElementById("number9").value);
             var result = callback(n1, n2);
-             document.getElementById("addresult").value = result;
-            }
+            document.getElementById("addresult").value = result;
+        }
 
-            function multiplyNum(n1, n2) {
-                return n1 * n2;
-            }
-            function divideNum(n1, n2) {
-                return n1 / n2;
-            }
-            function addNum(n1, n2) {
-                return n1 + n2;
-            }  
+        function multiplyNum(n1, n2) {
+            return n1 * n2;
+        }
+
+        function divideNum(n1, n2) {
+            return n1 / n2;
+        }
+
+        function addNum(n1, n2) {
+            return n1 + n2;
+        }
     </script>
-       <style>
+
+    <style>
         textarea {
             background-color: lightgoldenrodyellow;
             height: 250px;
@@ -75,6 +84,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="avatar">
         <p>
@@ -85,29 +95,34 @@
     <header class="page_header"></header>
     <main>
         <ul>
-            <li><a href="wk2/notes.html">Notes</a></li>
-            <li><a href="wk2/main.js">Code Examples</a></li>
+            <li><a href="notes.html">Wk 2 Notes</a></li>
+            <li><a href="main.js">Code Examples</a></li>
         </ul>
 
-    <section id="team_activity_1">
-        <h1>Week 2  </h1>
-        <h2>Core Requirements & Stretch Goals</h2>
-    <input id="number" name="number" type="number"/>
-    <input id="number1" name="number2" type="number"/>
-    <button onclick="loadProgram()">Submit</button>
-    <button onclick="index(1)">+</button>
-    <button onclick="index(2)">-</button>
-    <button onclick="index(3)">*</button>
-    <div id="text"></div>
-</section>
+        <section id="team_activity_2">
+            <h1>Week 2 </h1>
+            <h2>Core Requirements & Stretch Goals</h2>
+            <input id="number" name="number" type="number" />
+            <input id="number1" name="number2" type="number" />
+            <button onclick="loadProgram()">Submit</button>
+            <button onclick="index(1)">+</button>
+            <button onclick="index(2)">-</button>
+            <button onclick="index(3)">*</button>
+            <div id="text"></div>
+        </section>
 
-<span style="color:red;font-size:17px"><b>Question:</b></span> Should I be placing the table of contents 'ol' list in each index ever week?
-</main><br><br> <footer class="footer">
-    <br>
-    &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
-</footer>
-<script src="scripts/main.js"></script>
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Should I be placing the table of contents 'ol'
+        list in each index, every week?<br>
+
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Why when I click the notes link on this page it combines week 1 and week 2 notes into 1 page?
+    </main><br><br>
+    <footer class="footer">
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
+    <script src="scripts/main.js"></script>
 
 
 </body>
+
 </html>

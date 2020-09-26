@@ -191,7 +191,7 @@ body.nodeName;//get the name of the element
   // do something with each image using document.images[i]
   }
 
-  const imageArray = Array.from(document.images);//turns a node list into an aray
+  const imageArray = Array.from(document.images);//turns a node list into an array
   //or
   const imageArray = [...document.images];
 
@@ -204,9 +204,9 @@ body.nodeName;//get the name of the element
   //Write a node list notation to locate ea. individual paragraph
   listItems[0];
   <li class='hero'>Superman</li>
-listItems[1];
+  listItems[1];
   <li class='vigilante hero' id='bats'>Batman</li>
-listItems[2];
+  listItems[2];
    <li class='hero'>Wonder Woman</li>
 
 
@@ -245,7 +245,7 @@ function createElement (tag,text) {
 const aquaman = createElement('li','Aquaman');
 
 //Insert a new element before the wonderWoman element in your html
-heroes.insertBefore(aquaman,wonderWoman);
+heroes.insertBefore(aquaman, wonderWoman);
 
 //Event Listeners
 //Change the content of the <h1> tag of the title page.

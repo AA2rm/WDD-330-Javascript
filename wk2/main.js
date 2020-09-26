@@ -76,4 +76,33 @@ Avengers array
 const title = 'Doctor';
 let amount = 50;
 
+/*************************************
+*Use the length property to iterate 
+through the loop
+*************************************/
+length
+ for (let i=0 ; i < document.images.length ; i++) {
+  // do something with each image using document.images[i]
+  }
 
+/**************************************************************************
+//Write a function that adds an extra class to an element using an addClass
+**************************************************************************/
+function addClass(element,newClass){
+  if (element.className) {
+      element.className = element.className + ' ' + newClass;
+  } else {
+      element.className = newClass;
+  }
+  return element.className;
+}
+
+addClass(wonderWoman,'warrior');
+"hero warrior"
+
+//Create a new element with a function
+function createElement (tag,text) {
+  const el = document.createElement(tag);
+  el.textContent = text;
+  return el
+}
