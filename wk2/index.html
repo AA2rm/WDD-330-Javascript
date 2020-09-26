@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,7 @@
         //Problem#1
         function loadProgram() {
             var userInput = document.getElementById("user_input").value
-            document.getElementById("output1").innerHTML = userInput
+            document.getElementById("output1").innerHTML = userInput;
         }
         //Problem#2
         function sumItUp() {
@@ -36,20 +35,23 @@
         const subtract = function subtract() {
         let numberInput3 = parseInt(document.getElementById('number3').value);
         let numberInput4 = parseInt(document.getElementById('number4').value);
+        let numberInput5 = parseInt(document.getElementById('number5').value);
         let answer = numberInput3 - numberInput4;
+        let answer = numberInput3 + numberInput4 * numberInput5;
+        let answer = numberInput5 / numberInput3;
         document.getElementById("output4").innerHTML = answer;
         } 
         //Stretch problem 2
         const multiply = () => {
-        let numberInput5 = parseInt(document.getElementById('number5').value);
-        let numberInput6 = parseInt(document.getElementById('number6').value);
+        let numberInput5 = parseInt(document.getElementById('number6').value);
+        let numberInput6 = parseInt(document.getElementById('number7').value);
         let answer2 = numberInput5 * numberInput6;
         document.getElementById("output5").innerHTML = answer2;
         }
         // Stretch# 3 Callback Function
         function calc(callback) {
-            var n1 = parseFloat(document.getElementById("number7").value);
-            var n2 = parseFloat(document.getElementById("number8").value);
+            var n1 = parseFloat(document.getElementById("number8").value);
+            var n2 = parseFloat(document.getElementById("number9").value);
             var result = callback(n1, n2);
              document.getElementById("addresult").value = result;
             }
@@ -113,12 +115,17 @@
             <h3 class="teamheader">Stretch #1</h3>
             <input type="text" id="number3" placeholder="Enter a number"><br>          
             <input type="text" id="number4" placeholder="Enter a number"><br>
+            <input type="text" id="number5" placeholder="Enter a number"><br>
             <button onclick="subtract()">result</button>
+            <button onclick="add, multiply()">result</button>
+            <button onclick="divide()">result</button>
             <div id="output4"></div>
             <br>
+
+ 
             <h3 class="teamheader">Stretch #2</h3>
-            <input type="text" id="number5" placeholder="Enter a number"><br><br>
-            <input type="text" id="number6" placeholder="Enter a number"><br>
+            <input type="text" id="number6" placeholder="Enter a number"><br><br>
+            <input type="text" id="number7" placeholder="Enter a number"><br>
             <button onclick="multiply()">result</button>
             <div id="output5"></div>
             <br>
@@ -127,8 +134,8 @@
         
         </section>    
             <h3>Calculator</h3>
-            Number 1: <input id="number7" type="number"/><br /><br />
-            Number 2: <input id="number8" type="number"/><br /><br />
+            Number 1: <input id="number8" type="number"/><br /><br />
+            Number 2: <input id="number9" type="number"/><br /><br />
             <input type="button" onclick="calc(addNum)"  value="Add" id="add" />
             <input type="button" value="Multiply" onclick="calc(multiplyNum)" id="multiply" />
             <input type="button" value="Divide" id="divide" onclick="calc(divideNum)"/>
