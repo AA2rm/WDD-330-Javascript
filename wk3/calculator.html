@@ -1,0 +1,62 @@
+<!Doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game Board</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+
+    <script>
+        let calculator = {
+            read() {
+                this.a = +prompt('a?', 0);
+                this.b = +prompt('b?', 0);
+            },
+
+            sum() {
+                return this.a + this.b;
+            },
+
+            mul() {
+                return this.a * this.b;
+            }
+        };
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+    </script>
+
+    <style>
+        textarea {
+            background-color: lightgoldenrodyellow;
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="avatar">
+        <p>
+            <img src="/images/icons/avatar3.jpg" alt="A Woman with glasses.">
+        </p>
+    </div>
+
+    <header class="page_header"></header>
+    <main>
+
+
+    </main>
+    <footer class="footer">
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
+    <script src="https://en.js.cx/test/libs.js"></script>
+    <script src="test.js"></script>
+</body>
+
+
+</html>
