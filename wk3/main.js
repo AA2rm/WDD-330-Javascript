@@ -1,7 +1,7 @@
 /************************
 //Create an object method
 *************************/
-let user = {
+let user1 = {
     name: "Renee",
     phone: 725 - 555 - 5555,
     id: 1234,
@@ -13,7 +13,7 @@ let user = {
 /**********************************
 //Create a method/function property
 **********************************/
-user.userName = function () { //notice the '.' unlike the ex. below
+user1.userName = function () { //notice the '.' unlike the ex. below
     alert("Tech=4me2");
 };
 
@@ -26,19 +26,19 @@ function userName() {
 
 //2. then add as a method
 //user is the obj & userName is the method, but together they are the property of the function (user.userName)
-user.userName = userName;
+user1.userName = userName;
 
 /***********************************
 //Create a shorthand function object
 ************************************/
-user = {
+user1 = {
     userName: function () {
         alert("Tech=4me2");
     }
 };
 
 //This is the shorthand method
-user = {
+user1 = {
     userName() { // same as "sayHi: function()"
         alert("Tech=4me2");
     }
@@ -47,7 +47,7 @@ user = {
 /*******************************************
 //Use the 'this' to call/retrieve the method
 *******************************************/
-let user = {
+let user1 = {
     name: "Renee",
     phone: 725 - 555 - 5555,
     id: 1234,
@@ -61,12 +61,12 @@ let user = {
 
 };
 
-user.userName(); // Renee
+user1.userName(); // Renee
 
 /**************************************************************
 //Retrieve the method by way of the outer var (NOT RECOMMENDED)
 **************************************************************/
-let user = {
+let user1 = {
     name: "Renee",
     name: "Renee",
     phone: 725 - 555 - 5555,
@@ -75,14 +75,14 @@ let user = {
     department: networkEngineer,
 
     userName() {
-        alert(user.name); // "user" instead of "this"
+        alert(user1.name); // "user" instead of "this"
     }
 };
 
 /********************************************************
 Assign two different objs to 'this" & to call the method
 ********************************************************/
-let user = {
+let user1 = {
     name: "Renee"
 };
 let admin = {
@@ -94,12 +94,12 @@ function userName() {
 }
 
 // use the same function in two objects
-user.f = userName;
+user1.f = userName;
 admin.f = userName;
 
 // these calls have different this
 // "this" inside the function is the object "before the dot"
-user.f(); // John  (this == user)
+user1.f(); // John  (this == user)
 admin.f(); // Admin  (this == admin)
 
 admin['f'](); // Admin (dot or square brackets access the method – doesn't matter)
@@ -119,7 +119,7 @@ userName; // undefined
 Use an arrow function to call an obj from 
 the outter method
 *******************************************/
-let user = {
+let user1 = {
     firstName: "Renee",
     userName() {
         let arrow = () => alert(this.firstName);
@@ -127,7 +127,7 @@ let user = {
     }
 };
 
-user.userName(); // Renee
+user1.userName(); // Renee
 
 /******************************************
  * Return an obj by accessing its ref
@@ -139,9 +139,9 @@ function makeUser() {
     };
 }
 
-let user = makeUser();
+let user1 = makeUser();
 
-alert(user.ref.name); // What's the result?
+alert(user1.ref.name); // What's the result?
 
 /*Ans: the obj is only referenced when it is called 
  *and does not reference what's in the obj. called 'this'

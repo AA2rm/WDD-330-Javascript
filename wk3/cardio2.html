@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Cardio 💪</title>
+    <title>Array Cardio Day 2💪</title>
     <link rel="stylesheet" href="styles/main.css">
 
     <style>
@@ -18,6 +18,18 @@
 </head>
 
 <body data-gr-c-s-loaded="true">
+  <header id="page_header"></header>
+    <main>
+        <ul>
+            <li><a href="wk3/events.html">Code Examples</a></li>
+            <li><a href="heros.html">Code Examples</a></li>
+            <li><a href="main.js">Code Examples</a></li>
+            <li><a href="notes.html">Wk 2 Notes</a></li>
+        </ul>
+        <section id="team_activity_3">
+            <h1>Week 2 </h1>
+            <h2>Stretch Goals</h2>
+
     <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
     <script>
     /*******************
@@ -38,7 +50,8 @@
         { text: 'Nice Nice Nice!', id: 542328 }
       ];
   
-      
+    /***********************************
+     * Completed individually
     /***********************************
      Some and Every Checks
      Array.prototype.some() 
@@ -51,10 +64,24 @@
           }
         })
 
+      const isAdult=people.every(function(person) {
+        if(person.year - person.year >= 19) {
+              return true;
+          }
+      });
+      console.log(isAdult);
+
       /*********************************      
        Array.prototype.every() 
        is everyone 19 or older?
       *********************************/
+      const isAdult = people.every(person){
+        
+      }
+      const found = objects.find(function (item) {
+        return item.id === 'b';
+      });
+      console.log(found === objects[1]); // true
 
 
 
@@ -79,7 +106,12 @@
        *****************************************/
   
     </script>
+  </section>
   
-  
+  <footer class="footer">
+    <br>
+    &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+</footer>
+<script src="scripts/main.js"></script>
   </body>
   </html>
