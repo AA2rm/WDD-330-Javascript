@@ -12,7 +12,7 @@
         // Get your shorts on - this is an array workout!
         // ## Array Cardio Day 1
 
-        // Some data we can work with
+        // Some data we can work with. Each inventor is an obj
 
         const inventors = [{
                 first: 'Albert',
@@ -88,6 +88,7 @@
             }
         ];
 
+        //People array
         const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry',
             'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert',
             'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester',
@@ -99,12 +100,24 @@
         ];
 
         /************************************
+         * Completed With Group 3    
+        /************************************
         //1. Using an array.prototype.filter()
-        , filter the list of inventors for 
+        , filter the list of inventors for (get)
         those born in the 1500's
         ************************************/
-        const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
-
+        //Long
+        /*const fifteen = inventors.filter(function(inventor) {
+            if(inventor.year >= 1500 && inventor.year < 1600) {
+                return true;//keep data
+                        } else {
+                return false;
+            }
+        });
+        */
+        //Short
+        const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600))
+        //console.log(fifteen);
         console.table(fifteen);
 
 
@@ -113,6 +126,12 @@
         , give us an array of the inventor 
         first and last names
         ***********************************/
+       //Long
+        /*const fullNames = inventors.map(inventor => inventor.first + ' ' + inventor.last);
+        console.log(fullNames);
+        */
+
+        //Short
         const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
         console.log(fullNames);
 
@@ -122,7 +141,19 @@
         , sort the inventors by birthdate, 
         oldest to youngest
         ***********************************/
-        /* const ordered = inventors.sort(function(a, b) {
+        //Long
+        /*
+        const ordered = inventors.sort(function(firstPerson, secondPerson) {
+            if(firstPerson.year > secondPerson.year) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        console.table(ordered)
+        */
+        //Long
+        /*const ordered = inventors.sort(function(a, b) {
            if(a.year > b.year) {
             return 1;
             } else {
@@ -130,46 +161,94 @@
               }
            });
         */
+       //Short       
+       const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+       
+       console.table(ordered)  
 
-        const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
-        console.table(ordered);
-
-
+        /*******************************************
+         * Completed Individually-by videos
         /*******************************************
         //4. Usins an array.prototype.reduce()
         , how many years did all the inventors live?
         *******************************************/
+       //Long
+       /*
+       var totalYears =0;
+       for (var i =0; i < inventors.length; i++) {
+           totalYears += inventor[i].year
+       }
+       console.log(totalYears)
+*/
+       //Short
         const totalYears = inventors.reduce((total, inventor) => {
             return total + (inventor.passed - inventor.year);
-        }, 0);
+        }, 0);//w/o the '0' the first time it's undefined after adding the '0' you get a value
 
         console.log(totalYears);
+
 
         /**************************************
         5. Sort the inventors by years lived
         **************************************/
+       //Long
+       /*const oldest = inventors.sort(function(a,b) {
+            const lastInventor = a.passed - a.year;
+            const nextInventor = b.passed - b.year;
+            if(lastInventor > nextInventor) {
+                return -1;
+            } else {
+                return 1;
+            }
+       });
+       */
+       //Short
         const oldest = inventors.sort(function(a, b) {
+            //create vars
             const lastInventor = a.passed - a.year;
             const nextInventor = b.passed - b.year;
             return lastInventor > nextInventor ? -1 : 1;
         });
-        console.table(oldest);
+
+        console.table(oldest)
+
 
         /*********************************************************
         6. Create a list of Boulevards in Paris that contain 'de' 
-        anywhere in the name
+        anywhere in the name(runs on wikipedia page)
         https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
         **********************************************************/
-        const category = document.querySelector('.mw-category');
-            const links = Array.from(category.querySelectorAll('a'));
-            const de = links
+        //Long
+        /*const category = document.querySelector('.mw-category');
+            const links = [...category.querySelectorAll('a')];           
+            const de = links//convert list of links into names
                 .map(link => link.textContent)
                 .filter(streetName => streetName.includes('de'));
+        */
+        
+        //Short: comment out when running query #7
+        /*const category = document.querySelector('.mw-category');
+            const links = Array.from(category.querySelectorAll('a'));//get the links from an array
+            const de = links
+                .map(link => link.textContent)
+                .filter(streetName => streetName.includes('de'));//filter list of name for 'de'
 
-
+        */
         /***********************************************        
         7. Sort the people alphabetically by last name
         ***********************************************/
+       //Long
+       const alpha = people.sort(function(lastOne, nextOne) {
+           //split on comma & space
+           //const parts = lastOne.split(', ');
+        const[last,first] = lastOne.split(', ');
+                 
+         });
+        //console.log(parts);
+        console.log(last, first);
+
+       
+       //Short
         const alpha = people.sort((lastOne, nextOne) => {
             const [aLast, aFirst] = lastOne.split(', ');
             const [bLast, bFirst] = nextOne.split(', ');
@@ -177,23 +256,54 @@
         });
         console.log(alpha);
 
+
         /***************************************
         8. Reduce Exercise
         Sum up the instances of each of these
         ****************************************/
+       //Long
+
+       //Short
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car',
             'truck', 'pogostick'
         ];
+        //Long
+        const tranvel = data.reduce(function (obj, item) {
+           //you can start with an list of objs
+            /* {
+            car:0,
+            truck: 0,
+            bike: 0,
+            walk: 0,
+            van: 0,
+            pogostick: 0;
+            }
+             */
 
-        const transportation = data.reduce(function (obj, item) {
+            //it's better to start w/ a blank obj instead and get the entire list of objs
+            //console.log(item);
+            //return obj;
+            //Then Check for the key value of the objs in the list
+            if (!obj[item]) {
+                obj[item] = 0;//see what the value is fist
+            }
+            obj[item]++;//increment the through the list of items
+            return obj;
+        }, {});       
+
+        console.log(travel);
+        //Short
+        
+        const tranvel = data.reduce(function (obj, item) {
             if (!obj[item]) {
                 obj[item] = 0;
             }
+            //Check for the key value of the obj
             obj[item]++;
             return obj;
         }, {});
 
-        console.log(transportation);
+        console.log(travel);
     </script>
     <footer class="footer">
         <br>
