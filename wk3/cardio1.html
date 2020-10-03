@@ -3,22 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Cardio 💪</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-    <header id="page_header"></header>
-    <main>
-        <ul>
-            <li><a href="wk3/events.html">Code Examples</a></li>
-            <li><a href="heros.html">Code Examples</a></li>
-            <li><a href="main.js">Code Examples</a></li>
-            <li><a href="notes.html">Wk 2 Notes</a></li>
+    <div id="portfolio_logo">
+        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+    </div> 
+   
+    <header class="page_header"> 
+     <ul  id="nav_bar">  
+            <li><a href="/https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            
+            <li><a href="/https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
         </ul>
-        <section id="team_activity_3">
-            <h1>Week 2 </h1>
+    </header>
+    <main>
+        <section id="team_activity">
+            <h1>Week 3</h1>
             <h2>Core Requirements & Stretch Goals</h2>
-            <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+            <p><em>Psst: have a look at the JavaScript Console</em> 💁</p><br>
+            <b>Note:</b>To see the various arrays on the server click inspect and then click the console tab.
             <script>
                 // Get your shorts on - this is an array workout!
                 // ## Array Cardio Day 1
@@ -188,12 +195,12 @@
                 *******************************************/
                 //Long
                 /*
-       var totalYears =0;
-       for (var i =0; i < inventors.length; i++) {
-           totalYears += inventor[i].year
-       }
-       console.log(totalYears)
-*/
+                var totalYears =0;
+                for (var i =0; i < inventors.length; i++) {
+                    totalYears += inventor[i].year
+                }
+                console.log(totalYears)
+                */
                 //Short
                 const totalYears = inventors.reduce((total, inventor) => {
                     return total + (inventor.passed - inventor.year);
@@ -226,8 +233,8 @@
 
                 console.table(oldest)
 
-
-
+            
+                
                 /*********************************************************
                 6. Create a list of Boulevards in Paris that contain 'de' 
                 anywhere in the name(runs on wikipedia page)
@@ -325,6 +332,7 @@
                 console.log(transport);
             </script>
         </section>
+        </main>
         <footer class="footer">
             <br>
             &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 3 Reading Notes</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>JavaScript: Novice to Ninja, 2nd Edition
+        : Notes</title>
+    <link rel="stylesheet" href="text/html">
 
     <style>
         textarea {
@@ -17,10 +18,21 @@
 </head>
 
 <body>
+    <div id="portfolio_logo">
+        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+    </div>
+
+    <header class="page_header">
+        <ul id="nav_bar">
+            <li><a href="/https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+
+            <li><a href="/https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+        </ul>
+    </header>
     <main>
         <section id="obj_functions">
             <textarea id="story_editor" placeholder="Insert your code"></textarea><br>
-            <h1>Reading Notes</h1>
+            <h1>Wk 3 Reading Notes</h1>
             <h2>Javascript.Info</h2>
             <ul>
                 <li><a href="https://javascript.info/object-methods" title="GitHub-Yenrab"> Doing Stuff With Web
@@ -120,13 +132,6 @@
             If you find that some code isn't working in your browser, you can add the following link into your HTML
             document. Note that this link needs to gobeforeany JavaScript that needs to be transpiled.<br>
 
-            <ul>
-                <li><a href="https://unpkg.com/babel-standalone@6/babel.min.js" title="Broken Script">Babel min.js</a>
-                </li>
-            </ul>
-
-
-
             You also have to change the type attribute to 'text/babel' in any links to JavaScript files. For example,
             the link to the JavaScript file in the example above would change to: <br>
 
@@ -184,47 +189,47 @@
             the argument.<br>
 
             Now we have an element that contains the text we want. So the process to follow each time you want to
-                create a  new element with text content is this:<br>
+            create a new element with text content is this:<br>
 
-                Create the element node<br>
-                Create the text node<br>
-                Append the text node to the element node<br>
-                const flash = document.createElement('li');
-                flash.textContent = 'Flash';<br>
+            Create the element node<br>
+            Create the text node<br>
+            Append the text node to the element node<br>
+            const flash = document.createElement('li');
+            flash.textContent = 'Flash';<br>
 
-                You can use a function to cerate element (see JS file line 240), and use the <b>appendChild() &
-                    insertBefore()</b> methods
-                to move markup that already exists in the DOM as well. if you use multiple inserts and appends, only the
-                last one will have
-                an effect. If an element is required to appear in several different places in the document, it would
-                need to be cloned before
-                each insertion. An element can be removed from a page using the <b>removeChild()</b> method that's
-                called on the parent node
-                using a single parameter. You can also replace elements on a page<b>replaceChild()</b> method. The
-                <b>innerHTML</b> property
-                is also writable and can be used to place a chunk of HTML inside an element. Code w/in script tags will
-                not execute. The
-                <b>document.getElementsByClassName()</b> & <b>document.getElementsByTagName()</b> are live collections
-                that discourage for use
-                due to performance reasons. You also need to be careful when referring to elements by their index in a
-                collection, as this
-                can change when markup is added or removed.<br>
+            You can use a function to cerate element (see JS file line 240), and use the <b>appendChild() &
+                insertBefore()</b> methods
+            to move markup that already exists in the DOM as well. if you use multiple inserts and appends, only the
+            last one will have
+            an effect. If an element is required to appear in several different places in the document, it would
+            need to be cloned before
+            each insertion. An element can be removed from a page using the <b>removeChild()</b> method that's
+            called on the parent node
+            using a single parameter. You can also replace elements on a page<b>replaceChild()</b> method. The
+            <b>innerHTML</b> property
+            is also writable and can be used to place a chunk of HTML inside an element. Code w/in script tags will
+            not execute. The
+            <b>document.getElementsByClassName()</b> & <b>document.getElementsByTagName()</b> are live collections
+            that discourage for use
+            due to performance reasons. You also need to be careful when referring to elements by their index in a
+            collection, as this
+            can change when markup is added or removed.<br>
 
-                Every element node has a <b>style</b> property. This can be used to dynamically modify the presentation
-                of any element on a web page.
-                Any CSS property names that are separated by dashes must be written in camelCase notation, so the dash
-                is removed and the next
-                letter is capitalized because dashes are not legal characters in property names. For ex the CSS proper
-                <b>background-color</b> becomes
-                <b>backgroundColor.</b> the <b>bracbket</b> notation can also be used, meaning that CSS properties can
-                be provided as a string and
-                don't need the camelCase notation. The CSSproperty often employed is the <b>display</b> property can be
-                used to make elements
-                disappear and reappear on the page as needed. The <b>getCommputerStyle()</b> function will retrieve all
-                the style info. of an element
-                that is given as a parameter. Browsers like Chrome do not allow access to methods of a
-                <b>CSSStyleDeclaration</b> obj such as
-                <b>getPropertyCSSValue()</b>.<br>
+            Every element node has a <b>style</b> property. This can be used to dynamically modify the presentation
+            of any element on a web page.
+            Any CSS property names that are separated by dashes must be written in camelCase notation, so the dash
+            is removed and the next
+            letter is capitalized because dashes are not legal characters in property names. For ex the CSS proper
+            <b>background-color</b> becomes
+            <b>backgroundColor.</b> the <b>bracbket</b> notation can also be used, meaning that CSS properties can
+            be provided as a string and
+            don't need the camelCase notation. The CSSproperty often employed is the <b>display</b> property can be
+            used to make elements
+            disappear and reappear on the page as needed. The <b>getCommputerStyle()</b> function will retrieve all
+            the style info. of an element
+            that is given as a parameter. Browsers like Chrome do not allow access to methods of a
+            <b>CSSStyleDeclaration</b> obj such as
+            <b>getPropertyCSSValue()</b>.<br>
         </section>
 
         <section id="events">
@@ -272,13 +277,13 @@
             attach an event listener to a parent element in order to capture events that are triggered by its child
             elements.<br>
         </section>
+    </main><br><br>
 
-        </main>
-        <footer class="footer">
-            <br>
-            &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
-        </footer>
-        <script src="scripts/main.js"></script>
+    <footer class="footer">
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
+
 </body>
 
 </html>

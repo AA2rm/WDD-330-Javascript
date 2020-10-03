@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/main.css">
     <title>JavaScript: Novice to Ninja, 2nd Edition
         : Notes</title>
-    <script>
-    </script>
+    <link rel="stylesheet" href="styles/main.css">
 
     <style>
         textarea {
@@ -21,134 +18,152 @@
 </head>
 
 <body>
-    <div class="avatar">
-        <p>
-            <img src="/images/icons/avatar3.png" alt="A Woman with glasses.">     
-        </p>
-    </div>
-    <header class="page_header"></header>
+    <div id="portfolio_logo">
+        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+    </div> 
+   
+    <header class="page_header"> 
+     <ul  id="nav_bar">  
+            <li><a href="/https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            
+            <li><a href="/https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+        </ul>
+    </header>
     <main>
         <section id="web_things_chp1">
             <h1>WK 1 Doing Stuff With The Web</h1>
             <h2>Make It Nice</h2>
             <ul>
-               <li><a href="https://github.com/yenrab/doing_stuff_with_web_things/tree/6009270a0ddce5a42675e0abe9c9c0232fa97185" title="GitHub-Yenrab"> Doing Stuff With Web Things</a></a></li>
+                <li><a href="https://github.com/yenrab/doing_stuff_with_web_things/tree/6009270a0ddce5a42675e0abe9c9c0232fa97185"
+                        title="GitHub-Yenrab"> Doing Stuff With Web Things</a></li>
             </ul>
-    
+
             <b>Functions</b> are a type of operation which:<br>
             1. Function syntax has the <b>function</b> keyword at the start of the code.<br>
             2. It has a (verb) name. Start with lowever case & camel case the first letter of each word afterwards.<br>
             3. Things that goes in the function. Is inside the ().<br>
-            4. Things that come out of the function are located in the {}, as well as things that make up what the function does goes here.<br><br>
+            4. Things that come out of the function are located in the {}, as well as things that make up what the
+            function does goes here.<br><br>
 
             Ex:<br>
             <b>function</b> theFunctionName(whatGoesIn){<br>
-                Instructions: what the computer does<br>
+            Instructions: what the computer does<br>
             }
-                <br>
-            
+            <br>
+
             <code>
                 <a href="../WDD340/wk1/main.js">Code: Function Ex.</a>
             </code><br><br>
-           <b>Note:</b>Place your function within the script tags. Since you have to tell the computer the id of the element you want
-           found, you are responsible for there being an element that has that
-           id. (look at the example in the fir st_event.html file below. If you forget to add an id or send getElementById the wrong id,
-           you’re going to get a strange error when you click the button. The
-           error will mention null. Since button and section are both tags, you can change what is in
+            <b>Note:</b>Place your function within the script tags. Since you have to tell the computer the id of the
+            element you want
+            found, you are responsible for there being an element that has that
+            id. (look at the example in the fir st_event.html file below. If you forget to add an id or send
+            getElementById the wrong id,
+            you’re going to get a strange error when you click the button. The
+            error will mention null. Since button and section are both tags, you can change what is in
             between their starting and ending tags using the same thing; innerHTML. <br>
 
             Create a button using the <b>button</b> tag. An example is in the first_event.html folder
             <code>
                 <a href="../WDD340/wk1/first_event.html">first_event.html Ex.</a>
             </code><br>
-            Add the button html code in the body and the JS code in the script tag between the head tags of the html doc.
+            Add the button html code in the body and the JS code in the script tag between the head tags of the html
+            doc.
             To get the button to update after clicking it you need to modify the code as such: <br>
 
-                Ex:<br>
-                <u>change from:</u> (button tag Click me! /button tag)<br><br>
-                <u>change to:</u> (buttontag onclick="showCongratulations(this)">Click Me! /button tag)<br><br>
-           
-            This is the <b>event</b> aspect of the function, which executes the code. Since button and section are both tags, you can change 
-            what is in between their starting and ending tags using the same thing; innerHTML. 
+            Ex:<br>
+            <u>change from:</u> (button tag Click me! /button tag)<br><br>
+            <u>change to:</u> (buttontag onclick="showCongratulations(this)">Click Me! /button tag)<br><br>
+
+            This is the <b>event</b> aspect of the function, which executes the code. Since button and section are both
+            tags, you can change
+            what is in between their starting and ending tags using the same thing; innerHTML.
         </section>
 
         <section id="master_mobile">
             <h1>Master Mobile UX</h1>
             <h2>Rewired The Brain For Mobile First</h2>
-            Focus on making content to fit small screens first for functionality. Just because you make your code <b>responsive</b> doesn't 
-            mean it mobile first. This is when you take what you have & make it work on mobile, but this does not address the screen size or
+            Focus on making content to fit small screens first for functionality. Just because you make your code
+            <b>responsive</b> doesn't
+            mean it mobile first. This is when you take what you have & make it work on mobile, but this does not
+            address the screen size or
             touch site issues.<br>
-            PROS &  CONS: <br>
-                It's time consuming & costly.<br>
-                Provides experience across many devices.<br>
-                Address constraints of mobile size/bandwith.<br>
-                Future Friendly & ready for scaling up.<br>
+            PROS & CONS: <br>
+            It's time consuming & costly.<br>
+            Provides experience across many devices.<br>
+            Address constraints of mobile size/bandwith.<br>
+            Future Friendly & ready for scaling up.<br>
 
             <h2>Improve UX by Understanding Users</h2>
-            <u>Observe</u> what the user is doing, not what they say. Be available, useful, and be quick by reducing the user cognitive load.<br>
-            <u>Reachability</u>-how the users handle the device. Make this easy, for example key items should be at the bottom of the device where 
+            <u>Observe</u> what the user is doing, not what they say. Be available, useful, and be quick by reducing the
+            user cognitive load.<br>
+            <u>Reachability</u>-how the users handle the device. Make this easy, for example key items should be at the
+            bottom of the device where
             it's easy to reach.<br>
             <u>Speed matters</u>-how is the client/user's buisiness effected? For example delays can effect revenue.<br>
-                reduce image<br>
-                svg/webfonts are lower bandwidth<br>
-                optimized & minify CSS & JS files. Remove white space.<br>
-                GZip files to eliminate unnecessary data.<br>
+            reduce image<br>
+            svg/webfonts are lower bandwidth<br>
+            optimized & minify CSS & JS files. Remove white space.<br>
+            GZip files to eliminate unnecessary data.<br>
 
             <h2>Strategic Menu Design</h2>
             Use Primary Controls<br>
-                Move nav bar & commonly used sub navigations to the bottom of the device.
-                    This promotes reachability issues.<br>
-                    Creates perception of speed<br>
-                    Improves engagement rates<br>
-                    Increased user satifaction<br>
-                Use icons that are easy recognizable like the word menu with a boarder that looks like a button.<br>
-            
+            Move nav bar & commonly used sub navigations to the bottom of the device.
+            This promotes reachability issues.<br>
+            Creates perception of speed<br>
+            Improves engagement rates<br>
+            Increased user satifaction<br>
+            Use icons that are easy recognizable like the word menu with a boarder that looks like a button.<br>
+
             <h2>Mobile Friendly Forms</h2>
             Focus on important things first, and keep it simple.<br>
-                Ditch the labels and display the label inside of the text box.<br>
-                Use float labels.<br>
-                Make check boxes larger.<br>
-                Ask customer preference of contact (email or phone).<br>
-                Break a form down into sections when more input is needed.<br>
-                Include a progress indicator. Enable autocomple on the form<br>
-                For password show the password and allow the user to hide the password when needed.<br>
-                Use an auto advance for credit/bank cards.<br>
-                For number use the number pad instead of the keyboard.<br>
-                Use an <a> </a> tag to link your phone number.
+            Ditch the labels and display the label inside of the text box.<br>
+            Use float labels.<br>
+            Make check boxes larger.<br>
+            Ask customer preference of contact (email or phone).<br>
+            Break a form down into sections when more input is needed.<br>
+            Include a progress indicator. Enable autocomple on the form<br>
+            For password show the password and allow the user to hide the password when needed.<br>
+            Use an auto advance for credit/bank cards.<br>
+            For number use the number pad instead of the keyboard.<br>
+            Use an <a> </a> tag to link your phone number.
 
             <h2>Advertising</h2>
-            When adding ads or popups keep them small and simple  no more thant 40% of your space).<br>
+            When adding ads or popups keep them small and simple no more thant 40% of your space).<br>
             If using lardge ads start with a small thumbnail that enlarges to a larger image when clicked on.<br>
             Use video ads.<br>
             Use ads that are in the background while the text is in the foreground.<br>
             Things to remember<br>
-                stop using pop-ups/pop-overs<br>
-                users don't visit your webisite to look at ads
-                keep it simple & sleek.<br>
-                Make it unobtrusive. Content first.<br>
+            stop using pop-ups/pop-overs<br>
+            users don't visit your webisite to look at ads
+            keep it simple & sleek.<br>
+            Make it unobtrusive. Content first.<br>
         </section>
 
         <section id="web_things_chp1.1">
-        <h1>WK 1 Doing Stuff With The Web</h1>
-        <h2>Think First</h2>
-        Steps to Success<br>
-            Think-learn what you don't know. Practice & know what the customer wants<br>                       
-            Design-use what you learn to layout a solution to the problem. How it interacts with other soft/hardware.<br>
+            <h1>WK 1 Doing Stuff With The Web</h1>
+            <h2>Think First</h2>
+            Steps to Success<br>
+            Think-learn what you don't know. Practice & know what the customer wants<br>
+            Design-use what you learn to layout a solution to the problem. How it interacts with other
+            soft/hardware.<br>
             Test-create expectations for behavior to indicate success.<br>
-                user interaction testing
-                unit testing
-                component testing
-                system testing
-                installation testing
-                new data expectations
-            Create-write the code.<br>         
+            user interaction testing
+            unit testing
+            component testing
+            system testing
+            installation testing
+            new data expectations
+            Create-write the code.<br>
         </section>
 
         <section id="web_things_chp2">
             <h1>Make It Nice</h1>
             To change the style of the page you put the code inside of the <b>style</b> tags.<br>
-            A short cut to only changing the color of the text is to use 'color: white;' coding in styles tag or in the CSS file.<br>
-            If a <b>section</b> is empty it's collapsed with no height. After you click it you will see the changes made to the id="result_display".<br>
+            A short cut to only changing the color of the text is to use 'color: white;' coding in styles tag or in the
+            CSS file.<br>
+            If a <b>section</b> is empty it's collapsed with no height. After you click it you will see the changes made
+            to the id="result_display".<br>
         </section>
 
         <section id="web_things_chp2.3">
@@ -158,73 +173,88 @@
                 <span style="color:red;">localStorage.</span>setItem(storyName, storyHTML)
             </code>
 
-            <code>                
+            <code>
                 function loadStory(){
-                    var storyName = document.getElementById(“name_input”).value  (SAVES)
-                    var storyHTML = localStorage.getItem(storyName)              (RETRIEVES)
-                    document.getElementById(“story_editor”).value = storyHTML
+                var storyName = document.getElementById(“name_input”).value (SAVES)
+                var storyHTML = localStorage.getItem(storyName) (RETRIEVES)
+                document.getElementById(“story_editor”).value = storyHTML
                 }
             </code>
-            
+
             <p>How To:</p>
             <ul>
-                
-                <li>You <u>store data</u> to your <b>computer</b> you store/save the var <b>key value</b> & label the saved data with what's in the  <b>key title</b>: 'storyName' var using the keyword <b>localStorage</b>.</li>
-                            
-                <li>To retrieve the data  you get the element id 'name_input' & store the key value into the 'loadStory' function's var 'storyName'. You use the <b>localStorage</b> to <u>retrieve</u> the data or key value that puts the story(key) into the var 'storyHTML'</li>
-                
-                <li>To display data you need to get the element's id 'story_editor' & place it in the visual box (value) called 'storyHTML' var.</li>
-            </ul>     
-            
+
+                <li>You <u>store data</u> to your <b>computer</b> you store/save the var <b>key value</b> & label the
+                    saved data with what's in the <b>key title</b>: 'storyName' var using the keyword
+                    <b>localStorage</b>.</li>
+
+                <li>To retrieve the data you get the element id 'name_input' & store the key value into the 'loadStory'
+                    function's var 'storyName'. You use the <b>localStorage</b> to <u>retrieve</u> the data or key value
+                    that puts the story(key) into the var 'storyHTML'</li>
+
+                <li>To display data you need to get the element's id 'story_editor' & place it in the visual box (value)
+                    called 'storyHTML' var.</li>
+            </ul>
+
             What to do to <u>allow the user to communicate.</u>
 
             The <b>input</b> tag can have an id and the story's name lets the user know what to type in the input box.
-            The<b>textarea</b> tag also has an id  and a <b>placeholder</b> property that is specific to help the user determine what goes into the
+            The<b>textarea</b> tag also has an id and a <b>placeholder</b> property that is specific to help the user
+            determine what goes into the
             textarea and the input tag.
             The <b>section</b> tags take up the space across the entire screen.
             The <b>onclick</b> is an event listener that is set to perform a function, when clicked.
-            When styling anything, always style any CSS either in it's own file or in the <b>style</b> tag when specific to a certain page.
-            To make the display <b>active</b> you have to add <b>methods/functions</b> to match those listed in the HTML as part of the onclick button listerners, using JS into the <b>script</b> tags.
+            When styling anything, always style any CSS either in it's own file or in the <b>style</b> tag when specific
+            to a certain page.
+            To make the display <b>active</b> you have to add <b>methods/functions</b> to match those listed in the HTML
+            as part of the onclick button listerners, using JS into the <b>script</b> tags.
             To use a <b>variable</b> in JS use <b>var</b>.
             When reading JS start on the right side of the = sign first.
-            To store data in a <b>var</b> you have to tell the document to get the 'element's id' like the (story_editor id). Then take what's inside of the value and store in the var. Next get the 'story_display'
-            id & store it inside the 'storyHTML var' beginning & ending tags. Therefore, the value of the id is stored in the var & section's beginning & ending tags.<br><br>
+            To store data in a <b>var</b> you have to tell the document to get the 'element's id' like the (story_editor
+            id). Then take what's inside of the value and store in the var. Next get the 'story_display'
+            id & store it inside the 'storyHTML var' beginning & ending tags. Therefore, the value of the id is stored
+            in the var & section's beginning & ending tags.<br><br>
             <code>
                 var storyHTML = document.getElementById(<span style="color:red;">“story_editor”</span>).value
                 document.getElementById(<span style="color:red;">“story_display”</span>).innerHTML = storyHTML
             </code><br><br>
-            -You get the user's input from any text area or input tag by using the keyword <b>value</b>, and to display data you use the keyword <b>section</b> AND <b>innerHTML</b>.<br>
-        </section>         
+            -You get the user's input from any text area or input tag by using the keyword <b>value</b>, and to display
+            data you use the keyword <b>section</b> AND <b>innerHTML</b>.<br>
+        </section>
 
-                 Ex.<br>
+        Ex.<br>
         <section id="portfolio">
             <h1>WK 1 On Creating A Portfolio</h1>
             <h2>Create a Repository</h2>
 
             <h2>CSS Styles</h2>
-             https://github.com/AA2rm/WDD-330-Javascript<br>
-             https://aa2rm.github.io/WDD-330-Javascript/
+            https://github.com/AA2rm/WDD-330-Javascript<br>
+            https://aa2rm.github.io/WDD-330-Javascript/
 
             <h2>Turn Github Pages On</h2>
-            After logging into the repository > click on settings > scroll down to the section 'Github Page' > select 'master branch'. Your URL repository will show up.<br>
-            
+            After logging into the repository > click on settings > scroll down to the section 'Github Page' > select
+            'master branch'. Your URL repository will show up.<br>
+
             <h2>Dynamic Table of Contents</h2>
             Add to the table of contents of the root index. <br>
             Create a main.js file under the WDD 330 project folder.<br>
             Add a js script tag to your html files.
-                -selects an 'ol' element from the index.html page.<br>
-                -readss a list of links froma an array.<br>
-                -For each of the items in the array of links you should create a li element, add an a element with the label and url from the list of links, and add the new li element into the ol element you grabbed above.<br>
-    
+            -selects an 'ol' element from the index.html page.<br>
+            -readss a list of links froma an array.<br>
+            -For each of the items in the array of links you should create a li element, add an a element with the label
+            and url from the list of links, and add the new li element into the ol element you grabbed above.<br>
+
             <h2>Record Your Work</h2>
             Take notes from your readings and complete exercises
         </section><br>
-      
-            <h2><u>Reference:</u></h2>
-            <ul> 
-                <li><a href="https://learnwebcode.com/how-to-insert-an-image-in-xhtml/" title="Insert An Image">Insert Images Using HTML</a></li>
-            </ul>       
-    </main>
+
+        <h2><u>Reference:</u></h2>
+        <ul>
+            <li><a href="https://learnwebcode.com/how-to-insert-an-image-in-xhtml/" title="Insert An Image">Insert
+                    Images Using HTML</a></li>
+        </ul>
+    </main><br><br>
+
     <footer class="footer">
         <br>
         &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington

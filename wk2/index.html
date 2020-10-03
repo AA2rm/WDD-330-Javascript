@@ -1,208 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/cs" href="styles/main.css">
-    <title>Team Assignments</title>
-    
+    <title>Week 2 Team Activity</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
     <script>
         //Problem#1
         function loadProgram() {
-            var userInput = document.getElementById("user_input").value
-            document.getElementById("output1").innerHTML = userInput;
+            let userInput = document.getElementById('number').value;
+            let sum = factorial(userInput);
+            let result = sum.toString();
+            document.getElementById('text').innerHTML = result;
         }
         //Problem#2
-        function sumItUp() {
-            var numberInput = parseInt(document.getElementById("user_input2").value);
-            var sum = 0;
-
-            for (var start = 1; start <= numberInput; start++) {
-                sum = start + sum;
+        function factorial(number) {
+            let sum = 0;
+            let num = parseInt(number);
+            while (num > 0) {
+                sum += num;
+                num--;
             }
-            document.getElementById("output2").innerHTML = sum
-        }        
-        
-        //Problem#3         
-        function addItUp(numberInput1, numberInput2) {
-            var numberInput1 = parseInt(document.getElementById('number1').value);
-            var numberInput2 = parseInt(document.getElementById('number2').value);
-            var add = numberInput1 + numberInput2;
-        document.getElementById("output3").innerHTML = add
+            return sum;
         }
- 
-        //Stretch problem 1
-        const subtract = function subtract() {
-        let numberInput3 = parseInt(document.getElementById('number3').value);
-        let numberInput4 = parseInt(document.getElementById('number4').value);
-        let numberInput5 = parseInt(document.getElementById('number5').value);
-        let answer = numberInput3 - numberInput4;
-        let answer = numberInput3 + numberInput4 * numberInput5;
-        let answer = numberInput5 / numberInput3;
-        document.getElementById("output4").innerHTML = answer;
-        } 
-        //Stretch problem 2
-        const multiply = () => {
-        let numberInput5 = parseInt(document.getElementById('number6').value);
-        let numberInput6 = parseInt(document.getElementById('number7').value);
-        let answer2 = numberInput5 * numberInput6;
-        document.getElementById("output5").innerHTML = answer2;
+        const sub = function (sub1, sub2) {
+            return sub1 - sub2;
+        };
+
+        const multi = (mul1, mul2) => {
+            return mul1 * mul2;
+        };
+        //Problem#3
+        function addNum(add1, add2) {
+            return add1 + add2;
         }
-        // Stretch# 3 Callback Function
+        //Stretch#1
+        function index(operation) {
+            let num1 = parseInt(document.getElementById('number').value);
+            let num2 = parseInt(document.getElementById('number1').value);
+            let result = 0;
+            //Stretch#2
+            switch (operation) {
+                case 1:
+                    result = addNum(num1, num2);
+                    break;
+                case 2:
+                    result = sub(num1, num2);
+                    break;
+                case 3:
+                    result = multi(num1, num2);
+                    break;
+            }
+            document.getElementById('text').innerHTML = result.toString();
+        }
+        //Stretch#3 
         function calc(callback) {
             var n1 = parseFloat(document.getElementById("number8").value);
             var n2 = parseFloat(document.getElementById("number9").value);
             var result = callback(n1, n2);
-             document.getElementById("addresult").value = result;
-            }
+            document.getElementById("addresult").value = result;
+        }
 
-            function multiplyNum(n1, n2) {
-                return n1 * n2;
-            }
-            function divideNum(n1, n2) {
-                return n1 / n2;
-            }
-            function addNum(n1, n2) {
-                return n1 + n2;
-            }   
+        function multiplyNum(n1, n2) {
+            return n1 * n2;
+        }
+
+        function divideNum(n1, n2) {
+            return n1 / n2;
+        }
+
+        function addNum(n1, n2) {
+            return n1 + n2;
+        }
     </script>
+
     <style>
         textarea {
-            width: 800px;
+            background-color: lightgoldenrodyellow;
             height: 250px;
-            background-color: #ffffe0;
+            width: 800px;
         }
     </style>
 </head>
 
 <body>
-    <header>
-
+    <div id="portfolio_logo">
+        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+    </div> 
+   
+    <header class="page_header"> 
+     <ul  id="nav_bar">  
+            <li><a href="/https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            
+            <li><a href="/https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+        </ul>
     </header>
     <main>
-        <!--Create a link to the note.html file-->
-        <section>
-            
-            <h2>Wk 2 Notes</h2>
-            <link rel="stylesheet" href="/htdocs/WDD340/wk2/notes.html">
-            <!--link external file-->
-        </section>
-        <section id="team_display">
-
-            <h1>TEAM ASSIGNMENTS</h1>
-            <h2>Core Requirements</h2><br>
-            <h3 class="teamheader">Problem #1</h3><br>
-            <button onclick="loadProgram()">Load Program</button><br>
-            <textarea id="user_input" placeholder="Input text here."></textarea>
-            <div id="output1"></div>
-
-            <h3 class="teamheader"> Problem #2</h3><br><br>
-            <input type="text" id="user_input2" placeholder="Please enter a number."><br>
-            <button onclick="sumItUp()">Load Sum</button>
-            <div id="output2"></div><br>
-            
-            <h3 class="teamheader">Problem #3</h3>
-            <input type="text" id="number1" placeholder="Enter a number"><br>  <p>+</p>         
-            <input type="text" id="number2" placeholder="Enter a number"><br>
-            <button onclick="addItUp()">result</button><br>
-            <div id="output3"></div>
-
+        <section class="individual_activity">
+            <h1>Week 2</h1>
+            <h2>Individual Assignments & Notes</h2>
         </section>        
-      
-        <br>
-        <section>
-            <h2>Stretch Goals</h2>
-            <h3 class="teamheader">Stretch #1</h3>
-            <input type="text" id="number3" placeholder="Enter a number"><br>          
-            <input type="text" id="number4" placeholder="Enter a number"><br>
-            <input type="text" id="number5" placeholder="Enter a number"><br>
-            <button onclick="subtract()">result</button>
-            <button onclick="add, multiply()">result</button>
-            <button onclick="divide()">result</button>
-            <div id="output4"></div>
-            <br>
+        <ul>
+            <li><a href="notes.html">Wk 2 Notes</a></li>
+            <li><a href="main.js">JS Code Examples</a></li>
+        </ul><br><br><br>
 
- 
-            <h3 class="teamheader">Stretch #2</h3>
-            <input type="text" id="number6" placeholder="Enter a number"><br><br>
-            <input type="text" id="number7" placeholder="Enter a number"><br>
-            <button onclick="multiply()">result</button>
-            <div id="output5"></div>
-            <br>
+        <section class="team_activity">
+            <h1>Week 2 </h1>
+            <h2>Core Requirements & Stretch Goals</h2>
+            <p>Try it.</p>
             
-            <h3 class="teamheader">Stretch #3</h3><br>            
-        
-        </section>    
-            <h3>Calculator</h3>
-            Number 1: <input id="number8" type="number"/><br /><br />
-            Number 2: <input id="number9" type="number"/><br /><br />
-            <input type="button" onclick="calc(addNum)"  value="Add" id="add" />
-            <input type="button" value="Multiply" onclick="calc(multiplyNum)" id="multiply" />
-            <input type="button" value="Divide" id="divide" onclick="calc(divideNum)"/>
-            <br /><br />
-            Result: <input id="result" type="number"/><br />
-            <br>
-        
-
-        <section id="example_display">
-            <h1>Examples</h1> 
-            <code>
-                
-                Ex: 1 const var block statement
-                {
-                <!--this is a block containing 2 statements-->
-                const message = 'Hello!';(pg 34)<br>
-                alert(message);<br>
-                }<br>
-
-                Ex: 2 Assign string literal (pg 37)
-                const name = 'Alexa';<br>
-                <!--This won't be assigned to another string-->
-                let score = 0;<br>
-                <!--This values may change during the program-->
-                name<br>
-                'Alexa'<br>             
-
-                Ex: 3
-                Write a function that takes the first number and adds it to a second number and display the result
-                from a div out put
-                var x = myFunction(4, 3);
-                document.getElementById("demo").innerHTML = x;
-
-                function myFunction(a, b) {
-                return a * b;
-                }
-                     type = "text/javascript" >
-
-                function add_number() {
-                    var first_number = parseInt(document.getElementsById("Text1").value);
-                    var second_number = parseInt(document.getElementsById("Text2").value);
-                    var result = first_number + second_number;
-                    document.getElementById("txtresult").value = result;
-                }
-                document.getElementById("txtresult").value = result;
-                }
-
-                //Write the argument to the function                   
-                    input type="text" id="text1" name="Enter first number"><br>
-                    input type="text" id="text2" name="Enter second number"><br>
-                    Result: 
-                    input type="text" id="txtresult" placeholder="TextBox3"><br>
-                    button onclick="add_numbers()" value="display_result"Display Results<br>
-                    div id="result" div 
-            </code>
+            <input id="number" name="number" type="number" />
+            <input id="number1" name="number2" type="number" />
+            <button onclick="loadProgram()">Submit</button>
+            <button onclick="index(1)">+</button>
+            <button onclick="index(2)">-</button>
+            <button onclick="index(3)">*</button>
+            <div id="text"></div>
         </section>
+
+        <section>
+            <h1>Table of Contents</h1>
+            <ol>
+                <li><a href="label:wk1/notes.html"></a>Week1 notes<a href="url:wk1/index.html">wk1 index</a></li>
+                <li><a href="label:wk2/notes.html"></a>Week2 notes<a href="url:wk2/index.html">wk2 index</a></li>
+                <li><a href="label:wk3/notes.html"></a>Week3 notes<a href="url:wk3/index.html">wk3 index</a></li>
+                <li><a href="label:wk4/notes.html"></a>Week4 notes<a href="url:wk4/index.html">wk4 index</a></li>
+                <li><a href="label:wk5/notes.html"></a>Week5 notes<a href="url:wk5/index.html">wk5 index</a></li>
+                <li><a href="label:wk6/notes.html"></a>Week6 notes<a href="url:wk6/index.html">wk6 index</a></li>
+                <li><a href="label:wk7/notes.html"></a>Week7 notes<a href="url:wk7/index.html">wk7 index</a></li>
+                <li><a href="label:wk8/notes.html"></a>Week8 notes<a href="url:wk8/index.html">wk8 index</a></li>
+                <li><a href="label:wk9/notes.html"></a>Week9 notes<a href="url:wk9index.html">wk9 index</a></li>
+                <li><a href="label:wk10/notes.html"></a>Week10 notes<a href="url:wk10/index.html">wk10 index</a></li>
+                <li><a href="label:wk11/notes.html"></a>Week11 notes<a href="url:wk11/index.html">wk11 index</a></li>
+                <li><a href="label:wk12/notes.html"></a>Week12 notes<a href="url:wk12/index.html">wk12 index</a></li>
+            </ol>
+        </section>
+        
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Should I be placing the table of contents 'ol'
+        list in each index, every week?<br>
+
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Why when I click the notes link on this page it combines week 1 and week 2 notes into 1 page?
+    </main><br><br>
+    <footer class="footer">
         <br>
-        <section id="individual_display">
-            <h2>Individual Assignments</h2>
-
-        </section>
-        <section id="ref_display">
-            <h2>Weekly References</h2>
-        </section>
-    </main>
-    <footer></footer>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
     <script src="scripts/main.js"></script>
+
+
 </body>
 
 </html>

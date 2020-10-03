@@ -1,117 +1,175 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Cardio Day 2💪</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Cardio Day 2 💪</title>
+  <link rel="stylesheet" href="styles/main.css">
 
-    <style>
-        textarea {
-            width: 800px;
-            height: 250px;
-            background-color: #ffffe0;
-        }
-    </style>
+  <style>
+    textarea {
+      width: 800px;
+      height: 250px;
+      background-color: #ffffe0;
+    }
+  </style>
 </head>
 
-<body data-gr-c-s-loaded="true">
-  <header id="page_header"></header>
-    <main>
-        <ul>
-            <li><a href="wk3/events.html">Code Examples</a></li>
-            <li><a href="heros.html">Code Examples</a></li>
-            <li><a href="main.js">Code Examples</a></li>
-            <li><a href="notes.html">Wk 2 Notes</a></li>
-        </ul>
-        <section id="team_activity_3">
-            <h1>Week 2 </h1>
-            <h2>Stretch Goals</h2>
+<body>
+  <div id="portfolio_logo">
+    <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+  </div>
 
-    <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-    <script>
-    /*******************
-     Array: Cardio Day 2
-    *******************/  
-      const people = [
-        { name: 'Wes', year: 1988 },
-        { name: 'Kait', year: 1986 },
-        { name: 'Irv', year: 1970 },
-        { name: 'Lux', year: 2015 }
-      ];
-  
-      const comments = [
-        { text: 'Love this!', id: 523423 },
-        { text: 'Super good', id: 823423 },
-        { text: 'You are the best', id: 2039842 },
-        { text: 'Ramen is my fav food ever', id: 123523 },
-        { text: 'Nice Nice Nice!', id: 542328 }
-      ];
-  
-    /***********************************
-     * Completed individually
-    /***********************************
-     Some and Every Checks
-     Array.prototype.some() 
-     is at least one person 19 or older?
-    ***********************************/
-      const isAdult=people.some(function(person) {
+  <header class="page_header">
+    <ul id="nav_bar">
+      <li><a href="/https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+
+      <li><a href="/https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+    </ul>
+  </header>
+  <main>
+
+    <section class="team_activity">
+      <h1>Week 3</h1>
+      <h2>Stretch Goals</h2>
+
+      <p><em>Psst: have a look at the JavaScript Console</em>💁</p>
+
+      <script>
+        /*******************
+        Array: Cardio Day 2
+        *******************/
+        const people = [{
+            name: 'Wes',
+            year: 1988
+          },
+          {
+            name: 'Kait',
+            year: 1986
+          },
+          {
+            name: 'Irv',
+            year: 1970
+          },
+          {
+            name: 'Lux',
+            year: 2015
+          }
+        ];
+
+        const comments = [{
+            text: 'Love this!',
+            id: 523423
+          },
+          {
+            text: 'Super good',
+            id: 823423
+          },
+          {
+            text: 'You are the best',
+            id: 2039842
+          },
+          {
+            text: 'Ramen is my fav food ever',
+            id: 123523
+          },
+          {
+            text: 'Nice Nice Nice!',
+            id: 542328
+          }
+        ];
+
+        /****************************************
+         COMPLETED INDIVIDUALLY
+         The ... spreads the items into the array
+        *****************************************
+         Some and Every Checks
+         Array.prototype.some() 
+         is at least one person 19 or older?
+        *****************************************/
+        //Long
+        /*const isAdult = people.some(function (person) {
           const currentYear = (new Date()).getFullYear;
-          if(person.year - person.year >= 19) {
-              return true;
+          if (currentYear - person.year >= 19) {
+            return true;
           }
-        })
+        })*/
 
-      const isAdult=people.every(function(person) {
-        if(person.year - person.year >= 19) {
-              return true;
+        //Short
+        const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+        console.log({
+          isAdult
+        }); //You can get a false if every item does not meet the criteria
+
+
+        /*********************************      
+         Array.prototype.every() 
+         is everyone 19 or older?
+        *********************************/
+        //Long
+        /*const allAdults = people.every(function (person) {
+          const currentYear = (new Date()).getFullYear;
+          if (currentYear - person.year >= 19) {
+            return true;
           }
-      });
-      console.log(isAdult);
+        })*/
+        //Short
+        const allAdults = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
 
-      /*********************************      
-       Array.prototype.every() 
-       is everyone 19 or older?
-      *********************************/
-      const isAdult = people.every(person){
-        
-      }
-      const found = objects.find(function (item) {
-        return item.id === 'b';
-      });
-      console.log(found === objects[1]); // true
+        console.log({
+          allAdults
+        }); //Curly brackets will give you the name of the var & value
 
 
+        /****************************************
+         Array.prototype.find()
+         Find is like filter, but instead 
+         returns just the one you are looking for
+         find the comment with the ID of 823423
+        *****************************************/
+        /*const comment = comments.find(function(comment) {
+          if(comment.id === 823423) {
+            return true;
+          }
+          
+        console.log(comment);
+        });*/
 
 
-
-      /****************************************
-       Array.prototype.find()
-       Find is like filter, but instead 
-       returns just the one you are looking for
-       find the comment with the ID of 823423
-      *****************************************/
-  
+        //Short
+        const comment = comments.find(comment => comment.id === 82343);
+        console.log(comment); //Returns the first item it finds
 
 
+        /******************************************
+         Array.prototype.findIndex()
+         Find the comment with this ID
+         delete the comment with the ID of 823423
+         *****************************************/
+        const index = comments.findINdex(comment => comment.id === 823423);
+        console.log(index);
 
+        //To delete an item from the original array
+        //comments.splice(index, 1); notice sp here
 
+        //OR you can create a new array and then delete from it instead of the orginal array
+        const newComments = [
+          ...comment.slice(o, index), //starts at zero & goes to the end of the index
+          ...comments.slice(index, +1) //starts at the index & goes to plus 1 until the enf of the index
+        ];
+        //notice sl here; this also deletes by building a 'new' array first and then deleting the item in the array
+        //Locates item w/in an array
+      </script>
+    </section>
+  </main><br><br>
 
-      /******************************************
-       Array.prototype.findIndex()
-       Find the comment with this ID
-       delete the comment with the ID of 823423
-       *****************************************/
-  
-    </script>
-  </section>
-  
   <footer class="footer">
     <br>
     &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
-</footer>
-<script src="scripts/main.js"></script>
-  </body>
-  </html>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
