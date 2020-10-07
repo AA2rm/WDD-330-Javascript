@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drum Kit</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        
+        <script>
+            
+        </script>
+
+        <style>
+            textarea {
+                background-color: #ffffe0;
+                height: 250px;
+                width: 800px;
+            }
+        </style>
+   </head>
+
+<body>
+    <div id="portfolio_logo">
+        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+    </div> 
+   
+    <header class="page_header"> 
+        <ul  id="nav_bar">  
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+        </ul>
+    </header>
+    <main>       
+        <section>
+            <h1>Week 4</h1>
+          <!--Using a data-' ' attribute to add a class of playing for the key elements & the  CSS playing css-->
+            <div class="keys">
+                <div data-key="65" class="key">...</div><kbd>A</kbd><span class="sound">clap</span>
+                <div data-key="83" class="key">...</div><kbd>S</kbd><span class="sound">hihat</span>
+                <div data-key="68" class="key">...</div><kbd>D</kbd><span class="sound">kick</span>
+                <div data-key="70" class="key">...</div><kbd>F</kbd><span class="sound">openhat</span>
+                <div data-key="71" class="key">...</div><kbd>G</kbd><span class="sound">boom</span>
+                <div data-key="72" class="key">...</div><kbd>H</kbd><span class="sound">ride</span>
+                <div data-key="74" class="key">...</div><kbd>J</kbd><span class="sound">snare</span>
+                <div data-key="75" class="key">...</div><kbd>K</kbd><span class="sound">tom</span>
+                <div data-key="76" class="key">...</div><kbd>L</kbd><span class="sound">tink</span>
+            </div>
+
+            <audio data-key="65" src="sounds/clap.wav"></audio>
+            <audio data-key="83" src="sounds/hihat.wav"></audio>
+            <audio data-key="68" src="sounds/kick.wav"></audio>
+            <audio data-key="70" src="sounds/openhat.wav"></audio>
+            <audio data-key="71" src="sounds/boom.wav"></audio>
+            <audio data-key="72" src="sounds/ride.wav"></audio>
+            <audio data-key="74" src="sounds/snare.wav"></audio>
+            <audio data-key="75" src="sounds/tom.wav"></audio>
+            <audio data-key="76" src="sounds/tick.wav"></audio>
+
+            <script>
+                // Create an event that listens for a keydown event
+                // and select the corresponding key
+                // then listen on each key for when the event occurs & for transition end
+      
+                   // console.log(e.keyCode);
+                   function playSound(e) {
+                    const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
+                    const key = document.querySelector('.key[data-key="${e.keyCode}"]');
+                    if(!audio)return;//stops the funciton from running con't 
+                    audio.currentTime = 0;//rewinds to the audio start
+                    audio.play() //plays audio element
+                   // console.log(audio); Check if you selected an audio element
+                    console.log(key);
+                    key.classList.add('playing');
+                   // key.classList.remove('playing');
+                   // key.classList.toggle('playing');  
+                   }         
+                
+
+                function removeTransition(e) {
+                    if(e.propertyName !== 'transform') return;//Skip if it's not a transorm
+                    console.log(e.propertyName);
+                    //console.log(this); // console log this to determine what it's equal to
+                    this.classList.remove('playing');
+                }
+                const keys = document.querySelectorAll('.keys');
+                //keys.addEventListener('transitionend');
+                keys.forEach(key => key.addEventListener('transitioned', removeTransition));
+                window.addEventListener('keydown', playSound);
+            </script>
+            
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
