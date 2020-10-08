@@ -1,4 +1,7 @@
 //TEAM ASSIGNMENT
+//#1 Build a 3X3 board in HTML and CSS.
+
+//#2
 //Add a touch event handlers
 someElement.addEventListener('touchend', process_touchend, false);
 

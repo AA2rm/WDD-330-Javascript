@@ -19,14 +19,15 @@
     <header class="page_header"> </header>
     <main>
         <!--Create a link to the note.html file-->
-        <section id="form_notes">
+        <section id="forms">
             <h1>Wk 4 Notes</h1>(Pg. 303-321)
             <h2>Forms</h2>
-            Each form control has an initial value that can be specified in the HTML code. This value can be changed by
-            a user entering information or interacting with the form’s interface, (such as using a slider to increase or
-            decrease a value). The value can also be changed dynamically using JavaScript.<br>
+            Forms are made up of a <b>form</b> element that contains form controls such as input fields, select menus and 
+            buttons. Each form control has an initial value that can be specified in the HTML code. This value can be 
+            changed by a user entering information or interacting with the form’s interface, (such as using a slider to 
+            increase or decrease a value). The value can also be changed dynamically using JavaScript.<br>
 
-         
+            Ex: A form with one input filed, & a button to submit a searh query
                 <form name='search' action='/search'>
                     <!--name attribute 'search'-->
                     <input name='searchInput'>
@@ -40,7 +41,7 @@
             elements contained in the form. We can also access the form controls using their 'name' attributes as if it 
             was a property of the form object, you can also use the square bracket notation can also be used instead.<br>
 
-            <h2>Form Properties & Method</h2><br>
+            <h2>Form Properties & Method</h2>
             The form.submit() method will submit the form automatically. A form can be submitted manually by the user
             employing a button or input element with a type attribute of submit , or even an input element with a type 
             attribute of image. While the <b>form.reset</b> method will reset all the form controls back to their initial 
@@ -48,11 +49,11 @@
             for additional scripting. The <b>form.action</b> property can be used to set the action attribute of a form, so 
             it’s sent to a different URL to be processed on the server.<br>
 
-            <h2>Form Events</h2><br>
+            <h2>Form Events</h2>
             Forms trigger a number of events; the <b>focus</b> event occurs when an element is focused on. In the case
             of an <b>input</b> element, this is when the cursor is placed inside the element.<br>
 
-            <h2>Submitting Forms</h2><br>
+            <h2>Submitting Forms</h2>
             The most important form event is the submit event, occurring when the form is submitted. Usually this will
             send the content of the form to the server to be processed, but we can use JavaScript to intercept the form 
             before it’s sent by adding a <b>submit</b> listener.<br>
@@ -62,19 +63,17 @@
             The <b>input</b> points to the input element in the form. You can also set the value using JS using the input.value. 
             The <b>placeholder</b> attribute can do this as well.<br>
 
-            <h2>Form Control</h2><br>
+            <h2>Form Control</h2>
             Some common types of form control are: <b>input</b>, <b>select</b>, <b>textarea</b>, & <b>buttton</b>,
             <b>autofocus</b>. The <b>placeholder</b> attribute will insert the value provided in the input field until the user 
             enters some text. The <b>maxlength</b> attribute will limit the number of characters that can be entered in the field 
             the value given. Here's a reference for new form elements.<br>
 
-           
-            <div class="sitepoint">Here's a complete array reference<a href="https://www.sitepoint.com/html5-forms-markup/">
-                Sitepoint</a>
-            </div>
-          
+            <ul>
+                <li><a href="https://www.sitepoint.com/html5-forms-markup/" title="Site Point Forms">Form Markup</a></li>                          
+            </ul>
 
-            <h2>Input Fields</h2><br>
+            <h2>Input Fields</h2>(Pg. 317)
             There are several categories of input field. The default type of input field is <b>text</b> which is used
             for entering a short piece of text, such as a username. It's advise to use the <b>type='text</b> attribute
              making the input field explicit. You set  this in the HTML using the <b>value</b> attribute.<br>
@@ -82,47 +81,55 @@
             <code>
                 <label for='donation-amount'>Enter amount to donate:
                     <input type='text' id='donation-amount' name='donationAmount' value='10'>
-                </label>
+                </label>                
             </code><br>
 
             Other input fields are <b>intput type='password'</b>, <b>type='checkbox'</b>, <b>type'radio</b>, <b>type='hidden'</b>,
+            <code>
+                <label for='realName'>Real Name:
+                    <input type='password' name='realName'
+                    id='realName'></label>
+            </code>
+            
             <b>typ'file/</b>, <b>type='number'</b>, <b>type='tel'</b>, and <b>type='color'</b>. We can assign a <b>category</b>property
             to our objects, like hero.<br>
             
-            <h2>Drop Down List Selection</h2><br>
+            <h2>Drop Down List Selection</h2>
             This lets you select one or more options from a list.<br>
 
-            <h2>Text Areas</h2><br>
+            <h2>Text Areas</h2>
             A <b>textarea</b> element is used to enter long pieces of text over multiple lines such as a comment or blog post.<br>
 
-            <h2>Buttons</h2><br>
+            <h2>Buttons</h2>
             The <b>submit</b> button is the default for most forms, but you can also use <b>reset</b>, <b>click me</b>, <b>menu</b>,
             <b>menuitem</b>, & <b>li</b>You can also disable the submit button.<br>
             
-            <b>Validating Forms</b><br>
-            Form validation is the process of checking whether a user has entered the information into a form correctly. Examples of the 
-            types of validation that occur include ensuring that: A required field is completed, An email address is valid, A number is 
-            entered when numerical data is required, & A password is at least a minimum number of characters. Validation can occur on the 
-            client side using JavaScript, and on the server side.<br>
+            <b>Validating Forms</b>
+            Form validation is the process of checking whether a user has entered the information into a form correctly. Validation can occur on the 
+            client side using JavaScript, and on the server side.Examples of the types of validation that occur include ensuring that: A required 
+            field is completed, An email address is valid, A number is entered when numerical data is required, & A password is at least a minimum 
+            number of characters. Validation can occur on the client side using JavaScript, and on the server side.<br>
+        
+            <b>API</b> works by simply adding relevant attributes to the form fields. For example, if a field is a required field that must be filled in, all 
+            you need to do is add a required attribute to that field and the browser will take care of the rest.<br>        
         </section>
         
-        <section id="oop">
-            
-            <h2 >Chapter 12-Object Oriented Programming</h2>(Pg 438)
-            <h3>An introduction to OOP</h3><br>
+        <section id="oop">            
+            <h2 >Chapter 12-Object Oriented Programming</h2>(Pg 457)
+            <h3>An introduction to OOP</h3>
             There are 3 main concepts in OOP 
             <b>encapsulation</b>-are the inner working that are kept hidden inside the obj, while the essential functionalities are exposed.
             <b>polymorphism</b>-various objects can share the same method, but also have the ability to override shared methods with a more 
-            specific implementation.
-            <b>inheritance </b>-this means we can take an object that already exists and inherit all its properties and methods. We can then 
-            improve on its functionality by adding new properties and methods.
+            specific implementation. <b>Inheritance </b>-this means we can take an object that already exists and inherit all its properties and methods. 
+            We can then improve on its functionality by adding new properties and methods.<br>
 
             Many object-oriented languages, such as Java and Ruby, are known asclass-basedlanguages. This is because they use a class to define 
             a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties and methods of the class.<br>
 
-            <h3>Constructor functions.</h3><br>
+            <h3>Constructor functions.</h3>
             An alternative way to create objects is to use aconstructor function. This is a function that defines the properties and methods
             of an object. When instantiating a new obj the parentheses are required, however, if any default arguments need to be provided.<br>
+            Ex:
             <code>
                 const whiteDice = new Dice(4);
             </code><br>
@@ -136,21 +143,27 @@
             JS contains a number of built-in constructor functions such as <b>object</b>, <b>array</b>, & <b>function</b> that can be used to create 
             objects, arrays and functions instead of literals. 
 
-            <h3>classes in JavaScript</h3><br>
-            classes in JavaScript
+            <h3>Inheritance</h3>
+            <b>Inheritance</b> is taking the features of one object then adding some new & inheritance: taking the features of one object then adding some new
+            features.<br>
+
+            <h3>classes in JavaScript</h3>
+            <b>Classes</b> in JavaScript use a class to define a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties
+            and methods of the class.
             
-            <h3>Prototypes</h3><br>
+            <h3>Prototypes</h3> JavaScript didn’t have classes before ES6, and used the concept of using actual
+            objects as the blueprint for creating more objects. 
+Pg 461
+            <h3>Public and private methods</h3>
 
-            <h3>Public and private methods</h3><br>
+            <h3>Public and private methods</h3>
+            
 
-            <h3>Inheritance</h3><br>
-            <b>Inheritance</b>
+            <h3>Creating objects from objects</h3>
 
-            <h3>Creating objects from objects</h3><br>
+            <h3>Adding methods to built-in objects</h3>
 
-            <h3>Adding methods to built-in objects</h3><br>
-
-            <h3>Mixins</h3><br>
+            <h3>Mixins</h3>
 
             <h3>Chaining Functions</h3>
 

@@ -1,90 +1,149 @@
-<!doctype html>
-<html lang='en-us'>
-<head>
-    <meta charset='utf-8'>
-    <title>Hero Form</title>
-    <style>
-        .error{
-            background: #f99;
-            border: #900 1px solid;
-            display: none;
-        }
-    </style>
-</head>
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hero Form</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        
+        <script>
+            
+        </script>
+
+        <style>
+            .error{
+                background: #f99;
+                border: #900 1px solid;
+                display: none;
+            }
+        </style>
+   </head>
+
 <body>
-    <form id='hero'>
-        <label for='heroName'>Name:
-            <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32>
-            <br><br>
-            <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32 required>
-        </label>
-        <br><br>
-        <label for='realName'>Real Name:
-        <input type='password' name='realName' id='realName'></label>
-        <br><br>
+    <div id="portfolio_logo">
+        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+    </div> 
+   
+    <header class="page_header"> 
+        <ul  id="nav_bar">  
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class='dojo'>
+            <div class='quiz-body'>
+            <header>
+            <div id='score'>Score: <strong>0</strong></div>
+            <h1>Quiz Ninja!</h1>
+            </header>
+            <div id='question'></div>
+                <form id='response'>
+                    <input name='answer' type='text'>
+                    <button type='submit'>Submit Answer</button>
+                </form> 
+            <div id='result'></div>
+            <div id='info'></div>
+            </div>
+            </section>
         <p>Super Powers:</p>
         <label for='flight'>Flight:
-        <input type='checkbox' id='flight' value='Flight' name='powers'>
+        <input type='checkbox' id='flight' value='Flight'
+         name='powers'>
         </label>
-        <br>
         <label for='strength'>Super Strength:
-        <input type='checkbox' id='strength' value='Strength' name='powers'>
+        <input type='checkbox' id='strength' value='Strength'
+        name='powers'>
         </label>
-        <br>
         <label for='speed'>Super Speed:
-        <input type='checkbox' id='speed' value='Super Speed' name='powers'>
+        <input type='checkbox' id='speed' value='Super Speed'
+        name='powers'>
         </label>
-        <br>
         <label for='energy'>Energy Blasts:
-        <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
+        <input type='checkbox' id='energy' value='Energy Blasts'
+        name='powers'>
         </label>
-        <br>
         <label for='telekinesis'>Telekinesis:
-        <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+        <input type='checkbox' id='telekinesis'
+        value='Telekinesis' name='powers'>
         </label>
-        <br>
-        <input type='checkbox' value='Flight' name='powers' checked>
-        <br>
-        <p>What type of hero are you?</p>
-        
-        <label for='villain'>Villain:
-        <input type='radio' name='category' value='Villain' id='villain'>
-        </label> 
-        <label for='hero'>Hero:<input type='radio' name='category' value='Hero' id='hero'></label>
-        
-        <label for='anti-hero'>Anti-Hero:
-        <input type='radio' name='category' value='Antihero' id='anti-hero'>
-        </label>
-        <br>
-        <label for='age'>Age:
-        <input type='number' id='age' name='age' min=0 step=1></label>
-        <br><br>
 
+        <!--Add the attribute checkboxes -->
+        <input type='checkbox' value='Flight' name='powers' checked>
+        
+        
+        <!--Add radio input fields-->
+        <p>What type of hero are you?</p>
+        <label for='hero'>Hero:
+        <input type='radio' name='category' value='Hero'
+        id='hero'>
+        </label>
+        <label for='villain'>Villain:
+        <input type='radio' name='category' value='Villain'
+        id='villain'>
+        </label>
+        <label for='anti-hero'>Anti-Hero:
+        <input type='radio' name='category' value='Antihero'
+        id='anti-hero'>
+        </label>
+
+        <!--Add radio button atttribute to check the villian value-->
+        <input type='radio' name='type' value='Villain' checked>
+
+        
+        <!--Add an input type for ofnumber to the form-->
+        <label for='age'>Age:
+            <input type='number' id='age' name='age' min=0 step=1>
+        </label>
+        <section>
+
+
+        <!--Set the initial value in a drop-down list -->
         <label for='City'>Base of Operations:
             <select name='city' id='city'>
-                <option value='' selected>Choose a City</option>
-                <option value='Metropolis'>Metropolis</option>
-                <option value='Gotham City'>Gotham City</option>
-                <option value='Keystone City'>Keystone City</option>
-                <option value='Coast City'>Coast City</option>
-                <option value='Star City'>Star City</option>
+            <option value='' selected>Choose a City</option>
+            <option value='Metropolis'>Metropolis</option>
+            <option value='Gotham City'>Gotham City</option>
+            <option value='Keystone City'>Keystone City</option>
+            <option value='Coast City'>Coast City</option>
+            <option value='Star City'>Star City</option>
             </select>
         </label>
-        <br>
-        <!--<label for='origin'>Origin Story:
-            <textarea id='origin' name='origin' rows='20' cols='60'></textarea>
-        </label>-->
-        <br>
-        <textarea name='origin' rows='20' cols='60'>Born as Kal-El on the planet Krypton...</textarea>
-        <br>
+
+
+        <!--Add a textarea to the form-->
+        <label for='origin'>Origin Story:
+            <textarea id='origin' name='origin' rows='20'cols='60'></textarea>
+            <textarea name='origin' rows='20' cols='60'>Born as Kal-El on the planet Krypton...</textarea>
+        </label>
+
+        <!--Add a reset button to the form & a button-->
         <button type='reset'>Reset</button>
-        <br> 
-        <button type='submit'>Submit</button>
-        <br>
-        <button type='submit' id='submit' disabled>Submit</button>
-        <br>
         <button type='button'>Click Me</button>
-    </form>
-<script src='main.js'></script>
+
+
+        <!--Add a required attribute for the input for the form-->
+        <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32 required>
+
+        <!--Disable the submit button-->
+        <button type='submit' id='submit' disabled>Submit</button>
+            <h1>Wk </h1>
+        
+        <!--Pick up on pg334 goes btn the question & result <div> elements in the index.html file  
+        <form id='response'>
+            <input name='answer' type='text'>
+            <button type='submit'>Submit Answer</button>
+            </form> 
+        -->
+        </section>
+    </main>
+    <footer class="footer">
+        <br>
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+    </footer>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

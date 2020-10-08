@@ -25,12 +25,11 @@
         </section>
 
         <section id="game_board">
-            <h1>Team Assignments</h1>
-            <h2>Core Requirements</h2><br>
-
-            <h2>Team Activity</h2>
-            <h3 class="teamheader">Problem #1</h3><br>
-            <!--Build a 3X3 board in HTML and CSS, with a table element or div.--><br>
+            <h1>Week 3</h1>
+            <h2>Core Requirements & Stretch Goals</h2>
+           
+            <!--#1 Build a 3X3 board in HTML and CSS, with a table element or div. You could do this with either a table
+            element, or a collection of divs. Both have their advantages and disadvantages.--><br>
             <div class="board">
                 <div></div>
                 <div></div>
@@ -45,10 +44,8 @@
             <button id="reset">Reset</button>
 
 
-            <h3 class="teamheader">Problem #2</h3><br>
-            <!--Attach a touchend listener to the board.When a cell is touched it should add either an
+            <!-- #2 Attach a touchend listener to the board.When a cell is touched it should add either an
             'X or an 'O', depending on whether it is player 1 or player 2's turn..--><br>
-
             <script>
                 const board = document.querySelector('.board');
                 const resetButton = document.getElementById('reset_button');
@@ -64,8 +61,7 @@
                 }
             </script>
 
-            <h3 class="teamheader">Problem #3</h3><br>
-            <!--Add a reset button.When touched the reset button should remove all of the marks from  the board.-->
+            <!-- #3 Add a reset button.When touched the reset button should remove all of the marks from  the board.-->
             <br>
             <script>
                 // 
@@ -87,44 +83,20 @@
             </script>
 
 
-            <h3 class="teamheader">Stretch #1</h3><br>
-            <!--If your board looks like the first image below...make it look like the second.
+            <h2>Stretch Goals</h2>>
+            <!-- #1 If your board looks like the first image below...make it look like the second.
             Hint: look into :nth-child(n), :last-child, etc for help to target specific cells to turn
             borders on or off.--><br>
 
-            <h3 class="teamheader">Stretch #2</h3><br>
-            <!--Add Game logic. Right now the players have to decide who won, or whether it was a tie. Add
+            
+            <!-- #2 Add Game logic. Right now the players have to decide who won, or whether it was a tie. Add
             some game logic to figure out when the game should result in a tie.--><br>
 
-            <h3 class="teamheader">Stretch #3</h3><br>
+            <!-- #3 Add More Game Logic; Add the logic to figure out when someone wins-->
         </section>
 
 
-        <section id="examples">
-            <h2>Examples</h2><br>
-            Ex: 1 Retrieve HTML form collections
-            <code>
-                const form = document.forms[0];
-
-                or
-                const form = document.forms.search;
-
-                or
-                const form = document.forms['search'];
-            </code>
-
-            Ex: 2 Return the tex from the categories of city listed in the form
-            <code>
-                form.city.options[0].text
-                "Choose a City"
-            </code><br>
-
-            Ex: 3 Create an instance of a const func
-            <code>
-                const redDice = new Dice();
-                { sides: 6, roll: [Function] }
-            </code>
-        </section>
+       
     </main>
     <footer></footer>
     <script src="scripts/main.js"></script>

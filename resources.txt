@@ -116,3 +116,8 @@ I can't pull up the remote
 ctrl + windows key + shift + P I was unable to open up the command pallet
 When I enter 
 https://wordhtml.com/
+
+SHORT-CUTS
+Pressing TAB will autocomplete any methods and should show you a list of
+possible methods
+Pressing the UP arrow key will select the previous command entered.
