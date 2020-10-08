@@ -1,5 +1,4 @@
-
-//CREATING METHODS
+//Wk 3-CREATING METHODS
 /************************
 //Create an object method
 *************************/
