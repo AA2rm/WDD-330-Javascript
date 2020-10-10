@@ -216,11 +216,12 @@ const dice = {
     roll() {
     return Math.floor(this.sides * Math.random() + 1)
     }
-    }
+}
 
 /********************************************
  * Create a construcor function that 
  * define the properties & methods of an obj
+ * NOTE: keyword this represent the obj
  ********************************************/
 const Dice = function(sides=6){
     this.sides = sides;
@@ -231,13 +232,285 @@ const Dice = function(sides=6){
 
 /********************************************
  * Create an instance for the dice const func
+ * using a new operator
  *******************************************/
 const redDice = new Dice(); //() not required when use 'new'
     { sides: 6, roll [Function]
 }
 
 //OR
-const redDice = new Dice;// () required if using default arg
+const redDice = new Dice;// () not required  when instantiating a new obj using a const function
+const whiteDice = new Dice(4); // Use () are required when using a default arg
 
-//OR
-const whiteDice = new Dice(4); // Use to create another obj
+
+/**************************************************
+ Validate the const is using an instanceof operator
+ *************************************************/
+redDice instanceof Dice
+// true
+
+ /******************************************
+ * Create a a new obj that will inherit the 
+ * properties & methods defined in the func
+ *******************************************/
+redDice.sides
+// 6
+redDice.roll()
+//4
+ /**************************************************
+ * Create a new object is to using a literal syntax:
+ **************************************************/
+
+const literalObject = {};
+// {}
+
+constructedObject = new Object();//create a new obj using the obj const func
+// {}
+
+literalObject instanceof Object; //this literal is still an instance of the obj const
+// true
+
+const literalArray = [1,2,3]; //create an array that uses the literal syntax
+
+constructedArray = new Array(1,2,3);//Use an alternative way to create an array const function
+// [1, 2, 3]
+
+ /********************************************
+ Create an array that sets the array’s length
+ property instead, and returns an array full of 
+ undefined! 
+ *******************************************/
+new Array(5); // you might expect [5]
+// [undefined, undefined, undefined, undefined, undefined]
+
+
+new Array(2.5);//results in an error being thrown if a floating point decimal number is provided as an argument, because the length of an array must be an integer
+// RangeError: Invalid array length
+
+
+
+//ES^ Class Declarations
+ /********************************************
+ * Create a class declaration
+ *******************************************/
+class Dice {
+    constructor(sides=6) {
+    this.sides = sides;
+    }
+    roll() {
+    return Math.floor(this.sides * Math.random() + 1)
+    }
+}
+
+ /********************************************
+ * Create an instance  of the Dice class 
+ * using the new operator
+ *******************************************/
+const blueDice = new Dice(20);
+// Dice { sides: 20 }
+
+ /********************************************
+ * Create a clss const & a const func & note
+ * which one produces problems
+ *******************************************/
+// Using constructor function - noDice is just set to undefined without any warning
+const noDice = Dice();
+noDice
+// undefined
+
+// Using class - an error is thrown
+const noDice = Dice();
+// TypeError: Class constructor Dice cannot be invoked without 'new'
+
+ 
+
+//Constructor Property
+ /*******************************************
+ * Create a const property that returns the 
+ * const function it created
+ *******************************************/
+blueDice.constructor
+// [Function: Dice]
+
+/*******************************************
+ * Create an new obj using an obj literal
+ *******************************************/
+const literalObject = {};
+// {}
+literalObject.constructor
+// [Function: Object]
+
+ /********************************************
+ * Create another copy of the redDice object,
+ * as if the const name was unknown
+ *******************************************/
+const greenDice = new redDice.constructor(10);
+//greenDice instanceOf Dice
+
+// true
+
+ /********************************************
+ * Create a method for the class name 'Dice'
+ *******************************************/
+class Dice {
+    constructor(sides=6) {
+    this.sides = sides;
+    }
+    roll() {
+    return Math.floor(this.sides * Math.random() + 1)
+    }
+    static description() {
+    return 'A way of choosing random numbers'
+    }
+}
+
+/********************************************
+ * Call  the static method by the class name
+ *******************************************/
+Dice.description()
+// 'A way of choosing random numbers'
+
+/********************************************
+ * Get the method of the class instance
+ * This cannot be done
+ *******************************************/
+redDice.description
+// TypeError: red.description is not a function
+
+
+
+//Prototypal Inheritance
+ /********************************************
+ * Create a class for creating ninja turtles
+ *******************************************/
+class Turtle {
+    constructor(name) {
+    this.name = name;
+    this.weapon = 'hands';
+    }
+    sayHi() {
+    return `Hi dude, my name is ${this.name}`;
+    }
+    attack(){
+    return `Feel the power of my ${this.weapon}!`;
+    }
+}
+
+ /********************************************
+ * Create a new turnle instance
+ *******************************************/
+const leo = new Turtle('Leonardo');
+// Turtle { name: 'Leonardo' }
+
+ /********************************************
+ *Create a var 'leo' that points to an instance
+ of the Turtle class, & has a name property &
+ a sayHi() method that references the name 
+ property
+ *******************************************/
+leo.name;
+// 'Leonardo'
+leo.sayHi();
+// 'Hi dude, my name is Leonardo'
+
+
+//Prototype Property
+ /********************************************
+  Return an obj from a prototype property of a
+   class and/or const func
+ *******************************************/
+Turtle.prototype;
+// Turtle {}
+
+ /********************************************
+ * Add new properties to the prototype if it's
+ * an obj
+ *******************************************/
+Turtle.prototype.weapon = 'Hands';
+// 'Hands'
+
+ /********************************************
+ * Add new methods to the prototype if it's
+ * an obj
+ *******************************************/
+Turtle.prototype.attack = function(){
+    return `Feel the power of my ${this.weapon}!`;
+    }
+// [Function]
+
+ /********************************************************
+ * Create a new Turtle instance that it inherits the weapon
+property and attack() method from the Turtle.prototype obj, 
+as well as receives the name property and sayHi() method 
+from the class declaration
+ *******************************************/
+const raph = new Turtle('Raphael');
+raph.name
+// 'Raphael'
+raph.sayHi()
+// 'Hi dude, my name is Raphael'
+raph.weapon
+// 'Hands'
+raph.attack()
+// 'Feel the power of my Hands!'
+
+
+//Finding Out the Prototype
+/********************************************
+ *Find the prototype via the const func
+ property prototype OKAY PRACTICE
+ *******************************************/
+raph.constructor.prototype;
+// Turtle { attack: [Function], weapon: 'Hands' }
+
+/********************************************
+ * Locate the prototype by using the 
+ * Object.getPrototypeOf() method taking the
+ * obj as a parameter. BEST PRACTICE
+ *******************************************/
+Object.getPrototypeOf(raph);
+// Turtle { attack: [Function], weapon: 'Hands' }
+
+/***********************************
+ * Locate the prototype by using the 
+ * __proto__property(dunder proto)
+ **********************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ * DEPRECATED
+ *******************************************/
+raph.__proto__
+// Turtle { attack: [Function], weapon: 'Hands' }
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/
+
+ /********************************************
+ * Call  the static method by the class name
+ *******************************************/

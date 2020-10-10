@@ -1,21 +1,25 @@
 /*Tic-Tac-Toe CSS*/
+/*#1 Build a 3X3 board in HTML and CSS.*/
 .board {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
     height: 480px;
     width: 480px;
+    cursor: pointer;
   }
 
   .board>div {
     border-right: 1px solid;
     border-bottom: 1px solid;
     border-width: 0px 1px 0px solid;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 48px;
     justify-content: center;
     text-align: center;
+    vertical-align: middle;
   }
-
+/*Make the look like the second image */
   .board>div:nth-child(3n) {
     border-right-width: 0;
   }
@@ -23,13 +27,4 @@
   .board>div:nth-child(n + 7) {
     border-bottom-width: 0;
   } 
-  td {
-    border: 2px solid 333;
-    height: 100px;
-    width: 100px;
-    text-align:  center;
-    vertical-align: middle;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 70px;
-    cursor: pointer;
-  }
+  

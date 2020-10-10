@@ -127,18 +127,10 @@
             a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties and methods of the class.<br>
 
             <h3>Constructor functions.</h3>
-            An alternative way to create objects is to use aconstructor function. This is a function that defines the properties and methods
-            of an object. When instantiating a new obj the parentheses are required, however, if any default arguments need to be provided.<br>
-            Ex:
-            <code>
-                const whiteDice = new Dice(4);
-            </code><br>
-            
-            To validate the obj is assign to the var:
-            <code>
-                redDice instanceof Dice
-                true
-            </code><br>
+            An alternative way to create objects is to use aconstructor function. This is a function that defines the properties and methods of an object.
+            When instantiating a new obj the parentheses are required, however, if any default arguments need to be provided. The keyword this is used to
+            represent the object that will be returned by the constructor function.(ex. in main.js wk 12)<br>
+   
 
             JS contains a number of built-in constructor functions such as <b>object</b>, <b>array</b>, & <b>function</b> that can be used to create 
             objects, arrays and functions instead of literals. 
@@ -148,12 +140,58 @@
             features.<br>
 
             <h3>classes in JavaScript</h3>
-            <b>Classes</b> in JavaScript use a class to define a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties
-            and methods of the class.
+            <b>Classes</b> in JavaScript use a class to define a blueprint for an object. Objects are then created as an instance of that class, and inherit 
+            all the properties and methods of the class.
+
+            <h3>Constructor Functions</h3>(Pg. 459)
+            This is a function that defines the properties and methods of an object. Here is the dice example rewritten as a constructor function JavaScript 
+            contains a number of built-in constructor functions such as Object, Array, and Function that can be used to create objects, arrays and functions 
+            instead of literals. Array constructor functions exhibit some strange behavior regarding the arguments  supplied, however. If only one argument is 
+            given, it doesn’t create an array with that argument as the first element, as you might expect. It sets the array’s length property instead, and 
+            returns an array full of undefined! This results in an error being thrown if a floating point decimal number is provided as an argument, because 
+            the length of an array must be an integer.<br>
             
-            <h3>Prototypes</h3> JavaScript didn’t have classes before ES6, and used the concept of using actual
-            objects as the blueprint for creating more objects. 
-Pg 461
+            <h3>ES6 Class Declarations</h3>(Pg. 464)
+            ES6 introduced the new class declaration syntax that does exactly the same thing as a constructor function, but looks much similar to writing a 
+            class in a classbased  programming language. The names of constructor functions or class declarations are capitalized. Once the new instance is 
+            created, the class behaves the same way as the obj.<br>
+            
+            <h3>Constructor Property</h3>
+            <b>Constructor property</b> returns the constructor func that created it. When an object literal is used to create a new object, we can see that in 
+            the background, the Object constructor function is being used. We can use the constructor property to instantiate a copy of an object, without having 
+            to reference the actual constructor function or class declaration directly.<br>
+
+
+
+            <h3>Static Methods</h3>
+            The static keyword can be used in class declarations to create a static method (class methods).  Static methods are not available to instances of the 
+            class.<br>
+
+
+            <h3>Prototypal Inheritance</h3>(Pg. 467)
+            Every class has a prototype property that is shared by every instance of the class. So any properties or methods of a class’s prototype can be accessed 
+            by every object instantiated by that class. <br>
+           
+           
+            <h3>Prototype Property</h3>
+            The <b>prototype property</b> allow you to add arguments the class with extra methods and properties after it has been created. This is useful when you
+            don't have ccess to the class declaration. All instances of the the Turtle class share all the properties and methods of its prototype. This means they 
+            can call any methods of the prototype and access any of its properties. Now if we create a new instance, we can see that it inherits the property and 
+            method from the object, as well as receiving the property name and method from the class declaration.<br>
+            
+            
+            <h3>Finding Out the Prototype</h3>
+            There are a number of ways to find the prototype of an object, by the constructor functions's prototype property, the Object.getPrototypeOf() method, the 
+            and by the dudnder proto(short for double underscore proto).<br>
+
+
+
+
+            <h3>Prototypes</h3> JavaScript didn’t have classes before ES6, and used the concept of using actual objects as the blueprint for creating more objects. 
+            The class declaration syntax works in exactly the same way as the constructor function syntax, while avoiding the pitfalls of using a const func.
+
+            
+            
             <h3>Public and private methods</h3>
 
             <h3>Public and private methods</h3>
