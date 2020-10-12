@@ -1,13 +1,7 @@
 
 //Minecraft Array
 //Data for each character
-var minecraftData = [
-    {
-        type: "Steve",
-        img: "300-Steve.png",
-        desc: "Steve is fighting to stay alive, humanoid with the ability to block, run, duck, and use weapons such as bombs, shoot ammo, shoot flaming arrows, and hide behind invisiable cloakng sheild."
-   
-    },
+var minecraftData = [   
     {
         type: "Creeper",
         img: "256px-reeper.png",
@@ -31,5 +25,11 @@ var minecraftData = [
         img: "300px-Skeleton_Aiming.png",
         desc: "Skeletons are common undead hostile mobs equipped with bows.",
         spawning: "Skeletons can spawn in the overworld at a light level of 7 or less, in groups of 1-4. 80% of skeletons spawned directly under the sky spawn as strays in Snowy Tundra, Snowy Mountains, Ice Spikes, Frozen River, Frozen Ocean, and Deep Frozen Ocean biomes. Spiders have a 1% chance to spawn with a skeleton riding them, creating a spider jockey. Skeleton horsemen spawn when a skeleton trap is triggered. The skeletons ride on skeleton horses and are equipped with enchanted bows and iron helmets, and have damage immunity for 3 seconds after spawning."
+    },
+    {
+        type: "Steve",
+        img: "300-Steve.png",
+        desc: "Steve is fighting to stay alive, humanoid with the ability to block, run, duck, and use weapons such as bombs, shoot ammo, shoot flaming arrows, and hide behind invisiable cloakng sheild.",
+        spawning: "Steve has the ability to clone when fighting agiainst 2 or more Iron Golems and 3 or more zombies"
     }
 ]
