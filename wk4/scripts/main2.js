@@ -2,6 +2,7 @@
 /* #2 Attach a touchend listener to the board.When a cell is touched it should add either an
 'X or an 'O', depending on whether it is player 1 or player 2's turn..
 */
+'use strict';
 
 const divboard = document.querySelector('.divboard');
 const resetButton = document.getElementById('reset_button');

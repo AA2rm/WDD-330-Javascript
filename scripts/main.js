@@ -1,3 +1,5 @@
+'use strict';
+
 /* Create a function that links the navigation and menu items*/
 function toggleMenu() {
     document.querySelector('#navigation').classList.toggle('open');

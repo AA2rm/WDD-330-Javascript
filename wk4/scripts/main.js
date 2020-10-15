@@ -1,4 +1,5 @@
 //JS EXAMPLES HEROES PROJ
+'use strict';
 
 //Question array pg 273
 /**********************************************************

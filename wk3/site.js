@@ -1,4 +1,5 @@
 //MINECRAFT
+'use strict';
 
 /*
  * KEY

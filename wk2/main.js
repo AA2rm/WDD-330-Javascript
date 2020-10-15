@@ -1,4 +1,5 @@
 //WEEK 2
+'use strict';
 /***********************************
 /*Initialize an array literal-array obj
 ************************************/

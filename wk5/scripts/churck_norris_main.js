@@ -1,4 +1,5 @@
 //API JavaScript-Chuck Norris
+'use strict';
 
 //Assign each of the buttons in the HTML  file to a var to reference to later
 const textButton = document.getElementById('number');
@@ -41,3 +42,4 @@ apiButton.addEventListener('click', () => {
     .then( data => outputDiv.innerText = data.value )
     .catch( error => console.log('There was an error:', error))
 },false);
+

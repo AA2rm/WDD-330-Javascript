@@ -1,6 +1,8 @@
 
 //Minecraft Array
 //Data for each character
+'use strict';
+
 var minecraftData = [   
     {
         type: "Creeper",

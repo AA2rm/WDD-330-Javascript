@@ -108,6 +108,20 @@ Review the .setItem command in office hour start at 51.00 in video.
     To see the  GitHub  source code go to github.com/username/projectname
     SUBMIT THIS WEEKLY: To see the project webpage change the url to https://username.github.io/projectname
 
+DEBUGGING
+Ex. Stack Trace Error
+index.html:13 Uncaught ReferenceError: unicorn is not defined (does not exist & causes the error)
+
+Ex. Exception Error 
+ReferenceError: unicorn is not defined (nonexistent)
+
+Ex. Warning Error
+JavaScript Warning: assignment to undeclared variable
+
+Note: Depending on the browser, some show icon in the corner of the browser  window, while other require the 
+      console to be open to see any warnings or exceptions.
+
+
 
 
 TROUBLE SHOOTING

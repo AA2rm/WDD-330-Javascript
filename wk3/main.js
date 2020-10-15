@@ -1,4 +1,6 @@
 //Wk 3-CREATING METHODS
+'use strict';
+
 /************************
 //Create an object method
 *************************/

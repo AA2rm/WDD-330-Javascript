@@ -1,3 +1,5 @@
+'use strict';
+
 /*Connect weekly notes to another weekly notes file*/
 wk1.next = wk2;
 
