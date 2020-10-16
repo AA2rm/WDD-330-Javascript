@@ -18,7 +18,7 @@ class name {
 }
 
 
-class hike{
+class hike {
     constructor(name, path = true, duration, difficulty) {
       this.path = path;
       this.name = name;          
@@ -29,5 +29,5 @@ class hike{
   }
 
  
-// Use the instnace  to call the showHikeList method.
+// Use the instance  to call the showHikeList method.
 myHike.showHikeList()
