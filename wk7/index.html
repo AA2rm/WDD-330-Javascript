@@ -1,6 +1,6 @@
-  
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+
   <head>
     <meta charset="utf-8" />
     <title>Great Hikes (dynamic DOM example)</title>
@@ -12,6 +12,7 @@
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
           Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
+
       img {
         max-width: 100%;
       }
@@ -19,19 +20,87 @@
   </head>
 
   <body>
+    <div id="portfolio_log">
+      <div id="tag_line">
+        <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+      </div>
+      <img src="images/lady.gif" title="Portfolio">
+
+
+    </div>
+
+
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>
+    <header class="page_header">
+      <ul id="nav_bar">
+        <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+        <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+        <li><a href="#" title="User Feedback">feedback</a></li>
+        <li>
+          <!--<a href="#" title="Google">-->
+          <form name='search' action='/search'><input name='searchInput'><button type='submit'>Search</button>
+          </form>
+          <!--</a>-->
+        </li>
+
+
+      </ul>
+    </header>
+    <header class="bottom_header_blue"></header>
     <main>
       <h1>Great hikes</h1>
       <ul id="hikes" class="hikeStyles">
-        <!-- your hike list should be build here. -->
+        <!-- Something goes here -->
       </ul>
-    </main>
 
 
-        <footer></footer>
-        
+
+      <section id="References">
+        <h2 style="color:#6600cc"><u>References: Home Page</u></h2>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=cv_Cs_kt0R0&ab_channel=MyCodingLair" title="Insert Image">Insert
+              Image Tutorial</a></li>
+          <li><a href="https://teamtreehouse.com/community/how-to-include-images-in-visual-studio-code-html"
+              title="Inserting Images">Insert Image Into VS Code Editor</a></li>
+          <li><a href="https://www.colorhexa.com/663399" title="Colorhexa">Color Schemes</a></li>
+          <li><a href=" https://www.w3schools.com/howto/howto_css_style_hr.asp" title="W3schools">Horizontal Lines Using
+              The
+              <hr> tag</a></li>
+        </ul>
+
+      </section>
+    </main><br><br><br>
+
+    <hr class="line1">
+    <hr class="line2">
+    <hr class="line3">
+
+    <footer class="footer">
+      <p class="footer_ph">
+        &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+      </p>
+
+
+      <ul id="footer">
+        <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
+            style="color:#6600cc">W3schools/javascript</a></li>
+        <li><a href="https://courses.wesbos.com/account/access/5eb152a29edbdf36381221ae/view/194129962"
+            title="JavaScript 30" style="color:#6600cc">JAVASCRIPT 30</a></li>
+        <li><a href="https://exploringjs.com/es6/index.html#toc_ch_overviews" title="Exploring ES6"
+            style="color:#6600cc">Exploring ES6</a></li>
+        <li><a
+            href="https://www.youtube.com/watch?v=Wy9q22isx3U&list=PLcXgYNNKu8p5oY9FkPSLAAO5evUA-V7zg&index=9&ab_channel=TraversyMedia"
+            title="Vue JS Crash Course" style="color:#6600cc"> JS Crash Course</a></li>
+        <li><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/6/k01nwu9d"
+            title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
+      </ul>
+    </footer>
+
     <script src="hiking-start.js"></script>
-        <script src="scripts/main.js"></script>
-        .<script src="main.js" type="module"></script><!--tell the HTML file that you want to use modules.-->
-    </body>
-    
-    </html>
+    <script src="scripts/main.js"></script>
+    <script src="main.js" type="module"></script>
+    <!--tell the HTML file that you want to use modules.-->
+  </body>
+
+  </html>

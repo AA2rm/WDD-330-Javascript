@@ -1,88 +1,142 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Title Goes Here</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        
-        <script>
-            
-        </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Goes Here</title>
+    <link rel="stylesheet" href="styles/styles.css">
 
-        <style>
-            textarea {
-                background-color: #ffffe0;
-                height: 250px;
-                width: 800px;
-            }
-        </style>
-   </head>
+    <script>
+
+    </script>
+
+    <style>
+        textarea {
+            background-color: #ffffe0;
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+</head>
 
 <body>
-    <div id="portfolio_logo">
-        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
-    </div> 
-   
-    <header class="page_header"> 
-        <ul  id="nav_bar">  
+    <div id="portfolio_log">
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+
+
+    </div>
+
+
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>
+    <header class="page_header">
+        <ul id="nav_bar">
             <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
-            
             <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li>
+                <!--<a href="#" title="Google">-->
+                <form name='search' action='/search'><input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
+
+
         </ul>
     </header>
-    <section class="individual_activity">
-        <h1>Week 9</h1>
-        <h2>Individual Assignments & Notes</h2>
-    </section>        
-    <ul>
-        <li><a href="notes.html">Wk 9 Notes</a></li>
-        <li><a href="main.js">JS Code Examples</a></li>
-    </ul><br><br><br>
+    <header class="bottom_header_blue"></header>
+    <main>
+        <section class="individual_activity">
+            <h1>Week 9</h1>
+            <h2>Individual Assignments & Notes</h2>
+        </section>
+        <ul>
+            <li><a href="notes.html">Wk 9 Notes</a></li>
+            <li><a href="main.js">JS Code Examples</a></li>
+        </ul><br><br><br>
 
-    <section class="team_activity">
-        <h1>Week 9 </h1>
-        <h2>Core Requirements & Stretch Goals</h2>
-        <p>Try it.</p>
-        
-        <input id="number" name="number" type="number" />
-        <input id="number1" name="number2" type="number" />
-        <button onclick="loadProgram()">Submit</button>
-        <button onclick="index(1)">+</button>
-        <button onclick="index(2)">-</button>
-        <button onclick="index(3)">*</button>
-        <div id="text"></div>
-    </section>
+        <section class="team_activity">
+            <h1>Week 9 </h1>
+            <h2>Core Requirements & Stretch Goals</h2>
+            <p>Try it.</p>
 
-    <section>
-        <h1>Table of Contents</h1>
-        <ol>
-            <li><a href="label:wk1/notes.html"></a>Week1 notes<a href="url:wk1/index.html">wk1 index</a></li>
-            <li><a href="label:wk2/notes.html"></a>Week2 notes<a href="url:wk2/index.html">wk2 index</a></li>
-            <li><a href="label:wk3/notes.html"></a>Week3 notes<a href="url:wk3/index.html">wk3 index</a></li>
-            <li><a href="label:wk4/notes.html"></a>Week4 notes<a href="url:wk4/index.html">wk4 index</a></li>
-            <li><a href="label:wk5/notes.html"></a>Week5 notes<a href="url:wk5/index.html">wk5 index</a></li>
-            <li><a href="label:wk6/notes.html"></a>Week6 notes<a href="url:wk6/index.html">wk6 index</a></li>
-            <li><a href="label:wk7/notes.html"></a>Week7 notes<a href="url:wk7/index.html">wk7 index</a></li>
-            <li><a href="label:wk8/notes.html"></a>Week8 notes<a href="url:wk8/index.html">wk8 index</a></li>
-            <li><a href="label:wk9/notes.html"></a>Week9 notes<a href="url:wk9index.html">wk9 index</a></li>
-            <li><a href="label:wk10/notes.html"></a>Week10 notes<a href="url:wk10/index.html">wk10 index</a></li>
-            <li><a href="label:wk11/notes.html"></a>Week11 notes<a href="url:wk11/index.html">wk11 index</a></li>
-            <li><a href="label:wk12/notes.html"></a>Week12 notes<a href="url:wk12/index.html">wk12 index</a></li>
-        </ol>
-    </section>
-    
-    <span style="color:red;font-size:17px"><b>Question:</b></span> Should I be placing the table of contents 'ol'
-    list in each index, every week?<br>
+            <input id="number" name="number" type="number" />
+            <input id="number1" name="number2" type="number" />
+            <button onclick="loadProgram()">Submit</button>
+            <button onclick="index(1)">+</button>
+            <button onclick="index(2)">-</button>
+            <button onclick="index(3)">*</button>
+            <div id="text"></div>
+        </section>
 
-    <span style="color:red;font-size:17px"><b>Question:</b></span> Why when I click the notes link on this page it combines week 1 and week 2 notes into 1 page?
-</main><br><br>
-<footer class="footer">
-    <br>
-    &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
-</footer>
-<script src="scripts/main.js"></script>
+        <section>
+            <h1>Table of Contents</h1>
+            <ol>
+                <li><a href="label:wk1/notes.html"></a>Week1 notes<a href="url:wk1/index.html">wk1 index</a></li>
+                <li><a href="label:wk2/notes.html"></a>Week2 notes<a href="url:wk2/index.html">wk2 index</a></li>
+                <li><a href="label:wk3/notes.html"></a>Week3 notes<a href="url:wk3/index.html">wk3 index</a></li>
+                <li><a href="label:wk4/notes.html"></a>Week4 notes<a href="url:wk4/index.html">wk4 index</a></li>
+                <li><a href="label:wk5/notes.html"></a>Week5 notes<a href="url:wk5/index.html">wk5 index</a></li>
+                <li><a href="label:wk6/notes.html"></a>Week6 notes<a href="url:wk6/index.html">wk6 index</a></li>
+                <li><a href="label:wk7/notes.html"></a>Week7 notes<a href="url:wk7/index.html">wk7 index</a></li>
+                <li><a href="label:wk8/notes.html"></a>Week8 notes<a href="url:wk8/index.html">wk8 index</a></li>
+                <li><a href="label:wk9/notes.html"></a>Week9 notes<a href="url:wk9index.html">wk9 index</a></li>
+                <li><a href="label:wk10/notes.html"></a>Week10 notes<a href="url:wk10/index.html">wk10 index</a></li>
+                <li><a href="label:wk11/notes.html"></a>Week11 notes<a href="url:wk11/index.html">wk11 index</a></li>
+                <li><a href="label:wk12/notes.html"></a>Week12 notes<a href="url:wk12/index.html">wk12 index</a></li>
+            </ol>
+        </section>
+
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Should I be placing the table of contents 'ol'
+        list in each index, every week?<br>
+
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Why when I click the notes link on this page it
+        combines week 1 and week 2 notes into 1 page?
+        <section id="References">
+            <h2 style="color:#6600cc"><u>References: Home Page</u></h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=cv_Cs_kt0R0&ab_channel=MyCodingLair"
+                        title="Insert Image">Insert Image Tutorial</a></li>
+                <li><a href="https://teamtreehouse.com/community/how-to-include-images-in-visual-studio-code-html"
+                        title="Inserting Images">Insert Image Into VS Code Editor</a></li>
+                <li><a href="https://www.colorhexa.com/663399" title="Colorhexa">Color Schemes</a></li>
+                <li><a href=" https://www.w3schools.com/howto/howto_css_style_hr.asp" title="W3schools">Horizontal Lines
+                        Using The
+                        <hr> tag</a></li>
+
+            </ul>
+
+        </section>
+    </main><br><br><br>
+
+    <hr class="line1">
+    <hr class="line2">
+    <hr class="line3">
+
+    <footer class="footer">
+        <p class="footer_ph">
+            &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+        </p>
+
+
+        <ul id="footer">
+            <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
+                    style="color:#6600cc">W3schools/javascript</a></li>
+            <li><a href="https://courses.wesbos.com/account/access/5eb152a29edbdf36381221ae/view/194129962"
+                    title="JavaScript 30" style="color:#6600cc">JAVASCRIPT 30</a></li>
+            <li><a href="https://exploringjs.com/es6/index.html#toc_ch_overviews" title="Exploring ES6"
+                    style="color:#6600cc">Exploring ES6</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Wy9q22isx3U&list=PLcXgYNNKu8p5oY9FkPSLAAO5evUA-V7zg&index=9&ab_channel=TraversyMedia"
+                    title="Vue JS Crash Course" style="color:#6600cc"> JS Crash Course</a></li>
+            <li><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/6/k01nwu9d"
+                    title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
+        </ul>
+    </footer>
+    <script src="scripts/main.js"></script>
 
 
 </body>
