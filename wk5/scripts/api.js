@@ -1,4 +1,4 @@
-//API JavaScript-Chuck Norris
+//API JavaScript
 'use strict';
 
 //Assign each of the buttons in the HTML  file to a var to reference to later
