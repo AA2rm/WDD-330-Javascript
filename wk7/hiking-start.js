@@ -1,3 +1,5 @@
+/* IMPORT HIKES*/
+
 //create an array of hikes
 const hikeList = [
     {

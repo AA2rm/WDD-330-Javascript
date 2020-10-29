@@ -16,6 +16,15 @@ INSTALL & RUN NPM SERVER (To see your work on the web)
 npm install -g http-serve (press enter)
 http-serve (runs the server)
 
+Installation from web
+    download node js
+    Check that it downloaded: nmp -- version
+    Install nmp server: nmp instal -g http-server
+    Run server: http-serve
+    To open file type: open
+    To close file type: ctrl + C
+    To open the file on the server: Either type in localhost:8080 or the ip address that's available  under the http-serve
+
 INSTALL & RUN GITHUB
 git add
 git commit -m "Add code.html to week 1"
@@ -135,3 +144,6 @@ SHORT-CUTS
 Pressing TAB will autocomplete any methods and should show you a list of
 possible methods
 Pressing the UP arrow key will select the previous command entered.
+
+
+Activity Resource: https://github.com/byui-cit/cit261/find/823905124110dc352592fca8bd8a1e66933b6040

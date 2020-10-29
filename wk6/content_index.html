@@ -8,9 +8,6 @@
     <title>Todo list</title>
 
     <script type="module" src="js/ToDo.js"> </script>
-    <script type="module" src="js/ls.js"></script>  
-    <script type="module" src="js/utils.js"></script>  
-  
 
     <style>
         textarea {
@@ -21,44 +18,30 @@
     </style>
 
 </head>
-<body> 
-    <main>  
-    <div class="container">
-        <h1>Todos</h1>
 
-        <div class="todos-wrapper">
-            <div id="todos">
-            
-            </div>
-        </div>        
-    </div>
-
-    <div class="add-todo-wrapper">
-        <input id="todoInput" type="text">
-        <button id="addbtn">Add</button>
-    </div>
-    
+<body>   
+    <main>
+        <h1>ToDo Files</h1>
         <ul>
            
-            <li><a href="js/ToDo.js">To Do JS</a></li>         
+            <li><a href="js/ToDo.js">JS</a></li>         
             <li><a href="js/ls.js">Local Storage</a></li>
             <li><a href="js/utils.js">Utilities</a></li>
-            <li><a href="todo_styles.css">To Do CSS</a></li>
-        </ul>     
-        ToDo element should include a checkbox to mark complete, a label for the task text, and a button used to remove the task  
+            <li><a href="todo_styles.css"> CSS</a></li>
+        </ul>      
+
+
+       
     </main><br><br><br>
+
 
     <footer class="footer">
         <p class="footer_ph">
             &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
         </p>
 
-        <p>
-            Footer should allow to switch between All tasks, active (not complete) tasks, and completed tasks. It should also 
-            include a total label. If filter is All…total should be all active tasks, otherwise it should show the number of
-            tasks found by the filter (active or completed)
-        </p>
-        <ul id="footer">           
+
+        <ul id="footer">
             <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
                     style="color:#6600cc">W3schools/javascript</a></li>
             <li><a href="https://courses.wesbos.com/account/access/5eb152a29edbdf36381221ae/view/194129962"
@@ -71,7 +54,7 @@
                     title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
         </ul>
     </footer>
-
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
