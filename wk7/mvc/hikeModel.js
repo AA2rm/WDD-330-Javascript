@@ -1,8 +1,10 @@
-/* HIKES MODEL*
-* https://github.com/byui-cit/cit261/blob/2795f016b88280bc9a98e386e8fd5dcd07993c3c/solutions/week05/mvc/hikeModel.js
-*/
+/* HIKES MODEL*/
+'use strict';
 
-// normally the model would have more going on...retrieving the hikes from a database, filtering, etc. Our model will be very simple.  We could simply export the hikeList, but a better pattern would be to create a 'getter' function to do it instead. That way as our model changed...we could simply change the getter function and anything using it should be able to remain the same.
+// normally the model would have more going on...retrieving the hikes from a database, filtering, etc. Our model will be 
+// very simple.  We could simply export the hikeList, but a better pattern would be to create a 'getter' function to do 
+// it instead. That way as our model changed...we could simply change the getter function and anything using it should be
+// able to remain the same.
 const hikeList = [
     {
       name: 'Bechler Falls',

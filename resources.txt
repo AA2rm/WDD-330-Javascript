@@ -146,4 +146,9 @@ possible methods
 Pressing the UP arrow key will select the previous command entered.
 
 
-Activity Resource: https://github.com/byui-cit/cit261/find/823905124110dc352592fca8bd8a1e66933b6040
+Activity Resource: 
+Week 7
+https://github.com/byui-cit/cit261/find/823905124110dc352592fca8bd8a1e66933b6040
+https://github.com/byui-cit/cit261/commit/8f641d5740bf4b9894e40f5194b87145a1fae282
+
+Week 
