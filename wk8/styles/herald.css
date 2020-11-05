@@ -1,0 +1,365 @@
+/*Week8 Herald Examples
+ *remember that transforms are applied in the order provided
+ * https://www.sitepoint.com/premium/books/html5-css3-for-the-real-world-2nd-edition/read/8/jzj68yuf
+ */
+ 
+
+ /*TRANSFORM/TRANSLATE*/
+/***************************
+ * Add a transform function
+ **************************/
+ h1 {
+ transform: translate(45px, -45px);
+}
+
+ /*********************************************
+  * Write a webkit that make the aforementioned 
+  * code work in IE9 and older mobile WebKit 
+  * browsers. 
+ ********************************************/
+ IE7 {
+ 
+-webkit-transform: translate(45px,-45px); /* iOS8, Android 
+ ↵4.4.3, BB10 */
+ -ms-transform: translate(45px,-45px); /* IE9 only */
+ transform: translate(45px,-45px);
+ }
+
+ /******************************************
+ * Move an element vertically & horizontally
+ * using a translateex & translatey
+ * Add a transform function
+ ******************************************/
+ #header {
+     transform: translateX(45px);
+     /* transform: translateY(15px); */
+ }
+
+ 
+ /*********************************************
+  * Move up along the y axis by 30px. 
+ ********************************************/
+p {
+    transform: translateY(-30px); 
+}
+
+/*********************************************
+  * Move the text 'dukes' to the R when the 
+  * user hovers over the h1  
+
+ ********************************************/
+ /* NOTE: Will not work on inline  elements*/
+.ad-ad2 h1:hover span {
+    color: #484848;  
+    transform: translateX(40px);
+}
+
+/* NOTE: Will work on inline  elements*/
+ /*********************************************
+  * Move up along the y axis by 30px. 
+ ********************************************/
+ .ad-ad2 h1 span {
+    font-size: 30px;
+    color: #999999;
+    display: inline-block;
+ }
+
+
+ /*TRANSFORM/SCALE*/
+  /*********************************************
+  * Move up along the y axis by 30px. 
+ ********************************************/
+ ul > li {
+    transform: scale(1.5, 0.25);  
+ }
+
+  /*********************************************
+  * Use a transform:scale on the span element
+  ********************************************/
+  /*Note that you shouldn’t declare a new transform : because of the 
+  cascade, a second transform would override the first. To declare 
+  multiple transformations, provide a space-separated list of 
+  transform functions. We simply add our scale to the end of that 
+  space-separated list.
+  */
+ .ad-ad2 h1:hover span {
+    color: #484848;  
+    transform: translateX(40px) scale(1.5);
+}
+
+
+
+
+/*TRANSFORM/ROTATION*/
+  /*********************************************
+  * Add a transform: rotate to 'dukes'. 
+  *********************************************/
+.ad-ad2 h1:hover span {
+    color: #484848;
+    transform: rotate(10deg) translateX(40px) scale(1.5);
+}
+
+  /*********************************************
+  * How to add a transform: skew
+   ********************************************/
+  /*NOTE: do not use on this proj: Herald
+  transform: skew(15deg, 4deg);
+  */
+
+  /*********************************************
+  * how to add transform: orgin 
+  ********************************************/
+  /* .square {
+      transform-origin: 0 0;
+  }
+
+  /*********************************************
+  *  Mimic translation use position: relative;
+   , and top and left values for IE internet Ex
+ ********************************************/
+ /* .translate {
+    position: relative;
+    top: 200px;
+    left: 200px;
+}
+*/
+
+
+  /*********************************************
+  * Create a filters to rotate an element in older  
+  * versions of IE Internet Explorer, NOTE: it may
+  * be ugly and performs poorly: 
+  *********************************************/
+  #transformedObject {
+    width:             345px;
+    height:            70px;
+
+    -moz-transform:    rotate(15deg)
+                        translateX(230px)
+                        scale(1.5);
+    -o-transform:      rotate(15deg)
+                        translateX(230px)
+                        scale(1.5);
+    -webkit-transform: rotate(15deg)
+                        translateX(230px)
+                        scale(1.5);
+    transform:         rotate(15deg)
+                        translateX(230px)
+                        scale(1.5);
+}	
+/*
+ * The following two rules are for IE only and
+ * should be wrapped in conditional comments.
+ * The -ms-filter rule should be on one line 
+ * and always *before* the filter rule if
+ * used in the same rule.
+ */
+
+ #transformedObject {
+
+    /* IE8+ - must be on one line, unfortunately */ 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.4488887394336025, M12=-0.388228567653781, M21=0.388228567653781, M22=1.4488887394336025, SizingMethod='auto expand')";
+    
+    /* IE6 and 7 */ 
+    filter: progid:DXImageTransform.Microsoft.Matrix(
+             M11=1.4488887394336025,
+             M12=-0.388228567653781,
+             M21=0.388228567653781,
+             M22=1.4488887394336025,
+             SizingMethod='auto expand');
+ 
+ 
+    /*
+     * To make the transform-origin be the middle of
+     * the object.    Note: These numbers
+     * are approximations.  For more accurate results,
+     * use Internet Explorer with this tool.
+     */
+    margin-left: 30px; 
+    margin-top: -56px;
+ 
+ } 
+ 
+
+/*TRANSITION PROPERTY
+/*************************************************
+ * Apply the transition to the transform property
+ * NOTE: -webkit- vendor prefix is still needed for 
+ older mobile devices, All other browsers, including 
+ IE10 and Android 4.4 browser support the unprefixed 
+ syntax. Always add this.
+*************************************************/
+.ad-ad2 h1 span {
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+}
+
+
+
+  /*********************************************
+  * Transition more than one property, but not all, 
+  * comma-separate them:
+ ***********************************************/
+ .foo {
+    transition-property: transform, color;
+}
+
+/*********************************************
+  * Set the transition time 
+*********************************************/
+.foo { 
+    transition-duration: 0.2s;
+}
+/*********************************************
+  * Add an ease-out transition-timing-func
+********************************************/
+.foo {
+    transition-timing-function: ease-out;
+}
+
+/*********************************************
+  * Add an transiton: delay that's 50ms when
+  * user hovers over the ad
+********************************************/
+.foo {
+    -webkit-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+
+
+/*********************************************
+  * Shorten the transform, duration, timing-
+  fucntion & delay from long code. 
+********************************************/
+/*Long hand*/
+.ad-ad2 h1 span {
+    transition-property: transform; 
+    transition-duration: 0.2s;  
+    transition-timing-function: ease-out;
+    transition-delay: 50ms;
+}
+
+/*Short hand*/
+.ad-ad2 h1 span {
+    transition: transform 0.2s ease-out 50ms;
+}
+
+
+/*********************************************
+  * Add Multiple transitions to the properties. 
+********************************************/
+.foo {
+    transition-property: transform, color; 
+    transition-duration: 0.2s;  
+    transition-timing-function: ease-out;
+    transition-delay: 50ms;
+    }
+
+/* OR with comma-separated*/
+.foo {
+    transition-property: transform, color; 
+    transition-duration: 0.2s, 0.1s;  
+    transition-timing-function: ease-out, linear;
+    transition-delay: 50ms;
+}
+
+/*********************************************
+  * Use shorthand to add mulitiple transitions
+  to the transition property 
+********************************************/
+.foo {
+    transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;
+}
+
+
+/*********************************************
+  * Change both property names at the same rate
+   and delay using the 'all' keyword
+********************************************/
+.foo {
+    transition: all 0.2s ease-out 50ms;
+}
+
+
+
+/*********************************************
+  * Create an animation named 'myAnimation' 
+  using a keyframe & @-webkit for older browsers
+********************************************/
+@-webkit-keyframes myAnimation { 
+  /* put animation keyframes here */
+
+}
+@keyframes myAnimation { 
+  /* put animation keyframes here */
+}
+
+
+/*********************************************
+  * Add animation to the keyframe that moves
+  * to the R and appears at 80% & becomes 
+  * visible by 20% during the duration & fades
+  * out after 80%
+********************************************/
+@keyframes moveRight { 
+  /* keyterms are the from & to*/
+  from {
+  transform: translateX(-50%);
+  }
+  to {
+  transform: translateX(50%);
+  }
+}
+/* key word keyframe with property name*/
+@keyframes appearDisappear { 
+  /*animated value starts out invisible until 80%, thens fades out*/
+  0%, 100% {
+  opacity: 0;
+  }
+  20%, 80% {
+  opacity: 1;
+  background-position: 120% 0;
+  }
+}
+
+
+/*********************************************
+  * Animate the properties
+********************************************/
+  @-webkit-keyframes myAnimation { 
+    animation-name: appearDisappear;
+  5%, 100% {
+  opacity: 1%;
+  } 
+  15%, 95% {
+  opacity: 1;
+  background-position: 90% 0;
+  }
+}
+ 
+@keyframes animation-duration { 
+  /* put animation keyframes here */
+ 300ms;
+}
+
+/*********************************************
+  * Move up along the y axis by 30px. 
+********************************************/
+
+
+
+/*********************************************
+  * Move up along the y axis by 30px. 
+********************************************/
+
+
+
+/*********************************************
+  * Move up along the y axis by 30px. 
+********************************************/
+
+
+
+
+
+

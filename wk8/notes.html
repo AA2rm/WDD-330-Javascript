@@ -19,40 +19,45 @@
 <body>
     <header class="page_header"></header>
     <main>
-        <section id="chp_8">
+        <section id="transform_transitions">
             <h1>Chapter 8</h1>Pgs.
 
+            <h2>Transform</h2>
+            Translation functions allow you to move elements left, right, up, or down. When you employ a translation
+            function, you’re moving elements without impacting the flow of the document. Remember that transforms are applied in the order provided<br>
+
+            <h2>Transforms & Older Browsers</h2>
+            To make the aforementioned code work in IE9 and older mobile WebKit browsers, you would include the
+            following:<br>
+            <code>
+                -webkit-transform: translate(45px,-45px); /* iOS8, Android 4.4.3, BB10 */
+                -ms-transform: translate(45px,-45px); /* IE9 only */
+                transform: translate(45px,-45px);
+            </code>
+
             <h2>Translation</h2>
-            Translation functions allow you to move elements left, right, up, or down.  When you employ a translation function, you’re moving elements without impacting the flow of the document. 
-            The translate(x,y) function moves an element x from the left, and y from the top:
-            <h2>Transforms & Older Browsers</h2><br>
-            The CSS3 <b>transform</b> property lets you lets you translate, rotate, scale, and/or skew any element on the page. property lets you lets you translate, rotate, scale, and/or skew any element on the page. 
-            property lets you lets you translate, rotate, scale, and/or skew any element on the page. 
-        </section>
-        
-        <section>
-            <h2>Translation</h2><br>
-            Translation functions allow you to move elements left, right, up, or down. These functions are similar to the behavior of <b>positon: relative</b>, when declaring top and left , moving elements up and down or left 
-            and right along the x and y axes. When you employ a translation function, you’re moving elements without impacting the flow of the document. Transforms require vendor prefixing for IE9, Android up to 4.4.3, iOS8, 
+            Translation functions allow you to move elements left, right, up, or down. These functions are similar to
+            the behavior of <b>positon: relative</b>, when declaring top and left , moving elements up and down or left
+            and right along the x and y axes. When you employ a translation function, you’re moving elements without
+            impacting the flow of the document. Transforms require vendor prefixing for IE9, Android up to 4.4.3, iOS8,
             and Blackberry 10. To make the aforementioned code work in IE9 and older mobile WebKit browsers,<br>
 
             Ex. Move an element x from the left & y from the top
             <code>
-                transform: translate(45px, -45px); 
+                transform: translate(45px, -45px);
             </code><br>
             Ex. Add code to make the transforms functional in IE9, Android 4.4.3,iOs8, & Blackberry19<br>
 
             <code>
-                -webkit-transform: translate(45px,-45px); /* iOS8, 
+                -webkit-transform: translate(45px,-45px); /* iOS8,
                 Android 4.4.3, BB10 */
                 -ms-transform: translate(45px,-45px); /* IE9 only */
                 transform: translate(45px,-45px);
             </code>
-        </section><br>
 
-        <section>
-            <h2>Translate X & Y</h2><br>
-            If you only want to move an element vertically or horizontally, you can use the <b>translatex</b> or <b>translatey</b> functions respectively.<br>
+            <h2>Translate X & Y</h2>
+            If you only want to move an element vertically or horizontally, you can use the <b>translatex</b> or
+            <b>translatey</b> functions respectively.<br>
 
             Ex. Move the position 45px to the right along the x axis & 50 px on the y axis<br>
 
@@ -64,74 +69,240 @@
             <h1>Put your <span>dukes</span> up, sire</h1>
             <code>
                 .ad-ad2 h1:hover span {
-                color: #484848;  
+                color: #484848;
                 transform: translateX(40px);
                 display: inline-block;
                 }
             </code>
-            IT DOESN'T WORK-transform don't work on inline elements so you have to add code for the inline block.
-      </section><br>
+            Note: IT DOESN'T WORK-transform don't work on inline elements so you have to add code for the inline block.<br>
 
-      <section>
-          <h2>Scaling</h2><br>
-          The <b>scale(x,y)</b> function scales an element by the defined factors horizontally then vertically. If only one value is provided, it will be used for 
-          both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio. <br>
 
-          Ex. Provide various values to distor the word element<br>
+            <h2>Scaling</h2>
+            The <b>scale(x,y)</b> function scales an element by the defined factors horizontally then vertically. If
+            only one value is provided, it will be used for
+            both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original
+            aspect ratio. NOTE: You can also scale an element by altering its width and height , or changing the font-size. 
+            Remember though that altering a width , height or font-size alters the space allocated for the element and can 
+            affect the layout.<br>
+
+            Ex. Provide various values to distor the word element<br>
             <code>
                 transform: scale(1.5, 0.25);
             </code>
-          You can also use the <b>scaleX(x)</b> or the <b>scaleY(y)</b> functions. These functions will scale only the horizontal dimensions or only the vertical 
-          dimensions respectively. A scaled element will grow outwards from or shrink inwards towards its center; in other words, the element’s center will stay in 
-          the same place as its dimensions change.<br>
+            You can also use the <b>scaleX(x)</b> or the <b>scaleY(y)</b> functions. These functions will scale only the
+            horizontal dimensions or only the vertical
+            dimensions respectively. A scaled element will grow outwards from or shrink inwards towards its center; in
+            other words, the element’s center will stay in
+            the same place as its dimensions change.<br>
 
-          Ex. Change the default scaling of the element<br>
-          <code>
-            ad-ad2 h1:hover span {
-                color: #484848;  
+            Ex. Change the default scaling of the element<br>
+            <code>
+                ad-ad2 h1:hover span {
+                color: #484848;
                 transform: translateX(40px) scale(1.5);
-            }
-          </code>
-          Note: that you shouldn’t declare a new transform : because of the cascade, a second transform would override the first. To declare multiple transformations, 
-          provide a space-separated list of transform functions. caling, like translation, has no impact on the document flow. Also, if you scale inline-block elements, 
-          text around it will fail to accommodate it with reflowing. Consider adjusting the element’s height , width , or font-size instead of using a scale() transform.
-      </section><br>
+                }
+            </code>
+            Note: that you shouldn’t declare a new transform : because of the cascade, a second transform would override
+            the first. To declare multiple transformations, provide a space-separated list of transform functions. caling, 
+            like translation, has no impact on the document flow. Also, if you scale inline-block elements, text around it 
+            will fail to accommodate it with reflowing. Consider adjusting the element’s height , width , or font-size instead 
+            of using a scale() transform.<br>
 
-      <section>
-          <h2>Rotation</h2><br>
-          The <b>rotate()</b>function rotates an element around the point of origin by a specified angle value. As with scale , by default the point of origin is the 
-          element’s center. Generally, angles are declared in degrees, with positive degrees moving clockwise and negative moving counterclockwise. In addition to degrees, 
-          values can be provided in grads, radians, or turns, but we’ll just be sticking with degrees.<br>
 
-          Ex. Rotate the word 'dukes' using a transform<br>
-          <code>
-            .ad-ad2 h1:hover span {
+            <h2>Rotation</h2>
+            The <b>rotate()</b>function rotates an element around the point of origin by a specified angle value. Aswit h scale , 
+            by default the point of origin is element’s center. Generally, angles are declared in degrees, with positive degrees 
+            moving clockwise and negative moving counterclockwise. In addition to degrees, values can be provided in grads, radians,
+            or turns, but we’ll just be sticking with degrees. NOTE: You can use filters to rotate an element in older versions of 
+            Internet Explorer, but it’s ugly and performs poorly:<br>
+
+            Ex. Rotate the word 'dukes' using a transform<br>
+            <code>
+                .ad-ad2 h1:hover span {
                 color: #484848;
                 transform: rotate(10deg) translateX(40px) scale(1.5);
-            }
-          </code>
-          We are declaring the rotationbeforethe translate so that it’s applied first—remember that transforms are applied in the order provided. 
-      </section><br>
-
-        <section>
-            <h2>Skew</h2><br>
-            The <b>skew(x,y)</b>  function specifies a skew along the x and y axes. As you’d expect, the x specifies the skew on the x axis, and the y specifies the skew on the 
-            y axis. If the second parameter is omitted, the skew will only occur on the x axis. As with translate and scale , there are axis-specific versions of the skew transform: 
-            skewX() and skewY() .<br>
-            <code>
-                transform: skew(15deg, 4deg);  
+                }
             </code>
-            NOTE: If you gave your circle or ellipse a transform-origin of 10% 10% or top center , you would notice the rotation
-        </section><br>
+            We are declaring the rotationbeforethe translate so that it’s applied first—remember that transforms are
+            applied in the order provided.
+            <br>
+
+
+            <h2>Skew</h2>
+            The <b>skew(x,y)</b> function specifies a skew along the x and y axes. As you’d expect, the x specifies the
+            skew on the x axis, and the y specifies the skew on the
+            y axis. If the second parameter is omitted, the skew will only occur on the x axis. As with translate and
+            scale , there are axis-specific versions of the skew transform:
+            skewX() and skewY().<br>
+            <code>
+                transform: skew(15deg, 4deg);
+            </code>
+            NOTE: If you gave your circle or ellipse a transform-origin of 10% 10% or top center , you would notice the
+            rotation
+
+            <h2>Changing the Origin of the Transform</h2>
+            You can control the origin from which your transforms are applied. This is done using the transform-origin 
+            property.  The order of transform functions does matter: if you rotate before translating, your translate 
+            direction will be on the rotated axis. If you are using IE8 and earlier, it's not supported by CSS3 gransforms.
+            To mimic translation use position: relative; , and top and left values:
+        
+            <h2>Transnform: animation</h2>
+            It is important to include a pre-state and a post-state. The list of properties that can be animated is found at
+            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties.
+            Steps to create a simple transition using only CSS:<br>
+
+            1. Declare the original state of the element in the default style declaration.<br>
+            
+            2. Declare the final state of your transitioned element; for example, a :hover state.<br>
+            
+            3. Include the transition functions in your default style declaration using the transition properties, including: 
+            <b>transition:property</b>  -roperty defines the CSS properties of the element that should be transitioned, with 
+            all for all properties being the default.<br>
+            
+            <b>transition-duration</b> -property sets how long the transition will take: the duration of time it takes to go 
+            from the default state to the transitioned state. You can specify this either in seconds ( s ) or milliseconds ( ms ).<br>
+
+            <b>transition-timing-function</b> -lets you control the pace of the transition in even more granular detail. You 
+            canstart off slow and become faster, start off fast and end slower. The key terms for this transition is: key terms 
+            ease , linear , ease-in , ease-out , or ease-in-out. You can also describe your timing function more precisely by 
+            defining your own cubic-bezier function. It accepts four numeric parameters; for example, linear is the same as
+            cubic-bezier(0, 0, 1, 1) . you can divide the transition over equidistant steps. With the steps function, you define 
+            the number of steps and the direction of either start or end. For example, steps(5, start) would jump through the 
+            equidistant steps of 0%, 20%, 40%, 60%, and 80%, and steps(5, end) would jump throught the equidistant steps of 20%, 
+            40%, 60%, 80%, and 100%.<br>
+
+            <b>transition-delay</b> -Using the transition-delay property, it’s possible to introduce a delay before the transition 
+            begins using  milliseconds ( ms ) or seconds ( s ).  NOTE: A negative time delay that’s less than the duration of the entire 
+            transition will cause it to start immediately, but it will start partway through the animation.<br>
+            
+            <h2>The Transition Shorthand Property</h2>
+            he transition property is shorthand for the four transition properties can be shorten.<br>
+            <code>
+                .ad-ad2 h1 span {
+                    transition: transform 0.2s ease-out 50ms;
+                }
+            </code>
+
+            <h2>Multiple Transitions</h2>
+            <b>tranistion</b> properties allow for multiple transitions in one call.<br>
+        
+            <h2>transitionend</h2> event  is fired once per direction for each completed transformed property. In the case where 
+            the transition fails to complete, such as if you mouseout before our 250ms transition is over in the example above, 
+            it will not fire when it has only partially moved and started changing color, but will fire when it returns to the 
+            original default state. If you have more than one property being transitioned, the transitionend event will fire 
+            multiple times.<br>
+
+            <h2>Animations</h2>
+            CSS animations, unlike transitions, allow you to control each step of an animation via keyframes. Akeyframeis a snapshot 
+            that defines a starting or end point of any smooth transition. All modern browsers support CSS animation, starting with IE10, 
+            though we still require the -webkit- prefix in iOS8, Android 4.4.3, and BlackBerry 10. IE10 is unprefixed. Firefox 16, Chrome 
+            39, and Opera 26 dropped their need for a prefix for CSS animations. It is best to use CSS for simple-state changes in a mobile 
+            environment. But it’s still better to employ JavaScript for intricate, stateful UIs, and when you do, you’ll likely want to use 
+            a JavaScript animation library to help with manageability and performance.<br>
+
+
+            <h2>Keyframes</h2>
+            To animate an element in CSS, you first create a named animation, then attach it to an element in that element’s property 
+            declaration block. Animations in themselves don’t do anything; in order to animate an element, you’ll need to associate the
+            animation with that element. To create an animation, use the @keyframes rule for IE10+ and FF16+. Include @-webkit-keyframes for 
+            all WebKit implementations followed by a name of your choosing, which will serve as the identifier for the animation. Then, 
+            you can specify your keyframes. NOTE: An element must have at minimum an animation name for there to be an animation, and must 
+            also have a duration declared for the animation to be perceptible. Once we have defined our keyframe animations, the next step 
+            is to apply it to one or more elements using the various animation properties.<br>
+
+            <h2>Animation Properties</h2>
+            The animation properties, remembering that you will need two declarations for each property as the -webkit- prefix is still 
+            needed in WebKit browsers.<br>
+
+            <h3> animation-duration</h3> 
+            
+            
+            <h3>animation-name</h3>  is used to attach an animation (previously defined using the @keyframes syntax) to an element.<br>
+
+
+            <h3>animation-start</h3>
+
+
+            <h3>animation-end</h3>
+        </section>
 
         <section id="chp_12">
-            <h1>Chapter 12</h1>(Pgs. )
+            <h2>Chapter 12</h2>(Pgs. )
+            <h3>Canvas</h3>
+            With canvas, we can draw shapes and lines, arcs and text, gradients and patterns. In addition, canvas gives us the power to manipulate 
+            pixels in images and even video.  
+
+            <h4>canvas Element</h4>
+            The text in between the canvas tags will only be shown if the canvas element is not supported by the visitor’s browser. Since drawing on 
+            the canvas is done using JavaScript, we’ll need a way to grab the element from the DOM.  Canvas API is supported in:
+
+            Chrome 4+
+            
+            Firefox 2+
+            
+            Opera 9.6+
+            
+            Safari 3.1+
+            
+            iOS 3.2+
+            
+            Internet Explorer 9.0+
+            
+            Android 3.0+<br>
+
+            Before we can draw onto a canvas, we need to grab hold of the canvas element on our page: 
+            <code>
+                var canvas = document.getElementById("myCanvas");
+            </code><br>
+
+            We obtain our drawing context by calling the getContext method and passing it the string "2d" , since we’ll be drawing in two dimensions.<br>
+            <code>
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d"); 
+            </code><br>
+
+            To learn more about 3-D, seehttp://www.khronos.org/webgl/.<br>
+            n the HTML5 canvas we saturate the paint brush with a <b>strokeStyle</b> & a <b>fillStyle</b> both are set on a context object, and both take 
+            one of three values: a string representing a <b>color</b>, a <b>CanvasGradient</b> object, or a <b>CanvasPattern</b> object. <br>
+            
+            We can use any CSS color value to set the stroke or fill color, as long as we specify it as a string: a hexadecimal value such as #00FFFF , a 
+            color name such as red or blue , or an RGB value such as rgb(0, 0, 255).<br>
+
+            Once we’ve defined the color of the stroke and the fill, we’re ready to start drawing! Let’s begin by drawing a rectangle. We can repeat the 
+            steps we just took: grabbing the canvas and the context, and setting a fill and stroke style. But now, we’ll draw a rectangle. We can do this
+            by calling the <b>fillRect</b> & the <b>strokeRect</b>.  Both of these methods take the X and Y coordinates where you want to begin drawing the 
+            fill or the stroke, and the width and height of the rectangle. In the canvas coordinate system, the top-left corner is (0,0). If the canvas is 
+            200 pixels by 200 pixels, then the bottom-right corner is (200,200)<br>
+
+            Instead of a color as our fillStyle , we could have used a <b>CanvasGradient</b> or a <b>CanvasPattern</b> object. We create a CanvasPattern by 
+            calling the createPattern method. createPattern takes two parameters: the image to create the pattern with, and how that image should be repeated. 
+            The repeat value is a string, and the valid values are the same as those in CSS: repeat , repeat-x , repeat-y , and no-repeat.<br>
+
+            You may be asking yourself, “what is that function statement that comes right before the call to img.onload ?” It’s ananonymous function. <b>Anonymous 
+            functions</b> are much like regular functions except, as you might guess, they are without names. When you see an anonymous function defined as an event 
+            listener, it means that the anonymous function is being bound to that event. In other words, the code inside that anonymous function will be run when 
+            the load event is fired. <br>
+
+
+
+
+
+
+
+
+
+            <h3>SVG</h3>
+
+
+
+
+            <h3>Drag & Drkl</h3>
         </section>
-   
-          
-</main>
-<footer></footer>
- <script src="scripts/main.js"></script>
+
+
+    </main>
+    <footer></footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
