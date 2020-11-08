@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 8 Team Activity</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <script src="team8.js"></script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            /* display: flex; */
+            flex-direction: row; 
+            float: none; 
+            height: 80px;
+            width: 100%
+        }
+        /* Style the buttons */
+        div>button>#prev {
+            background-color: #00b659;
+            border-radius: 5px;
+            color: #ffffff;
+            height: 45px;
+            text-align: center;
+            width: 195px;
+        }
+
+        div>button>#next {
+            background-color: #6666ff;
+            border-radius: 5px;
+            color: #ffffff;
+            height: 45px;
+            text-align: center;
+            width: 195px;
+        }
+        /* Add a border */
+        .border {
+            border-top-color: #000000;
+            border: 1px solid #000000;
+            margin: 5px auto;
+            margin: auto;
+            margin-left: 0px;
+            margin-right: 0px;
+            text-align: center;
+            width: 50%;
+        }
+        /* Style the footer */
+        .footer {
+            background-color: #f0b3ff;
+            border-top-style: solid;
+            font-size: 15px;
+            height: 75px;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer_ph {
+            font-weight: bold;
+        }
+
+        #footer {
+            display: flex;
+            font-weight: bold;
+            word-spacing: 2px;
+        } 
+        #peopleList td {
+             cursor: pointer;
+        }
+
+        #detailsbox {
+            flex: 1 0 15em;
+            padding: 1em;
+            text-align: center;
+            border: 2px solid;
+        }
+
+        #detailsbox dl {
+            border: 1px solid;
+            text-align: left;
+        }
+
+        #peopleList {
+            display: flex; 
+            flex-flow: row wrap;
+            list-style-type: none;
+        }
+
+        #peopleList thead {
+            background-color: lightgray;
+        }
+
+        #peopleList tr {
+            border: 1px solid;
+            padding: 0.5em;
+            height: 44px;
+        }
+        #peopleList tr:nth-child(even) {
+            background-color: azure;
+        }
+        #peopleList tr:hover {
+            background-color: bisque;
+            text-decoration: underline;
+        } 
+        /* Style a mobile responsive page */
+        @media only screen and (max-width: 600px) {
+        .content {
+        background-color: #ffffff;
+        /* display: flex; */
+        flex-direction: row;
+        /* float: none; */
+        width: 100%
+    }
+ }
+ 
+    </style>
+</head>
+
+<body class="content">
+    <main>
+        <h1>Week 8</h1>
+        <h2>Team Assignments</h2>
+        <h3>List of Star Wars Characters</h3>
+
+        <div>
+            <ul id="list"></ul>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button><br><br>
+
+            <table id="peopleList">
+                <thead>
+                  <!-- <tr>
+                    <th>Name</th>                    
+                    <th>Gender</th>
+                    <th>Birth Year</th>
+                    <th>Homeworld</th>
+                  </tr> -->
+                </thead>
+      
+                <tbody></tbody>
+            </table> <br>
+
+            <h3>Scroll Through The Index Using The Next & Previous Tabs Below To View Details Abouts The Star War Characters</h3>
+              
+              <a id="prev2" href="https://swapi.dev/api/people/1/">&lt;-Prev</a>       
+              <a id="next2" href="https://swapi.dev/api/people/2/">2</a>
+              <a id="next3" href="https://swapi.dev/api/people/3/">3</a>
+              <a id="next4" href="https://swapi.dev/api/people/4/">4</a>
+              <a id="next5" href="https://swapi.dev/api/people/5/">5</a>
+              <a id="next6" href="https://swapi.dev/api/people/6/">6</a>
+              <a id="next7" href="https://swapi.dev/api/people/7/">7</a>
+              <a id="next8" href="https://swapi.dev/api/people/8/">8</a>
+              <a id="next9" href="https://swapi.dev/api/people/9/">9</a>
+              <a id="next10" href="https://swapi.dev/api/people/10/">10</a>
+              <a id="next11" href="https://swapi.dev/api/people/11/">11</a>
+              <a id="next12" href="https://swapi.dev/api/people/12/">12</a>
+              <a id="next13" href="https://swapi.dev/api/people/13">13</a>
+              <a id="next14" href="https://swapi.dev/api/people/14/">14</a>
+              <a id="next15" href="https://swapi.dev/api/people/15/">15</a>
+              <a id="next16" href="https://swapi.dev/api/people/16/">15</a>
+              <a id="next17" href="https://swapi.dev/api/people/17/">17</a>
+              <a id="next18" href="https://swapi.dev/api/people/18/">18</a>
+              <a id="next19" href="https://swapi.dev/api/people/19/">Next -&gt;</a>
+              <a id="next20" href="https://swapi.dev/api/people/19/">20</a>
+
+              
+            <div id="detailsbox" class="hidden">
+              <dl>
+                <dt>Name:</dt>
+                <dd class="name"></dd>
+                <dt>Gender:</dt>
+                <dd class="gender"></dd>
+                <dt>Birth Year:</dt>
+                <dd class="birth_year"></dd>
+                <dt>Home World:</dt>
+                <dd class="homeword"></dd>
+              </dl>
+            </div>
+        </div><br>
+
+        
+           
+    
+
+        <h3> View the CSS, HTML, & JS Code to The Star Wars API</h3>
+        <ul>
+            <li><a href="team8.js">Team 8 JS</a></li>
+            <li><a href="team8.html">Team 8 HTML</a></li>
+            <li><a href="team8.css">Team 8 CSS</a></li>
+        </ul>
+    </main><br><br><br>
+
+    <footer class="footer">
+        <p class="footer_ph">
+            &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+        </p>
+
+
+        <ul id="footer">
+            <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
+                    style="color:#6600cc">W3schools/javascript</a></li>
+            <li><a href="https://courses.wesbos.com/account/access/5eb152a29edbdf36381221ae/view/194129962"
+                    title="JavaScript 30" style="color:#6600cc">JAVASCRIPT 30</a></li>
+            <li><a href="https://exploringjs.com/es6/index.html#toc_ch_overviews" title="Exploring ES6"
+                    style="color:#6600cc">Exploring ES6</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Wy9q22isx3U&list=PLcXgYNNKu8p5oY9FkPSLAAO5evUA-V7zg&index=9&ab_channel=TraversyMedia"
+                    title="Vue JS Crash Course" style="color:#6600cc"> JS Crash Course</a></li>
+            <li><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/6/k01nwu9d"
+                    title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

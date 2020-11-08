@@ -232,7 +232,7 @@
             With canvas, we can draw shapes and lines, arcs and text, gradients and patterns. In addition, canvas gives us the power to manipulate 
             pixels in images and even video.  
 
-            <h4>canvas Element</h4>
+            <h4>Canvas Element</h4>
             The text in between the canvas tags will only be shown if the canvas element is not supported by the visitor’s browser. Since drawing on 
             the canvas is done using JavaScript, we’ll need a way to grab the element from the DOM.  Canvas API is supported in:
 
@@ -281,8 +281,14 @@
             You may be asking yourself, “what is that function statement that comes right before the call to img.onload ?” It’s ananonymous function. <b>Anonymous 
             functions</b> are much like regular functions except, as you might guess, they are without names. When you see an anonymous function defined as an event 
             listener, it means that the anonymous function is being bound to that event. In other words, the code inside that anonymous function will be run when 
-            the load event is fired. <br>
+            the load event is fired. To create a <b>CanvasGradient</b> we call one of two methods: createLinearGradient() or createRadialGradient() ; then we add one 
+            or more color stops to the gradient. Create a createLinearGradient ’s x0 and y0 represent the starting location of the gradient. x1 and y1 represent the 
+            ending location.<br>
 
+            We’re not limited to drawing rectangles—we can draw any shape we can imagine! Unlike rectangles and squares, however, there’s no built-in method for drawing cicles
+            or other shapes. To draw more interesting shapes, we must first lay out the path of the shape. <b>Paths</b> create a blueprint for your lines, arcs, and 
+            shapes, but paths are invisible until you give them a stroke! e need to take three steps: layout the path, stroke the path, and fill the path. As with drawing 
+            rectangles, we can just stroke the path, or fill the path—or we can do both.
 
 
 
