@@ -1,0 +1,2 @@
+/*REGISTRATION JS*/
+'use strict';

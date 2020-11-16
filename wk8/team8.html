@@ -143,6 +143,7 @@
       
                 <tbody></tbody>
             </table> <br>
+        </div><br>
 
             <h3>Scroll Through The Index Using The Next & Previous Tabs Below To View Details Abouts The Star War Characters</h3>
               
@@ -158,29 +159,36 @@
               <a id="next10" href="https://swapi.dev/api/people/10/">10</a>
               <a id="next11" href="https://swapi.dev/api/people/11/">11</a>
               <a id="next12" href="https://swapi.dev/api/people/12/">12</a>
-              <a id="next13" href="https://swapi.dev/api/people/13">13</a>
+              <a id="next13" href="https://swapi.dev/api/people/13/">13</a>
               <a id="next14" href="https://swapi.dev/api/people/14/">14</a>
               <a id="next15" href="https://swapi.dev/api/people/15/">15</a>
-              <a id="next16" href="https://swapi.dev/api/people/16/">15</a>
+              <a id="next16" href="https://swapi.dev/api/people/16/">16</a>
               <a id="next17" href="https://swapi.dev/api/people/17/">17</a>
               <a id="next18" href="https://swapi.dev/api/people/18/">18</a>
-              <a id="next19" href="https://swapi.dev/api/people/19/">Next -&gt;</a>
-              <a id="next20" href="https://swapi.dev/api/people/19/">20</a>
+              <a id="next19" href="https://swapi.dev/api/people/19/">19</a>
+              <a id="next20" href="https://swapi.dev/api/people/19/">Next-&lt;</a><br><br><br>
 
               
-            <div id="detailsbox" class="hidden">
-              <dl>
-                <dt>Name:</dt>
-                <dd class="name"></dd>
-                <dt>Gender:</dt>
-                <dd class="gender"></dd>
-                <dt>Birth Year:</dt>
-                <dd class="birth_year"></dd>
-                <dt>Home World:</dt>
-                <dd class="homeword"></dd>
-              </dl>
-            </div>
-        </div><br>
+            <!--Turn this div into a text box that can add  user data to be viewed by other users-->
+
+            <h3>Share what you know about your favorite Star War's Character.</h3>
+            <form action="/WDD_330/wk8/team8.js" method="POST">
+                <p>.</p> 
+                User Name: Name:    <input type="text" name="user" id="user"><br><br>             
+                CharacterName:      <input type="text" name="name" id="name"><br><br>
+                Gender:             <input type="text" name="gender" id="gender"><br><br>
+                Birth Year:         <input type="text" name="birthYear" id="birth_year"><br><br>
+                Home homeWorld:     <input type="text" name="homeWord" id="homeworld"><br><br>                                
+                Background History: <label for="description"></label><br><br><br>
+                <textarea rows="15" cols="50" name="description" id="description" required></textarea>
+                <label>&nbsp;</label>
+                <!-- Add a action key value pair-->
+                <input type="hidden" name="action" value="addStory">
+
+                <!-- Add the submit button-->
+                <button type="submit" name="submit" id="peopleList" value="Add Story">Add Story</button>                
+            </form>
+        
 
         
            

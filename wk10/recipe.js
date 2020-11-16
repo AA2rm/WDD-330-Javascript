@@ -1,0 +1,2 @@
+/*RECIPE JS*/
+'use strict';
