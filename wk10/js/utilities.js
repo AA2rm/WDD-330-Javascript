@@ -2,11 +2,6 @@
 'use strict';
 /*******************************************************
 * Add an export keyword before each of our functions to
-* export the functions in utitlies doc
-*******************************************************/
-
-/*******************************************************
-* Add an export keyword before each of our functions to
 * export the functions in utitlies doc. Create a helper 
 * function that will fetch an external API request from 
 * the url

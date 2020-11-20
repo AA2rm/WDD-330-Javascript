@@ -1,33 +1,38 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
 
 <head>
-    <meta charset="utf-8">
-    <title>Justice League</title>
+    <meta charset="utf-8" />
+    <title>Domestic Quakes List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="index.js" type="module"></script>
+    <script type="module" src="js/index.js"></script>
+    <style>
+        .quakeStyles {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .quakeStyles li {
+            margin: 0.5em 0;
+        }
+
+        .quakeStyles div {
+            font-size: 0.8em;
+        }
+    </style>
+
 </head>
 
 <body>
     <main>
-    <div id="portfolio_logo">
-        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
-    </div>
-
-    <header class="page_header">
-        <ul id="nav_bar">
-            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
-
-            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
-        </ul>
-        <h1 id='title'>Justice League</h1>
-    </header>
-   
-       <!--Ex of DOM Web Page-->
-        <ul id='roster'>
-            <li class='hero'>Superman</li>
-            <li class='vigilante hero' id='bats'>Batman</li>
-            <li class='hero'>Wonder Woman</li>
-        </ul>
-    </main><br><br>
+        <section id="quakes">
+            <h1>Domestic Quakes List</h1>
+            <ul id="quakeList"></ul>
+        </section>
+        
+    </main>
     <hr class="line1">
     <hr class="line2">
     <hr class="line3">

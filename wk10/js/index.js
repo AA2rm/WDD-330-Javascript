@@ -72,4 +72,4 @@ const baseUrl ='https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&
 /**************************************** 
  * console.log something from the method
  ***************************************/
-console.log(quakeList);
+// console.log(quakeList);

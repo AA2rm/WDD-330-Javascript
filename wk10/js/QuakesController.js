@@ -142,21 +142,21 @@ var initPos = () => {
   this.extension = extension;
 }
 
-function initPos () {
-  return `initPos' ${this.name}`
-}
+// function initPos () {
+//   return `initPos' ${this.name}`
+// }
 
-// OR
-var initPos=function() {
-  var value=null
+// // OR
+// var initPos=function() {
+//   var value=null
 
-  this.setValue=funciton(strValue); {
+//   this.setValue=funciton(strValue); {
 
-  this.value=strValue;
-  };
+//   this.value=strValue;
+//   };
 
-  this.getValue=function() {
-    return this.value;
-  };
-};
+//   this.getValue=function() {
+//     return this.value;
+//   };
+// };
 

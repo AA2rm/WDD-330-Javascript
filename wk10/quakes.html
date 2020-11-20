@@ -3,53 +3,66 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Local Quakes</title>
+    <title>Quakes List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="index.js" type="module"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="styles/main.css"> -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <script src="js/index.js" type="module"></script>
     <script type="module" src="js/index.js"></script>
-    <style>
-        .quakeStyles {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .quakeStyles li {
-            margin: 0.5em 0;
-        }
-
-        .quakeStyles div {
-            font-size: 0.8em;
-        }
-    </style>
-   
 </head>
 
 <body>
     <main>
+        <h1>Enter The Date & Radius</h1><br><br><br>
+
         <form id="quakeForm">
             <div id= "divGrid">
-                <div>
+                <div id="start">
                     <label>Start Date</label>
                     <input id="startDate" type="date" required>
                 </div>
-                <div>
+                <br><br> 
+                <div id="end">
                     <label>End Date</label>
                     <input id="endDate" type="date" required>
                 </div>
-
-                <div>
+                <br><br>
+                <div id="radius">
                     <label>Radius</label>
                     <input id="maxRadius" type="number" min=100 max= 20000 step = 50>
-
                 </div>
-
-                <button class="btn" id="searchBtn" > Search</button>
+                <br><br><br>
+                <button class="btn" id="searchBtn"> Search</button>
             </div>
-        </form>
-            <h1>Quake List</h1>
-            <ul id="quakeList"></ul>     
-    </main>   
+        </form> 
+        <h1>Quake List</h1>
+        <ul id="quakeList"></ul>                
+    </main><br><br><br><br><br><br><br>
+    <hr class="line1">
+    <hr class="line2">
+    <hr class="line3">
+
+    <footer class="footer">
+        <p class="footer_ph">
+            &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
+        </p>
+
+
+        <ul id="footer">
+            <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
+                    style="color:#6600cc">W3schools/javascript</a></li>
+            <li><a href="https://courses.wesbos.com/account/access/5eb152a29edbdf36381221ae/view/194129962"
+                    title="JavaScript 30" style="color:#6600cc">JAVASCRIPT 30</a></li>
+            <li><a href="https://exploringjs.com/es6/index.html#toc_ch_overviews" title="Exploring ES6"
+                    style="color:#6600cc">Exploring ES6</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Wy9q22isx3U&list=PLcXgYNNKu8p5oY9FkPSLAAO5evUA-V7zg&index=9&ab_channel=TraversyMedia"
+                    title="Vue JS Crash Course" style="color:#6600cc"> JS Crash Course</a></li>
+            <li><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/6/k01nwu9d"
+                    title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
+        </ul>
+    </footer>
+    <script src="scripts/main.js"></script>  
 </body>
 
 </html>
