@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 & CSS3 for the Real World: 2nd Edition</title>
     <link rel="stylesheet" type="text/html" href="styles/main.css">
-    
+
     <script></script>
 
     <style>
@@ -18,21 +19,43 @@
 </head>
 
 <body>
-   
+    <div id="portfolio_log"> 
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+    </div>     
+    
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>  
+    <header class="page_header"> 
+        <ul  id="nav_bar">  
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li><!--<a href="#" title="Google">-->
+                <form name='search' action='/search'>
+                    <input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
+        </ul>
+    </header>
+    <header class="bottom_header_blue"></header> 
     <main>
         <section class="individual_display">
             <h1>Week 8</h1>
             <h2>Individual Assignments & Notes</h2>
-       
-        <h1>My Canvas API</h1>
-        <ul>
-            <li><a href="notes.html">Wk8 Notes</a></li>
-            <li><a href="main.js">JS Code Examples</a></li>
-            <li><a href="canvas.css">Canvas CSS</a></li>
-            <li><a href="canvas.js">Canvas JS</a></li>
-        </ul>
-        
-        
+
+            <h1>My Canvas API</h1>
+            <ul>
+                <li><a href="notes.html">Wk8 Notes</a></li>
+                <li><a href="main.js">JS Code Examples</a></li>
+                <li><a href="canvas.css">Canvas CSS</a></li>
+                <li><a href="canvas.js">Canvas JS</a></li>
+            </ul>
+
+
         </section>
         <!--FOOT NOTE: Go back and change all references to a class-->
         <section class="ref">
@@ -40,7 +63,7 @@
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=ZBdE8DElQQU&ab_channel=TraversyMedia"
                         title="Linking List With JS">Linked List Data Structure</a></li>
-               
+
             </ul>
         </section>
         <!--Create the HTML syntax for the api for the Herald-->
@@ -48,30 +71,31 @@
         <canvas id="myCanvas" class="myCanvas" width="200" height="200">
             Sorry! Your browser doesn’t support Canvas.
         </canvas>
-        
+
         <!--CanvasElement 2-->
-        <canvas id="demo2" >
+        <canvas id="demo2">
             Sorry! Your browser doesn’t support Canvas.
         </canvas>
         <!--CanvasElement 3-->
-        <canvas id="demo3">            
+        <canvas id="demo3">
             Sorry! Your browser doesn’t support Canvas.
         </canvas>
         <!--CanvasElement 4-->
-        <canvas id="demo4">            
+        <canvas id="demo4">
             Sorry! Your browser doesn’t support Canvas.
         </canvas>
 
         <h2>Questions</h2>
-        <span style="color:red;font-size:17px"><b>Question:</b></span>Why do I have an error for creating animation properties, 
+        <span style="color:red;font-size:17px"><b>Question:</b></span>Why do I have an error for creating animation
+        properties,
         when it is styled in CSS syntax as hinted?
-       
+
         <section id="References">
             <h2 style="color:#6600cc"><u>References: Home Page</u></h2>
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=cv_Cs_kt0R0&ab_channel=MyCodingLair"
                         title="Insert Image"></a></li>
-                
+
 
             </ul>
 
@@ -86,8 +110,6 @@
         <p class="footer_ph">
             &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
         </p>
-
-
         <ul id="footer">
             <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
                     style="color:#6600cc">W3schools/javascript</a></li>
@@ -104,4 +126,5 @@
     <!-- CHECK TO SEE IF SCRIPT BELOW IS NEEDED -->
     <!--<script src="scripts/main.js"></script>-->
 </body>
+
 </html>

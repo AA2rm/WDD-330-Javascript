@@ -1,25 +1,240 @@
 /*Chapter 12 Canvas API*/
-
-
 /***********************************************************************
-Chp 12
-CANVAS API
+Style the Page
 /***********************************************************************/
+/* Style the logo image in the header */
+#div.portfolio_logo {
+  image-rendering: auto;
+  height: 50px;
+  margin-top: -7px; 
+  background-size: 20%;
+  display: flex;
+  float: left;
+  font-family: 'fantasy' URW Chancery L, cursive;
+  font-style: italic;
+  height: 30px;
+  margin-bottom: 6px;
+  padding: 10px; 
+  width:100%; 
+
+}
+img {
+  background-image: url(WDD_330/images/lady.gif);
+  height: 163px;
+  margin-bottom: -98px;
+  width: 15%;
+}
+
+/*Style the Header tag line*/
+#tag_line {
+  font-family: cursive;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: #663399;
+  font-size: 37px;
+  margin-bottom: -96px;
+  text-align: center;
+}
+
+div#tag_line>p {
+  font-family: cursive;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Style the Headers*/
+.top_header_med_lavender {
+  background-color: #993399;
+  height: 10px;
+}
+.top_header_violet {
+  background-color: #663399;
+  height: 20px;
+  margin-bottom: 65px;
+}
+header.page_header {
+  background-color: #f0b3ff;
+  color: #ffffff;  
+  height: 20px;  
+  padding-bottom: 20px;
+  margin-top: -75px;
+  width: 100%;
+}
+
+.bottom_header_blue {
+  background-color: #333399;
+  /*color scheme:#333399 blue, #16004c, another blue, #993399 medium purple*/
+  height: 10px;
+  margin-bottom: 50px;
+}
+/*Add color to nav bar*/
+border {
+  border-top-color: #b300b3;
+}
 
 
+/*Style the links*/
+.header a:hover {
+  background-color: #ddd;
+  color: #cc0000;
+}
+
+/*nav bar ul*/
+ul#nav_bar {    
+  display: flex;  
+  font-variant: all-small-caps; 
+  font-weight: bolder;    
+  padding: 15px 225px 50px;
+}
+
+header.page_header>#ulnav_bar {
+  margin-left: 135px;
+}
 
 
+li {
+  margin-left: 20px;
+  width: 100%;
+}
+
+a {
+  display: flex;
+  color: #330033;
+  font-size: 15px;
+  word-spacing: 3px;
+}
+
+/*Body: index page list ul*/
+.wkly_index {
+  font-variant: all-small-caps;
+  font-weight: bolder;
+  margin-top: 6px; 
+}
+
+/*HTML SELECTORS*/
+/*Remove the bullets from the mobile menu*/
+/*Wk 1 work*/
+nav ul {
+  list-style: none;
+  margin: 5px;
+  padding: 5px;
+}
+
+nav ul li:first-child {
+  display: block;
+}
+
+nav ul li {
+  background-color: powderblue;
+  border: 1px solid #3a1aad;
+  display: none;
+}
+
+/*Expand the links to the full width of the page and remove the line from under the text links*/
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/*CLASS SELECTORS*/
+/* Open the class="open" when present */
+
+.open li {
+  display: block;
+}
+
+/*Design the h1-h6 heaers*/
+h1 {
+  margin-left: 5px;
+  
+}
+
+
+h2 {
+  margin-left: 5px;
+}
+/*ID SELECTORS*/
+
+/*Wk 2 work*/
+/*Body*/
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+} */
+
+textarea {
+  background-color: #ffffe0;
+  height: 250px;
+  width: 800px;
+}
+
+/*Indent paragrahs in notes.html*/
+.tab {
+  margin-left: 40px;
+}
+
+/*assign the color to the rainbow page*/
+.rebeccapurple {
+  background-color: #663399;
+
+}
+
+
+/*Style the color bar before the footer*/
+hr.line1{
+  background-color:#993399;     
+  height: 9px;
+  margin-bottom: .1px;
+}
+hr.line2{
+  background-color:  #663399;    
+  height: 7px;
+  margin-bottom: .1px;
+  margin-top: .1px;
+  
+}
+
+hr.line3{
+  background-color:  #333399;    
+  height: 5px;
+  margin-bottom: 1px; 
+  margin-top: .1px;
+ 
+}
+
+/*Style the footer*/
+.footer {
+  background-color: #f0b3ff;
+  border-top-style:solid;    
+  font-size: 15px; 
+  height: 75px;  
+  margin-bottom: 10px; 
+  text-align: center;
+  width: 100%;
+}
+
+.footer_ph {
+  font-weight: bold;
+}
+
+#footer {
+  display: flex;
+  font-weight: bold;
+  word-spacing: 2px;
+}
+
+/**********************************************************************************************************************/
 /*********************************************
-  * Add height & width to the Canvas API
+* Style the height & width to the Canvas API
 ********************************************/
 
 #myCanvas {
     width: 200%;
     height:  200px;
   }
-  
-  
-  
+    
   /*********************************************
     * Add a height and width to the canvas api
   ********************************************/
@@ -27,6 +242,7 @@ CANVAS API
     height: 200px;
     width: 200%;
   }
+
   /*********************************************
     * Add a border to the canvas
   ********************************************/
@@ -50,122 +266,3 @@ CANVAS API
   
   
   
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/
-  
-  
-  
-  /*********************************************
-    * Move up along the y axis by 30px. 
-  ********************************************/

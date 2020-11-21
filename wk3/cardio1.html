@@ -9,17 +9,29 @@
 </head>
 
 <body>
-    <div id="portfolio_logo">
-        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
-    </div> 
-   
+    <div id="portfolio_log"> 
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+    </div>     
+    
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>  
     <header class="page_header"> 
-     <ul  id="nav_bar">  
-            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
-            
-            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+        <ul  id="nav_bar">  
+               <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+               <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+               <li><a href="#" title="User Feedback">feedback</a></li>
+               <li><!--<a href="#" title="Google">-->
+                <form name='search' action='/search'>
+                    <input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
         </ul>
     </header>
+    <header class="bottom_header_blue"></header>
     <main>
         <section id="team_activity">
             <h1>Week 3</h1>
@@ -233,8 +245,8 @@
 
                 console.table(oldest)
 
-            
-                
+
+
                 /*********************************************************
                 6. Create a list of Boulevards in Paris that contain 'de' 
                 anywhere in the name(runs on wikipedia page)
@@ -332,8 +344,8 @@
                 console.log(transport);
             </script>
         </section>
-        </main>
-        <hr class="line1">
+    </main>
+    <hr class="line1">
     <hr class="line2">
     <hr class="line3">
 
@@ -356,8 +368,8 @@
                     title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
         </ul>
     </footer>
-        <script src="main.js"></script>
-        <script src="scripts/main.js"></script>
+    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

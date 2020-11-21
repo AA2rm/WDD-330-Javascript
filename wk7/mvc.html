@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <!--Hikes Files include the following : Objects, modules, organization, along with events and DOM manipulation with Javascript.-->
-<!--https://byui-cit.github.io/cit261/resources/hikes-MVC.html--><head>
+<!--https://byui-cit.github.io/cit261/resources/hikes-MVC.html-->
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great Hikes </title>
     <link rel="stylesheet" href="styles/main.css">
-    
+
     <style>
-      
+
     </style>
 
 </head>
 
 <body>
+    <div id="portfolio_log"> 
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+    </div>     
+    
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>  
+    <header class="page_header"> 
+        <ul  id="nav_bar">  
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li><!--<a href="#" title="Google">-->
+                <form name='search' action='/search'>
+                    <input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
+        </ul>
+    </header>
+    <header class="bottom_header_blue"></header> 
     <main>
         <ul>
             <li><a href="notes.html">Wk 5 Notes</a></li>
@@ -26,18 +51,16 @@
         <p class="callout">
             Alternatively, if you would like to implement this using the MVC
             (Model, View, Controller) pattern you can follow
-            <a href="../resources/hikes-MVC.html" target="_blank" >these instructions</a>
-            to see one implementation of modules, classes and MVC to solve	               
-            this problem. Compare your ideas and plans to the ones in the	             
-            needed for our MVC version of this app.	   	
-       
-          <!-- END STEP -->	           
-
-
-            <a href="https://github.com/byui-cit/cit261/tree/gh-pages/solutions/week05/mvc">click here for the instructor's solution
-            target="_blank" MVC solution</a>
+            <a href="../resources/hikes-MVC.html" target="_blank">these instructions</a>
+            to see one implementation of modules, classes and MVC to solve
+            this problem. Compare your ideas and plans to the ones in the
+            needed for our MVC version of this app.
+            <!-- END STEP -->
+            <a href="https://github.com/byui-cit/cit261/tree/gh-pages/solutions/week05/mvc">click here for the
+                instructor's solution
+                target="_blank" MVC solution</a>
         </p>
-        	      
+
         <span id="warning-container">
             <i data-reactroot=""></i>
         </span>
@@ -131,7 +154,7 @@
                 </div>
             </li>
         </ul>
-   
+
         <!-- <section id="References">
             <h2 style="color:#6600cc"><u>References: Home Page</u></h2>
             <ul>
@@ -145,11 +168,13 @@
                         <hr> tag</a></li>
             </ul>
         </section> -->
-        <span style="color:red;font-size:17px"><b>Question:</b></span> Why am I getting a 404 server error on my api.js file?<br>
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Why am I getting a 404 server error on my api.js
+        file?<br>
 
-        <span style="color:red;font-size:17px"><b>Question:</b></span> Why are the JS font and resources not loading on my api.js file?  <br>
+        <span style="color:red;font-size:17px"><b>Question:</b></span> Why are the JS font and resources not loading on
+        my api.js file? <br>
     </main><br><br><br>
-      
+
 
     <hr class="line1">
     <hr class="line2">
@@ -159,8 +184,6 @@
         <p class="footer_ph">
             &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
         </p>
-
-
         <ul id="footer">
             <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
                     style="color:#6600cc">W3schools/javascript</a></li>
@@ -177,5 +200,7 @@
     <script src="scripts/main.js"></script>
     <script src="hiking-start.js"></script>
     <script src="main.js" type="module"></script>
+
 </body>
+
 </html>

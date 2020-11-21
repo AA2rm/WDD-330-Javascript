@@ -8,17 +8,16 @@
     <title>First Event</title>
     <script>
         //Create a structure list of links that has a label & URL of the pg that opens when clicked
-        const links = [
-         {
-            label: "Week1 notes", 
+        const links = [{
+            label: "Week1 notes",
             url: "wk1/index.html"
-         }
-        ] 
-        function showCongratulations(theButtonClicked){
+        }]
+
+        function showCongratulations(theButtonClicked) {
             document.getElementById("result_display").innerHTML =
                 "Congratulations, you did it!<p>You got the page to update!</p>"
-            theButtonClicked.innerHTML = "Click Me Again!"    
-            }
+            theButtonClicked.innerHTML = "Click Me Again!"
+        }
     </script>
     <style>
         textarea {
@@ -26,12 +25,14 @@
             height: 250px;
             width: 800px;
         }
+
         body {
             background-color: rgb(106, 93, 196);
             color: white;
         }
+
         /*Style the result-display id*/
-        #result_display{
+        #result_display {
             background-color: DarkGrey;
             width: 300px;
             height: 150px;
@@ -40,39 +41,51 @@
             left: 10px;
             padding: 10px;
         }
-        
     </style>
 </head>
 
 <body>
-    <div class="portfolio_logo">
-        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
+    <div id="portfolio_log">
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
     </div>
 
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>
     <header class="page_header">
-    <ul  id="nav_bar">  
-        <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
-        
-        <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
-    </ul>
+        <ul id="nav_bar">
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li>
+                <!--<a href="#" title="Google">-->
+                <form name='search' action='/search'>
+                    <input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
+        </ul>
     </header>
+    <header class="bottom_header_blue"></header>
     <main>
         <section id="func_event_display">
             <h1>FUNCTIONS & EVENTS</h1>
             <button onclick="showCongratulations(this)">Click Me!</button>
             <div id="result_display"></div>
-           
+
 
             <h2>References:</h2>
             <code>
                 <a href='https://github.com/yenrab/doing_stuff_with_web_things/blob/master/doing_stuff_with_web_things.pdf'
                     title="Doing Stuff With Web Things">Manual: Create a button</a><br>
             </code><br>
-            Link: 
+            Link:
             <ul>
                 <li><a href="notes.html">Notes</a></li>
             </ul>
-            
+
         </section>
     </main><br><br>
     <hr class="line1">

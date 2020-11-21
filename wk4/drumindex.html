@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Drum Kit</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        
-        <script>
-            
-        </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="styles/styles.css">
 
-        <style>
-            textarea {
-                background-color: #ffffe0;
-                height: 250px;
-                width: 800px;
-            }
-        </style>
-   </head>
+    <script>
+
+    </script>
+
+    <style>
+        textarea {
+            background-color: #ffffe0;
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+</head>
 
 <body>
-    <div id="portfolio_logo">
-        <img class="lady" src="/WDD-330/images/ladylogo.gif" title="Portfolio Homepage">
-    </div> 
-   
+    <div id="portfolio_log"> 
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+    </div>     
+    
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>  
     <header class="page_header"> 
         <ul  id="nav_bar">  
             <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
-            
             <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li><!--<a href="#" title="Google">-->
+                <form name='search' action='/search'>
+                    <input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
         </ul>
     </header>
-    <main>       
+    <header class="bottom_header_blue"></header>
+    <main>
         <section>
             <h1>Week 4</h1>
-          <!--Using a data-' ' attribute to add a class of playing for the key elements & the  CSS playing css-->
+            <!--Using a data-' ' attribute to add a class of playing for the key elements & the  CSS playing css-->
             <div class="keys">
                 <div data-key="65" class="key">...</div><kbd>A</kbd><span class="sound">clap</span>
                 <div data-key="83" class="key">...</div><kbd>S</kbd><span class="sound">hihat</span>
@@ -62,24 +74,24 @@
                 // Create an event that listens for a keydown event
                 // and select the corresponding key
                 // then listen on each key for when the event occurs & for transition end
-      
-                   // console.log(e.keyCode);
-                   function playSound(e) {
+
+                // console.log(e.keyCode);
+                function playSound(e) {
                     const audio = document.querySelector('audio[data-key="${e.keyCode}"]');
                     const key = document.querySelector('.key[data-key="${e.keyCode}"]');
-                    if(!audio)return;//stops the funciton from running con't 
-                    audio.currentTime = 0;//rewinds to the audio start
+                    if (!audio) return; //stops the funciton from running con't 
+                    audio.currentTime = 0; //rewinds to the audio start
                     audio.play() //plays audio element
-                   // console.log(audio); Check if you selected an audio element
+                    // console.log(audio); Check if you selected an audio element
                     console.log(key);
                     key.classList.add('playing');
-                   // key.classList.remove('playing');
-                   // key.classList.toggle('playing');  
-                   }         
-                
+                    // key.classList.remove('playing');
+                    // key.classList.toggle('playing');  
+                }
+
 
                 function removeTransition(e) {
-                    if(e.propertyName !== 'transform') return;//Skip if it's not a transorm
+                    if (e.propertyName !== 'transform') return; //Skip if it's not a transorm
                     console.log(e.propertyName);
                     //console.log(this); // console log this to determine what it's equal to
                     this.classList.remove('playing');
@@ -89,8 +101,8 @@
                 keys.forEach(key => key.addEventListener('transitioned', removeTransition));
                 window.addEventListener('keydown', playSound);
             </script>
-            
-            
+
+
         </section>
     </main>
     <hr class="line1">

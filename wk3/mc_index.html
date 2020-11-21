@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,76 +8,103 @@
     <!--Instructor's Ref: https://www.youtube.com/watch?v=ejvkQx-uYW8&ab_channel=ChadEddington-->
     <!--https://github.com/chadeddington/wdd330-portfolio/tree/0ce01835397ed8f384deec17c9f88a32f8bbbf03/week3/minecraft-->
     <!--Load script before the body-->
-<style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    header {
-        position: fixed;
-        left: 0px;
-        right: 0px;
-        background-color: #80BA5A;
-    }
+        header {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            background-color: #80BA5A;
+        }
 
-    #backButton {
-        position: absolute;
-        top: 15px;
-        left: 5px;
-        font-size: 2rem;
-        color: white;
-        background-color: transparent;
-        border: none;
-    }
+        #backButton {
+            position: absolute;
+            top: 15px;
+            left: 5px;
+            font-size: 2rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+        }
 
-    #app {
-        position: absolute;
-        top: 77px;
-        left: 0px;
-        bottom: 0px;
-        right: 0px;
-        overflow-y: scroll;
-    }
+        #app {
+            position: absolute;
+            top: 77px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            overflow-y: scroll;
+        }
 
-    .mob {
-        padding: 20px;
-    }
+        .mob {
+            padding: 20px;
+        }
 
-    h1, h2, h3 {
-        font-family: Arial, Helvetica, sans-serif;
-    }
+        h1,
+        h2,
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    h1 {
-        text-align: center;
-        color: white;
-        padding: 20px 0px;
-        margin: 0;
-    }
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px 0px;
+            margin: 0;
+        }
 
-    img {
-        margin: auto;
-        display: block;
-    }
-</style>
-<script src="data.js"></script>
-<script src="site.js"></script>
+        img {
+            margin: auto;
+            display: block;
+        }
+    </style>
+    <script src="data.js"></script>
+    <script src="site.js"></script>
 </head>
+
 <body>
+    <div id="portfolio_log"> 
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+    </div>     
+    
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>  
+    <header class="page_header"> 
+        <ul  id="nav_bar">  
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li><!--<a href="#" title="Google">-->
+                <form name='search' action='/search'>
+                    <input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
+        </ul>
+    </header>
+    <header class="bottom_header_blue"></header>
     <main>
         <header>
             <button id="backButton" onclick="loadData()">←</button>
             <h1 id="pageTitle">Minecraft Mobs</h1>
         </header>
         <div id="app"></div>
-            <h1>Week 3</h1>
-            <a href="mc_index.html">Minecraft Mobs</a>
-            <div class="mob" id="0"></div>
-            <div class="mob" id="1"></div>
-            <div class="mob" id="2"></div>
-            <div class="mob" id="3"></div>
-            <div class="mob" id="4"></div>
+        <h1>Week 3</h1>
+        <a href="mc_index.html">Minecraft Mobs</a>
+        <div class="mob" id="0"></div>
+        <div class="mob" id="1"></div>
+        <div class="mob" id="2"></div>
+        <div class="mob" id="3"></div>
+        <div class="mob" id="4"></div>
     </main><br><br>
     <hr class="line1">
     <hr class="line2">
@@ -86,8 +114,6 @@
         <p class="footer_ph">
             &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
         </p>
-
-
         <ul id="footer">
             <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
                     style="color:#6600cc">W3schools/javascript</a></li>
@@ -102,7 +128,6 @@
         </ul>
     </footer>
     <script src="scripts/main.js"></script>
-
-    
 </body>
+
 </html>

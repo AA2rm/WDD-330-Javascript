@@ -1,12 +1,35 @@
+<!doctype html>
 <!--Each button will be used to make a different type of Ajax request. One will request plain text and the other will request a JSON string from an external API. The div with an id of 'output' will be where we’ll insert the response we receive from the Ajax request.-->
 <!--For our Ajax requests, we'll be using a couple of online APIs. The first isNumbersAPI, which returns facts about random numbers as a text string. The second ischucknorris.io, which returns a JSON string, containing a random satirical factoid about everybody's favorite hard man, Chuck Norris.-->
-<!doctype html>
 <html lang='en'>
 <head>
 <meta charset='utf-8'>
 <title>Ajax Example</title>
 </head>
 <body>
+    <div id="portfolio_log"> 
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+    </div>     
+    
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>  
+    <header class="page_header"> 
+        <ul  id="nav_bar">  
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li><!--<a href="#" title="Google">-->
+                <form name='search' action='/search'>
+                    <input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
+        </ul>
+    </header>
+    <header class="bottom_header_blue"></header> 
     <main>
         <button id='number'>Number Fact</button>
         <button id='chuck'>Chuck Norris Fact</button>
@@ -23,8 +46,6 @@
             <p class="footer_ph">
                 &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
             </p>
-
-
             <ul id="footer">
                 <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
                         style="color:#6600cc">W3schools/javascript</a></li>

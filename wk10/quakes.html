@@ -7,22 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" type="text/css" href="styles/main.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
-    
+
     <script src="js/index.js" type="module"></script>
     <script type="module" src="js/index.js"></script>
 </head>
 
 <body>
+    <div id="portfolio_log">
+        <div id="tag_line">
+            <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
+        </div>
+        <img src="images/lady.gif" title="Portfolio">
+    </div>
+
+    <header class="top_header_med_lavender"></header>
+    <header class="top_header_violet"></header>
+    <header class="page_header">
+        <ul id="nav_bar">
+            <li><a href="https://github.com/AA2rm/WDD-330-Javascript/" title="Git HubPage">repository</a></li>
+            <li><a href="https://aa2rm.github.io/WDD-330-Javascript/" title="GitHub URL">master branch</a></li>
+            <li><a href="#" title="User Feedback">feedback</a></li>
+            <li>
+                <!--<a href="#" title="Google">-->
+                <form name='search' action='/search'><input name='searchInput'><button type='submit'>Search</button>
+                </form>
+                <!--</a>-->
+            </li>
+        </ul>
+    </header>
+    <header class="bottom_header_blue"></header>
     <main>
         <h1>Enter The Date & Radius</h1><br><br><br>
 
         <form id="quakeForm">
-            <div id= "divGrid">
+            <div id="divGrid">
                 <div id="start">
                     <label>Start Date</label>
                     <input id="startDate" type="date" required>
                 </div>
-                <br><br> 
+                <br><br>
                 <div id="end">
                     <label>End Date</label>
                     <input id="endDate" type="date" required>
@@ -30,14 +53,14 @@
                 <br><br>
                 <div id="radius">
                     <label>Radius</label>
-                    <input id="maxRadius" type="number" min=100 max= 20000 step = 50>
+                    <input id="maxRadius" type="number" min=100 max=20000 step=50>
                 </div>
                 <br><br><br>
                 <button class="btn" id="searchBtn"> Search</button>
             </div>
-        </form> 
+        </form>
         <h1>Quake List</h1>
-        <ul id="quakeList"></ul>                
+        <ul id="quakeList"></ul>
     </main><br><br><br><br><br><br><br>
     <hr class="line1">
     <hr class="line2">
@@ -47,7 +70,6 @@
         <p class="footer_ph">
             &copy; 2020 | Portfolio | WDD-330 | Instructor: Brother Chad Eddington
         </p>
-
 
         <ul id="footer">
             <li><a href="https://www.w3schools.com/js/default.asp" title="W3schools JS"
@@ -62,7 +84,7 @@
                     title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
         </ul>
     </footer>
-    <script src="scripts/main.js"></script>  
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
