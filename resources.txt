@@ -6,10 +6,10 @@ GitHub signin authorization: vscode://vscode.github-authentication/did-authentic
             Wk1 WDD Notes 1.2                       Wk1 WDD Tasks 1.1                    Wk1 WDD Event 1.1 
             Wk1 WDD Notes 1.3 ect...                Wk1 WDD Tasks 1.2                    Wk1 WDD Event 1.2
             Wk2 WDD Notes 1.0                       Wk1 WDD Tasks 1.3
-            Wk2 WDD Notes 1.1 etc...                Wk1 WDD Tasks 1.4 etc...
-            Wk3 WDD Notes 1.0                       Wk2 WDD Tasks 1.0
-            Wk4 WDD Notes 1.0                       Wk2 WDD Tasks 1.1 etc...
-            Wk5 WDD Notes 1.0
+            Wk2 WDD Notes 1.1 etc...                Wk1 WDD Tasks 1.4 
+            Wk3 WDD Notes 1.0                       Wk1 WDD Tasks 1.5
+            Wk4 WDD Notes 1.0                       Wk2 WDD Tasks 1.0 
+            Wk5 WDD Notes 1.0                       Wk2 WDD Tasks 1.1 
             Wk5 WDD Notes 1.1 etc...
         
 INSTALL & RUN NPM SERVER (To see your work on the web)

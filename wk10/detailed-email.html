@@ -10,60 +10,6 @@
         <script></script>
 
         <style>
-            /*Style the email section of the page*/
-            body {
-                font: 1em sans-serif;
-                width: 200px;
-                padding: 0;
-                margin : 0 auto;
-            }
-
-            p * {
-                display: block;
-            }
-
-            input[type=email]{
-                -webkit-appearance: none;
-                appearance: none;
-
-                width: 100%;
-                border: 1px solid #333;
-                margin: 0;
-
-                font-family: inherit;
-                font-size: 90%;
-
-                box-sizing: border-box;
-            }
-
-            /* This is our style for the invalid fields */
-            input:invalid{
-                border-color: #900;
-                background-color: #FDD;
-            }
-
-            input:focus:invalid {
-                outline: none;
-            }
-
-            /* This is the style of our error messages */
-            .error {
-                width  : 100%;
-                padding: 0;
-
-                font-size: 80%;
-                color: white;
-                background-color: #900;
-                border-radius: 0 0 5px 5px;
-
-                box-sizing: border-box;
-            }
-
-            .error.active {
-                padding: 0.3em;
-            }
-            /***************************************************/
-            /* Style the header, footer portion of the page*/
             /* Style the logo image in the header */
             #div.portfolio_logo {
                 image-rendering: auto;
@@ -77,9 +23,7 @@
                 height: 30px;
                 margin-bottom: 6px;
                 padding: 10px; 
-                width:100%;
-            }
-
+                width:100%;             }
             img {
                 background-image: url(WDD_330/images/lady.gif);
                 height: 163px;
@@ -130,7 +74,7 @@
                 margin-bottom: 50px;
             }
             /*Add color to nav bar*/
-                border {
+            border {
                 border-top-color: #b300b3;
             }
 
@@ -152,7 +96,6 @@
             header.page_header>#ulnav_bar {
                 margin-left: 135px;
             }
-
 
             li {
                 margin-left: 20px;
@@ -226,58 +169,54 @@
             } */
 
             textarea {
-            background-color: #ffffe0;
-            height: 250px;
-            width: 800px;
+                background-color: #ffffe0;
+                height: 250px;
+                width: 800px;
             }
 
             /*Indent paragrahs in notes.html*/
             .tab {
-            margin-left: 40px;
+                margin-left: 40px;
             }
 
             /*assign the color to the rainbow page*/
             .rebeccapurple {
-            background-color: #663399;
-
+                background-color: #663399;
             }
-
 
             /*Style the color bar before the footer*/
             hr.line1{
-            background-color:#993399;     
-            height: 9px;
-            margin-bottom: .1px;
+                background-color:#993399;     
+                height: 9px;
+                margin-bottom: .1px;
             }
             hr.line2{
-            background-color:  #663399;    
-            height: 7px;
-            margin-bottom: .1px;
-            margin-top: .1px;
-            
+                background-color:  #663399;    
+                height: 7px;
+                margin-bottom: .1px;
+                margin-top: .1px;            
             }
 
             hr.line3{
-            background-color:  #333399;    
-            height: 5px;
-            margin-bottom: 1px; 
-            margin-top: .1px;
-            
+                background-color:  #333399;    
+                height: 5px;
+                margin-bottom: 1px; 
+                margin-top: .1px;            
             }
 
             /*Style the footer*/
             .footer {
-            background-color: #f0b3ff;
-            border-top-style:solid;    
-            font-size: 15px; 
-            height: 75px;  
-            margin-bottom: 10px; 
-            text-align: center;
-            width: 100%;
+                background-color: #f0b3ff;
+                border-top-style:solid;    
+                font-size: 15px; 
+                height: 75px;  
+                margin-bottom: 10px; 
+                text-align: center;
+                width: 100%;
             }
 
             .footer_ph {
-            font-weight: bold;
+                font-weight: bold;
             }
 
             #footer {
@@ -285,8 +224,59 @@
             font-weight: bold;
             word-spacing: 2px;
             }
+            /***************************************************/
+            /* Style the email section of the page*/
+            body {
+                font: 1em sans-serif;
+                width: 100%;
+                padding: 0;
+                margin : 0 auto;
+            }
 
-                     
+            p * {
+                display: block;
+            }
+
+            input[type=email]{
+                -webkit-appearance: none;
+                appearance: none;
+
+                width: 100%;
+                border: 1px solid #333;
+                margin: 0;
+
+                font-family: inherit;
+                font-size: 90%;
+
+                box-sizing: border-box;
+            }
+
+            /* This is our style for the invalid fields */
+            input:invalid{
+                border-color: #900;
+                background-color: #FDD;
+            }
+
+            input:focus:invalid {
+                outline: none;
+            }
+
+            /* This is the style of our error messages */
+            .error {
+                width  : 100%;
+                padding: 0;
+
+                font-size: 80%;
+                color: white;
+                background-color: #900;
+                border-radius: 0 0 5px 5px;
+
+                box-sizing: border-box;
+            }
+
+            .error.active {
+                padding: 0.3em;
+            }
         </style>
    </head>
 
@@ -315,20 +305,20 @@
     </header>
     <header class="bottom_header_blue"></header>
     <main>
-       
-        <section class="individual_display1">
-            <h1>Week 10 </h1>
-            <h2>Individual Assignments: Email Constraint Form Validation With API #3</h2>
-               <form>
-                <p>Email Validation With API</p>
-                <label for="mail">I would like you to provide me with an e-mail address:</label>
-                <input type="email" id="mail" name="mail">
+        <h1>Week 10 </h1>
+        <h2>Individual Assignment: Email Form Non-Validation With API #4</h2>
+            <form novalidate>
+                <p>
+                  <label for="mail">
+                    <span>Please enter an email address:</span>
+                    <input type="email" id="mail" name="mail" required minlength="8">
+                    <span class="error" aria-live="polite"></span>
+                  </label>
+                </p>
                 <button>Submit</button>
-              </form>              
-        </section>
-        
-
+            </form>
     </main><br><br>
+
     <hr class="line1">
     <hr class="line2">
     <hr class="line3">
