@@ -65,7 +65,7 @@ header.page_header {
     margin-bottom: 50px;
 }
 /*Add color to nav bar*/
-border {
+.border {
     border-top-color: #b300b3;
 }
 
@@ -81,7 +81,7 @@ ul#nav_bar {
     display: flex;  
     font-variant: all-small-caps; 
     font-weight: bolder;    
-    padding: 15px 225px 50px;
+    padding: 8px 215px 30px;
 }
 
 header.page_header>#ulnav_bar {
@@ -94,6 +94,13 @@ li {
     width: 100%;
 }
 
+
+
+#search_btn {
+    margin-right:-60px;
+    margin-top: 1px;
+    padding-top: 1px;
+}
 a {
     display: flex;
     color: #330033;
@@ -133,6 +140,17 @@ nav ul li a {
     padding: 10px;
     text-decoration: none;
 }
+
+/*Style the labtop jpg image*/
+.bg_img {
+    align-items: center;
+    width: 70%;
+    height: 60px;
+    
+
+}
+
+
 
 /*CLASS SELECTORS*/
 /* Open the class="open" when present */

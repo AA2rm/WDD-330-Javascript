@@ -306,3 +306,14 @@ body {
 #searchBtn {
   margin-left: 15px;
 }
+
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+ }
+ 
+/***************************************************************************************/
+/*******************************
+* Style the Fruit Page
+* Posted w/in fruit html
+*******************************/
