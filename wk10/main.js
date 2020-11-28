@@ -338,35 +338,3 @@ addEventListener('fetch', function(event) {
   );
 });
 
-/****************************************
- * Create a fetch request from a url &
- * console log it ou
-****************************************/
-
-
-
-/****************************************
- * Create a fetch request from a url &
- * console log it ou
-****************************************/
-
-
-
-/****************************************
- * Create a fetch request from a url &
- * console log it ou
-****************************************/
-
-
-
-/****************************************
- * Create a fetch request from a url &
- * console log it ou
-****************************************/
-
-
-
-/****************************************
- * Create a fetch request from a url &
- * console log it ou
-****************************************/

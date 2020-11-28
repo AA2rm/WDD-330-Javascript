@@ -4,19 +4,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title Goes Here</title>
+    <title>Team 3 Activity</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 
-    <script>
+    <!-- Add in an Auth module -->
+    <script type="module" src="client/auth.js"> </script>
+    <script type="module" src="client/authHelpers.js"></script>  
+    <script type="module" src="cient/week11.js"></script>   
 
-    </script>
 
     <style>
+        /* Style the logo image in the header */
+        #div.portfolio_logo {
+            image-rendering: auto;
+            height: 50px;
+            margin-top: -7px; 
+            background-size: 20%;
+            display: flex;
+            float: left;
+            font-family: 'fantasy URW Chancery L, cursive';
+            font-style: italic;
+            height: 30px;
+            margin-bottom: 6px;
+            padding: 10px; 
+            width:100%; 
+        
+        }
+        img {
+            background-image: url(WDD_330/images/lady.gif);
+            height: 163px;
+            margin-bottom: -98px;
+            width: 15%;
+        }
+        
+        /*Style the Header tag line*/
+        #tag_line {
+            font-family: cursive;
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: #663399;
+            font-size: 37px;
+            margin-bottom: -96px;
+            text-align: center;
+        }
+        
+        div#tag_line>p {
+            font-family: cursive;
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /*Style the Headers*/
+        .top_header_med_lavender {
+            background-color: #993399;
+            height: 10px;
+        }
+        .top_header_violet {
+            background-color: #663399;
+            height: 20px;
+            margin-bottom: 65px;
+        }
+        header.page_header {
+            background-color: #f0b3ff;
+            color: #ffffff;  
+            height: 20px;  
+            padding-bottom: 20px;
+            margin-top: -75px;
+            width: 100%;
+        }
+        
+        .bottom_header_blue {
+            background-color: #333399;
+            /*color scheme:#333399 blue, #16004c, another blue, #993399 medium purple*/
+            height: 10px;
+            margin-bottom: 50px;
+        }
+        /*Add color to nav bar*/
+        border {
+            border-top-color: #b300b3;
+        }
+        
+        
+        /*Style the links*/
+        .header a:hover {
+            background-color: #ddd;
+            color: #cc0000;
+        }
+        
+        /*nav bar ul*/
+        ul#nav_bar {    
+            display: flex;  
+            font-variant: all-small-caps; 
+            font-weight: bolder;    
+            padding: 15px 225px 50px;
+        }
+        
+        header.page_header>#ulnav_bar {
+            margin-left: 135px;
+        }
+        
+        
+        li {
+            margin-left: 20px;
+            width: 100%;
+        }
+        
+        a {
+            display: flex;
+            color: #330033;
+            font-size: 15px;
+            word-spacing: 3px;
+        }
+        
+        /*Body: index page list ul*/
+        .wkly_index {
+            font-variant: all-small-caps;
+            font-weight: bolder;
+            margin-top: 6px; 
+        }
+        
+        /*HTML SELECTORS*/
+        /*Remove the bullets from the mobile menu*/
+        /*Wk 1 work*/
+        nav ul {
+            list-style: none;
+            margin: 5px;
+            padding: 5px;
+        }
+        
+        nav ul li:first-child {
+            display: block;
+        }
+        
+        nav ul li {
+            background-color: powderblue;
+            border: 1px solid #3a1aad;
+            display: none;
+        }
+        
+        /*Expand the links to the full width of the page and remove the line from under the text links*/
+        nav ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+        
+        /*CLASS SELECTORS*/
+        /* Open the class="open" when present */
+        
+        .open li {
+            display: block;
+        }
+        
+        /*Design the h1-h6 heaers*/
+        h1 {
+            margin-left: 5px;
+            
+        }
+        
+        
+        h2 {
+            margin-left: 5px;
+        }
+        /*ID SELECTORS*/
+        
+        /*Wk 2 work*/
+        /*Body*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        fieldset {
+            align-content: center;
+            margin-left: 200px;
+            width: 70%;
+            /* border-width: 50%; */
+        }
         textarea {
             background-color: #ffffe0;
             height: 250px;
             width: 800px;
         }
+        
+        /*Indent paragrahs in notes.html*/
+        .tab {
+            margin-left: 40px;
+        }
+        
+        /*assign the color to the rainbow page*/
+        .rebeccapurple {
+            background-color: #663399;
+        
+        }
+        
+        
+        /*Style the color bar before the footer*/
+        hr.line1{
+            background-color:#993399;     
+            height: 9px;
+            margin-bottom: .1px;
+        }
+        hr.line2{
+            background-color:  #663399;    
+            height: 7px;
+            margin-bottom: .1px;
+            margin-top: .1px;
+            
+        }
+        
+        hr.line3{
+            background-color:  #333399;    
+            height: 5px;
+            margin-bottom: 1px; 
+            margin-top: .1px;
+        
+        }
+        
+        /*Style the footer*/
+        .footer {
+            background-color: #f0b3ff;
+            border-top-style:solid;    
+            font-size: 15px; 
+            height: 75px;  
+            margin-bottom: 10px; 
+            text-align: center;
+            width: 100%;
+        }
+        
+        .footer_ph {
+            font-weight: bold;
+        }
+        
+        #footer {
+            display: flex;
+            font-weight: bold;
+            word-spacing: 2px;
+        }
+        
     </style>
 </head>
 
@@ -45,67 +271,77 @@
     </header>
     <header class="bottom_header_blue"></header>
     <main>
-        <section class="individual_activity">
-            <h1>Week 11</h1>
-            <h2>Individual Assignments & Notes</h2>
-        </section>
-        <ul>
-            <li><a href="notes.html">Wk11 Notes</a></li>
-            <li><a href="main.js">JS Code Examples</a></li>
-        </ul><br><br><br>
-
-        <section class="team_activity">
-            <h1>Week 11 </h1>
-            <h2>Core Requirements & Stretch Goals</h2>
-            <p>Try it.</p>
-
-            <input id="number" name="number" type="number" />
-            <input id="number1" name="number2" type="number" />
-            <button onclick="loadProgram()">Submit</button>
-            <button onclick="index(1)">+</button>
-            <button onclick="index(2)">-</button>
-            <button onclick="index(3)">*</button>
-            <div id="text"></div>
-        </section>
-
-        <section>
-            <h1>Table of Contents</h1>
-            <ol>
-                <li><a href="label:wk1/notes.html"></a>Week1 notes<a href="url:wk1/index.html">wk1 index</a></li>
-                <li><a href="label:wk2/notes.html"></a>Week2 notes<a href="url:wk2/index.html">wk2 index</a></li>
-                <li><a href="label:wk3/notes.html"></a>Week3 notes<a href="url:wk3/index.html">wk3 index</a></li>
-                <li><a href="label:wk4/notes.html"></a>Week4 notes<a href="url:wk4/index.html">wk4 index</a></li>
-                <li><a href="label:wk5/notes.html"></a>Week5 notes<a href="url:wk5/index.html">wk5 index</a></li>
-                <li><a href="label:wk6/notes.html"></a>Week6 notes<a href="url:wk6/index.html">wk6 index</a></li>
-                <li><a href="label:wk7/notes.html"></a>Week7 notes<a href="url:wk7/index.html">wk7 index</a></li>
-                <li><a href="label:wk8/notes.html"></a>Week8 notes<a href="url:wk8/index.html">wk8 index</a></li>
-                <li><a href="label:wk9/notes.html"></a>Week9 notes<a href="url:wk9index.html">wk9 index</a></li>
-                <li><a href="label:wk10/notes.html"></a>Week10 notes<a href="url:wk10/index.html">wk10 index</a></li>
-                <li><a href="label:wk11/notes.html"></a>Week11 notes<a href="url:wk11/index.html">wk11 index</a></li>
-                <li><a href="label:wk12/notes.html"></a>Week12 notes<a href="url:wk12/index.html">wk12 index</a></li>
-            </ol>
-        </section>
-
-        <span style="color:red;font-size:17px"><b>Question:</b></span> Should I be placing the table of contents 'ol'
-        list in each index, every week?<br>
-
-        <span style="color:red;font-size:17px"><b>Question:</b></span> Why when I click the notes link on this page it
-        combines week 1 and week 2 notes into 1 page?
-        <section id="References">
-            <h2 style="color:#6600cc"><u>References: Home Page</u></h2>
+        <h1>Week 11</h1>        
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=cv_Cs_kt0R0&ab_channel=MyCodingLair"
-                        title="Insert Image">Insert Image Tutorial</a></li>
-                <li><a href="https://teamtreehouse.com/community/how-to-include-images-in-visual-studio-code-html"
-                        title="Inserting Images">Insert Image Into VS Code Editor</a></li>
-                <li><a href="https://www.colorhexa.com/663399" title="Colorhexa">Color Schemes</a></li>
-                <li><a href=" https://www.w3schools.com/howto/howto_css_style_hr.asp" title="W3schools">Horizontal Lines
-                        Using The
-                        <hr> tag</a></li>
+                <li><a href="content_index.html">Content</a></li>
+                <li><a href="todo.html">ToDo HTML</a></li>
+                <li><a href="js/main.js">Main JS</a></li>          
+                <li><a href="js/ls.js">Local Storage</a></li>
+                <li><a href="js/utils.js">Utilities</a></li>
+                <li><a href="js/ToDo.js">To Do JS</a></li> 
+                <li><a href="todo_styles.css">To Do CSS</a></li>
+         </ul>
+           
+      <!-- Add a Login Form & auth module -->
+        <section class="individual_activity">    
+            <h2>Individual Assignments: Fetch & Client-Side Validation</h2>
+            <form action="/WDD-330/wk11/index.php" method="post">                
+                <fieldset class="outline2">
+                    <table class="textbox2">
+                        <tr>
+                            <td>
+                                <h2>All fields required</h2>
+                                <label for="firstname">First Name:</label>
+                                <input type="text" name="firstname" id="firstname" placeholder="first name" required><br><br>
+                                <br>
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" name="lastname" id="lastname" placeholder="last name"
+                                    required><br><br>
+                                <br>
+                                <!-- <label for="userName">User Name:</label>
+                                <input type="text" name="userName" id="userName"
+                                    placeholder="user name" required><br><br> -->
+                                
+                                <label for="email">Email Address:</label>
+                                <input type="email" name="email" id="email" placeholder="email" 
+                                   required><br><br>
+                                <br><br>
+                                <span><b>Passwords must be at least 8 characters, 1 number, 1 uppercase, and 1
+                                    special
+                                    character.</b></span><br><br>
+                                <!--style the span text to be smaller than the other text-->
+                                <!-- Add a pattern attribute that forces a requirement that the password is 8 characters long w/ no spaces -->
+                                <label for="password">Password:</label>
+                                <input type="password" name="password" id="password" placeholder="password" required
+                                    pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
-            </ul>
+                                <label>&nbsp;</label><br><br><br><br>
+                                <!-- Add the submit button-->
+                                <input type="submit" class="regbtn" name="submit" value="SUBMIT">
+                                <!-- Add a action key value pair-->
+                                <!-- <input type="hidden" name="action" value="register"> -->
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+       </section><br><br>
+        
 
-        </section>
+       <span style="color:red;font-size:17px"><b>Question:</b></span> The team activity directions says, "Create one more 
+       file called week11.js and add it to your html via a script element (We will be using modules so don't forget 
+       type="module")."  HOWEVER: Shouldn't this script element be placed in the <b>'week11.html' file instead of the week11.js file</b><br><br>
+
+       <span style="color:red;font-size:17px"><b>Question:</b></span>I was unable to locate the 'Networ' tab in Chrome. How do I locate this?
+
+
+       <section id="References">
+        <h2 style="color:#6600cc"><u>References: Week 10 Readings</u></h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation" title="Client-Side Form Validation">Form Vallidation</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"  title="API Fetch">Using Fetch</a></li>
+        </ul>
+    </section>
     </main><br><br><br>
 
     <hr class="line1">
