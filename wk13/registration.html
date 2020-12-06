@@ -263,53 +263,51 @@
     </header>
     <header class="bottom_header_blue"></header>
     <main class="content">
-        <section class="individual_display">
+      
             <h1>Week 13 </h1>
             <h2>Block 2 Challenge: Registration Form </h2>
             <div class="container">
 
                 <span style="color:black;font-weight:bold"></span>
 
-                <form action="/acme/accounts/index.php" method="post">
+                <form action="/WDD-330/wk13/registration.html" method="post">
                     <h2>All fields required</h2>
                     <fieldset class="outline2">
                         <table class="textbox2">
                             <tr>
                                 <td>
-                                    <label for="clientFirstname">First name:</label><br>
-                                    <input type="text" name="clientFirstname" id="clientFirstname"
+                                    <label for="firstname">First name:</label><br>
+                                    <input type="text" name="firstname" id="firstname"
                                         placeholder="firstname" required>
                                     <br>
-                                    <label for="clientLastname">Last name :</label><br>
-                                    <input type="text" name="clientLastname" id="clientLastname" placeholder="lastname"
+                                    <label for="lastname">Last name :</label><br>
+                                    <input type="text" name="lastname" id="lastname" placeholder="lastname"
                                         required>
                                     <br>
-                                    <label for="clientEmail">Email address :</label><br>
-                                    <input type="email" placeholder="email address" name="clientEmail" id="clientEmail"
-                                        value="client email" required>
+                                    <label for="email">Email address :</label><br>
+                                    <input type="email" placeholder="email address" name="email" id="email"
+                                        value="email" required>
                                     <br><br>
                                     <span>Passwords must be at least 8 characters, 1 number, 1 uppercase, and 1
                                         special
                                         character.</span><br><br>
                                     <!--style the span text to be smaller than the other text-->
                                     <!-- Add a pattern attribute that forces a requirement that the password is 8 characters long w/ no spaces -->
-                                    <label for="clientPassword">Password:</label><br>
-                                    <input type="password" name="clientPassword" id="clientPassword"
+                                    <label for="password">Password:</label><br>
+                                    <input type="password" name="password" id="password"
                                         placeholder="password" required
                                         pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
                                     <label>&nbsp;</label><br><br><br><br><br><br>
                                     <!-- Add the submit button-->
-                                    <input type="submit" class="regbtn" name="submit" value="Register">
-                                    <!-- Add a action key value pair-->
-                                    <input type="hidden" name="action" value="register">
+                                    <button type="button" class="regbtn" name="submit" id="submit" value="click">Register</button>
                                 </td>
                             </tr>
                         </table>
                     </fieldset>
                 </form>
             </div>
-        </section>
+      
     </main><br><br>
     <hr class="line1">
     <hr class="line2">

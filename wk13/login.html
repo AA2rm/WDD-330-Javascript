@@ -268,19 +268,27 @@
                   <table class="textbox">
                     <tr>
                       <td>
+                        <h2>Not a memeber? Please register.</h2>
+                        <h3>All fields required</h3>
+                        
+                        <div>
                         <label for="clientEmail">Email Address:</label><br>
                         <input type="email" placeholder="Email address.." id="clientEmail" name="email" value="client email"
                           required autocomplete="off"><br>
-        
-                        <label for="clientPassword">Password:</label><br>
+                        </div>
+
+                        <div>
+                        <label for="password">Password:</label><br>
                         <p>Passwords must be at least 8 characters, 1 number, 1 uppercase, and 1 special character.</p>
-                        <input type="password" placeholder="Password..." id="clientPassword" value="client password"
+                        <input type="password" placeholder="Password..." id="password" value="password"
                           name="password" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                           title="(at least 8 characters, no spaces)"><br>
-                        <label>&nbsp;</label>
-                        <button type="submit" class="cancelbtn1">Login</button>
+                        
+                        </div>
+                          <label>&nbsp;</label>
+                        <button type="button" class="logbtn" name="submit" id="submit" value="click">Login</button>
                         <input type="hidden" name="action" value="Login">
-                        <h3>Not a memeber?</h3>
+                        
         
                         <a href='../wk13/registration.html' class="button">Create an Account</a>
                         

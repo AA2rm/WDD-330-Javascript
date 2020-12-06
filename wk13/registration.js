@@ -1,8 +1,0 @@
-/*REGISTRATION JS*/
-'use strict';
-
-
-
-
-
-

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 3 Activity 11</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
     <script type="module" src="client/auth.js"> </script>
     <script type="module" src="client/authHelpers.js"></script>  
@@ -269,10 +269,93 @@
     </header>
     <header class="bottom_header_blue"></header>
     <main>
-        
-          
+        <header>
+            <h1 class="text-center">Authentication Login</h1>
+            <nav></nav>
+        </header>
+        <div id="errors" class="errors hidden"></div>
+        <div id="login">
+            <!-- Add a Login Form & auth module -->          
+            <h2>Individual Assignments: Fetch & Client-Side Validation</h2>            
+            <form action="/WDD-330/wk11/week11.html" method="post">                
+            
+                <fieldset class="outline2">
+                    <table class="textbox2">
+                        <tr>
+                            <td>
+                                <h2>All fields required</h2>
+                                <div>
+                                    <label for="firstname">First Name:</label>
+                                    <input type="text" class="form-layout" name="firstname" id="firstname" placeholder="first name" required><br><br>
+                                </div>
+                                <br><br><br>
 
-       
+                                <div>
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" class="form-layout" name="lastname" id="lastname" placeholder="last name"
+                                    required>
+                                </div>
+                                <br><br><br>
+
+                                <div>
+                                    <label for="username">User Name:</label>
+                                    <input type="text" class="form-layout" name="username" id="username" placeholder="username"  value="user1@email.com" required><br><br>
+                                </div>
+                                <br><br><br>
+
+                                <div>
+                                    <label for="email">Email Address:</label>
+                                 <input type="email" class="form-layout" name="email" id="email" placeholder="email" required>
+                                </div>
+                                <br><br><br>
+
+                                <span><b>Passwords must be at least 8 characters, 1 number, 1 uppercase, and 1
+                                    special
+                                    character.</b></span><br><br>
+                               
+                                <div>
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-layout" name="password" id="password" placeholder="password" required
+                                    pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                                </div>
+
+                                <label>&nbsp;</label><br><br><br><br>
+                                <!-- Add the submit button-->
+                                <button type="button" class="btn btn-primary center-bolock" name="submit"  id="submit" value="click">Login</button>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+            <br><br>
+            <div id="token-display"></div>
+            <div id="content" class="hidden">
+                <form name="postForm">
+                    <div>
+                        
+                        <label for="title">Title</label>
+                        <input type="text" class="form-layout" name="title"  id="title" placeholder="title" required/>
+                    </div>
+                    <br><br><br><br>
+                    <div>
+                        <label for="content-display">Content</label>
+                        <input type="text" class="form-layout" name="content-display" id="content-display" placeholder="content" required/>
+                    </div>
+                    <br>
+                    <div id="postError"></div>
+                    <input type="submit" id="addSubmit"/>
+                </form>
+                <br>
+                <ul id="list"></ul>
+            </div>
+        </div><br><br>
+        
+        <span style="color:red;font-size:17px"><b>Question:</b></span> The team activity directions says, "Create one more 
+        file called week11.js and add it to your html via a script element (We will be using modules so don't forget 
+        type="module")."  HOWEVER: Shouldn't this script element be placed in the <b>'week11.html' file instead of the week11.js file</b><br><br>
+ 
+        <span style="color:red;font-size:17px"><b>Question:</b></span>I was unable to locate the 'Networ' tab in Chrome. How do I locate this?
+
         <section id="References">
             <h2 style="color:#6600cc"><u>References: Week 10 Readings</u></h2>
             <ul>
@@ -304,7 +387,7 @@
                     title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
         </ul>
     </footer>
-    <script src="scripts/main.js"></script>
+    
 </body>
 
 </html>

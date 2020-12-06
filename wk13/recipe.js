@@ -1,2 +1,0 @@
-/*RECIPE JS*/
-'use strict';

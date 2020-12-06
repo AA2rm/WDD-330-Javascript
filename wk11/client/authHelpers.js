@@ -6,24 +6,24 @@
  * from the server, does a POST, & sends login
  * data to the authentication server
  *********************************************/
-
-export function getJSON(url) {
-    return fetch(url, {
-        method: 'GET',  // *GET, POST, PUT, DELETE, etc.
-        method: 'POST'
-    })
-      .then(function(response) {
-        if (!response.ok) {
-          throw Error(response.statusText);
-        } else {
-          return response.json();
-        }
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+// Class Examples
+// export function getJSON(url) {
+//     return fetch(url, {
+//         method: 'GET',  // *GET, POST, PUT, DELETE, etc.
+//         method: 'POST'
+//     })
+//       .then(function(response) {
+//         if (!response.ok) {
+//           throw Error(response.statusText);
+//         } else {
+//           return response.json();
+//         }
+//       })
+//       .catch(function(error) {
+//         console.log(error);
+//       });
       
-  }
+//   }
 
   export class Errors {
     constructor(errorElementId) {
@@ -56,7 +56,7 @@ const baseURL = 'http://127.0.0.1:3000/';
 // helper function to make an http request with fetch.
 // pass an URL & method set to GET
 // modify the function declaration adding in a token arg
-async function makeRequest(url, method = 'GET', body = null, token = null) {
+export async function makeRequest(url, method = 'GET', body = null, token = null) {
     // we will need to set some custom options for our fetch call
     // specify method GET is the default
     // set headers
@@ -98,7 +98,10 @@ async function makeRequest(url, method = 'GET', body = null, token = null) {
   
       console.log(response);
       throw new Error(`${data.status}: ${data.message}`);
-    } else return data;
+    } else {
+      
+      return data;
+    }
   
     // not catching the error here...so we will need to catch it later on and handle it.
   }

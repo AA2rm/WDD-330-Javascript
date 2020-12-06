@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 3 Activity</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    
 
     <!-- Add in an Auth module -->
     <script type="module" src="client/auth.js"> </script>
     <script type="module" src="client/authHelpers.js"></script>  
-    <script type="module" src="cient/week11.js"></script>   
+    <script type="module" src="client/week11.js"></script>   
 
 
     <style>
@@ -96,7 +97,7 @@
             display: flex;  
             font-variant: all-small-caps; 
             font-weight: bolder;    
-            padding: 15px 225px 50px;
+            padding: 5px 50px;
         }
         
         header.page_header>#ulnav_bar {
@@ -242,7 +243,33 @@
             font-weight: bold;
             word-spacing: 2px;
         }
+        /* ********************************************************************************************************** */
+        .errors {
+            border: 1px solid darkred;
+            background-color: lightcoral;
+            padding: 0.5em;
+        }
+        form input {
+            margin: 0.5em 0;
+            font-size: 1.4em;
+            background-image: linear-gradient(to right, pink, lightgreen, turquoise);
+            /* background-image: linear-gradient(to right, pink, lightgreen, #2085ad);   */
+            width: 300px;
+        }
+        form button {
+            font-size: 1.2em;
+            height: 35px;
+            padding: 0.4em;
+            background-color: rgb(156, 82, 144);
+            width: 120px;
+        }
         
+        input:invalid {
+            box-shadow: 0 0 5px 1px red;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -270,69 +297,20 @@
         </ul>
     </header>
     <header class="bottom_header_blue"></header>
-    <main>
-        <h1>Week 11</h1>        
+
+    <header>
+        <h1 class="text-center">Authentication Login</h1>
+        <nav></nav>
+    </header>
+       <h1>Week 11</h1>        
             <ul>
-                <li><a href="content_index.html">Content</a></li>
-                <li><a href="todo.html">ToDo HTML</a></li>
-                <li><a href="js/main.js">Main JS</a></li>          
-                <li><a href="js/ls.js">Local Storage</a></li>
-                <li><a href="js/utils.js">Utilities</a></li>
-                <li><a href="js/ToDo.js">To Do JS</a></li> 
-                <li><a href="todo_styles.css">To Do CSS</a></li>
-         </ul>
-           
-      <!-- Add a Login Form & auth module -->
-        <section class="individual_activity">    
-            <h2>Individual Assignments: Fetch & Client-Side Validation</h2>
-            <form action="/WDD-330/wk11/index.php" method="post">                
-                <fieldset class="outline2">
-                    <table class="textbox2">
-                        <tr>
-                            <td>
-                                <h2>All fields required</h2>
-                                <label for="firstname">First Name:</label>
-                                <input type="text" name="firstname" id="firstname" placeholder="first name" required><br><br>
-                                <br>
-                                <label for="lastname">Last Name:</label>
-                                <input type="text" name="lastname" id="lastname" placeholder="last name"
-                                    required><br><br>
-                                <br>
-                                <!-- <label for="userName">User Name:</label>
-                                <input type="text" name="userName" id="userName"
-                                    placeholder="user name" required><br><br> -->
-                                
-                                <label for="email">Email Address:</label>
-                                <input type="email" name="email" id="email" placeholder="email" 
-                                   required><br><br>
-                                <br><br>
-                                <span><b>Passwords must be at least 8 characters, 1 number, 1 uppercase, and 1
-                                    special
-                                    character.</b></span><br><br>
-                                <!--style the span text to be smaller than the other text-->
-                                <!-- Add a pattern attribute that forces a requirement that the password is 8 characters long w/ no spaces -->
-                                <label for="password">Password:</label>
-                                <input type="password" name="password" id="password" placeholder="password" required
-                                    pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-
-                                <label>&nbsp;</label><br><br><br><br>
-                                <!-- Add the submit button-->
-                                <input type="submit" class="regbtn" name="submit" value="SUBMIT">
-                                <!-- Add a action key value pair-->
-                                <!-- <input type="hidden" name="action" value="register"> -->
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-            </form>
-       </section><br><br>
-        
-
-       <span style="color:red;font-size:17px"><b>Question:</b></span> The team activity directions says, "Create one more 
-       file called week11.js and add it to your html via a script element (We will be using modules so don't forget 
-       type="module")."  HOWEVER: Shouldn't this script element be placed in the <b>'week11.html' file instead of the week11.js file</b><br><br>
-
-       <span style="color:red;font-size:17px"><b>Question:</b></span>I was unable to locate the 'Networ' tab in Chrome. How do I locate this?
+                <li><a href="client/auth.js">JS Authentication</a></li>
+                <li><a href="client/authHelpers.js">JS Authentication Helpers </a></li>
+                   <li><a href="client/week11.js">JS Week 11</a></li>
+                <li><a href="client/week11.html">HTML Week 11</a></li>             
+                <li><a href="auth/json-server/">JSON Server Pack</a></li>
+            </ul>
+      
 
 
        <section id="References">
@@ -340,10 +318,13 @@
         <ul>
             <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation" title="Client-Side Form Validation">Form Vallidation</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"  title="API Fetch">Using Fetch</a></li>
-        </ul>
-    </section>
-    </main><br><br><br>
+            <li><a href="https://stackoverflow.com/questions/1580863/javascript-how-to-create-a-new-instance-of-a-class-without-using-the-new-keywor"  title="API Fetch">Creating an instance</a></li>
+            <li><a href="https://www.w3schools.com/js/js_function_call.asp"  title="Call A Method">Calling Methods</a></li>
 
+        </ul> 
+        </section>
+        <br><br><br>
+    
     <hr class="line1">
     <hr class="line2">
     <hr class="line3">
@@ -365,7 +346,7 @@
                     title="Sitepoint" style="color:#6600cc">Javascript: Novice to Ninja</a></li>
         </ul>
     </footer>
-    <script src="scripts/main.js"></script>
+    
 </body>
 
 </html>
