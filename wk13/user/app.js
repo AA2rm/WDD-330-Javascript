@@ -62,7 +62,8 @@ const App = () => {
             Search
           </button> 
       </form> 
-      /
+
+      <div className="recies">
       {recipes.map(recipe => (
         <Recipe 
         key={recipe.recipe.label}
@@ -72,6 +73,7 @@ const App = () => {
         ingredients={recipe.recipe.ingredients}
         />
       ))}
+    </div>
     </div>
   );
 };

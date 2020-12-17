@@ -27,7 +27,7 @@
         }
 
         img {
-            background-image: url(WDD_330/images/lady.gif);
+            /* background-image: url(WDD_330/images/lady.gif); */
             height: 163px;
             margin-bottom: -98px;
             width: 15%;
@@ -175,9 +175,10 @@
         } */
 
         textarea {
-            background-color: #ffffe0;
+            background-color: #ffffff;
             height: 250px;
-            width: 800px;
+            width: 400px;
+            align-content: center;
         }
 
         /*Indent paragrahs in notes.html*/
@@ -233,11 +234,41 @@
             font-weight: bold;
             word-spacing: 2px;
         }
+        /************************* Styling for App ************************/
+        .App {
+        min-height: 1280px;
+        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        }
+
+        .search-form {
+        min-height: 1280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .search-bar {
+        width: 50%;
+        border: none;
+        padding: 15px;  
+        }
+
+        .search-button {
+        background: #993399;
+        border: none;
+        padding: 10px 20px;
+        color: #ffffff;
+        }
+        .recipes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
 
 <body>
-    <div id="portfolio_log">
+    <div id="portfolio_logo">
         <div id="tag_line">
             <p style="color:#6600cc">Come Learn JavaScript With Me!</p>
         </div>
@@ -271,9 +302,11 @@
                         <tr>
                             <td>
                                 <button type="submit" class="search-button" name="submit" id="submit" value="click">Submit</button>
-                                <input class="search-bar" type="text"/>
+                                <input class="submit-bar" type="text"/>
+                                <br><br>
                                 <button class="search-button" type="submit">Search</button>
-
+                                <input class="search-bar" type="text"/>
+                                <br><br>
                                 <label for="title">Recipe Title:</label><br>
                                 <input type="text" name="title" id="title">
                                 <br><br>
