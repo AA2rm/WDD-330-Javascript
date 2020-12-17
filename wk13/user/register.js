@@ -18,7 +18,7 @@ export default class Register {
         this.user = {};
         this.errors = errorHandler;
     }
-
+    // use an async to send a callback to the register form
     async register(callback) {
         // replace the ids below with whatever you used in your form.    
         const firstname = document.getElementById('firstname');
@@ -127,9 +127,9 @@ function hideLogin() {
 }
 
 
-/*****************************************
- * Attach a listerner to the submit button
- ****************************************/
+/************************************************
+ * Attach an event listerner to the submit button
+ ***********************************************/
 const loginForm = document.getElementById("register");
 loginForm.querySelector('button').addEventListener("click", () => {
     Auth.login(getPosts);
@@ -140,3 +140,108 @@ loginForm.querySelector('button').addEventListener("click", () => {
 
 
 
+
+
+
+/*****************************************
+ * Add a promise to approve or reject the 
+ * form 
+ ****************************************/
+let p = new Promise((resolve, reject) => {
+  let a = (firstname, lastname, username, password)
+  if (a == (firstname, lastname, username, password)) {
+    resolve('You have successfully registered')
+  } else {
+      reject('Failed, please try again')
+  }
+})
+// display the message
+p.then((message) => {
+    consolelog('This is in the then' + message)
+})
+// display a catch error
+.catch((message) => {
+    console.log('this is in the cath' + message)
+})
+
+/*****************************************
+ * Add a callback for the success & error
+ * of the promise
+ ****************************************/
+const updateUser = true
+const getCurrentUser = false
+
+// function watchRegisterCallback(callback, errorCallback) {
+//     if (updateUser) {
+//         errorCallback({
+//             firstname: 'updateUser',
+//             lastname: 'updateUser',
+//             username: 'updateUser',
+//             password: 'updateUser',
+//             message: ':('
+//         })
+//     } else if (getCurrentUser) {
+//         errorCallback({
+//             firstname: 'updateUser',
+//             lastname: 'updateUser',
+//             username: 'updateUser',
+//             password: 'updateUser',
+//             message: 'Form data is not sufficient'
+//         })
+//     } else {
+//         callback('Great you have registered!')
+//     }
+// }
+// watchRegisterCallback((message) => {
+//     console.log('Success: ' + message)
+// }, (error) => {
+//   console.log(error.firstname, error.lastname, error.username, error.password + message)
+
+// })
+
+
+function watchRegisterPromise() {
+    return new Promise((resolve, reject) => {
+        if (updateUser) {
+            reject({
+                firstname: 'updateUser',
+                lastname: 'updateUser',
+                username: 'updateUser',
+                password: 'updateUser',
+                message: ':('
+            })
+        } else if (getCurrentUser) {
+            reject({
+                firstname: 'updateUser',
+                lastname: 'updateUser',
+                username: 'updateUser',
+                password: 'updateUser',
+                message: 'Form data is not sufficient'
+            })
+        } else {
+            resolve('Great you have registered!')
+        }    
+    })
+}
+
+watchRegisterPromise().then((message) => {
+// add a .then to nest a promise
+    console.log('Success: ' + message)
+}).then((message) =>{
+    console.log('Success: ' + message)
+}).catch((error) => {
+    console.log(error.firstname, error.lastname, error.username, error.password + message)
+
+})
+
+const openLoginForm = new Promise ((resolve, reject) => {
+    resolve('login form')
+})
+
+Promise.all( [
+    updateUser,
+    getCurrentUser,
+    openLoginForm
+]).then((messages) => {
+    console.log(messages)
+})

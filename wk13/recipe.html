@@ -270,27 +270,32 @@
                     <table class="textbox2">
                         <tr>
                             <td>
-                                <label for="recipeName">Recipe Name:</label><br>
-                                <input type="text" name="recipeName" id="recipeName">
+                                <button type="submit" class="search-button" name="submit" id="submit" value="click">Submit</button>
+                                <input class="search-bar" type="text"/>
+                                <button class="search-button" type="submit">Search</button>
+
+                                <label for="title">Recipe Title:</label><br>
+                                <input type="text" name="title" id="title">
                                 <br><br>
 
-                                <label for="recipeType">Recipe Type:</label><br>
-                                <input type="text" name="recipeType" id="recipeType">
+                                <label for="calories">Recipe Calories:</label><br>
+                                <input type="text" name="calories" id="calories">
+
+                                <br><br>
+                                <label for="ingredients">Recipe Ingredients:</label><br>                              
+                                <textarea name="ingredients" id="ingredients"></textarea>
+                                
                                           
                                 <br><br>
-                                <label for="recipeIngredients">Ingredients:</label><br>
-                              
-                                <textarea name="recipeIngredients" id="recipeIngredients"></textarea>
+                                <label for="image">Recipe Image:</label><br>                              
+                                <textarea name="image" id="image"></textarea>
                                 
                                 <br><br>
-                                <label for="recipeDirections">Directions:</label><br>
-                               
-                                <textarea name="recipeDirections" id="recipeDirections"></textarea><br><br>
-                                <button type="submit" class="search-button" name="submit" id="submit" value="click">Submit</button>
-                         
-                        </td>
-                    </tr>   
-                </table>
+                                <label for="recipeDirections">Directions:</label><br>                               
+                                <textarea name="recipeDirections" id="recipeDirections"></textarea><br><br>                                
+                            </td>
+                        </tr>   
+                    </table>
             </fieldset>
         </div>
         </form>

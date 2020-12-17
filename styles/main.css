@@ -1,4 +1,3 @@
-
 /* Style the logo image in the header */
 #div.portfolio_logo {
     image-rendering: auto;
@@ -144,6 +143,7 @@ nav ul li a {
 /*Style the labtop jpg image*/
 .bg_img {
     align-items: center;
+    margin-left: 425px;
     width: 70%;
     height: 60px;
     
